@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tailwind Starter Template - Nordic Shop: Tailwind Toolbox</title>
+    <title>SIAKAD MDNU</title>
     <meta name="description" content="Free open source Tailwind CSS Store template">
     <meta name="keywords" content="tailwind,tailwindcss,tailwind css,css,starter template,free template,store template, shop layout, minimal, monochrome, minimalistic, theme, nordic">
 
@@ -66,7 +66,6 @@
             /*Set to match the Tailwind colour you want the active one to be */
         }
     </style>
-
 </head>
 
 <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
@@ -90,7 +89,7 @@
             </div>
 
             <div class="font-bold text-yellow-600 text-right">
-                <a class="text-2xl" href="#">SISTEM INFORMASI AKADEMIK <br></a>
+                <a class="text-2xl">SISTEM INFORMASI AKADEMIK <br></a>
                 <a class="text-1xl tracking-widest">MDNU</a>
             </div>
         </div>
@@ -107,7 +106,6 @@
                         <div class="container mx-auto">
                             <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                                 <p class="text-white text-2xl my-4">Selamat Datang di Sistem Informasi Akademik Madrasah Diniyyah Nurul Ummah Yogyakarta</p>
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-normal text-xl p-3 mt-1 rounded-lg py-3 px-7" href="#">masuk</button>
                             </div>
                         </div>
                     </div>
@@ -120,12 +118,11 @@
             <!--Slide 2-->
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
-            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide2.jpg');">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide2.jpg');">
                     <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-black bg-opacity-40">
                         <div class="container mx-auto">
                             <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                                 <p class="text-white text-2xl my-4">"Mabruk, Semoga Barokah. Mondok Ngaji, Jama'ah, Muthola'ah"</p>
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-normal text-xl p-3 mt-1 rounded-lg py-3 px-7" href="#">masuk</button>
                             </div>
                         </div>
                     </div>
@@ -137,13 +134,12 @@
             <!--Slide 3-->
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0" style="height:50vh;">
-            <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide3.jpg');">
+                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide3.jpg');">
                     <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-black bg-opacity-40">
                         <div class="container mx-auto">
                             <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                                 <p class="text-white text-2xl my-3">"Ngandelo aku, nek pancen alim tenan, wong sing do pengen nggolek mantu santri, utowo santri putri ngendi wae mesti bakal ngantri."</p>
                                 <p class="text-white text-xl mb-3">- Al-Maghfurlah KH. Asyhari Marzuqi"</p>
-                                <button class="bg-blue-500 hover:bg-blue-700 text-white font-normal text-xl p-3 mt-1 rounded-lg py-3 px-7" href="#">masuk</button>
                             </div>
                         </div>
                     </div>
@@ -168,191 +164,60 @@
         </div>
     </div>
 
-    <!--	 
-Alternatively if you want to just have a single hero
-<section class="w-full mx-auto bg-nordic-gray-light flex pt-12 md:pt-0 md:items-center bg-cover bg-right" style="max-width:1600px; height: 32rem; background-image: url('https://images.unsplash.com/photo-1422190441165-ec2956dc9ecc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1600&q=80');">
-	<div class="container mx-auto">
-		<div class="flex flex-col w-full lg:w-1/2 justify-center items-start  px-6 tracking-wide">
-			<h1 class="text-black text-2xl my-4">Stripy Zig Zag Jigsaw Pillow and Duvet Set</h1>
-			<a class="text-xl inline-block no-underline border-b border-gray-600 leading-relaxed hover:text-black hover:border-black" href="#">products</a>
-		</div>
-	  </div>
-</section>
--->
-
+    <!-- LOGIN, TENTANG, ALAMAT -->
     <section class="bg-white py-8">
 
-        <div class="container mx-auto flex items-center flex-wrap pt-4 pb-12">
-
-            <nav id="store" class="w-full z-30 top-0 px-6 py-1">
-                <div class="w-full container mx-auto flex flex-wrap items-center justify-between mt-0 px-2 py-3">
-
-                    <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl " href="#">
-                        Store
-                    </a>
-
-                    <div class="flex items-center" id="store-nav-content">
-
-                        <a class="pl-3 inline-block no-underline hover:text-black" href="#">
-                            <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M7 11H17V13H7zM4 7H20V9H4zM10 15H14V17H10z" />
-                            </svg>
-                        </a>
-
-                        <a class="pl-3 inline-block no-underline hover:text-black" href="#">
-                            <svg class="fill-current hover:text-black" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-                                <path d="M10,18c1.846,0,3.543-0.635,4.897-1.688l4.396,4.396l1.414-1.414l-4.396-4.396C17.365,13.543,18,11.846,18,10 c0-4.411-3.589-8-8-8s-8,3.589-8,8S5.589,18,10,18z M10,4c3.309,0,6,2.691,6,6s-2.691,6-6,6s-6-2.691-6-6S6.691,4,10,4z" />
-                            </svg>
-                        </a>
-
-                    </div>
+        <!-- LOGIN -->
+        <div class="w-full container mx-auto flex items-center justify-between">
+            <div class="flex-1 mx-8 py-8">
+                <div class="text-center">
+                    <a class="tracking-wide font-bold text-xl gray-800">Masuk untuk melihat informasi akademik anda</a><br>
                 </div>
-            </nav>
-
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1555982105-d25af4182e4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">£9.99</p>
-                </a>
+                <div class="text-center py-4">
+                    <button class="bg-blue-600 hover:bg-blue-800 text-white text-xl p-3 mt-1 rounded-lg py-3 px-8" href="#">Masuk</button>
+                </div>
             </div>
-
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1508423134147-addf71308178?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">£9.99</p>
-                </a>
-            </div>
-
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">£9.99</p>
-                </a>
-            </div>
-
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/reserve/LJIZlzHgQ7WPSh5KVTCB_Typewriter.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">£9.99</p>
-                </a>
-            </div>
-
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1467949576168-6ce8e2df4e13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">£9.99</p>
-                </a>
-            </div>
-
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">£9.99</p>
-                </a>
-            </div>
-
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1550837368-6594235de85c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&h=400&q=80">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">£9.99</p>
-                </a>
-            </div>
-
-            <div class="w-full md:w-1/3 xl:w-1/4 p-6 flex flex-col">
-                <a href="#">
-                    <img class="hover:grow hover:shadow-lg" src="https://images.unsplash.com/photo-1551431009-a802eeec77b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=400&h=400&q=80">
-                    <div class="pt-3 flex items-center justify-between">
-                        <p class="">Product Name</p>
-                        <svg class="h-6 w-6 fill-current text-gray-500 hover:text-black" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                            <path d="M12,4.595c-1.104-1.006-2.512-1.558-3.996-1.558c-1.578,0-3.072,0.623-4.213,1.758c-2.353,2.363-2.352,6.059,0.002,8.412 l7.332,7.332c0.17,0.299,0.498,0.492,0.875,0.492c0.322,0,0.609-0.163,0.792-0.409l7.415-7.415 c2.354-2.354,2.354-6.049-0.002-8.416c-1.137-1.131-2.631-1.754-4.209-1.754C14.513,3.037,13.104,3.589,12,4.595z M18.791,6.205 c1.563,1.571,1.564,4.025,0.002,5.588L12,18.586l-6.793-6.793C3.645,10.23,3.646,7.776,5.205,6.209 c0.76-0.756,1.754-1.172,2.799-1.172s2.035,0.416,2.789,1.17l0.5,0.5c0.391,0.391,1.023,0.391,1.414,0l0.5-0.5 C14.719,4.698,17.281,4.702,18.791,6.205z" />
-                        </svg>
-                    </div>
-                    <p class="pt-1 text-gray-900">£9.99</p>
-                </a>
-            </div>
-
         </div>
-
-    </section>
-
-    <section class="bg-white py-8">
-
         <div class="container py-8 px-6 mx-auto">
-
-            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8" href="#">
-                About
-            </a>
-
-            <p class="mt-8 mb-8">This template is inspired by the stunning nordic minamalist design - in particular:
-                <br>
-                <a class="text-gray-800 underline hover:text-gray-900" href="http://savoy.nordicmade.com/" target="_blank">Savoy Theme</a> created by <a class="text-gray-800 underline hover:text-gray-900" href="https://nordicmade.com/">https://nordicmade.com/</a> and <a class="text-gray-800 underline hover:text-gray-900" href="https://www.metricdesign.no/" target="_blank">https://www.metricdesign.no/</a>
-            </p>
-
-            <p class="mb-8">Lorem ipsum dolor sit amet, consectetur <a href="#">random link</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vel risus commodo viverra maecenas accumsan lacus vel facilisis volutpat. Vitae aliquet nec ullamcorper sit. Nullam eget felis eget nunc lobortis mattis aliquam. In est ante in nibh mauris. Egestas congue quisque egestas diam in. Facilisi nullam vehicula ipsum a arcu. Nec nam aliquam sem et tortor consequat. Eget mi proin sed libero enim sed faucibus turpis in. Hac habitasse platea dictumst quisque. In aliquam sem fringilla ut. Gravida rutrum quisque non tellus orci ac auctor augue mauris. Accumsan lacus vel facilisis volutpat est velit egestas dui id. At tempor commodo ullamcorper a. Volutpat commodo sed egestas egestas fringilla. Vitae congue eu consequat ac.</p>
-
+            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">Tentang MDNU</a>
+            <p class="py-4">MDNU atau Madrasah Diniyyah Nurul Ummah adalah Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad magni cumque, enim deleniti molestiae, ipsum iste suscipit itaque eius aliquam officiis ipsam commodi autem delectus, blanditiis omnis quos reiciendis. In.</p>
         </div>
 
+        <!-- ALAMAT -->
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+            <div class="flex space-x-10 py-5 mx-auto">
+                <div class="text-left pl-5 mb-8">
+                    <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl">Kunjungi Kami</a>
+                    <p class="py-4">Anda dapat menemukan kami di:</p>
+                    <p class="text-blue-900">Jl. Raden Ronggo KG II No.982, Prenggan, Kec. Kotagede, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55172.</p>
+                </div>
+                <div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.6604869675466!2d110.3934521145091!3d-7.825712579895561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5710b624c18d%3A0x8d5f089b87af3c59!2sPondok%20Pesantren%20Nurul%20Ummah!5e0!3m2!1sen!2sid!4v1620766907033!5m2!1sen!2sid" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
         <div class="container flex px-3 py-8 ">
             <div class="w-full mx-auto flex flex-wrap">
                 <div class="flex w-full lg:w-1/2 ">
                     <div class="px-3 md:px-0">
-                        <h3 class="font-bold text-gray-900">About</h3>
-                        <p class="py-4">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vel mi ut felis tempus commodo nec id erat. Suspendisse consectetur dapibus velit ut lacinia.
-                        </p>
+                        <h3 class="font-bold text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
+                        <a class="inline-block no-underline hover:text-black hover:underline pt-5" href="#">Telp. +000 000 000 000</a><br>
+                        <a class="inline-block no-underline hover:text-black hover:underline" href="#">WhatsApp. 000 000 000 00</a><br>
+                        <a class="inline-block no-underline hover:text-black hover:underline" href="#">E-mail. mdnu@nurulummah.com</a>
                     </div>
                 </div>
                 <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
                     <div class="px-3 md:px-0">
-                        <h3 class="font-bold text-gray-900">Social</h3>
+                        <h3 class="font-bold text-gray-900">Media Sosial</h3>
                         <ul class="list-reset items-center pt-3">
                             <li>
-                                <a class="inline-block no-underline hover:text-black hover:underline py-1" href="#">Add social links</a>
+                                <a class="inline-block no-underline hover:text-black hover:underline py-1" href="#">Instagram</a>
+                                <a class="inline-block no-underline hover:text-black hover:underline" href="#">YouTube</a>
+                                <a class="inline-block no-underline hover:text-black hover:underline" href="#">Website</a>
                             </li>
                         </ul>
                     </div>
@@ -360,7 +225,6 @@ Alternatively if you want to just have a single hero
             </div>
         </div>
     </footer>
-
 </body>
 
 </html>
