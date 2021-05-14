@@ -205,9 +205,9 @@
                 <div class="flex w-full lg:w-1/2 ">
                     <div class="px-3 md:px-0">
                         <h3 class="font-bold text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
-                        <a class="inline-block no-underline hover:text-black hover:underline pt-5" href="#">Telp. +000 000 000 000</a><br>
-                        <a class="inline-block no-underline hover:text-black hover:underline" href="#">WhatsApp. 000 000 000 00</a><br>
-                        <a class="inline-block no-underline hover:text-black hover:underline" href="#">E-mail. mdnu@nurulummah.com</a>
+                        <a class="inline-block no-underline hover:text-black hover:underline pt-5" href="tel:+62 857 2565 5593">Telp. 0857 2565 5593</a><br>
+                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://web.whatsapp.com/send?phone=6285725655593&text=Assalamualaikum%20Admin">WhatsApp. 0857 2565 5593</a><br>
+                        <a class="inline-block no-underline hover:text-black hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
                     </div>
                 </div>
                 <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
@@ -215,9 +215,9 @@
                         <h3 class="font-bold text-gray-900">Media Sosial</h3>
                         <ul class="list-reset items-center pt-3">
                             <li>
-                                <a class="inline-block no-underline hover:text-black hover:underline py-1" href="#">Instagram</a>
-                                <a class="inline-block no-underline hover:text-black hover:underline" href="#">YouTube</a>
-                                <a class="inline-block no-underline hover:text-black hover:underline" href="#">Website</a>
+                                <a class="inline-block no-underline hover:text-black hover:underline py-1" href="https://instagram.com/nurulummahyk?igshid=1m74irp80dl0v">Instagram</a>
+                                <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">YouTube</a>
+                                <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a>
                             </li>
                         </ul>
                     </div>
