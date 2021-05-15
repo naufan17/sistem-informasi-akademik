@@ -8,6 +8,10 @@
     <meta name="author" content="David Grzyb">
     <meta name="description" content="">
 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.2/Chart.bundle.min.js"
+        integrity="sha256-XF29CBwU1MWLaGEnsELogU6Y6rcc5nCkhhx89nFMIDQ=" crossorigin="anonymous"></script>
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
@@ -116,9 +120,10 @@
                 </div>
 
                 <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                    <a href="forms.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                    <a href="riwayat-nilai.html"
+                        class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                         <i class="fas fa-star mr-3"></i>
-                        Nilai Rata-rata
+                        Riwayat Nilai
                     </a>
                 </div>
 
@@ -205,177 +210,97 @@
                 </nav>
             </header>
 
-            <!-- NILAI -->
+            <!-- RIWAYAT NILAI -->
             <div class="overflow-x-hidden">
                 <main class="p-6">
-                    <h1 class="text-3xl text-black pb-2 mt-2">Nilai</h1>
+                    <h1 class="text-3xl text-black pb-2 mt-2">Riwayat Nilai</h1>
 
                     <div class="bg-white rounded-lg shadow-md p-8 my-8">
 
                         <p class="text-xl pb-4 flex items-center">
-                            Laporan Hasil Studi MDNU
+                            Riwayat Nilai Kumulatif Santri
                         </p>
 
-                        <!-- OPTION -->
-                        <div class="flex space-x-4 items-center pt-8 pb-4">
-
-                            <!--FLEX 1-->
-                            <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
-                            <div class="flex-none w-36">
-                                <a class="self-center">Tahun Ajaran</a>
-                            </div>
-
-                            <!--FLEX 2-->
-                            <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
-                            <div class="flex-none md:w-1/5">
-                                <div class="relative">
-                                    <div
-                                        class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
-                                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </div>
-                                    <select
-                                        class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
-                                        id="grid-state">
-                                        <option>2021/2022</option>
-                                        <option>2020/2021</option>
-                                        <option>2019/2020</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="flex space-x-4 items-center pb-8">
-
-                            <!--FLEX 1-->
-                            <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
-                            <div class="flex-none w-36">
-                                <a class="self-center">Semester</a>
-                            </div>
-
-                            <!--FLEX 2-->
-                            <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
-                            <div class="flex-none md:w-1/5">
-                                <div class="relative">
-                                    <div
-                                        class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
-                                        <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                            <path
-                                                d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                        </svg>
-                                    </div>
-                                    <select
-                                        class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
-                                        id="grid-state">
-                                        <option>Ganjil</option>
-                                        <option>Genap</option>
-                                    </select>
-                                </div>
-                            </div>
-
-                            <!--FLEX 3-->
-                            <div class="object-left text-center text-white text-base">
-                                <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Lihat
-                                    Hasil Studi</button>
-                            </div>
-
-                        </div>
-
-                        <!--TABEL NILAI-->
-                        <div class="bg-white overflow-auto pt-8 pb-8">
+                        <!--TABEL RIWAYAT NILAI-->
+                        <div class="bg-white overflow-auto pb-8">
                             <table class="table-auto bg-white">
                                 <thead class="bg-gray-800 text-white">
                                     <tr>
                                         <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                        <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Mata
-                                            Pelajaran</th>
-                                        <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">KKM
+                                        <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Tahun
+                                            Akademik</th>
+                                        <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Semester
                                         </th>
-                                        <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nilai
-                                            Hasil Belajar</th>
-                                        <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">
-                                            Rata-rata
-                                            Kelas</td>
+                                        <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Jumlah MP
+                                        </th>
+                                        <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nilai
+                                            Kumulatif</td>
                                     </tr>
                                 </thead>
                                 <tbody class="text-gray-700">
                                     <tr>
                                         <td class="text-left py-3 px-4">1</td>
-                                        <td class="text-left py-3 px-4"><a></a>Tafsir</a></td>
-                                        <td class="text-left py-3 px-4"><a>60</a></td>
-                                        <td class="text-left py-3 px-4">75</td>
-                                        <td class="text-left py-3 px-4">67,4</td>
+                                        <td class="text-left py-3 px-4"><a></a>2020/2021</a></td>
+                                        <td class="text-left py-3 px-4"><a>Ganjil</a></td>
+                                        <td class="text-left py-3 px-4">8</td>
+                                        <td class="text-left py-3 px-4">660</td>
                                     </tr>
                                     <tr class="bg-gray-200">
                                         <td class="text-left py-3 px-4">2</td>
-                                        <td class="text-left py-3 px-4"><a>Fiqih</a></td>
-                                        <td class="text-left py-3 px-4"><a>60</a></td>
-                                        <td class="text-left py-3 px-4">90</td>
-                                        <td class="text-left py-3 px-4">74,0</td>
+                                        <td class="text-left py-3 px-4"><a>2020/2021</a></td>
+                                        <td class="text-left py-3 px-4"><a>Genap</a></td>
+                                        <td class="text-left py-3 px-4">8</td>
+                                        <td class="text-left py-3 px-4">686</td>
                                     </tr>
                                     <tr>
                                         <td class="text-left py-3 px-4">3</td>
-                                        <td class="text-left py-3 px-4"><a>Nahwu</a></td>
-                                        <td class="text-left py-3 px-4"><a>60</a></td>
-                                        <td class="text-left py-3 px-4">80</td>
-                                        <td class="text-left py-3 px-4">65,7</td>
+                                        <td class="text-left py-3 px-4"><a>2021/2022</a></td>
+                                        <td class="text-left py-3 px-4"><a>Ganjil</a></td>
+                                        <td class="text-left py-3 px-4">9</td>
+                                        <td class="text-left py-3 px-4">689</td>
                                     </tr>
                                     <tr class="bg-gray-200">
                                         <td class="text-left py-3 px-4">4</td>
-                                        <td class="text-left py-3 px-4"><a>Hadits</a></td>
-                                        <td class="text-left py-3 px-4"><a>60</a></td>
-                                        <td class="text-left py-3 px-4">75</td>
-                                        <td class="text-left py-3 px-4">67,4</td>
+                                        <td class="text-left py-3 px-4"><a>2021/2022</a></td>
+                                        <td class="text-left py-3 px-4"><a>Genap</a></td>
+                                        <td class="text-left py-3 px-4">9</td>
+                                        <td class="text-left py-3 px-4">700</td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
 
-                        <!--KETERANGAN TAMBAHAN-->
-                        <div class="bg-white overflow-auto py-4">
-                            <table class="table-auto bg-white">
-                                <tbody class="text-gray-700">
-                                    <tr class="bg-gray-200">
-                                        <td class="text-left font-semibold py-3 px-4"><a>Jumlah Nilai</a></td>
-                                        <td class="text-left w-1/2 py-3 px-4"><a>: 660</a></td>
-                                    </tr>
-                                    <tr>
+                        <!--Graph Card-->
+                        <div class="w-full md:w-1/2 py-4">
+                            <div class="border-b-2 py-3">
+                                <p class="text-xl">Grafik Riwayat</p>
+                            </div>
+                            <div class="py-5">
+                                <canvas id="chartjs-0" class="chartjs w-1/2 h-96"></canvas>
 
-                                        <td class="text-left font-semibold py-3 px-4"><a>Nilai Rata-rata</a></td>
-                                        <td class="text-left w-1/2 py-3 px-4"><a>: 82,5</a></td>
-                                    </tr>
-                                    <tr class="bg-gray-200">
+                                <script>
+                                    new Chart(document.getElementById("chartjs-0"), {
+                                        "type": "line",
+                                        "data": {
+                                            "labels": ["smt 1", "smt 2", "smt 3", "smt 4", "smt 5", "smt 6", "smt 7", "smt 8", "smt 9", "smt 10"],
+                                            "datasets": [{
+                                                "label": "Views",
+                                                "data": [660, 686, 689, 700],
+                                                "fill": false,
+                                                "borderColor": "rgb(75, 192, 192)",
+                                                "lineTension": 0.1
+                                            }]
+                                        },
+                                        "options": {}
+                                    });
+                                </script>
 
-                                        <td class="text-left font-semibold py-3 px-4"><a>Rangking</a></td>
-                                        <td class="text-left w-1/2 py-3 px-4"><a>: 5 dari 25 santri</a></td>
-                                    </tr>
-                                    <tr>
-
-                                        <td class="text-left font-semibold py-3 px-4"><a>Presentase Absensi MDNU</a>
-                                        </td>
-                                        <td class="text-left w-1/2 py-3 px-4"><a>: 0%</a></td>
-                                    </tr>
-                                    <tr class="bg-gray-200">
-
-                                        <td class="text-left font-semibold py-3 px-4"><a>Presentase Absensi
-                                                Asrama</a>
-                                        </td>
-                                        <td class="text-left w-1/2 py-3 px-4"><a>: 0%</a></td>
-                                    </tr>
-                                    <tr>
-
-                                        <td class="text-left font-semibold py-3 px-4"><a>Keterangan</a></td>
-                                        <td class="text-left w-1/2 py-3 px-4"><a>: Naik Kelas</a></td>
-                                    </tr>
-
-                                </tbody>
-                            </table>
+                            </div>
                         </div>
+
                         <div class="flex object-left text-center text-white text-base pt-4">
                             <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Cetak
-                                Nilai</button>
+                                Riwayat Nilai</button>
                         </div>
                     </div>
 
@@ -415,9 +340,9 @@
                             </div>
                         </div>
                     </footer>
+                </main>
             </div>
         </div>
-        </main>
 </body>
 
 </html>
