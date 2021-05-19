@@ -267,13 +267,31 @@
                             <h2 class="text-2xl ">
                                 Update Informasi Data Diri
                             </h2>
-                            <p class="text-sm text-gray-500">
-                                Update Detail Data Diri
-                            </p>
+
                         </div>
 
-                        <div>
-                            <form id="form" novalidate>
+
+                        <form id="form" novalidate>
+                            <div>
+                                <div class="pt-8">
+                                    <p class="self-center bg-gray-50 py-4 px-4">
+                                        Identitas Diri
+                                    </p>
+                                </div>
+
+                                <div class="grid justify-items-stretch py-8">
+                                    <div class="justify-self-center object-center text-center text-white text-base px-4">
+                                        <div class="py-8 self-center">
+                                            <img id="showImage" class="w-52 rounded-full"
+                                                src="https://source.unsplash.com/random/350x350" alt="random image">
+                                        </div>
+                                        <div class="">
+                                        <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8"
+                                            href="#">Ganti Foto</button>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
                                     <p class="self-center text-gray-600">
                                         Nama Lengkap
@@ -281,8 +299,10 @@
                                     <div class="relative z-0 w-full mb-5">
                                         <input type="text" name="name" placeholder=" " required
                                             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                        <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">Name is required</span>
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
@@ -292,8 +312,9 @@
                                     <div class="relative z-0 w-full mb-5">
                                         <input type="text" name="name" placeholder=" " required
                                             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">Tempat Lahir is
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
                                             required</span>
                                     </div>
                                 </div>
@@ -305,8 +326,9 @@
                                         <input type="text" name="date" placeholder=" "
                                             onclick="this.setAttribute('type', 'date');"
                                             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">Tanggal Lahir is
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
                                             required</span>
                                     </div>
                                 </div>
@@ -340,8 +362,9 @@
                                     <div class="relative z-0 w-full mb-5">
                                         <input type="text" name="name" placeholder=" " required
                                             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">NIK/Passport is
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
                                             required</span>
                                     </div>
                                 </div>
@@ -352,244 +375,19 @@
                                     <div class="relative z-0 w-full mb-5">
                                         <input type="text" name="name" placeholder=" " required
                                             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">Golongan Darah is
-                                            required</span>
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
                                     <p class="self-center text-gray-600">
-                                        Alamat Rumah Asal
+                                        Nomor Telepon / Handphone
                                     </p>
                                     <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required
+                                        <input type="text" name="name" placeholder=" "
                                             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">Alamat Rumah Asal is
-                                            required</span>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        RT Asal
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required
-                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">RT is
-                                            required</span>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        RW Asal
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required
-                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">RW Asal is
-                                            required</span>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Kelurahan / Desa Asal
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required
-                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">This field is
-                                            required</span>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Propinsi Asal
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required
-                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">This field is
-                                            required</span>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Kabupaten Asal
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required
-                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">This field is
-                                            required</span>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Kecamatan Asal
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required
-                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">This field is
-                                            required</span>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Negara Asal
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">This field is
-                                            required</span>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Kode Pos Asal
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">This field is
-                                            required</span>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Pekerjaan Santri
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Alamat Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        RT Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        RW Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Kelurahan / Desa Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Propinsi Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Kabupaten Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Kecamatan Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Negara Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Kode Pos Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Telepon Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Fax Tempat Kerja
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Nomor Telepon
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
-                                    </div>
-                                </div>
-                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                                    <p class="self-center text-gray-600">
-                                        Nomor Handphone
-                                    </p>
-                                    <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " required
-                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
-                                        <span class="text-sm text-red-600 hidden" id="error">This field is
-                                            required</span>
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
@@ -599,7 +397,8 @@
                                     <div class="relative z-0 w-full mb-5">
                                         <input type="text" name="name" placeholder=" " required
                                             class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="password" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
                                         <span class="text-sm text-red-600 hidden" id="error">This field is
                                             required</span>
                                     </div>
@@ -609,8 +408,10 @@
                                         Website
                                     </p>
                                     <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
@@ -618,8 +419,10 @@
                                         Blog
                                     </p>
                                     <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
@@ -627,8 +430,10 @@
                                         Twitter
                                     </p>
                                     <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
@@ -636,8 +441,10 @@
                                         Facebook
                                     </p>
                                     <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
@@ -645,8 +452,10 @@
                                         instagram
                                     </p>
                                     <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                                     </div>
                                 </div>
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
@@ -654,11 +463,692 @@
                                         Linkdin
                                     </p>
                                     <div class="relative z-0 w-full mb-5">
-                                        <input type="text" name="name" placeholder=" " class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                                            <label for="pekerjaan" class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                                     </div>
                                 </div>
-<!--                                
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Scan Akta Kelahiran
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="pt-8">
+                                    <p class="self-center bg-gray-50 py-4 px-4">
+                                        Keterangan Tempat Tinggal Asal
+                                    </p>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Alamat Rumah
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        RT
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        RW
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kelurahan / Desa
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Propinsi
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                                            <option value="" selected disabled hidden></option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                        <label for="select"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                                            option (Required)</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">Option has to be
+                                            selected</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kabupaten
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                                            <option value="" selected disabled hidden></option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                        <label for="select"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                                            option (Required)</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">Option has to be
+                                            selected</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kecamatan
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                                            <option value="" selected disabled hidden></option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                        <label for="select"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                                            option (Required)</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">Option has to be
+                                            selected</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Negara
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kode Pos
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="pt-8">
+                                    <p class="self-center bg-gray-50 py-4 px-4">
+                                        Keterangan Pekerjaan
+                                    </p>
+                                </div>
+
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Pekerjaan Santri
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Alamat Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        RT Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        RW Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kelurahan / Desa Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 orig00">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Propinsi Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                                            <option value="" selected disabled hidden></option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                        <label for="select"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                                            option</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kabupaten Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                                            <option value="" selected disabled hidden></option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                        <label for="select"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                                            option</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kecamatan Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                                            <option value="" selected disabled hidden></option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                        <label for="select"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                                            option</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Negara Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kode Pos Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Telepon Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Fax Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        E-mail Tempat Kerja
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="pt-8">
+                                    <p class="self-center bg-gray-50 py-4 px-4">
+                                        Keterangan Orang Tua
+                                    </p>
+                                </div>
+                                <p class="self-center bg-gray-50 py-4 px-4">
+                                    Ayah
+                                </p>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Nama Lengkap
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Tempat Lahir
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Tanggal Lahir
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="date" placeholder=" "
+                                            onclick="this.setAttribute('type', 'date');"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Pekerjaan
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Pendidikan Terakhir
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Nomor Telepon / Handphone
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        E-mail
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+
+
+                                <div class="pt-8">
+                                    <p class="self-center bg-gray-50 py-4 px-4">
+                                        Ibu
+                                    </p>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Nama Lengkap
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Tempat Lahir
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Tanggal Lahir
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="date" placeholder=" "
+                                            onclick="this.setAttribute('type', 'date');"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Pekerjaan
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Pendidikan Terakhir
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Nomor Telepon / Handphone
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" "
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="pekerjaan"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        E-mail
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <div class="pt-8">
+                                    <p class="self-center bg-gray-50 py-4 px-4">
+                                        Keterangan Tempat Tinggal Orang Tua
+                                    </p>
+                                </div>
+
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Alamat Rumah
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        RT
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        RW
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kelurahan / Desa
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Propinsi
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                                            <option value="" selected disabled hidden></option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                        <label for="select"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                                            option (Required)</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">Option has to be
+                                            selected</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kabupaten
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                                            <option value="" selected disabled hidden></option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                        <label for="select"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                                            option (Required)</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">Option has to be
+                                            selected</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kecamatan
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <select name="select" value="" onclick="this.setAttribute('value', this.value);"
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none z-1 focus:outline-none focus:ring-0 focus:border-black border-gray-200">
+                                            <option value="" selected disabled hidden></option>
+                                            <option value="1">Option 1</option>
+                                            <option value="2">Option 2</option>
+                                            <option value="3">Option 3</option>
+                                            <option value="4">Option 4</option>
+                                            <option value="5">Option 5</option>
+                                        </select>
+                                        <label for="select"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Select an
+                                            option (Required)</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">Option has to be
+                                            selected</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Negara
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                                <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                                    <p class="self-center text-gray-600">
+                                        Kode Pos
+                                    </p>
+                                    <div class="relative z-0 w-full mb-5">
+                                        <input type="text" name="name" placeholder=" " required
+                                            class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                        <label for="password"
+                                            class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Required</label>
+                                        <span class="text-sm text-red-600 hidden" id="error">This field is
+                                            required</span>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!--                                
                                 <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
                                     <p class="self-center text-gray-600">
                                         Scan Akta Kelahiran
@@ -768,10 +1258,10 @@
                                 </button>
                             </form>
 -->
-                        </div>
 
 
-<!--
+
+                            <!--
                         <script>
                             'use strict'
 
@@ -798,21 +1288,21 @@
 -->
 
 
-                        <div class="flex space-x-6 p-4">
-                            <button
-                                class="border border-teal-500 text-teal-500 block rounded-sm py-3 px-8 flex items-center hover:bg-red-700 hover:text-white">
-                                <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                                    xmlns="http://www.w3.org/2000/svg">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M6 18L18 6M6 6l12 12"></path>
-                                </svg>
-                                Cancel
-                            </button>
-                            <button
-                                class="border border-teal-500 bg-blue-600 hover:bg-blue-800 text-white block rounded-sm py-3 px-8 ml-2 flex items-center">
-                                Save
-                            </button>
-                        </div>
+                            <div class="flex space-x-6 p-4">
+                                <button
+                                    class="border border-teal-500 text-teal-500 block rounded-sm py-3 px-8 flex items-center hover:bg-red-700 hover:text-white">
+                                    <svg class="w-6 h-6 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                    Cancel
+                                </button>
+                                <button
+                                    class="border border-teal-500 bg-blue-600 hover:bg-blue-800 text-white block rounded-sm py-3 px-8 ml-2 flex items-center">
+                                    Save
+                                </button>
+                            </div>
 
                     </div>
 
