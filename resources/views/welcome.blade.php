@@ -82,15 +82,15 @@
 
                 <!--NAME-->
                 <div class="text-center font-sans font-bold text-yellow-800 mt-3">
-                    <a class="text-1xl">MADRASAH DINIYYAH<br></a>
+                    <a class="text-base">MADRASAH DINIYYAH<br></a>
                     <a class="text-2xl">NURUL UMMAH<br></a>
-                    <a class="text-1xl tracking-widest">YOGYAKARTA</a>
+                    <a class="text-base tracking-widest">YOGYAKARTA</a>
                 </div>
             </div>
 
             <div class="font-bold text-yellow-600 text-right">
-                <a class="text-2xl">SISTEM INFORMASI AKADEMIK <br></a>
-                <a class="text-1xl tracking-widest">MDNU</a>
+                <a class="text-xl">SISTEM INFORMASI AKADEMIK <br></a>
+                <a class="text-base tracking-widest">M D N U</a>
             </div>
         </div>
     </nav>
@@ -171,10 +171,10 @@
         <div class="w-full container mx-auto flex items-center justify-between">
             <div class="flex-1 mx-8 py-8">
                 <div class="text-center">
-                    <a class="tracking-wide font-bold text-xl gray-800">Masuk untuk melihat informasi akademik anda</a><br>
+                    <a class="text-lg font-bold">Masuk untuk melihat informasi akademik anda</a><br>
                 </div>
-                <div class="text-center py-4">
-                    <button class="bg-blue-600 hover:bg-blue-800 text-white text-xl p-3 mt-1 rounded-lg py-3 px-8" href="#">Masuk</button>
+                <div class=" text-center text-white text-xl py-4">
+                    <button class="transform hover:scale-110 motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8" href="#">Masuk</button>
                 </div>
             </div>
         </div>

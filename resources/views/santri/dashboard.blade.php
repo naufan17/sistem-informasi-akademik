@@ -50,7 +50,7 @@
 
 <body class="work-sans leading-normal text-base tracking-normal">
 
-    <nav id="header" class="w-full z-30 top-0 py-1 bg-indigo-900">
+    <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
             <div class="flex space-x-4 py-5">
 
@@ -60,29 +60,29 @@
                 </div>
 
                 <!--NAME-->
-                <div class="text-center font-sans text-white mt-2">
-                    <a class="text-1xl">MADRASAH DINIYYAH<br></a>
-                    <a class="text-2xl font-bold">NURUL UMMAH<br></a>
-                    <a class="text-1xl tracking-widest">Y O G Y A K A R T A</a>
+                <div class="text-center font-bold font-sans text-yellow-800 mt-2">
+                    <a class="text-base">MADRASAH DINIYYAH</a><br>
+                    <a class="text-2xl font-bold">NURUL UMMAH</a><br>
+                    <a class="text-base tracking-widest">YOGYAKARTA</a>
                 </div>
             </div>
 
-            <div class=" text-white text-right">
-                <a class="text-2xl">SISTEM INFORMASI AKADEMIK <br></a>
-                <a class="text-1xl tracking-widest">MDNU</a>
+            <div class="font-bold text-yellow-600 text-right">
+                <a class="text-xl">SISTEM INFORMASI AKADEMIK <br></a>
+                <a class="text-base tracking-widest">M D N U</a>
             </div>
         </div>
     </nav>
 
     <div class="bg-gray-100 font-family-karla flex">
 
-        <aside class="relative bg-white h-screen w-64 hidden sm:block shadow-xl">
+        <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
 
             <nav class="font-semibold pt-3">
 
                 <div class="text-gray-900">
                     <div class="pt-6 px-6 mb-8">
-                        <div class="text-center bg-gray-100 rounded-lg shadow-xl">
+                        <div class="text-center bg-white rounded-lg shadow-xl">
                             <div class="px-6 py-6">
                                 <img src="https://source.unsplash.com/random/350x350" alt="random image" class="object-center rounded-full">
                             </div>
@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                    <a href="index.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                    <a href="data-diri.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                         <i class="fas fa-id-card-alt mr-3"></i>
                         Data Pribadi
                     </a>
@@ -113,21 +113,21 @@
                 </div>
 
                 <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                    <a href="forms.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                    <a href="riwayat-nilai.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                         <i class="fas fa-star mr-3"></i>
-                        Nilai Rata-rata
+                        Riwayat Nilai
                     </a>
                 </div>
 
                 <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                    <a href="tabs.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                    <a href="ustadz.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                         <i class="fas fa-address-book mr-3"></i>
                         Ustadz
                     </a>
                 </div>
 
                 <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                    <a href="calendar.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                    <a href="santri.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                         <i class="fas fa-address-book mr-3"></i>
                         Santri
                     </a>
@@ -198,12 +198,13 @@
             </header>
 
             <div class="overflow-x-hidden">
-                <main class="p-6">
+                <main class="pt-6 px-6">
                     <div class="flex px-24 py-8">
                         <div class="flex-1"></div>
 
                         <div class="flex-1 text-center">
-                            <h1 class="text-3xl text-gray-800 pb-6">SELAMAT DATANG DI XXXX</h1>
+                            <p class="text-xl text-gray-800">SELAMAT DATANG DI</p>
+                            <p class="text-4xl text-gray-800 pb-6">SIAKAD MDNU</p>
                             <img src="images/dasbor.png" class="py-8">
                             <h1 class="text-lg text-black pb-6">Mulai menjelajah untuk melihat informasi seputar akademik</h1>
                         </div>
@@ -329,91 +330,6 @@
             </div>
         </div>
         </main>
-
-        <!-- AlpineJS -->
-        <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
-        <!-- Font Awesome -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js" integrity="sha256-KzZiKy0DWYsnwMF+X1DvQngQ2/FxF7MF3Ff72XcpuPs=" crossorigin="anonymous"></script>
-        <!-- ChartJS -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js" integrity="sha256-R4pqcOYV8lt7snxMQO/HSbVCFRPMdrhAFMH+vr9giYI=" crossorigin="anonymous"></script>
-
-        <script>
-            var chartOne = document.getElementById('chartOne');
-            var myChart = new Chart(chartOne, {
-                type: 'bar',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
-                }
-            });
-
-            var chartTwo = document.getElementById('chartTwo');
-            var myLineChart = new Chart(chartTwo, {
-                type: 'line',
-                data: {
-                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-                    datasets: [{
-                        label: '# of Votes',
-                        data: [12, 19, 3, 5, 2, 3],
-                        backgroundColor: [
-                            'rgba(255, 99, 132, 0.2)',
-                            'rgba(54, 162, 235, 0.2)',
-                            'rgba(255, 206, 86, 0.2)',
-                            'rgba(75, 192, 192, 0.2)',
-                            'rgba(153, 102, 255, 0.2)',
-                            'rgba(255, 159, 64, 0.2)'
-                        ],
-                        borderColor: [
-                            'rgba(255, 99, 132, 1)',
-                            'rgba(54, 162, 235, 1)',
-                            'rgba(255, 206, 86, 1)',
-                            'rgba(75, 192, 192, 1)',
-                            'rgba(153, 102, 255, 1)',
-                            'rgba(255, 159, 64, 1)'
-                        ],
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        yAxes: [{
-                            ticks: {
-                                beginAtZero: true
-                            }
-                        }]
-                    }
-                }
-            });
-        </script>
     </div>
 
 
