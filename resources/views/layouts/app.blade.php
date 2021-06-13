@@ -55,7 +55,7 @@
     <!-- HEADER -->
     <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-            <div class="flex space-x-4 py-5">
+            <div class="flex space-x-4 py-3">
                 <!--LOGO-->
                 <div class="object-left">
                     <img src="images/logo.png" class="w-24">
@@ -137,37 +137,37 @@
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="data-diri.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                            <a href="/data-diri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                                 <i class="fas fa-id-card-alt mr-3"></i>
                                 Data Pribadi
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="mapel.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                            <a href="/mata-pelajaran" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                                 <i class="fas fa-book-open mr-3"></i>
                                 Mata Pelajaran
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="nilai.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                            <a href="/nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                                 <i class="fas fa-star-half-alt mr-3"></i>
                                 Nilai
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="riwayat-nilai.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                            <a href="/riwayat-nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                                 <i class="fas fa-star mr-3"></i>
                                 Riwayat Nilai
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="ustadz.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                            <a href="/ustadz" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                                 <i class="fas fa-address-book mr-3"></i>
                                 Ustadz
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="santri.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
+                            <a href="/santri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
                                 <i class="fas fa-address-book mr-3"></i>
                                 Santri
                             </a>
