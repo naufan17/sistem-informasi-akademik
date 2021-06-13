@@ -122,64 +122,7 @@
             <!-- </div>
         </nav> -->
         <main class="py-4">
-            <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex">
-                <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
-                    <nav class="font-semibold pt-3">
-                        <div class="text-gray-900">
-                            <div class="pt-6 px-6 mb-8">
-                                <div class="text-center bg-white rounded-lg shadow-xl">
-                                    <div class="px-6 py-6">
-                                        <img src="https://source.unsplash.com/random/350x350" alt="random image" class="object-center rounded-full">
-                                    </div>
-                                    <h4 class="pb-6 text-l font-semibold leading-tight truncate">Hai There!</h4>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/data-diri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-id-card-alt mr-3"></i>
-                                Data Pribadi
-                            </a>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/mata-pelajaran" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-book-open mr-3"></i>
-                                Mata Pelajaran
-                            </a>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-star-half-alt mr-3"></i>
-                                Nilai
-                            </a>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/riwayat-nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-star mr-3"></i>
-                                Riwayat Nilai
-                            </a>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/ustadz" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-address-book mr-3"></i>
-                                Ustadz
-                            </a>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/santri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-address-book mr-3"></i>
-                                Santri
-                            </a>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('logout') }}" method="POST" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-address-book mr-3"></i>
-                                Log Out
-                            </a>
-                        </div>
-                    </nav>
-                </aside>
                 <div class="w-full flex flex-col h-screen overflow-y-hidden">
                     <div class="overflow-x-hidden">
                         @yield('content')

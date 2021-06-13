@@ -22,27 +22,26 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-
-Route::get('/data-diri', function () {
-    return view('santri.data-diri');
-});    
-
-Route::get('/mata-pelajaran', function () {
-    return view('santri.mata-pelajaran');
-}); 
-
-Route::get('/nilai', function () {
-    return view('santri.nilai');
-}); 
-
-Route::get('/riwayat-nilai', function () {
-    return view('santri.riwayat-nilai');
-}); 
-
-Route::get('/ustadz', function () {
-    return view('santri.ustadz');
-}); 
-
-Route::get('/santri', function () {
-    return view('santri.santri');
-}); 
+Route::group(['middleware' => 'auth'], function () {
+    Route::get('/dashboard', function () {
+        return view('santri.dashboard');
+    }); 
+    Route::get('/data-diri', function () {
+        return view('santri.data-diri');
+    });    
+    Route::get('/mata-pelajaran', function () {
+        return view('santri.mata-pelajaran');
+    }); 
+    Route::get('/nilai', function () {
+        return view('santri.nilai');
+    }); 
+    Route::get('/riwayat-nilai', function () {
+        return view('santri.riwayat-nilai');
+    }); 
+    Route::get('/ustadz', function () {
+        return view('santri.ustadz');
+    }); 
+    Route::get('/santri', function () {
+        return view('santri.santri');
+    });
+});
