@@ -25,76 +25,29 @@
     
 </head>
 <body class="work-sans leading-normal text-base tracking-normal">
-    <!-- HEADER -->
-    <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
-        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-            <div class="flex space-x-4 py-3">
-                <!--LOGO-->
-                <div class="object-left">
-                    <img src="images/logo.png" class="w-24">
-                </div>
-                <!--NAME-->
-                <div class="text-center font-bold font-sans text-yellow-800 mt-2">
-                    <a class="text-base">MADRASAH DINIYYAH</a><br>
-                    <a class="text-2xl font-bold">NURUL UMMAH</a><br>
-                    <a class="text-base tracking-widest">YOGYAKARTA</a>
-                </div>
-            </div>
-            <div class="font-bold text-yellow-600 text-right">
-                <a class="text-xl">SISTEM INFORMASI AKADEMIK <br></a>
-                <a class="text-base tracking-widest">M D N U</a>
-            </div>
-        </div>
-    </nav>
     <div id="app">
-        <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
-            <div class="container">
-                <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
-                    <!-- Left Side Of Navbar -->
-                    <!-- <ul class="navbar-nav mr-auto">
-                    </ul> -->
-                    <!-- Right Side Of Navbar -->
-                    <!-- <ul class="navbar-nav ml-auto"> -->
-                        <!-- Authentication Links -->
-                        <!-- @guest
-                            @if (Route::has('login'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
-                                </li>
-                            @endif
-                            @if (Route::has('register'))
-                                <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
-                                </li>
-                            @endif
-                        @else
-                            <li class="nav-item dropdown">
-                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                    {{ Auth::user()->name }}
-                                </a>
-                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
-                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                        @csrf
-                                    </form>
-                                </div>
-                            </li>
-                        @endguest
-                    </ul>
-                </div>
-            </div>
-        </nav> -->
         <main class="py-4">
+            <!-- HEADER -->
+            <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
+                <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+                    <div class="flex space-x-4 py-2">
+                        <!--LOGO-->
+                        <div class="object-left">
+                            <img src="images/logo.png" class="w-24">
+                        </div>
+                        <!--NAME-->
+                        <div class="text-center font-bold font-sans text-yellow-800 mt-2">
+                            <a class="text-base">MADRASAH DINIYYAH</a><br>
+                            <a class="text-2xl font-bold">NURUL UMMAH</a><br>
+                            <a class="text-base tracking-widest">YOGYAKARTA</a>
+                        </div>
+                    </div>
+                    <div class="font-bold text-yellow-600 text-right">
+                        <a class="text-xl">SISTEM INFORMASI AKADEMIK <br></a>
+                        <a class="text-base tracking-widest">M D N U</a>
+                    </div>
+                </div>
+            </nav>
             <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex">
                 <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
@@ -162,6 +115,7 @@
                         </div>
                     </nav>
                 </aside>
+                <!-- Page Content -->
                 <div class="w-full flex flex-col h-screen overflow-y-hidden">
                     <div class="overflow-x-hidden">
                         @yield('content')
