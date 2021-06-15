@@ -2,6 +2,14 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Santri\DashboardController;
+use App\Http\Controllers\Santri\DataDiriController;
+use App\Http\Controllers\Santri\MataPelajaranController;
+use App\Http\Controllers\Santri\NilaiController;
+use App\Http\Controllers\Santri\RiwayatNilaiController;
+use App\Http\Controllers\Santri\SantriController;
+use App\Http\Controllers\Santri\UstadzController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,28 +28,12 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', function () {
-        return view('santri.dashboard');
-    }); 
-    Route::get('/data-diri', function () {
-        return view('santri.data-diri');
-    });    
-    Route::get('/mata-pelajaran', function () {
-        return view('santri.mata-pelajaran');
-    }); 
-    Route::get('/nilai', function () {
-        return view('santri.nilai');
-    }); 
-    Route::get('/riwayat-nilai', function () {
-        return view('santri.riwayat-nilai');
-    }); 
-    Route::get('/ustadz', function () {
-        return view('santri.ustadz');
-    }); 
-    Route::get('/santri', function () {
-        return view('santri.santri');
-    });
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/data-diri', [DataDiriController::class, 'index'])->name('data-diri');
+    Route::get('/mata-pelajaran', [MataPelajaranController::class, 'index'])->name('mata-pelajaran');
+    Route::get('/nilai', [NilaiController::class, 'index'])->name('nilai');
+    Route::get('/riwayat-nilai', [RiwayatNilaiController::class, 'index'])->name('riwayat-nilai');
+    Route::get('/ustadz', [UstadzController::class, 'index'])->name('ustadz');
+    Route::get('/santri', [SantriController::class, 'index'])->name('santri');
 });
