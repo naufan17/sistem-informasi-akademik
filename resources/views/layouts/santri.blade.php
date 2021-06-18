@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -22,15 +23,16 @@
 
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    
+
 </head>
+
 <body class="work-sans leading-normal text-base tracking-normal">
     <div id="app">
-        <main class="py-4">
+        <main>
             <!-- HEADER -->
-            <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
+            <nav id="header" class="w-full bg-white border-b-2">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-                    <div class="flex space-x-4 py-2">
+                    <div class="flex space-x-4 py-6">
                         <!--LOGO-->
                         <div class="object-left">
                             <img src="images/logo.png" class="w-24">
@@ -62,57 +64,54 @@
                                 </div>
                             </div>
                         </div>
+
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle text-gray-800 group-hover:text-white flex items-center py-4 pl-6" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }}
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('logout') }}"
-                                    onclick="event.preventDefault();
-                                                    document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                    @csrf
-                                </form>
-                            </div>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/data-diri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-id-card-alt mr-3"></i>
+                            <a href="/data-diri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+
                                 Data Pribadi
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/mata-pelajaran" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-book-open mr-3"></i>
+                            <a href="/mata-pelajaran" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+
                                 Mata Pelajaran
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-star-half-alt mr-3"></i>
+                            <a href="/nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+
                                 Nilai
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/riwayat-nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-star mr-3"></i>
+                            <a href="/riwayat-nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+
                                 Riwayat Nilai
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/ustadz" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-address-book mr-3"></i>
+                            <a href="/ustadz" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+
                                 Ustadz
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/santri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-address-book mr-3"></i>
+                            <a href="/santri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+
                                 Santri
                             </a>
                         </div>
+
+                        
+                        <button class="w-full bg-blue-600 hover:bg-blue-800 cta-btn font-semibold justify-center ">
+                            <a class="text-white items-center py-4 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">{{ __('Logout') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                            </form>
+                        </button>
+
                     </nav>
                 </aside>
                 <!-- Page Content -->
@@ -125,4 +124,5 @@
         </main>
     </div>
 </body>
+
 </html>
