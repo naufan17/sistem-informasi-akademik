@@ -50,6 +50,7 @@
                     </div>
                 </div>
             </nav>
+            
             <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex">
                 <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
