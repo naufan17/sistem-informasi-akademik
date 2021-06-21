@@ -3,13 +3,14 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\HomeController;
-use App\Http\Controllers\Santri\DashboardController;
+use App\Http\Controllers\Santri\DashboardSantriController;
 use App\Http\Controllers\Santri\DataDiriController;
 use App\Http\Controllers\Santri\MataPelajaranController;
 use App\Http\Controllers\Santri\NilaiController;
 use App\Http\Controllers\Santri\RiwayatNilaiController;
 use App\Http\Controllers\Santri\SantriController;
 use App\Http\Controllers\Santri\UstadzController;
+use App\Http\Controllers\Ustadz\DashboardUstadzController;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,11 +30,15 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-    Route::get('/data-diri', [DataDiriController::class, 'index'])->name('data-diri');
-    Route::get('/mata-pelajaran', [MataPelajaranController::class, 'index'])->name('mata-pelajaran');
-    Route::get('/nilai', [NilaiController::class, 'index'])->name('nilai');
-    Route::get('/riwayat-nilai', [RiwayatNilaiController::class, 'index'])->name('riwayat-nilai');
-    Route::get('/ustadz', [UstadzController::class, 'index'])->name('ustadz');
+    Route::get('/santri/dashboard', [DashboardSantriController::class, 'index'])->name('santri.dashboard');
+    Route::get('/santri/data-diri', [DataDiriController::class, 'index'])->name('santri.data-diri');
+    Route::get('/santri/mata-pelajaran', [MataPelajaranController::class, 'index'])->name('santri.mata-pelajaran');
+    Route::get('/santri/nilai', [NilaiController::class, 'index'])->name('santri.nilai');
+    Route::get('/santri/riwayat-nilai', [RiwayatNilaiController::class, 'index'])->name('santri.riwayat-nilai');
+    Route::get('/santri/ustadz', [UstadzController::class, 'index'])->name('santri.ustadz');
     Route::get('/santri', [SantriController::class, 'index'])->name('santri');
+});
+
+Route::group(['middleware' => 'checkRole:ustadz'], function () {
+    Route::get('/ustadz/dashboard', [DashboardUstadzController::class, 'index'])->name('ustadz.dashboard');
 });

@@ -1,4 +1,4 @@
-@extends('layouts.santri')
+@extends('layouts.ustadz')
 
 @section('content')
 
@@ -16,12 +16,10 @@
                 <div class="flex-1"></div>
             </div>
         </main>
-
         <!-- FOOTER -->
         <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
             <div class="container flex px-6 py-8 ">
                 <div class="w-full mx-auto flex flex-wrap">
-
                     <div class="text-left flex w-full lg:w-1/2 ">
                         <div class="px-3 md:px-0">
                             <h3 class="font-bold text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
@@ -30,7 +28,6 @@
                             <a class="inline-block no-underline hover:text-black hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
                         </div>
                     </div>
-
                     <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
                         <div class="px-3 md:px-0">
                             <h3 class="font-bold text-gray-900">Media Sosial</h3>
@@ -41,16 +38,13 @@
                                     <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
                                     <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Twitter</a>
                                     <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a>
-                                    
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </footer>
-
     </div>
 </div>
 

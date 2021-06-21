@@ -10,25 +10,17 @@
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
                 <div class="flex space-x-4 items-center pb-4">
-                    <!--FLEX 1-->
-                    <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
                     <div class="flex-none w-36">
                         <a class="self-center">Tahun Ajaran</a>
                     </div>
-                    <!--FLEX 2-->
-                    <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
                     <div class="flex-none md:w-1/5">
                         <div class="relative">
-                            <div
-                                class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
+                            <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
                                 <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                 </svg>
                             </div>
-                            <select
-                                class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
-                                id="grid-state">
+                            <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
                                 <option>2021/2022</option>
                                 <option>2020/2021</option>
                                 <option>2019/2020</option>
@@ -37,25 +29,18 @@
                     </div>
                 </div>
                 <div class="flex space-x-4 items-center pb-8">
-                    <!--FLEX 1-->
-                    <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
                     <div class="flex-none w-36">
                         <a class="self-center">Semester</a>
                     </div>
-                    <!--FLEX 2-->
-                    <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
                     <div class="flex-none md:w-1/5">
                         <div class="relative">
                             <div
                                 class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
                                 <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path
-                                        d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                 </svg>
                             </div>
-                            <select
-                                class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded"
-                                id="grid-state">
+                            <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
                                 <option>Ganjil</option>
                                 <option>Genap</option>
                             </select>
@@ -159,12 +144,10 @@
                 </div>
             </div>
         </main>
-
         <!-- FOOTER -->
         <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
             <div class="container flex px-6 py-8 ">
                 <div class="w-full mx-auto flex flex-wrap">
-
                     <div class="text-left flex w-full lg:w-1/2 ">
                         <div class="px-3 md:px-0">
                             <h3 class="font-bold text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
@@ -173,7 +156,6 @@
                             <a class="inline-block no-underline hover:text-black hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
                         </div>
                     </div>
-
                     <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
                         <div class="px-3 md:px-0">
                             <h3 class="font-bold text-gray-900">Media Sosial</h3>
@@ -183,17 +165,14 @@
                                     <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">YouTube</a>
                                     <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
                                     <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Twitter</a>
-                                    <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a>
-                                    
+                                    <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a> 
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </footer>
-
     </div>
 </div>
 

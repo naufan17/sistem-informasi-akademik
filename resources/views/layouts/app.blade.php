@@ -26,7 +26,7 @@
 </head>
 <body class="work-sans leading-normal text-base tracking-normal">
     <div id="app">
-        <main class="py-4">
+        <main>
             <!-- HEADER -->
             <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between p-8">

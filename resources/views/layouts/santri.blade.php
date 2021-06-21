@@ -50,7 +50,6 @@
                     </div>
                 </div>
             </nav>
-            
             <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex">
                 <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
@@ -65,45 +64,36 @@
                                 </div>
                             </div>
                         </div>
-
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/data-diri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-
+                            <a href="{{ route('santri.data-diri') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Data Pribadi
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/mata-pelajaran" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-
+                            <a href="{{ route('santri.mata-pelajaran') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Mata Pelajaran
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-
+                            <a href="{{ route('santri.nilai') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Nilai
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/riwayat-nilai" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-
+                            <a href="{{ route('santri.riwayat-nilai') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Riwayat Nilai
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/ustadz" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-
+                            <a href="{{ route('santri.ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Ustadz
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="/santri" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-
+                            <a href="{{ route('santri') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Santri
                             </a>
                         </div>
-
-                        
                         <button class="w-full bg-blue-600 hover:bg-blue-800 cta-btn font-semibold justify-center ">
                             <a class="text-white items-center py-4 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}

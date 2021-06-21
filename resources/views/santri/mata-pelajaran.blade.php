@@ -99,7 +99,6 @@
                 </div>
             </div>
         </main>
-
         <!-- FOOTER -->
         <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
             <div class="container flex px-6 py-8 ">
@@ -124,16 +123,13 @@
                                     <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
                                     <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Twitter</a>
                                     <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a>
-                                    
                                 </li>
                             </ul>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </footer>
-
     </div>
 </div>
 

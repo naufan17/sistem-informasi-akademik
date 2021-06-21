@@ -3,23 +3,14 @@
 @section('content')
 
 <div class="w-full flex flex-col h-screen overflow-y-hidden">
-
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
             <h1 class="text-3xl text-black pb-2 mt-2">Input Nilai</h1>
-
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
-
-                <!-- OPTION -->
-                <!--FLEX 1-->
-                <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
                 <div class="flex space-x-4 items-center pb-8">
                     <div class="flex-none w-36">
                         <a class="self-center">Kelas</a>
                     </div>
-
-                    <!--FLEX 2-->
-                    <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
                     <div class="flex-none md:w-1/5">
                         <div class="relative">
                             <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
@@ -33,19 +24,14 @@
                                 <option>2 Wustho</option>
                                 <option>1 Ulya</option>
                                 <option>2 Ulya</option>
-
                             </select>
                         </div>
                     </div>
                 </div>
-
                 <div class="flex space-x-4 items-center pb-8">
                     <div class="flex-none w-36">
                         <a class="self-center">Mapel</a>
                     </div>
-
-                    <!--FLEX 2-->
-                    <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
                     <div class="flex-none md:w-1/5">
                         <div class="relative">
                             <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
@@ -59,18 +45,10 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="flex space-x-4 items-center pb-8">
-
-                    <!--FLEX 1-->
-                    <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
                     <div class="flex-none w-36">
                         <a class="self-center">Semester</a>
                     </div>
-
-                    <!--FLEX 2-->
-                    <!--SET F-NONE AGAR TERKUNCI DAN SET W U/ PANJANG BOXNYA-->
                     <div class="flex-none md:w-1/5">
                         <div class="relative">
                             <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
@@ -84,18 +62,13 @@
                             </select>
                         </div>
                     </div>
-
-                    <!--FLEX 3-->
                     <div class="object-left text-center text-white text-base">
                         <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Lihat</button>
                     </div>
-
                 </div>
-
                 <p class="text-xl py-8 flex items-center">
                     Inputkan Nilai Ke Santri
                 </p>
-
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
@@ -141,7 +114,6 @@
                                 </td>
                                 <td class="text-left py-3 px-4"><a>-</a></td>
                             </tr>
-
                             <tr class="bg-gray-200">
                                 <td class="text-left py-3 px-4">2</td>
                                 <td class="text-left py-3 px-4">0002</td>
@@ -169,7 +141,6 @@
                                 </td>
                                 <td class="text-left py-3 px-4"><a>-</a></td>
                             </tr>
-
                             <tr>
                                 <td class="text-left py-3 px-4">3</td>
                                 <td class="text-left py-3 px-4">0003</td>
@@ -197,7 +168,6 @@
                                 </td>
                                 <td class="text-left py-3 px-4"><a>-</a></td>
                             </tr>
-
                             <tr class="bg-gray-200">
                                 <td class="text-left py-3 px-4">4</td>
                                 <td class="text-left py-3 px-4">0004</td>
@@ -227,8 +197,6 @@
                             </tr>
                         </tbody>
                     </table>
-
-                    <!--KETERANGAN TAMBAHAN-->
                     <div class="bg-white overflow-auto py-8">
                         <table class="table-auto bg-white py-4">
                             <tbody class="text-gray-700">
@@ -239,7 +207,6 @@
                             </tbody>
                         </table>
                     </div>
-
                     <p class="text-xl flex items-center py-8">
                         Catatan Untuk Santri
                     </p>
@@ -302,7 +269,6 @@
                             </tbody>
                         </table>
                     </div>
-
                 </div>
                 <div class="flex space-x-6 p-4">
                     <button class="border border-teal-500 text-teal-500 block rounded-sm py-3 px-8 flex items-center hover:bg-red-700 hover:text-white">
@@ -316,7 +282,6 @@
                     </button>
                 </div>
             </div>
-
             <!-- FOOTER -->
             <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
                 <div class="container flex px-6 py-8 ">
@@ -330,7 +295,6 @@
                                 <a class="inline-block no-underline hover:text-black hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
                             </div>
                         </div>
-
                         <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
                             <div class="px-3 md:px-0">
                                 <h3 class="font-bold text-gray-900">Media Sosial</h3>
@@ -341,19 +305,15 @@
                                         <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
                                         <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Twitter</a>
                                         <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a>
-
                                     </li>
                                 </ul>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </footer>
-
         </main>
     </div>
 </div>
-
 
 @endsection
