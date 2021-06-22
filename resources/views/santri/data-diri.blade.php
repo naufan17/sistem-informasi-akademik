@@ -9,8 +9,9 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Data Diri</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <div class="flex object-left text-center text-white text-base p-4">
-                    <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Update
-                        Profile</button>
+                    <a href="{{ route('santri.update-data-diri') }}" class="button bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">
+                        Update Profile
+                    </a>
                 </div>
                 <div class="p-4">
                     <h2 class="text-2xl ">
@@ -93,7 +94,7 @@
                             18106050033@student.uin-suka.ac.id
                         </p>
                     </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+                    <!-- <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">
                             Website
                         </p>
@@ -157,7 +158,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                 </div>
                 <div>
                     <div class="pt-8">
@@ -170,10 +171,7 @@
                             Alamat Rumah
                         </p>
                         <p>
-                            Palembang Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima
-                            voluptates, saepe molestiae omnis eligendi culpa officiis fugit quae suscipit
-                            laboriosam perspiciatis consequuntur in beatae quisquam? Nemo velit placeat
-                            laudantium natus.
+                            Palembang
                         </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
@@ -202,10 +200,10 @@
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">
-                            Propinsi
+                            Kapanewon
                         </p>
                         <p>
-                            Sumatera Selatan
+                            Muara Sugihan
                         </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
@@ -218,13 +216,13 @@
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">
-                            Kecamatan
+                            Provinsi
                         </p>
                         <p>
-                            Muara Sugihan
+                            Sumatera Selatan
                         </p>
                     </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+                    <!-- <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">
                             Negara
                         </p>
@@ -239,9 +237,9 @@
                         <p>
                             00000
                         </p>
-                    </div>
+                    </div> -->
                 </div>
-                <div>
+                <!-- <div>
                     <div class="pt-8">
                         <p class="self-center bg-gray-50 py-4 px-4">
                             Keterangan Pekerjaan
@@ -353,8 +351,8 @@
                             -
                         </p>
                     </div>
-                </div>
-                <div>
+                </div> -->
+                <!-- <div>
                     <div class="pt-8">
                         <p class="self-center bg-gray-50 py-4 px-4">
                             Keterangan Orang Tua
@@ -480,8 +478,8 @@
                             ajhdb@gmail.com
                         </p>
                     </div>
-                </div>
-                <div>
+                </div> -->
+                <!-- <div>
                     <div class="pt-8">
                         <p class="self-center bg-gray-50 py-4 px-4">
                             Keterangan Tempat Tinggal Orang Tua
@@ -562,11 +560,7 @@
                             00000
                         </p>
                     </div>
-                </div>
-                <div class="flex object-left text-center text-white text-base py-8 px-4">
-                    <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Update
-                        Profile</button>
-                </div>
+                </div> -->
             </div>
         </main>
     </div>

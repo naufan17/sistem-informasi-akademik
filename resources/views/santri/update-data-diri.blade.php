@@ -9,18 +9,12 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Data Diri</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <div class="p-4">
-                    <button
-                        class="flex items-center border border-teal-500 text-teal-500 block rounded-sm py-3 px-6 w-32 hover:bg-blue-700 hover:text-white">
-                        <svg class="h-5 w-5 mr-3 fill-current" version="1.1" id="Layer_1"
-                            xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-                            x="0px" y="0px" viewBox="-49 141 512 512"
-                            style="enable-background:new -49 141 512 512;" xml:space="preserve">
-                            <path id="XMLID_10_"
-                                d="M438,372H36.355l72.822-72.822c9.763-9.763,9.763-25.592,0-35.355c-9.763-9.764-25.593-9.762-35.355,0 l-115.5,115.5C-46.366,384.01-49,390.369-49,397s2.634,12.989,7.322,17.678l115.5,115.5c9.763,9.762,25.593,9.763,35.355,0 c9.763-9.763,9.763-25.592,0-35.355L36.355,422H438c13.808,0,25-11.193,25-25S451.808,372,438,372z">
-                            </path>
+                    <a href="{{ route('santri.data-diri') }}" class="button flex items-center border border-teal-500 text-teal-500 block rounded-sm py-3 px-6 w-32 hover:bg-blue-700 hover:text-white">
+                        <svg class="h-5 w-5 mr-3 fill-current" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="-49 141 512 512" style="enable-background:new -49 141 512 512;" xml:space="preserve">
+                            <path id="XMLID_10_" d="M438,372H36.355l72.822-72.822c9.763-9.763,9.763-25.592,0-35.355c-9.763-9.764-25.593-9.762-35.355,0 l-115.5,115.5C-46.366,384.01-49,390.369-49,397s2.634,12.989,7.322,17.678l115.5,115.5c9.763,9.762,25.593,9.763,35.355,0 c9.763-9.763,9.763-25.592,0-35.355L36.355,422H438c13.808,0,25-11.193,25-25S451.808,372,438,372z"></path>
                         </svg>
                         Back
-                    </button>
+                    </a>
                 </div>
                 <div class="p-4">
                     <h2 class="text-2xl ">
@@ -157,7 +151,7 @@
                                     required</span>
                             </div>
                         </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                        <!-- <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
                             <p class="self-center text-gray-600">
                                 Website
                             </p>
@@ -233,7 +227,7 @@
                                 <label for="pekerjaan"
                                     class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                     <div>
                         <div class="pt-8">
@@ -295,7 +289,7 @@
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
                             <p class="self-center text-gray-600">
-                                Propinsi
+                                Kapanewon
                             </p>
                             <div class="relative z-0 w-full mb-5">
                                 <select name="select" value="" onclick="this.setAttribute('value', this.value);"
@@ -337,7 +331,7 @@
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
                             <p class="self-center text-gray-600">
-                                Kecamatan
+                                Provinsi
                             </p>
                             <div class="relative z-0 w-full mb-5">
                                 <select name="select" value="" onclick="this.setAttribute('value', this.value);"
@@ -356,7 +350,7 @@
                                     selected</span>
                             </div>
                         </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                        <!-- <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
                             <p class="self-center text-gray-600">
                                 Negara
                             </p>
@@ -382,8 +376,8 @@
                                     required</span>
                             </div>
                         </div>
-                    </div>
-                    <div>
+                    </div> -->
+                    <!-- <div>
                         <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">
                                 Keterangan Pekerjaan
@@ -556,8 +550,8 @@
                                     class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                             </div>
                         </div>
-                    </div>
-                    <div>
+                    </div> -->
+                    <!-- <div>
                         <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">
                                 Keterangan Orang Tua
@@ -743,8 +737,8 @@
                                     class="absolute duration-300 top-3 -z-1 origin-0 text-gray-500">Optional</label>
                             </div>
                         </div>
-                    </div>
-                    <div>
+                    </div> -->
+                    <!-- <div>
                         <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">
                                 Keterangan Tempat Tinggal Orang Tua
@@ -891,7 +885,7 @@
                                     required</span>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <div class="flex space-x-6 p-4">
                         <button
                             class="border border-teal-500 text-teal-500 block rounded-sm py-3 px-8 flex items-center hover:bg-red-700 hover:text-white">

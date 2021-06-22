@@ -16,4 +16,9 @@ class DataDiriController extends Controller
     {
         return view('santri.data-diri');
     }
+
+    public function formUpdate()
+    {
+        return view('santri.update-data-diri');
+    }
 }

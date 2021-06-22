@@ -48,30 +48,14 @@
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
+                            @foreach($ustadzs as $ustadz)
                             <tr>
-                                <td class="text-left py-3 px-4">1</td>
-                                <td class="text-left py-3 px-4"><a></a>0001</a></td>
-                                <td class="text-left py-3 px-4"><a>si A</a></td>
-                                <td class="text-left py-3 px-4">Aktif Mengajar</td>
+                                <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-left py-3 px-4">{{ $ustadz->id }}</td>
+                                <td class="text-left py-3 px-4">{{ $ustadz->name }}</td>
+                                <td class="text-left py-3 px-4">{{ $ustadz->status }}</td>
                             </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">2</td>
-                                <td class="text-left py-3 px-4"><a>0002</a></td>
-                                <td class="text-left py-3 px-4"><a>si B</a></td>
-                                <td class="text-left py-3 px-4">Aktif Mengajar</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left py-3 px-4">3</td>
-                                <td class="text-left py-3 px-4"><a>0003</a></td>
-                                <td class="text-left py-3 px-4"><a>si C</a></td>
-                                <td class="text-left py-3 px-4">Aktif Mengajar</td>
-                            </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">4</td>
-                                <td class="text-left py-3 px-4"><a>0004</a></td>
-                                <td class="text-left py-3 px-4"><a>si D</a></td>
-                                <td class="text-left py-3 px-4">Aktif Mengajar</td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

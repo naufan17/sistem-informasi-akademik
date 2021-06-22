@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class UstadzController extends Controller
 {
@@ -14,6 +15,8 @@ class UstadzController extends Controller
      */
     public function index()
     {
-        return view('santri.ustadz');
+        $ustadzs = User::where('role', 'ustadz')->get();
+
+        return view('santri.ustadz', compact('ustadzs'));
     }
 }

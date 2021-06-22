@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class SantriController extends Controller
 {
@@ -14,6 +15,8 @@ class SantriController extends Controller
      */
     public function index()
     {
-        return view('santri.santri');
+        $santris = User::where('role', 'santri')->get();
+
+        return view('santri.santri', compact('santris'));
     }
 }
