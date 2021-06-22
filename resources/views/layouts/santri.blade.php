@@ -52,7 +52,7 @@
             </nav>
             <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex">
-                <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
+                <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block">
                     <nav class="font-semibold pt-3">
                         <div class="text-gray-900">
                             <div class="pt-6 px-6 mb-8">
@@ -102,7 +102,6 @@
                                 @csrf
                             </form>
                         </button>
-
                     </nav>
                 </aside>
                 <!-- Page Content -->
@@ -112,6 +111,35 @@
                     </div>
                 </div>
             </div>
+            <!-- FOOTER -->
+            <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+                <div class="container flex px-6 py-8 ">
+                    <div class="w-full mx-auto flex flex-wrap">
+                        <div class="text-left flex w-full lg:w-1/2 ">
+                            <div class="px-3 md:px-0">
+                                <h3 class="font-bold text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
+                                <a class="inline-block no-underline hover:text-black hover:underline pt-4" href="tel:+62 857 2565 5593">Telp. 0857 2565 5593</a><br>
+                                <a class="inline-block no-underline hover:text-black hover:underline" href="https://web.whatsapp.com/send?phone=6285725655593&text=Assalamualaikum%20Admin">WhatsApp. 0857 2565 5593</a><br>
+                                <a class="inline-block no-underline hover:text-black hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
+                            <div class="px-3 md:px-0">
+                                <h3 class="font-bold text-gray-900">Media Sosial</h3>
+                                <ul class="list-reset items-center pt-4">
+                                    <li>
+                                        <a class="inline-block no-underline hover:text-black hover:underline py-1" href="https://instagram.com/nurulummahyk?igshid=1m74irp80dl0v">Instagram</a>
+                                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">YouTube</a>
+                                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
+                                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Twitter</a>
+                                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
         </main>
     </div>
 </body>

@@ -18,10 +18,8 @@ class CheckRole
     {
         if(auth()->user()->role == 'ustadz'){
             return $next($request);
+        }else{
+            return redirect('/santri/dashboard');
         }
-   
-        return redirect('/')->with('error',"Only admin can access!");
-
-        // return $next($request);
     }
 }
