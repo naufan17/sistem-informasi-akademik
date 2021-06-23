@@ -37,7 +37,7 @@
                             <label for="role" class="col-md-4 col-form-label text-md-right">{{ __('Role') }}</label>
                             <div class="col-md-6">
                                 <!-- <input id="role" type="text" class="form-control" name="role" value="" required autocomplete="role"> -->
-                                <select id="role" type="texnt" class="form-select @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" aria-label=".form-select-lg example" required autocomplete="role">
+                                <select id="role" type="text" class="form-select @error('role') is-invalid @enderror" name="role" value="{{ old('role') }}" aria-label=".form-select-lg example" required autocomplete="role">
                                     <option selected>Pilih Santri atau Ustadz</option>
                                     <option value="Santri">Santri</option>
                                     <option value="Ustadz">Ustadz</option>

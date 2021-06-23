@@ -78,7 +78,7 @@
                                 <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
                                 <td class="text-left py-3 px-4">{{ $santri->id }}</td>
                                 <td class="text-left py-3 px-4">{{ $santri->name }}</td>
-                                <td class="text-left py-3 px-4">{{ $ustadz->status }}</td>
+                                <td class="text-left py-3 px-4">{{ $santri->status }}</td>
                             </tr>
                             @endforeach
                         </tbody>

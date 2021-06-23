@@ -23,38 +23,16 @@
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
+                            @foreach($mapels as $mapel)
                             <tr>
-                                <td class="text-left py-3 px-4">1</td>
-                                <td class="text-left py-3 px-4">MP-01</td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500" >Tafsir</a></td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500 italic" >Tafsir Ayyat Al-Ahkam Juz 1</a></td>
-                                <td class="text-left py-3 px-4">Selasa, 19.00-19.45</td>
+                                <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-left py-3 px-4">{{ $mapel->id }}</td>
+                                <td class="text-left py-3 px-4">{{ $mapel->matkul }}</td>
+                                <td class="text-left py-3 px-4">{{ $mapel->kelas }}</td>
+                                <td class="text-left py-3 px-4">{{ $mapel->jadwal }}</td>    
                                 <td class="text-left py-3 px-4">Salman Hadi</td>
                             </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">2</td>
-                                <td class="text-left py-3 px-4">MP-02</td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500">Fiqih</a></td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500 italic">Fath Al-Mu'in</a></td>
-                                <td class="text-left py-3 px-4">Selasa, 19.00-19.45</td>
-                                <td class="text-left py-3 px-4">Muhammad Roudak</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left py-3 px-4">3</td>
-                                <td class="text-left py-3 px-4">MP-03</td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500">Nahwu</a></td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500 italic">Al-Qawa'id Al-Asasiyyah fi 'Al-Lughoh Al-'Arabiyyah</a></td>
-                                <td class="text-left py-3 px-4">Selasa, 19.00-19.45</td>
-                                <td class="text-left py-3 px-4">Ainun Najib</td>
-                            </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">4</td>
-                                <td class="text-left py-3 px-4">MP-04</td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500">Hadits</a></td>
-                                <td class="text-left py-3 px-4"><a class="hover:text-blue-500 italic">Nail Al-Maram Juz 1</a></td>
-                                <td class="text-left py-3 px-4">Selasa, 19.00-19.45</td>
-                                <td class="text-left py-3 px-4">Mufti. M</td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
