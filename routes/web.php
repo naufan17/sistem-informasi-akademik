@@ -11,6 +11,7 @@ use App\Http\Controllers\Santri\RiwayatNilaiController;
 use App\Http\Controllers\Santri\SantriController;
 use App\Http\Controllers\Santri\UstadzController;
 use App\Http\Controllers\Ustadz\DashboardUstadzController;
+use App\Http\Controllers\Ustadz\InputNilaiController;
 
 /*
 |--------------------------------------------------------------------------
@@ -42,4 +43,5 @@ Route::group(['middleware' => 'auth'], function () {
 
 Route::group(['middleware' => 'checkRole:ustadz'], function () {
     Route::get('/ustadz/dashboard', [DashboardUstadzController::class, 'index'])->name('ustadz.dashboard');
+    Route::get('/ustadz/input-nilai', [InputNilaiController::class, 'index'])->name('ustadz.input-nilai');
 });
