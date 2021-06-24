@@ -19,18 +19,20 @@
                                 <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Nama MP</th>
                                 <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nama Kitab</th>
                                 <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Jadwal</th>
+                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
                                 <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nama Ustadz</td>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
-                            @foreach($mapels as $mapel)
+                            @foreach($courses as $course)
                             <tr>
                                 <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-left py-3 px-4">{{ $mapel->id }}</td>
-                                <td class="text-left py-3 px-4">{{ $mapel->matkul }}</td>
-                                <td class="text-left py-3 px-4">{{ $mapel->kelas }}</td>
-                                <td class="text-left py-3 px-4">{{ $mapel->jadwal }}</td>    
-                                <td class="text-left py-3 px-4">Salman Hadi</td>
+                                <td class="text-left py-3 px-4">{{ $course->id }}</td>
+                                <td class="text-left py-3 px-4">{{ $course->course }}</td>
+                                <td class="text-left py-3 px-4">{{ $course->grade }}</td>
+                                <td class="text-left py-3 px-4">{{ $course->schedule }}</td>
+                                <td class="text-left py-3 px-4">{{ $course->semester }}</td>   
+                                <td class="text-left py-3 px-4">{{ $course->name }}</td>
                             </tr>
                             @endforeach
                         </tbody>

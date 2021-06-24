@@ -4,7 +4,8 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Mapel;
+use App\Models\Course;
+use App\Models\User;
 
 class MataPelajaranController extends Controller
 {
@@ -15,8 +16,8 @@ class MataPelajaranController extends Controller
      */
     public function index()
     {
-        $mapels = Mapel::all();
+        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->get();
 
-        return view('santri.mata-pelajaran', compact('mapels'));
+        return view('santri.mata-pelajaran', compact('courses'));
     }
 }
