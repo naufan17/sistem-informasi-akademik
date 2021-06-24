@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Santri;
+namespace App\Http\Controllers\Ustadz;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -17,6 +17,6 @@ class SantriController extends Controller
     {
         $santris = User::where('role', 'santri')->get();
 
-        return view('santri.santri', compact('santris'));
+        return view('ustadz.santri', compact('santris'));
     }
 }

@@ -68,8 +68,8 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('santri.mata-pelajaran') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-                                Mata Pelajaran
+                            <a href="{{ route('santri.kelas') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                                Kelas
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
@@ -83,13 +83,13 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('santri.ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-                                Ustadz
+                            <a href="" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                                Absensi
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('santri') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-                                Santri
+                            <a href="{{ route('santri.ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                                Ustadz
                             </a>
                         </div>
                         <button class="w-full bg-blue-600 hover:bg-blue-800 cta-btn font-semibold justify-center ">

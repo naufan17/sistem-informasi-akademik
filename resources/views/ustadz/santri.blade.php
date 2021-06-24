@@ -1,4 +1,4 @@
-@extends('layouts.santri')
+@extends('layouts.ustadz')
 
 @section('content')
 
@@ -65,11 +65,10 @@
                             <tr>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
                                 <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">NIS</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nama
-                                    Santri
-                                </th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Status
-                                </th>
+                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nama Santri</th>
+                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Status</th>
+                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nilai</th>
+                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Absensi</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">

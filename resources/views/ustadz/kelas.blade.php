@@ -1,4 +1,4 @@
-@extends('layouts.santri')
+@extends('layouts.ustadz')
 
 @section('content')
 
@@ -16,8 +16,9 @@
                             <tr>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
                                 <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Kode MP</th>
-                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Nama MP</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nama Kitab</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Mata pelajaran</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Kitab</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Kelas</th>
                                 <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Jadwal</th>
                                 <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
                                 <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nama Ustadz</td>
@@ -29,6 +30,7 @@
                                 <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->id }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->course }}</td>
+                                <td class="text-left py-3 px-4">{{ $course->book }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->grade }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->schedule }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->semester }}</td>   
@@ -38,7 +40,7 @@
                         </tbody>
                     </table>
                 </div>
-                <p class="text-xl py-4 flex items-center">
+                <!-- <p class="text-xl py-4 flex items-center">
                     Catatan dari Ustadz
                 </p>
                 <div class="bg-white overflow-auto pb-8">
@@ -76,7 +78,7 @@
                 </div>
                 <div class="flex object-left text-center text-white text-base pt-6">
                     <button class="bg-blue-600 hover:bg-blue-800 shadow-lg rounded py-3 px-8" href="#">Cetak MP</button>
-                </div>
+                </div> -->
             </div>
         </main>
     </div>

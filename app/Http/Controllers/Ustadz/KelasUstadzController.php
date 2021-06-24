@@ -1,13 +1,13 @@
 <?php
 
-namespace App\Http\Controllers\Santri;
+namespace App\Http\Controllers\Ustadz;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\User;
 
-class MataPelajaranController extends Controller
+class KelasUstadzController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -18,6 +18,6 @@ class MataPelajaranController extends Controller
     {
         $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->get();
 
-        return view('santri.mata-pelajaran', compact('courses'));
+        return view('ustadz.kelas', compact('courses'));
     }
 }

@@ -65,15 +65,23 @@
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="profil-ustadz.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-id-card-alt mr-3"></i>
+                            <a href="profil-ustadz.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Profil
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('ustadz.input-nilai') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-6">
-                                <i class="fas fa-book-open mr-3"></i>
+                            <a href="{{ route('ustadz.kelas') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                                Kelas
+                            </a>
+                        </div>
+                        <!-- <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
+                            <a href="{{ route('ustadz.input-nilai') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Input Nilai
+                            </a>
+                        </div> -->
+                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
+                            <a href="{{ route('ustadz.santri') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                                Santri
                             </a>
                         </div>
                         <button class="w-full bg-blue-600 hover:bg-blue-800 cta-btn font-semibold justify-center ">
