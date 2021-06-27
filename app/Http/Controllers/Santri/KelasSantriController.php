@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Course;
+use App\Models\Classroom;
 use App\Models\User;
 
 class KelasSantriController extends Controller
@@ -14,10 +14,10 @@ class KelasSantriController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index($name)
     {
-        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->get();
+        $classroom = Classroom::leftjoin('users', 'classrooms.id_santri', '=', 'users.id')->where('name', $name)->get();
 
-        return view('santri.kelas', compact('courses'));
+        return view('santri.kelas', compact('classroom'));
     }
 }

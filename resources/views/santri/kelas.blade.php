@@ -5,10 +5,10 @@
 <div class="w-full flex flex-col h-screen overflow-y-hidden">
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Mata Pelajaran</h1>
+            <h1 class="text-3xl text-black pb-2 mt-2">Kelas</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <p class="text-xl pb-4 flex items-center">
-                    Daftar Paket Mata Pelajaran
+                    Daftar Kelas
                 </p>
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
@@ -25,16 +25,16 @@
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
-                            @foreach($courses as $course)
+                            @foreach($classroom as $clasroom)
                             <tr>
                                 <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-left py-3 px-4">{{ $course->id }}</td>
-                                <td class="text-left py-3 px-4">{{ $course->course }}</td>
-                                <td class="text-left py-3 px-4">{{ $course->book }}</td>
-                                <td class="text-left py-3 px-4">{{ $course->grade }}</td>
-                                <td class="text-left py-3 px-4">{{ $course->schedule }}</td>
-                                <td class="text-left py-3 px-4">{{ $course->semester }}</td>   
-                                <td class="text-left py-3 px-4">{{ $course->name }}</td>
+                                <td class="text-left py-3 px-4">{{ $clasroom->id }}</td>
+                                <td class="text-left py-3 px-4">{{ $clasroom->clas }}</td>
+                                <td class="text-left py-3 px-4">{{ $clasroom->book }}</td>
+                                <td class="text-left py-3 px-4">{{ $clasroom->grade }}</td>
+                                <td class="text-left py-3 px-4">{{ $clasroom->schedule }}</td>
+                                <td class="text-left py-3 px-4">{{ $clasroom->semester }}</td>   
+                                <td class="text-left py-3 px-4">{{ $clasroom->name }}</td>
                             </tr>
                             @endforeach
                         </tbody>

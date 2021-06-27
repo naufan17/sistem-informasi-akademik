@@ -14,9 +14,9 @@ class KelasUstadzController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index($name)
     {
-        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->get();
+        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->where('name', $name)->get();
 
         return view('ustadz.kelas', compact('courses'));
     }

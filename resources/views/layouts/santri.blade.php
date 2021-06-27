@@ -68,7 +68,7 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('santri.kelas') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href="kelas/{{ Auth::user()->name }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Kelas
                             </a>
                         </div>

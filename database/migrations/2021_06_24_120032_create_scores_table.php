@@ -14,13 +14,13 @@ class CreateScoresTable extends Migration
     public function up()
     {
         Schema::create('scores', function (Blueprint $table) {
-            $table->id();
+            $table->id('id_score');
             $table->float('score');
             $table->unsignedBigInteger('id_santri');
             $table->unsignedBigInteger('id_course');
             $table->timestamps();
             $table->foreign('id_santri')->references('id')->on('users');
-            $table->foreign('id_course')->references('id')->on('courses');
+            $table->foreign('id_course')->references('id_course')->on('courses');
         });
     }
 
