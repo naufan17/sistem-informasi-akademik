@@ -15,6 +15,7 @@ class CreateAttendancesTable extends Migration
     {
         Schema::create('attendances', function (Blueprint $table) {
             $table->id('id_attendance');
+            $table->float('minimum_attendance');
             $table->float('attendance');
             $table->unsignedBigInteger('id_santri');
             $table->unsignedBigInteger('id_course');

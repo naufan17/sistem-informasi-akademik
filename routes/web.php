@@ -34,7 +34,8 @@ Auth::routes();
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/santri/dashboard', [DashboardSantriController::class, 'index'])->name('santri.dashboard');
     Route::get('/santri/data-diri/{name}', [DataDiriController::class, 'index'])->name('santri.data-diri');
-    Route::get('/santri/data-diri/form-update/{name}', [DataDiriController::class, 'formUpdate'])->name('santri.data-diri.update');   
+    Route::get('/santri/data-diri/form-update/{name}', [DataDiriController::class, 'formUpdate'])->name('santri.data-diri.form-update');
+    Route::get('/santri/data-diri/update', [DataDiriController::class, 'Update'])->name('santri.data-diri.update');  
     Route::get('/santri/kelas/{name}', [KelasSantriController::class, 'index'])->name('santri.kelas');
     Route::get('/santri/nilai', [NilaiController::class, 'index'])->name('santri.nilai');
     Route::get('/santri/riwayat-nilai', [RiwayatNilaiController::class, 'index'])->name('santri.riwayat-nilai');

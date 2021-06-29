@@ -15,6 +15,7 @@ class CreateScoresTable extends Migration
     {
         Schema::create('scores', function (Blueprint $table) {
             $table->id('id_score');
+            $table->float('minimum_score');
             $table->float('score');
             $table->unsignedBigInteger('id_santri');
             $table->unsignedBigInteger('id_course');

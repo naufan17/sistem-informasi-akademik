@@ -70,12 +70,17 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href= "kelas/{{ Auth::user()->name }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href= "{{ url('ustadz/kelas') }}/{{ Auth::user()->name }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Kelas
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('ustadz.santri') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href= "" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                                Penilaian
+                            </a>
+                        </div>
+                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
+                            <a href="{{ url('ustadz.santri') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Santri
                             </a>
                         </div>
