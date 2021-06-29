@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class DashboardSantriController extends Controller
 {

@@ -19,4 +19,11 @@ class UstadzController extends Controller
 
         return view('santri.ustadz', compact('ustadzs'));
     }
+
+    public function filter(Request $request)
+    {
+        $ustadzs = User::where('role', 'ustadz')->where('status', $request->status)->get();
+
+        return view('santri.ustadz', compact('ustadzs'));
+    }
 }

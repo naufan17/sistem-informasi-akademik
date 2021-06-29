@@ -26,11 +26,11 @@
 </head>
 <body class="work-sans leading-normal text-base tracking-normal">
     <div id="app">
-        <main>
+        <main class="py-4">
             <!-- HEADER -->
-            <nav id="header" class="w-full bg-white border-b-2">
+            <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-                    <div class="flex space-x-4 py-6">
+                    <div class="flex space-x-4 py-2">
                         <!--LOGO-->
                         <div class="object-left">
                             <img src="images/logo.png" class="w-24">
@@ -63,22 +63,22 @@
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('santri.data-diri') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('santri/data-diri') }}/{{ Auth::user()->name }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Data Pribadi
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="kelas/{{ Auth::user()->name }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('santri/kelas') }}/{{ Auth::user()->name }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Kelas
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('santri.nilai') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('santri/nilai') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Nilai
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('santri.riwayat-nilai') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('santri/riwayat-nilai') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Riwayat Nilai
                             </a>
                         </div>
@@ -88,7 +88,7 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ route('santri.ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('santri/ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Ustadz
                             </a>
                         </div>

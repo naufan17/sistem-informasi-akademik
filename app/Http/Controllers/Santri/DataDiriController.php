@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\User;
 
 class DataDiriController extends Controller
 {
@@ -12,13 +13,21 @@ class DataDiriController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+    public function index($name)
     {
-        return view('santri.data-diri');
+        $users = User::where('name', $name)->get();
+
+        return view('santri.data-diri', compact('users'));
     }
 
-    public function formUpdate()
+    public function formUpdate($name)
     {
-        return view('santri.update-data-diri');
+        $users = User::where('name', $name)->get();
+        
+        return view('santri.update-data-diri', compact('users'));
+    }
+
+    public function Update($name)
+    {
     }
 }
