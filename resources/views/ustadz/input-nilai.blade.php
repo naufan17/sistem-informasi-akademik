@@ -66,23 +66,17 @@
                         <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Lihat</button>
                     </div>
                 </div>
-                <p class="text-xl py-8 flex items-center">
-                    Inputkan Nilai Ke Santri
-                </p>
+                <p class="text-xl py-8 flex items-center">Inputkan Nilai Ke Santri</p>
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">NIS</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Nama
-                                    Santri</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Nilai
-                                    Hasil Belajar</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi
-                                    Asrama</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi
-                                    MDNU</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Nama Santri</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Nilai Hasil Belajar</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi Asrama</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi MDNU</th>
                                 <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Total</th>
                             </tr>
                         </thead>

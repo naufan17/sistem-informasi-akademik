@@ -33,12 +33,15 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/santri/dashboard', [DashboardSantriController::class, 'index'])->name('santri.dashboard');
+    
     Route::get('/santri/data-diri/{name}', [DataDiriController::class, 'index'])->name('santri.data-diri');
     Route::get('/santri/data-diri/form-update/{name}', [DataDiriController::class, 'formUpdate'])->name('santri.data-diri.form-update');
-    Route::get('/santri/data-diri/update', [DataDiriController::class, 'Update'])->name('santri.data-diri.update');  
+    Route::get('/santri/data-diri-update', [DataDiriController::class, 'update'])->name('santri.data-diri.update');
+
     Route::get('/santri/kelas/{name}', [KelasSantriController::class, 'index'])->name('santri.kelas');
     Route::get('/santri/nilai', [NilaiController::class, 'index'])->name('santri.nilai');
     Route::get('/santri/riwayat-nilai', [RiwayatNilaiController::class, 'index'])->name('santri.riwayat-nilai');
+    
     Route::get('/santri/filter-ustadz', [UstadzController::class, 'filter'])->name('santri.filter-ustadz');
     Route::get('/santri/ustadz', [UstadzController::class, 'index'])->name('santri.ustadz');
 });
@@ -47,5 +50,7 @@ Route::group(['middleware' => 'checkRole:ustadz'], function () {
     Route::get('/ustadz/dashboard', [DashboardUstadzController::class, 'index'])->name('ustadz.dashboard');
     Route::get('/ustadz/input-nilai', [InputNilaiController::class, 'index'])->name('ustadz.input-nilai');
     Route::get('/ustadz/kelas/{name}', [KelasUstadzController::class, 'index'])->name('ustadz.kelas');
+
+    Route::get('/ustadz/filter-santri', [SantriController::class, 'filter'])->name('ustadz.filter-santri');
     Route::get('/ustadz/santri', [SantriController::class, 'index'])->name('ustadz.santri');
 });

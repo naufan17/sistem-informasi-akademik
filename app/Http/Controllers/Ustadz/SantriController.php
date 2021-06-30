@@ -19,4 +19,11 @@ class SantriController extends Controller
 
         return view('ustadz.santri', compact('santris'));
     }
+
+    public function filter(Request $request)
+    {
+        $santris = User::where('role', 'santri')->where('status', $request->status)->get();
+        
+        return view('ustadz.santri', compact('santris'));
+    }
 }
