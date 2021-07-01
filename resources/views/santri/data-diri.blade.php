@@ -25,35 +25,35 @@
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nama Lengkap</p>
-                        <p>{{ $user->name }}</p>
+                        <p>: {{ $user->name }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Tempat Lahir</p>
-                        <p>{{ $user->place_born }}</p>
+                        <p>: {{ $user->place_born }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Tanggal Lahir</p>
-                        <p>{{ $user->birthday }}</p>
+                        <p>: {{ $user->birthday }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Jenis Kelamin</p>
-                        <p>{{ $user->gender }}</p>
+                        <p>: {{ $user->gender }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nomor Induk Kependudukan / Passport</p>
-                        <p>{{ $user->id_number }}</p>
+                        <p>: {{ $user->id_number }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Golongan Darah</p>
-                        <p>{{ $user->blood }}</p>
+                        <p>: {{ $user->blood }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nomor Telepon / Handphone</p>
-                        <p>{{ $user->phone_number }}</p>
+                        <p>: {{ $user->phone_number }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Email</p>
-                        <p>{{ $user->email }}</p>
+                        <p>: {{ $user->email }}</p>
                     </div>
                 </div>
                 <div>
@@ -62,31 +62,31 @@
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Alamat Rumah</p>
-                        <p>{{ $user->address}}</p>
+                        <p>: {{ $user->address}}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">RT</p>
-                        <p>{{ $user->RT }}</p>
+                        <p>: {{ $user->RT }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">RW</p>
-                        <p>{{ $user->RW }}</p>
+                        <p>: {{ $user->RW }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Kelurahan / Desa</p>
-                        <p>{{ $user->village }}</p>
+                        <p>: {{ $user->village }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">Kapanewon</p>
-                        <p>{{ $user->districs }}</p>
+                        <p class="text-gray-600">Kecamatan</p>
+                        <p>: {{ $user->districs }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Kabupaten</p>
-                        <p>{{ $user->regency }}</p>
+                        <p>: {{ $user->regency }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Provinsi</p>
-                        <p>{{ $user->province }}</p>
+                        <p>: {{ $user->province }}</p>
                     </div>
                 </div>
                 @endforeach

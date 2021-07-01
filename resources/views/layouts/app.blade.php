@@ -48,6 +48,7 @@
                     </div>
                 </div>
             </nav>
+
             <!-- Page Content -->
             <div class="bg-gray-100 font-family-karla flex">
                 <div class="w-full flex flex-col h-screen overflow-y-hidden">
@@ -56,6 +57,7 @@
                     </div>
                 </div>
             </div>
+            
             <!-- FOOTER -->
             <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
                 <div class="container flex px-6 py-8 ">
