@@ -28,9 +28,9 @@
     <div id="app">
         <main>
             <!-- HEADER -->
-            <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
-                <div class="w-full container mx-auto flex flex-wrap items-center justify-between p-8">
-                    <div class="flex space-x-4">
+            <nav id="header" class="w-full bg-white border-b-2">
+                <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+                    <div class="flex space-x-4 py-6">
                         <!--LOGO-->
                         <div class="object-left">
                             <img src="images/logo.png" class="w-24">
@@ -51,15 +51,18 @@
 
             <!-- Page Content -->
             <div class="bg-gray-100 font-family-karla flex">
+
+                <!-- Page Content -->
                 <div class="w-full flex flex-col h-screen overflow-y-hidden">
                     <div class="overflow-x-hidden">
                         @yield('content')
                     </div>
                 </div>
+
             </div>
             
             <!-- FOOTER -->
-            <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+            <footer class="mx-auto bg-white py-8 border-t border-gray-400">
                 <div class="container flex px-6 py-8 ">
                     <div class="w-full mx-auto flex flex-wrap">
                         <div class="text-left flex w-full lg:w-1/2 ">

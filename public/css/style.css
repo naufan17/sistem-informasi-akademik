@@ -82,3 +82,6 @@
 #carousel-3:checked~.control-3~.carousel-indicators li:nth-child(3) .carousel-bullet {
     color: #000;
 }
+tr:nth-child(even) {
+    background-color:;
+}

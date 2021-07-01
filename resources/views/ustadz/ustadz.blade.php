@@ -1,4 +1,4 @@
-@extends('layouts.santri')
+@extends('layouts.ustadz')
 
 @section('content')
 
@@ -32,7 +32,8 @@
                         </div>
                     </div>
                 </form>
-                <p class="text-xl py-4 flex items-center">Daftar Ustadz Pengampu</p>
+                <p class="text-xl py-4 flex items-center">Daftar Ustadz</p>
+                
                 <!--TABEL DAFTAR USTADZ -->
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">

@@ -1,4 +1,4 @@
-@extends('layouts.santri')
+@extends('layouts.ustadz')
 
 @section('content')
 
@@ -6,7 +6,7 @@
     <!-- DATA DIRI -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Data Diri</h1>
+            <h1 class="text-3xl text-black pb-2 mt-2">Profil</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <div class="flex object-left text-center text-white text-base p-4">
                     <a href="{{ url('santri/data-diri/form-update') }}/{{ Auth::user()->name }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white rounded shadow-lg py-3 px-8">Update Profile</a>
@@ -25,106 +25,68 @@
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nama Lengkap</p>
-                        <p>: {{ $user->name }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Tempat Lahir</p>
-                        <p>: {{ $user->place_born }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Tanggal Lahir</p>
-                        <p>: {{ $user->birthday }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Jenis Kelamin</p>
-                        <p>: {{ $user->gender }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nomor Induk Kependudukan / Passport</p>
-                        <p>: {{ $user->id_number }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Golongan Darah</p>
-                        <p>: {{ $user->blood }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nomor Telepon / Handphone</p>
-                        <p>: {{ $user->phone_number }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Email</p>
-                        <p>: {{ $user->email }}</p>
+                        <p>: </p>
                     </div>
                 </div>
 
                 <div>
                     <div class="pt-8">
-                        <p class="self-center bg-gray-50 py-4 px-4">Keterangan Tempat Tinggal Asal</p>
+                        <p class="self-center bg-gray-50 py-4 px-4">Keterangan Tempat Tinggal</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Alamat Rumah</p>
-                        <p>: {{ $user->address}}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">RT</p>
-                        <p>: {{ $user->RT }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">RW</p>
-                        <p>: {{ $user->RW }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Kelurahan / Desa</p>
-                        <p>: {{ $user->village }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Kecamatan</p>
-                        <p>: {{ $user->districs }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Kabupaten</p>
-                        <p>: {{ $user->regency }}</p>
+                        <p>: </p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Provinsi</p>
-                        <p>: {{ $user->province }}</p>
-                    </div>
-                </div>
-
-                <div class="pb-4">
-                    <div class="pt-8">
-                        <p class="self-center bg-gray-50 py-4 px-4">Keterangan Orang Tua</p>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">Nama Ayah</p>
-                        <p>: </p>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">Tempat Lahir Ayah</p>
-                        <p>: </p>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">Tanggal Lahir Ayah</p>
-                        <p>: </p>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">Nama Ibu</p>
-                        <p>: </p>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">Tempat Lahir Ayah</p>
-                        <p>: </p>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">Tempat Lahir Ibu</p>
-                        <p>: </p>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">Alamat Orang Tua</p>
-                        <p>: </p>
-                    </div>  
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">No. Telp/Handphone</p>
                         <p>: </p>
                     </div>
                 </div>

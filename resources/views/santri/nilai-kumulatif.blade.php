@@ -6,7 +6,7 @@
     <!-- NILAI -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Nilai</h1>
+            <h1 class="text-3xl text-black pb-2 mt-2">Nilai Kumulatif</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
                 <div class="flex space-x-4 items-center pb-4">
@@ -48,63 +48,47 @@
                     </div>
                     <!--FLEX 3-->
                     <div class="object-left text-center text-white text-base">
-                        <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Lihat
-                            Hasil Studi</button>
+                        <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Lihat Laporan</button>
                     </div>
                 </div>
                 <p class="text-xl py-4 flex items-center">
-                    Laporan Hasil Studi MDNU
+                    Laporan Kumulatif Hasil Studi MDNU
                 </p>
-                <!--TABEL NILAI-->
-                <div class="bg-white overflow-auto pb-8">
+                
+                <!-- LAPORAN KUMULATIF -->
+                <div class="bg-white overflow-auto py-4">
                     <table class="table-auto bg-white">
-                        <thead class="bg-gray-800 text-white">
-                            <tr>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Mata
-                                    Pelajaran</th>
-                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">KKM
-                                </th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nilai
-                                    Hasil Belajar</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">
-                                    Rata-rata
-                                    Kelas</td>
-                            </tr>
-                        </thead>
                         <tbody class="text-gray-700">
-                            <tr>
-                                <td class="text-left py-3 px-4">1</td>
-                                <td class="text-left py-3 px-4"><a></a>Tafsir</a></td>
-                                <td class="text-left py-3 px-4"><a>60</a></td>
-                                <td class="text-left py-3 px-4">75</td>
-                                <td class="text-left py-3 px-4">67,4</td>
-                            </tr>
                             <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">2</td>
-                                <td class="text-left py-3 px-4"><a>Fiqih</a></td>
-                                <td class="text-left py-3 px-4"><a>60</a></td>
-                                <td class="text-left py-3 px-4">90</td>
-                                <td class="text-left py-3 px-4">74,0</td>
+                                <td class="text-left font-semibold py-3 px-4"><a>Jumlah Nilai</a></td>
+                                <td class="text-left w-1/2 py-3 px-4"><a>: 660</a></td>
                             </tr>
                             <tr>
-                                <td class="text-left py-3 px-4">3</td>
-                                <td class="text-left py-3 px-4"><a>Nahwu</a></td>
-                                <td class="text-left py-3 px-4"><a>60</a></td>
-                                <td class="text-left py-3 px-4">80</td>
-                                <td class="text-left py-3 px-4">65,7</td>
+                                <td class="text-left font-semibold py-3 px-4"><a>Nilai Rata-rata</a></td>
+                                <td class="text-left w-1/2 py-3 px-4"><a>: 82,5</a></td>
                             </tr>
                             <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">4</td>
-                                <td class="text-left py-3 px-4"><a>Hadits</a></td>
-                                <td class="text-left py-3 px-4"><a>60</a></td>
-                                <td class="text-left py-3 px-4">75</td>
-                                <td class="text-left py-3 px-4">67,4</td>
+                                <td class="text-left font-semibold py-3 px-4"><a>Rangking</a></td>
+                                <td class="text-left w-1/2 py-3 px-4"><a>: 5 dari 25 santri</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-semibold py-3 px-4"><a>Presentase Absensi MDNU</a>
+                                </td>
+                                <td class="text-left w-1/2 py-3 px-4"><a>: 0%</a></td>
+                            </tr>
+                            <tr class="bg-gray-200">
+                                <td class="text-left font-semibold py-3 px-4"><a>Presentase Absensi
+                                        Asrama</a>
+                                </td>
+                                <td class="text-left w-1/2 py-3 px-4"><a>: 0%</a></td>
+                            </tr>
+                            <tr>
+                                <td class="text-left font-semibold py-3 px-4"><a>Keterangan</a></td>
+                                <td class="text-left w-1/2 py-3 px-4"><a>: Naik Kelas</a></td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-            
                 <div class="flex object-left text-center text-white text-base pt-4">
                     <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Cetak
                         Nilai</button>

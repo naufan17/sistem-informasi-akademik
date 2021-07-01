@@ -19,20 +19,20 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
-
+    
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.2/tailwind.min.css" rel="stylesheet"/>
-
+    
 </head>
+
 <body class="work-sans leading-normal text-base tracking-normal">
-    <div id="app" class="flex flex-col h-screen">
+    <div id="app">
         <main>
 
             <!-- HEADER -->
-            <nav id="header" class="w-full z-30 top-0 bg-white border-b-2 py-3">
+            <nav id="header" class="w-full bg-white border-b-2">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-                    <div class="flex space-x-4 py-2">
+                    <div class="flex space-x-4 py-6">
                         <!--LOGO-->
                         <div class="object-left">
                             <img src="images/logo.png" class="w-24">
@@ -52,8 +52,9 @@
             </nav>
 
             <!-- MENU -->
-            <div class=" bg-gray-100 font-family-karla flex">
-                <aside class="relative bg-gray-100 w-64 hidden sm:block">
+            <div class="bg-gray-100 font-family-karla flex">
+                <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
+
                     <nav class="font-semibold pt-3">
                         <div class="text-gray-900">
                             <div class="pt-6 px-6 mb-8">
@@ -86,13 +87,18 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
-                                Absensi
+                            <a href="{{ url('santri/nilai-kumulatif') }}" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
+                                Nilai Kumulatif
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
                             <a href="{{ url('santri/ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Ustadz
+                            </a>
+                        </div>
+                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
+                            <a href="{{ url('santri/santri') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                                Santri
                             </a>
                         </div>
                         <div class="w-full hover:bg-blue-600 cta-btn font-semibold justify-center ">
@@ -117,12 +123,12 @@
 
 
             <!-- FOOTER -->
-            <footer class="bg-white py-8 border-t border-gray-400">
-                <div class=" container flex px-6 py-8 ">
-                    <div class=" w-full mx-auto flex flex-wrap text-gray-500">
+            <footer class="mx-auto bg-white py-8 border-t border-gray-400">
+                <div class="container flex px-6 py-8 ">
+                    <div class="w-full mx-auto flex flex-wrap">
                         <div class="text-left flex w-full lg:w-1/2 ">
                             <div class="px-3 md:px-0">
-                                <h3 class="font-bold text-gray-800">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
+                                <h3 class="font-bold text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
                                 <a class="inline-block no-underline hover:text-black hover:underline pt-4" href="tel:+62 857 2565 5593">Telp. 0857 2565 5593</a><br>
                                 <a class="inline-block no-underline hover:text-black hover:underline" href="https://web.whatsapp.com/send?phone=6285725655593&text=Assalamualaikum%20Admin">WhatsApp. 0857 2565 5593</a><br>
                                 <a class="inline-block no-underline hover:text-black hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
@@ -130,7 +136,7 @@
                         </div>
                         <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
                             <div class="px-3 md:px-0">
-                                <h3 class="font-bold text-gray-800">Media Sosial</h3>
+                                <h3 class="font-bold text-gray-900">Media Sosial</h3>
                                 <ul class="list-reset items-center pt-4">
                                     <li>
                                         <a class="inline-block no-underline hover:text-black hover:underline py-1" href="https://instagram.com/nurulummahyk?igshid=1m74irp80dl0v">Instagram</a>
@@ -145,7 +151,6 @@
                     </div>
                 </div>
             </footer>
-
         </main>
     </div>
 </body>

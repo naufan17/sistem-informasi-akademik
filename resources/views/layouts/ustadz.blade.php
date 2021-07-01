@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -29,6 +28,7 @@
 <body class="work-sans leading-normal text-base tracking-normal">
     <div id="app">
         <main>
+
             <!-- HEADER -->
             <nav id="header" class="w-full bg-white border-b-2">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
@@ -50,9 +50,11 @@
                     </div>
                 </div>
             </nav>
+
             <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex">
                 <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
+
                     <nav class="font-semibold pt-3">
                         <div class="text-gray-900">
                             <div class="pt-6 px-6 mb-8">
@@ -65,7 +67,7 @@
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="profil-ustadz.html" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('ustadz/profil-ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Profil
                             </a>
                         </div>
@@ -75,8 +77,8 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href= "" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-                                Penilaian
+                            <a href="" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                                Ustadz
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
@@ -84,8 +86,8 @@
                                 Santri
                             </a>
                         </div>
-                        <button class="w-full bg-blue-600 hover:bg-blue-800 cta-btn font-semibold justify-center ">
-                            <a class="text-white items-center py-4 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
+                        <button class="w-full hover:bg-blue-600 cta-btn font-semibold justify-center ">
+                            <a class="text-gray-800 hover:text-white items-center py-4 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -95,15 +97,18 @@
 
                     </nav>
                 </aside>
+
                 <!-- Page Content -->
                 <div class="w-full flex flex-col h-screen overflow-y-hidden">
                     <div class="overflow-x-hidden">
                         @yield('content')
                     </div>
                 </div>
+
             </div>
+            
             <!-- FOOTER -->
-            <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+            <footer class="mx-auto bg-white py-8 border-t border-gray-400">
                 <div class="container flex px-6 py-8 ">
                     <div class="w-full mx-auto flex flex-wrap">
                         <div class="text-left flex w-full lg:w-1/2 ">

@@ -1,4 +1,4 @@
-@extends('layouts.santri')
+@extends('layouts.ustadz')
 
 @section('content')
 
@@ -6,7 +6,7 @@
     <!-- DATA DIRI -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Data Diri</h1>
+            <h1 class="text-3xl text-black pb-2 mt-2">Profil</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
 
                 <!-- BACK BUTTON -->
@@ -102,7 +102,7 @@
 
                     <div>
                         <div class="pt-8">
-                            <p class="self-center bg-gray-50 py-4 px-4">Keterangan Tempat Tinggal Asal</p>
+                            <p class="self-center bg-gray-50 py-4 px-4">Keterangan Tempat Tinggal</p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Alamat Rumah</p>
@@ -146,64 +146,11 @@
                                 <input type="text" name="province" placeholder=" " value="{{ $user->province }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
-                    </div>
-
-                    <div>
-                        <div class="pt-8">
-                            <p class="self-center bg-gray-50 py-4 px-4">Keterangan Orang Tua</p>
-                        </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Nama Ayah</p>
-                            <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                            </div>
-                        </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Tempat Lahir Ayah</p>
-                            <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                            </div>
-                        </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Tanggal Lahir Ayah</p>
-                            <div class="relative z-0 w-full">
-                                <input type="date" name="" placeholder=" " value="" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                            </div>
-                        </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Nama Ibu</p>
-                            <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                            </div>
-                        </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Tempat Lahir Ibu</p>
-                            <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                            </div>
-                        </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Tanggal Lahir Ibu</p>
-                            <div class="relative z-0 w-full">
-                                <input type="date" name="" placeholder=" " value="" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                            </div>
-                        </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Alamat Orang Tua</p>
-                            <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                            </div>
-                        </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">No. Telp/Handphone</p>
-                            <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                            </div>
-                        </div>
                         <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
                             <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Simpan</button>
                         </div>
                     </div>
+
                     @endforeach
                 </form>
 

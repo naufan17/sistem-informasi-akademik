@@ -14,6 +14,6 @@ class NilaiController extends Controller
      */
     public function index()
     {
-        return view('santri.nilai');
+        return view('santri.santri');
     }
 }
