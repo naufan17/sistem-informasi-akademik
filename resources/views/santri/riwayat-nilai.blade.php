@@ -8,53 +8,26 @@
         <main class="pt-6 px-6">
             <h1 class="text-3xl text-black pb-2 mt-2">Riwayat Nilai</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
-                <p class="text-xl pb-4 flex items-center">
-                    Riwayat Nilai Kumulatif Santri
-                </p>
+                <p class="text-xl pb-4 flex items-center">Riwayat Nilai Kumulatif Santri</p>
                 <!--TABEL RIWAYAT NILAI-->
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Tahun
-                                    Akademik</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Semester
-                                </th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Jumlah MP
-                                </th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nilai
-                                    Kumulatif</td>
+                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Tahun Akademik</th>
+                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
+                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Jumlah MP</th>
+                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nilai Kumulatif</td>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             <tr>
                                 <td class="text-left py-3 px-4">1</td>
-                                <td class="text-left py-3 px-4"><a></a>2020/2021</a></td>
-                                <td class="text-left py-3 px-4"><a>Ganjil</a></td>
-                                <td class="text-left py-3 px-4">8</td>
+                                <td class="text-left py-3 px-4"><a>2020/2021</td>
+                                <td class="text-left py-3 px-4">Ganjil</td>
+                                <td class="text-left py-3 px-4">{{ $totalMataPelajaran }}</td>
                                 <td class="text-left py-3 px-4">660</td>
-                            </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">2</td>
-                                <td class="text-left py-3 px-4"><a>2020/2021</a></td>
-                                <td class="text-left py-3 px-4"><a>Genap</a></td>
-                                <td class="text-left py-3 px-4">8</td>
-                                <td class="text-left py-3 px-4">686</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left py-3 px-4">3</td>
-                                <td class="text-left py-3 px-4"><a>2021/2022</a></td>
-                                <td class="text-left py-3 px-4"><a>Ganjil</a></td>
-                                <td class="text-left py-3 px-4">9</td>
-                                <td class="text-left py-3 px-4">689</td>
-                            </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">4</td>
-                                <td class="text-left py-3 px-4"><a>2021/2022</a></td>
-                                <td class="text-left py-3 px-4"><a>Genap</a></td>
-                                <td class="text-left py-3 px-4">9</td>
-                                <td class="text-left py-3 px-4">700</td>
                             </tr>
                         </tbody>
                     </table>

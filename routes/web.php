@@ -45,9 +45,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/santri/data-diri/update-password', [DataDiriSantriController::class, 'updatePassword'])->name('santri.data-diri.update-password');
 
     Route::get('/santri/kelas/{id}', [KelasSantriController::class, 'index'])->name('santri.kelas');
-    Route::get('/santri/nilai', [NilaiSantriController::class, 'index'])->name('santri.nilai');
-    Route::get('/santri/riwayat-nilai', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
-    Route::get('/santri/nilai-kumulatif', [NilaiKumulatifSantriController::class, 'index'])->name('santri.nilai-kumulatif');
+    Route::get('/santri/kelas/detail/{id}', [KelasSantriController::class, 'detail'])->name('santri.kelas.detail');
+
+    Route::get('/santri/nilai/{id}', [NilaiSantriController::class, 'index'])->name('santri.nilai');
+    Route::get('/santri/riwayat-nilai/{id}', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
+    Route::get('/santri/nilai-kumulatif/{id}', [NilaiKumulatifSantriController::class, 'index'])->name('santri.nilai-kumulatif');
     
     Route::get('/santri/filter-ustadz', [UstadzSantriController::class, 'filter'])->name('santri.filter-ustadz');
     Route::get('/santri/ustadz', [UstadzSantriController::class, 'index'])->name('santri.ustadz');
@@ -70,5 +72,5 @@ Route::group(['middleware' => 'checkRole:ustadz'], function () {
     Route::get('/ustadz/santri', [SantriUstadzController::class, 'index'])->name('ustadz.santri');
 
     Route::get('/ustadz/filter-ustadz', [SantriUstadzController::class, 'filter'])->name('ustadz.filter-ustadz');
-    Route::get('/ustadz/ustadz', [SantriUstadzController::class, 'index'])->name('ustadz.ustadz');
+    Route::get('/ustadz/ustadz', [UstadzUstadzController::class, 'index'])->name('ustadz.ustadz');
 });

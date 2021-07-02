@@ -73,17 +73,17 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/nilai') }}" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('santri/nilai') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
                                 Nilai
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/riwayat-nilai') }}" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('santri/riwayat-nilai') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
                                 Riwayat Nilai
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/nilai-kumulatif') }}" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('santri/nilai-kumulatif') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
                                 Nilai Kumulatif
                             </a>
                         </div>

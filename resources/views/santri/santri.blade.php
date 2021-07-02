@@ -9,7 +9,7 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Santri</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
-                <div class="flex space-x-4 items-center pb-8">
+                <!-- <div class="flex space-x-4 items-center pb-8">
                     <div class="flex-none w-36">
                         <a class="self-center">Kelas</a>
                     </div>
@@ -30,7 +30,7 @@
                             </select>
                         </div>
                     </div>
-                </div>
+                </div> -->
                 <!-- OPTION -->
                 <form method="GET" action="{{ url('santri/filter-santri') }}">
                     <div class="flex space-x-4 items-center pb-8">

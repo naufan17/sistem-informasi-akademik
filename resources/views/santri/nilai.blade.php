@@ -61,53 +61,25 @@
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Mata
-                                    Pelajaran</th>
-                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">KKM
-                                </th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nilai
-                                    Hasil Belajar</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">
-                                    Rata-rata
-                                    Kelas</td>
+                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Mata Pelajaran</th>
+                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">KKM</th>
+                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nilai Hasil Belajar</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
+                            @foreach($scores as $score)
                             <tr>
-                                <td class="text-left py-3 px-4">1</td>
-                                <td class="text-left py-3 px-4"><a></a>Tafsir</a></td>
-                                <td class="text-left py-3 px-4"><a>60</a></td>
-                                <td class="text-left py-3 px-4">75</td>
-                                <td class="text-left py-3 px-4">67,4</td>
+                                <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-left py-3 px-4">{{ $score->id_course }}</td>
+                                <td class="text-left py-3 px-4">{{ $score->minimum_score }}</td>
+                                <td class="text-left py-3 px-4">{{ $score->score }}</td>
                             </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">2</td>
-                                <td class="text-left py-3 px-4"><a>Fiqih</a></td>
-                                <td class="text-left py-3 px-4"><a>60</a></td>
-                                <td class="text-left py-3 px-4">90</td>
-                                <td class="text-left py-3 px-4">74,0</td>
-                            </tr>
-                            <tr>
-                                <td class="text-left py-3 px-4">3</td>
-                                <td class="text-left py-3 px-4"><a>Nahwu</a></td>
-                                <td class="text-left py-3 px-4"><a>60</a></td>
-                                <td class="text-left py-3 px-4">80</td>
-                                <td class="text-left py-3 px-4">65,7</td>
-                            </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">4</td>
-                                <td class="text-left py-3 px-4"><a>Hadits</a></td>
-                                <td class="text-left py-3 px-4"><a>60</a></td>
-                                <td class="text-left py-3 px-4">75</td>
-                                <td class="text-left py-3 px-4">67,4</td>
-                            </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>
-            
                 <div class="flex object-left text-center text-white text-base pt-4">
-                    <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Cetak
-                        Nilai</button>
+                    <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Cetak Nilai</button>
                 </div>
             </div>
         </main>

@@ -18,8 +18,7 @@ class Score extends Model
     protected $fillable = [
         'minimum_score',
         'score',
-        'id_santri',
-        'id_course',
+        'id_cumulative_study',
     ];
     
 }
