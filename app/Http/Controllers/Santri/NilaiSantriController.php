@@ -16,7 +16,9 @@ class NilaiSantriController extends Controller
      */
     public function index($id)
     {
-        $scores = Score::leftjoin('cumulative_studies', 'scores.id_cumulative_study', '=', 'cumulative_studies.id_cumulative_study')->get();
+        $scores = CumulativeStudy::where('id_santri', $id)
+                                ->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')->where('id', $id)
+                                ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')->where('id_santri', $id)->get();
 
         return view('santri.nilai', compact('scores'));
     }

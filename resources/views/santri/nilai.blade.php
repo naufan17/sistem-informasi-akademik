@@ -70,7 +70,7 @@
                             @foreach($scores as $score)
                             <tr>
                                 <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-left py-3 px-4">{{ $score->id_course }}</td>
+                                <td class="text-left py-3 px-4">{{ $score->course }}</td>
                                 <td class="text-left py-3 px-4">{{ $score->minimum_score }}</td>
                                 <td class="text-left py-3 px-4">{{ $score->score }}</td>
                             </tr>

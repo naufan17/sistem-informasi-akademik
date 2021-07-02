@@ -26,7 +26,7 @@
                                 <td class="text-left py-3 px-4">1</td>
                                 <td class="text-left py-3 px-4"><a>2020/2021</td>
                                 <td class="text-left py-3 px-4">Ganjil</td>
-                                <td class="text-left py-3 px-4">{{ $totalMataPelajaran }}</td>
+                                <!-- <td class="text-left py-3 px-4">{{ $totalMataPelajaran }}</td> -->
                                 <td class="text-left py-3 px-4">660</td>
                             </tr>
                         </tbody>

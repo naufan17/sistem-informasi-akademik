@@ -16,15 +16,15 @@ class RiwayatNilaiSantriController extends Controller
      */
     public function index($id)
     {
-        $scores = Score::leftjoin('users', 'scores.id_santri', '=', 'users.id')->where('id', $id)
-                        ->leftjoin('courses', 'scores.id_course', '=', 'courses.id_course')->where('id', $id)->get();
+        // $scores = Score::leftjoin('users', 'scores.id_santri', '=', 'users.id')->where('id', $id)
+        //                 ->leftjoin('courses', 'scores.id_course', '=', 'courses.id_course')->where('id', $id)->get();
         
-        $totalNilai = 0;
-        foreach(Score::leftjoin('users', 'scores.id_santri', '=', 'users.id')->where('id', $id) as $courses){
-            $totaNilai = $totalNilai + $courses->total;
-        }
+        // $totalNilai = 0;
+        // foreach(Score::leftjoin('users', 'scores.id_santri', '=', 'users.id')->where('id', $id) as $courses){
+        //     $totaNilai = $totalNilai + $courses->total;
+        // }
 
-        $totalMataPelajaran = Score::where('id_santri', $id)->count();
+        // $totalMataPelajaran = Score::where('id_santri', $id)->count();
 
         return view('santri.riwayat-nilai', compact('totalMataPelajaran'));
     }
