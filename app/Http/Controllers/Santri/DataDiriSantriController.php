@@ -6,28 +6,28 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 
-class DataDiriController extends Controller
+class DataDiriSantriController extends Controller
 {
-        /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($name)
+    public function index($id)
     {
-        $users = User::where('name', $name)->get();
+        $santris = User::where('id', $id)->get();
 
-        return view('santri.data-diri', compact('users'));
+        return view('santri.data-diri', compact('santris'));
     }
 
-    public function formUpdate($name)
+    public function formUpdate($id)
     {
-        $users = User::where('name', $name)->get();
+        $santris = User::where('id', $id)->get();
         
-        return view('santri.update-data-diri', compact('users'));
+        return view('santri.update-data-diri', compact('santris'));
     }
 
-    public function update(Request $request)
+    public function updateProfile(Request $request)
     {
         // $request->validate([
         //     'name' => 'required', 'string', 'max:255',
@@ -67,6 +67,16 @@ class DataDiriController extends Controller
             'status' => $request->status, 
         ]);
 
-        return redirect('santri/dashboard/');
+        return redirect()->route('santri.data-diri', ['name' => $request->name]);
     }
+
+    public function updatePassword(Request $request)
+    {
+        User::where('id', $request->id)->update([
+            'password' => Hash::make($request->password), 
+        ]);
+
+        return redirect()->route('santri.data-diri', ['name' => $request->name]);
+    }
+    
 }

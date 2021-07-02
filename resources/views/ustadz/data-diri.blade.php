@@ -9,13 +9,13 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Profil</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <div class="flex object-left text-center text-white text-base p-4">
-                    <a href="{{ url('santri/data-diri/form-update') }}/{{ Auth::user()->name }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white rounded shadow-lg py-3 px-8">Update Profile</a>
+                    <a href="{{ url('ustadz/data-diri/form-update') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white rounded shadow-lg py-3 px-8">Update Profile</a>
                 </div>
                 <div class="p-4">
                     <h2 class="text-2xl ">Informasi Data Diri</h2>
                     <p class="text-sm text-gray-500">Detail Data Diri</p>
                 </div>
-                @foreach($users as $user)
+                @foreach($ustadzs as $ustadz)
                 <div>
                     <div class="pt-8">
                         <p class="self-center bg-gray-50 py-4 px-4">Identitas Diri</p>
@@ -25,69 +25,68 @@
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nama Lengkap</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->name }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Tempat Lahir</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->place_born }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Tanggal Lahir</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->birthday }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Jenis Kelamin</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->gender }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nomor Induk Kependudukan / Passport</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->id_number }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Golongan Darah</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->blood }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nomor Telepon / Handphone</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->phone_number }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Email</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->email }}</p>
                     </div>
                 </div>
-
                 <div>
                     <div class="pt-8">
-                        <p class="self-center bg-gray-50 py-4 px-4">Keterangan Tempat Tinggal</p>
+                        <p class="self-center bg-gray-50 py-4 px-4">Keterangan Tempat Tinggal Asal</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Alamat Rumah</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->address}}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">RT</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->RT }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">RW</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->RW }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Kelurahan / Desa</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->village }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Kecamatan</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->districs }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Kabupaten</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->regency }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Provinsi</p>
-                        <p>: </p>
+                        <p>: {{ $ustadz->province }}</p>
                     </div>
                 </div>
                 @endforeach

@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/data-diri') }}/{{ Auth::user()->name }}" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('santri/data-diri') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white flex items-center py-4 pl-8">
                                 Data Pribadi
                             </a>
                         </div>

@@ -67,7 +67,7 @@
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('ustadz/profil-ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('ustadz/data-diri') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Profil
                             </a>
                         </div>
@@ -77,7 +77,7 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href="{{ url('ustadz/ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Ustadz
                             </a>
                         </div>

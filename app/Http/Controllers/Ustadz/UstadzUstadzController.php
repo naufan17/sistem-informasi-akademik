@@ -6,24 +6,24 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\User;
 
-class SantriController extends Controller
+class UstadzUstadzController extends Controller
 {
-        /**
+    /**
      * Show the application dashboard.
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index()
     {
-        $santris = User::where('role', 'santri')->get();
+        $ustadzs = User::where('role', 'ustadz')->get();
 
-        return view('ustadz.santri', compact('santris'));
+        return view('ustadz.ustadz', compact('ustadzs'));
     }
 
     public function filter(Request $request)
     {
-        $santris = User::where('role', 'santri')->where('status', $request->status)->get();
-        
-        return view('ustadz.santri', compact('santris'));
+        $ustadzs = User::where('role', 'ustadz')->where('status', $request->status)->get();
+
+        return view('ustadz.ustadz', compact('ustadzs'));
     }
 }
