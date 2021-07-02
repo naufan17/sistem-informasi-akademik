@@ -24,11 +24,9 @@
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
-
 <body class="work-sans leading-normal text-base tracking-normal">
     <div id="app">
         <main>
-
             <!-- HEADER -->
             <nav id="header" class="w-full bg-white border-b-2">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
@@ -50,11 +48,9 @@
                     </div>
                 </div>
             </nav>
-
             <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex">
                 <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
-
                     <nav class="font-semibold pt-3">
                         <div class="text-gray-900">
                             <div class="pt-6 px-6 mb-8">
@@ -72,7 +68,7 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href= "{{ url('ustadz/kelas') }}/{{ Auth::user()->name }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                            <a href= "{{ url('ustadz/kelas') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
                                 Kelas
                             </a>
                         </div>
@@ -97,16 +93,13 @@
 
                     </nav>
                 </aside>
-
                 <!-- Page Content -->
                 <div class="w-full flex flex-col h-screen overflow-y-hidden">
                     <div class="overflow-x-hidden">
                         @yield('content')
                     </div>
                 </div>
-
             </div>
-            
             <!-- FOOTER -->
             <footer class="mx-auto bg-white py-8 border-t border-gray-400">
                 <div class="container flex px-6 py-8 ">

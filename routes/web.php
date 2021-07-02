@@ -64,7 +64,7 @@ Route::group(['middleware' => 'checkRole:ustadz'], function () {
     Route::get('/ustadz/data-diri/update-profile', [DataDiriUstadzController::class, 'updateProfile'])->name('ustadz.data-diri.update-profile');
     Route::get('/ustadz/data-diri/update-password', [DataDiriUstadzController::class, 'updatePassword'])->name('ustadz.data-diri.update-password');
 
-    Route::get('/ustadz/kelas/{name}', [KelasUstadzController::class, 'index'])->name('ustadz.kelas');
+    Route::get('/ustadz/kelas/{id}', [KelasUstadzController::class, 'index'])->name('ustadz.kelas');
 
     Route::get('/ustadz/filter-santri', [SantriUstadzController::class, 'filter'])->name('ustadz.filter-santri');
     Route::get('/ustadz/santri', [SantriUstadzController::class, 'index'])->name('ustadz.santri');

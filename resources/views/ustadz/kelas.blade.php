@@ -7,9 +7,7 @@
         <main class="pt-6 px-6">
             <h1 class="text-3xl text-black pb-2 mt-2">Kelas</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
-                <p class="text-xl pb-4 flex items-center">
-                    Daftar Kelas
-                </p>
+                <p class="text-xl pb-4 flex items-center">Daftar Kelas</p>
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
@@ -21,20 +19,18 @@
                                 <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Kelas</th>
                                 <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Jadwal</th>
                                 <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nama Ustadz</td>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             @foreach($courses as $course)
                             <tr>
                                 <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-left py-3 px-4">{{ $course->id }}</td>
+                                <td class="text-left py-3 px-4">{{ $course->id_course }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->course }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->book }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->grade }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->schedule }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->semester }}</td>   
-                                <td class="text-left py-3 px-4">{{ $course->name }}</td>
                             </tr>
                             @endforeach
                         </tbody>
