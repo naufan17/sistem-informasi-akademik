@@ -4,10 +4,11 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Attendance;
 use App\Models\Score;
 use App\Models\User;
 
-class RiwayatNilaiSantriController extends Controller
+class NilaiKumulatifSantriController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -16,6 +17,6 @@ class RiwayatNilaiSantriController extends Controller
      */
     public function index()
     {
-        return view('santri.riwayat-nilai');
+        return view('santri.nilai-kumulatif');
     }
 }

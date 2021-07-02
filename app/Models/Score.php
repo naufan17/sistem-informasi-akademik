@@ -16,6 +16,7 @@ class Score extends Model
      * @var array
      */
     protected $fillable = [
+        'minimum_score',
         'score',
         'id_santri',
         'id_course',

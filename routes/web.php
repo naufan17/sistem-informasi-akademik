@@ -8,7 +8,8 @@ use App\Http\Controllers\Santri\DashboardSantriController;
 use App\Http\Controllers\Santri\DataDiriSantriController;
 use App\Http\Controllers\Santri\KelasSantriController;
 use App\Http\Controllers\Santri\NilaiSantriController;
-use App\Http\Controllers\Santri\RiwayatNilaiController;
+use App\Http\Controllers\Santri\RiwayatNilaiSantriController;
+use App\Http\Controllers\Santri\NilaiKumulatifSantriController;
 use App\Http\Controllers\Santri\SantriSantriController;
 use App\Http\Controllers\Santri\UstadzSantriController;
 
@@ -43,9 +44,10 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/santri/data-diri/update-profile', [DataDiriSantriController::class, 'updateProfile'])->name('santri.data-diri.update-profile');
     Route::get('/santri/data-diri/update-password', [DataDiriSantriController::class, 'updatePassword'])->name('santri.data-diri.update-password');
 
-    Route::get('/santri/kelas/{name}', [KelasSantriController::class, 'index'])->name('santri.kelas');
-    Route::get('/santri/nilai', [NilaiController::class, 'index'])->name('santri.nilai');
-    Route::get('/santri/riwayat-nilai', [RiwayatNilaiController::class, 'index'])->name('santri.riwayat-nilai');
+    Route::get('/santri/kelas/{id}', [KelasSantriController::class, 'index'])->name('santri.kelas');
+    Route::get('/santri/nilai', [NilaiSantriController::class, 'index'])->name('santri.nilai');
+    Route::get('/santri/riwayat-nilai', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
+    Route::get('/santri/nilai-kumulatif', [NilaiKumulatifSantriController::class, 'index'])->name('santri.nilai-kumulatif');
     
     Route::get('/santri/filter-ustadz', [UstadzSantriController::class, 'filter'])->name('santri.filter-ustadz');
     Route::get('/santri/ustadz', [UstadzSantriController::class, 'index'])->name('santri.ustadz');

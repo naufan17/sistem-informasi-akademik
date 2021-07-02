@@ -14,9 +14,9 @@ class KelasSantriController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($name)
+    public function index($id)
     {
-        $classroom = Classroom::leftjoin('users', 'classrooms.id_santri', '=', 'users.id')->where('name', $name)->get();
+        $classroom = Classroom::leftjoin('users', 'classrooms.id_santri', '=', 'users.id')->where('id', $id)->get();
 
         return view('santri.kelas', compact('classroom'));
     }
