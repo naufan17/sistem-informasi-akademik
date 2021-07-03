@@ -68,8 +68,8 @@
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href= "{{ url('ustadz/kelas') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
-                                Kelas
+                            <a href= "{{ url('ustadz/mata-pelajaran') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white flex items-center py-4 pl-8">
+                                Mata Pelajaran
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">

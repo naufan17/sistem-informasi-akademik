@@ -7,7 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\User;
 
-class KelasUstadzController extends Controller
+class MataPelajaranUstadzController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -20,6 +20,6 @@ class KelasUstadzController extends Controller
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')->get();
 
-        return view('ustadz.kelas', compact('courses'));
+        return view('ustadz.mata-pelajaran', compact('courses'));
     }
 }
