@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class CumulativeStudy extends Model
+class Schedule extends Model
 {
     use HasFactory, Notifiable;
 
@@ -16,11 +16,9 @@ class CumulativeStudy extends Model
      * @var array
      */
     protected $fillable = [
-        'year',
-        'current_semester',
-        'minimum_score',
-        'score',
-        'id_santri',
-        'id_course',
+        'day',
+        'time_begin',
+        'time_end',
     ];
+    
 }
