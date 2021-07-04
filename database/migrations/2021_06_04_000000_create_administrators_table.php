@@ -16,7 +16,9 @@ class CreateadministratorsTable extends Migration
         Schema::create('administrators', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email')->unique();
+            $table->string('username')->unique();
+            // $table->string('email')->unique();
+            $table->enum('status', ['Aktif', 'Tidak aktif'])->default('Aktif');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

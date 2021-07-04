@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\Course;
 use App\Models\User;
 
 class UstadzSantriController extends Controller
@@ -15,9 +16,10 @@ class UstadzSantriController extends Controller
      */
     public function index()
     {
-        $ustadzs = User::where('role', 'ustadz')->get();
+        $courses = Course::all();
+        $ustadzs = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->where('role', 'ustadz')->get();
 
-        return view('santri.ustadz', compact('ustadzs'));
+        return view('santri.ustadz', compact('courses', 'ustadzs'));
     }
 
     public function filter(Request $request)

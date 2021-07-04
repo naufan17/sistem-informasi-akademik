@@ -55,11 +55,10 @@ class LoginController extends Controller
             if (auth()->user()->role == 'ustadz') {
                 return redirect()->route('ustadz.dashboard');
             }else{
-                return redirect()->route('login');
+                return redirect()->route('login')->with('error', 'You have no permission ');
             }
         }else{
-            return redirect()->route('login')
-                ->with('error','Email & Password are incorrect.');
+            return redirect()->route('login')->with('error', 'Email & Password are incorrect.');
         }     
     }
 }
