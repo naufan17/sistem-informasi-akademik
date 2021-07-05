@@ -71,6 +71,6 @@ Route::group(['middleware' => 'checkRole:ustadz'], function () {
     Route::get('/ustadz/filter-santri', [SantriUstadzController::class, 'filter'])->name('ustadz.filter-santri');
     Route::get('/ustadz/santri', [SantriUstadzController::class, 'index'])->name('ustadz.santri');
 
-    Route::get('/ustadz/filter-ustadz', [SantriUstadzController::class, 'filter'])->name('ustadz.filter-ustadz');
+    Route::get('/ustadz/filter-ustadz', [UstadzUstadzController::class, 'filter'])->name('ustadz.filter-ustadz');
     Route::get('/ustadz/ustadz', [UstadzUstadzController::class, 'index'])->name('ustadz.ustadz');
 });

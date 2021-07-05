@@ -21,7 +21,7 @@
                     <h2 class="text-2xl ">Update Informasi Data Diri</h2>
                 </div>
                 <!-- FORM UPDATE DATA DIRI -->
-                <form method="GET" action="{{ url('ustadz/data-diri-update') }}">
+                <form method="GET" action="{{ url('ustadz/data-diri/update-profile') }}">
                     @foreach($ustadzs as $ustadz)
                     <div>
                         <div class="pt-8">
@@ -142,6 +142,31 @@
                         </div>
                     </div>
                     @endforeach
+                </form>
+                <form method="GET" action="{{ url('ustadz/data-diri/update-password') }}">
+                    <div class="pb-8">
+                        <div class="pt-8">
+                            <p class="self-center bg-gray-50 py-4 px-4">Update Password</p>
+                        </div>
+                        @foreach($ustadzs as $ustadz)
+                        <input id="id" type="hidden" name="id" placeholder="" value="{{ $ustadz->id }}" required autocomplete="role" required class="pt-3 pb-2 px-3 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                            <p class="self-center text-gray-600">New Password</p>
+                            <div class="relative z-0 w-full mb-5">
+                                <input type="password" name="password" placeholder="" required autocomplete="new-password" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                            </div>
+                        </div>
+                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                            <p class="self-center text-gray-600">Password Confirm</p>
+                            <div class="relative z-0 w-full mb-5">
+                                <input type="password" name="password_confirmation" placeholder="" required autocomplete="new-password" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                    <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" >Simpan</button>
+                    </div>
                 </form>
             </div>
         </main>

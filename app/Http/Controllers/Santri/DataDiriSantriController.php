@@ -67,7 +67,7 @@ class DataDiriSantriController extends Controller
             'status' => $request->status, 
         ]);
 
-        return redirect()->route('santri.data-diri', ['name' => $request->name]);
+        return redirect()->route('santri.data-diri', ['id' => $request->id]);
     }
 
     public function updatePassword(Request $request)
@@ -76,7 +76,7 @@ class DataDiriSantriController extends Controller
             'password' => Hash::make($request->password), 
         ]);
 
-        return redirect()->route('santri.data-diri', ['name' => $request->name]);
+        return redirect()->route('santri.data-diri', ['id' => $request->id]);
     }
     
 }

@@ -67,7 +67,7 @@ class DataDiriUstadzController extends Controller
             'status' => $request->status, 
         ]);
 
-        return redirect()->route('ustadz.data-diri', ['name' => $request->name]);
+        return redirect()->route('ustadz.data-diri', ['id' => $request->id]);
     }
 
     public function updatePassword(Request $request)
@@ -76,7 +76,7 @@ class DataDiriUstadzController extends Controller
             'password' => Hash::make($request->password), 
         ]);
 
-        return redirect()->route('ustadz.data-diri', ['name' => $request->name]);
+        return redirect()->route('ustadz.data-diri', ['id' => $request->id]);
     }
     
 }

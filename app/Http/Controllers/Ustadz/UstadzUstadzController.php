@@ -24,8 +24,9 @@ class UstadzUstadzController extends Controller
 
     public function filter(Request $request)
     {
-        $ustadzs = User::where('role', 'ustadz')->where('status', $request->status)->get();
+        $courses = Course::all();
+        $ustadzs = Course::where('course', $request->course)->leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->where('role', 'ustadz')->where('status', $request->status)->get();
 
-        return view('ustadz.ustadz', compact('ustadzs'));
+        return view('ustadz.ustadz', compact('courses', 'ustadzs'));
     }
 }
