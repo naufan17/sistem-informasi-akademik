@@ -54,38 +54,37 @@
                 <p class="text-xl py-4 flex items-center">
                     Laporan Kumulatif Hasil Studi MDNU
                 </p>
-                
                 <!-- LAPORAN KUMULATIF -->
                 <div class="bg-white overflow-auto py-4">
                     <table class="table-auto bg-white">
                         <tbody class="text-gray-700">
                             <tr class="bg-gray-200">
-                                <td class="text-left font-semibold py-3 px-4"><a>Jumlah Nilai</a></td>
-                                <td class="text-left w-1/2 py-3 px-4"><a>: 660</a></td>
+                                <td class="text-left font-semibold py-3 px-4">Jumlah Nilai</td>
+                                <td class="text-left w-1/2 py-3 px-4">: {{ $totalNilai }}</td>
                             </tr>
                             <tr>
-                                <td class="text-left font-semibold py-3 px-4"><a>Nilai Rata-rata</a></td>
-                                <td class="text-left w-1/2 py-3 px-4"><a>: 82,5</a></td>
+                                <td class="text-left font-semibold py-3 px-4">Nilai Rata-rata</td>
+                                <td class="text-left w-1/2 py-3 px-4">: {{ $rataRata }}</td>
                             </tr>
                             <tr class="bg-gray-200">
-                                <td class="text-left font-semibold py-3 px-4"><a>Rangking</a></td>
-                                <td class="text-left w-1/2 py-3 px-4"><a>: 5 dari 25 santri</a></td>
+                                <td class="text-left font-semibold py-3 px-4">Rangking</td>
+                                <td class="text-left w-1/2 py-3 px-4">: 5 dari 25 santri</td>
                             </tr>
+                            @foreach($attendances as $attendance)
                             <tr>
-                                <td class="text-left font-semibold py-3 px-4"><a>Presentase Absensi MDNU</a>
-                                </td>
-                                <td class="text-left w-1/2 py-3 px-4"><a>: 0%</a></td>
+                                <td class="text-left font-semibold py-3 px-4">Presentase Absensi MDNU</td>
+                                <td class="text-left w-1/2 py-3 px-4">: {{ $attendance->attendance_mdnu }}%</td>
                             </tr>
                             <tr class="bg-gray-200">
-                                <td class="text-left font-semibold py-3 px-4"><a>Presentase Absensi
-                                        Asrama</a>
-                                </td>
-                                <td class="text-left w-1/2 py-3 px-4"><a>: 0%</a></td>
+                                <td class="text-left font-semibold py-3 px-4">Presentase Absensi Asrama</td>
+                                <td class="text-left w-1/2 py-3 px-4">: {{ $attendance->attendance_asrama }}%</td>
                             </tr>
                             <tr>
-                                <td class="text-left font-semibold py-3 px-4"><a>Keterangan</a></td>
-                                <td class="text-left w-1/2 py-3 px-4"><a>: Naik Kelas</a></td>
+                                <td class="text-left font-semibold py-3 px-4">Keterangan</td>
+                                <td class="text-left w-1/2 py-3 px-4">: Naik Kelas</td>
+                                <!-- <td class="text-left w-1/2 py-3 px-4">: Tidak Naik Kelas</td> -->
                             </tr>
+                            @endforeach
                         </tbody>
                     </table>
                 </div>

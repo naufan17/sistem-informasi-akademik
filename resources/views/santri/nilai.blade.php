@@ -49,7 +49,8 @@
                     <!--FLEX 3-->
                     <div class="object-left text-center text-white text-base">
                         <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Lihat
-                            Hasil Studi</button>
+                            Hasil Studi
+                        </button>
                     </div>
                 </div>
                 <p class="text-xl py-4 flex items-center">

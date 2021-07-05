@@ -16,13 +16,14 @@ class RiwayatNilaiSantriController extends Controller
     public function index($id)
     {        
         $totalNilai = 0;
-        foreach(CumulativeStudy::where('id_santri', $id) as $score){
-            $totaNilai += $score->score;
+        foreach(CumulativeStudy::where('id_santri', $id)->get() as $score){
+            $totalNilai = $totalNilai + $score->score;
+            $tahunAkademik = $score->year;
+            $semester = $score->current_semester;
         }
-        // $cumulativeStudies = CumulativeStudy::where('id_santri', $id)->get();
 
         $totalMataPelajaran = CumulativeStudy::where('id_santri', $id)->count();
 
-        return view('santri.riwayat-nilai', compact('totalNilai', 'totalMataPelajaran'));
+        return view('santri.riwayat-nilai', compact('totalNilai', 'totalMataPelajaran', 'tahunAkademik', 'semester'));
     }
 }

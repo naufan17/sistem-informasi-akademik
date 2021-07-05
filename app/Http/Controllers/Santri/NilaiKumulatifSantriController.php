@@ -4,9 +4,8 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Models\CumulativeStudy;
 use App\Models\Attendance;
-use App\Models\Score;
-use App\Models\User;
 
 class NilaiKumulatifSantriController extends Controller
 {
@@ -17,6 +16,17 @@ class NilaiKumulatifSantriController extends Controller
      */
     public function index($id)
     {
-        return view('santri.nilai-kumulatif');
+        $totalNilai = 0;
+        foreach(CumulativeStudy::where('id_santri', $id)->get() as $score){
+            $totalNilai = $totalNilai + $score->score;
+        }
+
+        $totalMataPelajaran = CumulativeStudy::where('id_santri', $id)->count();
+
+        $rataRata = $totalNilai/$totalMataPelajaran;
+
+        $attendances = Attendance::where('id_santri', $id)->get();
+
+        return view('santri.nilai-kumulatif', compact('totalNilai', 'rataRata', 'attendances'));
     }
 }
