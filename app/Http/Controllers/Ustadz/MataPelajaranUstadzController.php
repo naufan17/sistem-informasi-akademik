@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Ustadz;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\Course;
+use App\Models\CumulativeStudy;
 use App\Models\User;
 
 class MataPelajaranUstadzController extends Controller
@@ -21,5 +22,12 @@ class MataPelajaranUstadzController extends Controller
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')->get();
 
         return view('ustadz.mata-pelajaran', compact('courses'));
+    }
+
+    public function detailSantri($id)
+    {
+        $santris = CumulativeStudy::where('id_course', $id)->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')->get();
+
+        return view('ustadz.santri-mata-pelajaran', compact('santris'));
     }
 }

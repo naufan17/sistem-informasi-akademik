@@ -67,6 +67,7 @@ Route::group(['middleware' => 'checkRole:ustadz'], function () {
     Route::get('/ustadz/data-diri/update-password', [DataDiriUstadzController::class, 'updatePassword'])->name('ustadz.data-diri.update-password');
 
     Route::get('/ustadz/mata-pelajaran/{id}', [MataPelajaranUstadzController::class, 'index'])->name('ustadz.mata-pelajaran');
+    Route::get('/ustadz/mata-pelajaran/detail-santri/{id}', [MataPelajaranUstadzController::class, 'detailSantri'])->name('ustadz.mata-pelajaran.detail-santri');
 
     Route::get('/ustadz/filter-santri', [SantriUstadzController::class, 'filter'])->name('ustadz.filter-santri');
     Route::get('/ustadz/santri', [SantriUstadzController::class, 'index'])->name('ustadz.santri');
