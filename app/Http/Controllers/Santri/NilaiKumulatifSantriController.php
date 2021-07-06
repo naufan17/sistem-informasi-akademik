@@ -27,6 +27,23 @@ class NilaiKumulatifSantriController extends Controller
 
         $attendances = Attendance::where('id_santri', $id)->get();
 
-        return view('santri.nilai-kumulatif', compact('totalNilai', 'rataRata', 'attendances'));
+        // $keterangan = 'Tidak Naik Kelas';
+        foreach(Attendance::where('id_santri', $id)->get() as $score){
+            if($score->attendance_mdnu <= 15 && $score->attendance_asrama <= 10){
+                $keterangan = 'Naik Kelas';
+            }else{
+                $keterangan = 'Tidak Naik Kelas';
+            } 
+        }
+
+        foreach(CumulativeStudy::where('id_santri', $id)->get() as $score){
+            if($score->score >= 59 && $keterangan == 'Naik Kelas'){
+                $keterangan = 'Naik Kelas';
+            }else{
+                $keterangan = 'Tidak Naik Kelas';
+            } 
+        }
+
+        return view('santri.nilai-kumulatif', compact('totalNilai', 'rataRata', 'attendances', 'keterangan'));
     }
 }

@@ -81,7 +81,7 @@
                             </tr>
                             <tr>
                                 <td class="text-left font-semibold py-3 px-4">Keterangan</td>
-                                <td class="text-left w-1/2 py-3 px-4">: Naik Kelas</td>
+                                <td class="text-left w-1/2 py-3 px-4">: {{ $keterangan }}</td>
                                 <!-- <td class="text-left w-1/2 py-3 px-4">: Tidak Naik Kelas</td> -->
                             </tr>
                             @endforeach

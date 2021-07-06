@@ -21,9 +21,9 @@
                                 </svg>
                             </div>
                             <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
-                                <option>2021/2022</option>
-                                <option>2020/2021</option>
-                                <option>2019/2020</option>
+                                @foreach($scores as $score)
+                                    <option>{{ $score->year }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -41,8 +41,9 @@
                                 </svg>
                             </div>
                             <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
-                                <option>Ganjil</option>
-                                <option>Genap</option>
+                                @foreach($scores as $score)
+                                    <option>{{ $score->current_semester }}</option>
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -77,7 +78,7 @@
                                 <td class="text-left py-3 px-4">{{ $score->minimum_score }}</td>
                                 <td class="text-left py-3 px-4">{{ $score->score }}</td>
                                 <td class="text-left py-3 px-4">{{ $score->year }}</td>
-                                <td class="text-left py-3 px-4">{{ $score->semester }}</td>
+                                <td class="text-left py-3 px-4">{{ $score->current_semester }}</td>
                             </tr>
                             @endforeach
                         </tbody>
