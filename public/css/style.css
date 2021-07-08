@@ -83,5 +83,5 @@
     color: #000;
 }
 tr:nth-child(even) {
-    background-color:;
+    background-color:rgba(229, 231, 235, var(--tw-bg-opacity));
 }
