@@ -27,6 +27,8 @@
                         <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">Identitas Diri</p>
                         </div>
+
+                        <!--
                         <div class="grid justify-items-stretch py-8">
                             <div class="justify-self-center object-center text-center text-white text-base px-4">
                                 <div class="py-8 self-center">
@@ -37,6 +39,8 @@
                                 </div>
                             </div>
                         </div>
+                        -->
+
                         <input type="hidden" name="id" placeholder=" " value="{{ $ustadz->id }}" required class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-800">Nama Lengkap</p>

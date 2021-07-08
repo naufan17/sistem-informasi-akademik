@@ -17,7 +17,7 @@
                                 <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Mata pelajaran</th>
                                 <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Kitab</th>
                                 <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
-                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Detail</th>
+                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Aksi</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
@@ -29,7 +29,7 @@
                                 <td class="text-left py-3 px-4">{{ $cumulative_study->book }}</td>
                                 <td class="text-left py-3 px-4">{{ $cumulative_study->semester }}</td>
                                 <td class="text-left py-3 px-4">
-                                    <a href="{{ url('santri/kelas/detail') }}/{{ $cumulative_study->id_course }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-lg py-3 px-8">Detail</a>
+                                    <a href="{{ url('santri/kelas/detail') }}/{{ $cumulative_study->id_course }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-2 px-8">Detail</a>
                                 </td>  
                             </tr>
                             @endforeach

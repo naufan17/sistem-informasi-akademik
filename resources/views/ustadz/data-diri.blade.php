@@ -20,9 +20,13 @@
                     <div class="pt-8">
                         <p class="self-center bg-gray-50 py-4 px-4">Identitas Diri</p>
                     </div>
+
+                    <!--
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4">
                         <img id="showImage" class="w-32 rounded-full" src="https://source.unsplash.com/random/350x350" alt="random image">
                     </div>
+                    -->
+
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nama Lengkap</p>
                         <p>: {{ $ustadz->name }}</p>

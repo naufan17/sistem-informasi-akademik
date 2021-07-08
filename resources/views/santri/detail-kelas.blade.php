@@ -19,16 +19,19 @@
                 </div>
                 <div class="p-4">
                     <h2 class="text-2xl ">Informasi Kelas</h2>
-                    <p class="text-sm text-gray-500">Detail Kelas</p>
                 </div>
                 @foreach($courses as $course)
                 <div>
                     <div class="pt-8">
-                        <p class="self-center bg-gray-50 py-4 px-4">Identitas Diri</p>
+                        <p class="self-center bg-gray-50 py-4 px-4">Detail Kelas</p>
                     </div>
+
+                    <!--
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4">
                         <img id="showImage" class="w-32 rounded-full" src="https://source.unsplash.com/random/350x350" alt="random image">
                     </div>
+                    -->
+
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Kode MP</p>
                         <p>: {{ $course->id_course }}</p>
