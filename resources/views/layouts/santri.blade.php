@@ -30,18 +30,17 @@
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
 
 </head>
-
 <body class="work-sans leading-normal text-base tracking-normal font-family-karla ">
     <div id="app">
 
         <!-- HEADER -->
         <nav id="header" class="w-full bg-white border-b-2">
             <div class="w-full container flex items-center justify-between">
-                <div class="flex space-x-4 lg:py-6">
+                <div class="flex space-x-4 py-6">
                     <!--LOGO-->
                     <div class="object-left">
-                        <img src="images/logo.png" class="w-24">
-                    </div>
+                            <img src="images/logo.png" class="w-24">
+                        </div>
                     <!--NAME-->
                     <div class="text-center font-bold font-sans text-yellow-800 mt-2">
                         <a class="text-base">MADRASAH DINIYYAH</a><br>

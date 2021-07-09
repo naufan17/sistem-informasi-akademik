@@ -38,7 +38,7 @@
                     <div class="flex space-x-4 py-6">
                         <!--LOGO-->
                         <div class="object-left">
-                            <img src="/public/images/logo.png" class="w-24">
+                            <img src="images/logo.png" class="w-24">
                         </div>
                         <!--NAME-->
                         <div class="text-center font-bold font-sans text-yellow-800 mt-2">

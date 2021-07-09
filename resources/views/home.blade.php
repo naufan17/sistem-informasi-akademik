@@ -28,17 +28,17 @@
 
 <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
     <!--HEADER-->
-    <nav id="header" class="w-full z-30 top-0 py-1">
+    <nav id="header" class="w-full bg-white border-b-2">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-            <div class="flex space-x-4 py-5">
+            <div class="flex space-x-4 py-6">
                 <!--LOGO-->
                 <div class="object-left">
-                    <img src="{{ ('images/logo.png ') }}" class="w-24">
+                    <img src="images/logo.png" class="w-24">
                 </div>
                 <!--NAME-->
-                <div class="text-center font-sans font-bold text-yellow-800 mt-3">
-                    <a class="text-base">MADRASAH DINIYYAH<br></a>
-                    <a class="text-2xl">NURUL UMMAH<br></a>
+                <div class="text-center font-bold font-sans text-yellow-800 mt-2">
+                    <a class="text-base">MADRASAH DINIYYAH</a><br>
+                    <a class="text-2xl font-bold">NURUL UMMAH</a><br>
                     <a class="text-base tracking-widest">YOGYAKARTA</a>
                 </div>
             </div>
