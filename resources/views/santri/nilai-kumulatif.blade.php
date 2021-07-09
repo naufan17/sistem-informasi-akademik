@@ -66,10 +66,10 @@
                                 <td class="text-left font-semibold py-3 px-4">Nilai Rata-rata</td>
                                 <td class="text-left w-1/2 py-3 px-4">: {{ $rataRata }}</td>
                             </tr>
-                            <tr class="bg-gray-200">
+                            <!-- <tr class="bg-gray-200">
                                 <td class="text-left font-semibold py-3 px-4">Rangking</td>
                                 <td class="text-left w-1/2 py-3 px-4">: 5 dari 25 santri</td>
-                            </tr>
+                            </tr> -->
                             @foreach($attendances as $attendance)
                             <tr>
                                 <td class="text-left font-semibold py-3 px-4">Presentase Absensi MDNU</td>

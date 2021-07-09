@@ -1,4 +1,4 @@
-@extends('layouts.santri')
+@extends('layouts.ustadz')
 
 @section('content')
 
@@ -9,7 +9,7 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Ustadz</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
-                <form method="GET" action="{{ url('santri/filter-ustadz') }}">
+                <form method="GET" action="{{ url('ustadz/filter-ustadz') }}">
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
                             <a class="self-center">Mata Pelajaran</a>
@@ -23,7 +23,10 @@
                                 </div>
                                 <select type="text" name="course" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
                                     @foreach($ustadzs as $ustadz)
-                                        <option value="{{ $ustadz->course }}">{{ $ustadz->course }}</option>
+                                        <option selected value="{{ $ustadz->course }}">{{ $ustadz->course }}</option>
+                                    @endforeach    
+                                    @foreach($courses as $course)
+                                        <option value="{{ $course->course }}">{{ $course->course }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -40,7 +43,7 @@
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <select type="text" name="status" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                <select type="text" name="status" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">     
                                     <option value="Aktif">Aktif</option>
                                     <option value="Tidak Aktif">Tidak Aktif</option>
                                 </select>
@@ -51,7 +54,7 @@
                         </div>
                     </div>
                 </form>
-                <p class="text-xl py-4 flex items-center">Daftar Ustadz Pengampu</p>
+                <p class="text-xl py-4 flex items-center">Daftar Ustadz</p>
                 <!--TABEL DAFTAR USTADZ -->
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">

@@ -20,13 +20,11 @@
                     <div class="pt-8">
                         <p class="self-center bg-gray-50 py-4 px-4">Identitas Diri</p>
                     </div>
-
                     <!--
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4">
                         <img id="showImage" class="w-32 rounded-full" src="https://source.unsplash.com/random/350x350" alt="random image">
                     </div>
                     -->
-
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nama Lengkap</p>
                         <p>: {{ $santri->name }}</p>
@@ -99,35 +97,35 @@
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nama Ayah</p>
-                        <p>: </p>
+                        <p>: {{ $santri->father_name }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Tempat Lahir Ayah</p>
-                        <p>: </p>
+                        <p>: {{ $santri->place_born_father }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Tanggal Lahir Ayah</p>
-                        <p>: </p>
+                        <p>: {{ $santri->birthday_father }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nama Ibu</p>
-                        <p>: </p>
-                    </div>
-                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
-                        <p class="text-gray-600">Tempat Lahir Ayah</p>
-                        <p>: </p>
+                        <p>: {{ $santri->mother_name }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Tempat Lahir Ibu</p>
-                        <p>: </p>
+                        <p>: {{ $santri->place_born_mother }}</p>
+                    </div>
+                    <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
+                        <p class="text-gray-600">Tanggal Lahir Ibu</p>
+                        <p>: {{ $santri->birthday_mother }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Alamat Orang Tua</p>
-                        <p>: </p>
+                        <p>: {{ $santri->parent_address }}</p>
                     </div>
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">No. Telp/Handphone</p>
-                        <p>: </p>
+                        <p>: {{ $santri->phone_number_parent }}</p>
                     </div>
                 </div>
                 @endforeach

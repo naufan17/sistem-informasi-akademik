@@ -27,7 +27,6 @@
                         <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">Identitas Diri</p>
                         </div>
-
                         <!--
                         <div class="grid justify-items-stretch py-8">
                             <div class="justify-self-center object-center text-center text-white text-base px-4">
@@ -40,7 +39,6 @@
                             </div>
                         </div>
                         -->
-
                         <input type="hidden" name="id" placeholder=" " value="{{ $santri->id }}" required class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-800">Nama Lengkap</p>
@@ -64,7 +62,6 @@
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Jenis Kelamin</p>
                             <div class="relative z-0 w-full">
-                                <!-- <input type="text" name="gender" placeholder=" " value="{{ $santri->gender }}" class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" /> -->
                                 <select type="text" name="gender" placeholder=" " value="{{ $santri->gender }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" id="grid-state">
                                     <option>Laki-laki</option>
                                     <option>Perempuan</option>
@@ -144,57 +141,57 @@
                         </div>
                     </div>
                     <div>
-                        <!-- <div class="pt-8">
+                        <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">Keterangan Orang Tua</p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Nama Ayah</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="father_name" placeholder=" " value="{{ $santri->father_name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Tempat Lahir Ayah</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="place_born_father" placeholder=" " value="{{ $santri->place_born_father }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Tanggal Lahir Ayah</p>
                             <div class="relative z-0 w-full">
-                                <input type="date" name="" placeholder=" " value="" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="date" name="birthday_father" placeholder=" " value="{{ $santri->birthday_father }}" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Nama Ibu</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="mother_name " placeholder=" " value="{{ $santri->mother_name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Tempat Lahir Ibu</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="place_born_mother" placeholder=" " value="{{ $santri->place_born_mother }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Tanggal Lahir Ibu</p>
                             <div class="relative z-0 w-full">
-                                <input type="date" name="" placeholder=" " value="" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="date" name="birthday_mother" placeholder=" " value="{{ $santri->birthday_mother }}" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Alamat Orang Tua</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="parent_address" placeholder=" " value="{{ $santri->parent_address }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">No. Telp/Handphone</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="" placeholder=" " value="" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="number" name="phone_number_parent" placeholder=" " value="{{ $santri->phone_number_parent }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
-                        </div> -->
+                        </div>
                         <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
                             <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Simpan</button>
                         </div>

@@ -22,8 +22,8 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="course" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
-                                    @foreach($courses as $course)
-                                        <option value="{{ $course->course }}">{{ $course->course }}</option>
+                                    @foreach($ustadzs as $ustadz)
+                                        <option value="{{ $ustadz->course }}">{{ $ustadz->course }}</option>
                                     @endforeach
                                 </select>
                             </div>

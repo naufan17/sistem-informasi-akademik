@@ -16,10 +16,9 @@ class UstadzUstadzController extends Controller
      */
     public function index()
     {
-        $courses = Course::all();
         $ustadzs = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->where('role', 'ustadz')->get();
 
-        return view('ustadz.ustadz', compact('courses', 'ustadzs'));
+        return view('ustadz.ustadz', compact('ustadzs'));
     }
 
     public function filter(Request $request)
@@ -27,6 +26,6 @@ class UstadzUstadzController extends Controller
         $courses = Course::all();
         $ustadzs = Course::where('course', $request->course)->leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->where('role', 'ustadz')->where('status', $request->status)->get();
 
-        return view('ustadz.ustadz', compact('courses', 'ustadzs'));
+        return view('ustadz.filter-ustadz', compact('courses', 'ustadzs'));
     }
 }
