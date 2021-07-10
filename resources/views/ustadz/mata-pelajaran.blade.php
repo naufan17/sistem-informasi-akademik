@@ -18,7 +18,6 @@
                                 <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Kitab</th>
                                 <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Kelas</th>
                                 <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Jadwal</th>
-                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
                                 <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Daftar Santri</th>
                             </tr>
                         </thead>
@@ -31,7 +30,6 @@
                                 <td class="text-left py-3 px-4">{{ $course->book }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->grade_number }} {{ $course->grade_name }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->day }} {{ $course->time_begin }} - {{ $course->time_end }}</td>
-                                <td class="text-left py-3 px-4">{{ $course->semester }}</td>
                                 <td class="text-left py-3 px-4">
                                     <a href="{{ url('ustadz/mata-pelajaran/detail-santri') }}/{{ $course->id_course }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-2 px-8">Lihat</a>
                                 </td>
