@@ -42,7 +42,7 @@
                             </div>
                             <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
                                 @foreach($scores as $score)
-                                    <option>{{ $score->current_semester }}</option>
+                                    <option>{{ $score->semester }}</option>
                                 @endforeach
                             </select>
                         </div>
@@ -78,7 +78,7 @@
                                 <td class="text-left py-3 px-4">{{ $score->minimum_score }}</td>
                                 <td class="text-left py-3 px-4">{{ $score->score }}</td>
                                 <td class="text-left py-3 px-4">{{ $score->year }}</td>
-                                <td class="text-left py-3 px-4">{{ $score->current_semester }}</td>
+                                <td class="text-left py-3 px-4">{{ $score->semester }}</td>
                             </tr>
                             @endforeach
                         </tbody>

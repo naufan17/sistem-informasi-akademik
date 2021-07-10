@@ -19,7 +19,7 @@ class RiwayatNilaiSantriController extends Controller
         foreach(CumulativeStudy::where('id_santri', $id)->get() as $score){
             $totalNilai = $totalNilai + $score->score;
             $tahunAkademik = $score->year;
-            $semester = $score->current_semester;
+            $semester = $score->semester;
         }
 
         $totalMataPelajaran = CumulativeStudy::where('id_santri', $id)->count();

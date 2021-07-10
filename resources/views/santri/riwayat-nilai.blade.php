@@ -23,7 +23,7 @@
                         </thead>
                         <tbody class="text-gray-700">
                             <tr>
-                                <td class="text-left py-3 px-4"></td>
+                                <td class="text-left py-3 px-4">1</td>
                                 <td class="text-left py-3 px-4">{{ $tahunAkademik }}</td>
                                 <td class="text-left py-3 px-4">{{ $semester }}</td>
                                 <td class="text-left py-3 px-4">{{ $totalMataPelajaran }}</td>

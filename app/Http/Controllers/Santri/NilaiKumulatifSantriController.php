@@ -19,6 +19,8 @@ class NilaiKumulatifSantriController extends Controller
         $totalNilai = 0;
         foreach(CumulativeStudy::where('id_santri', $id)->get() as $score){
             $totalNilai = $totalNilai + $score->score;
+            $tahunAkademik = $score->year;
+            $semester = $score->semester;
         }
 
         $totalMataPelajaran = CumulativeStudy::where('id_santri', $id)->count();
@@ -44,6 +46,6 @@ class NilaiKumulatifSantriController extends Controller
             } 
         }
 
-        return view('santri.nilai-kumulatif', compact('totalNilai', 'rataRata', 'attendances', 'keterangan'));
+        return view('santri.nilai-kumulatif', compact('totalNilai', 'rataRata', 'attendances', 'keterangan', 'tahunAkademik', 'semester'));
     }
 }
