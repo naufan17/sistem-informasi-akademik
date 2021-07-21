@@ -6,7 +6,7 @@
     <!-- DATA DIRI -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Profil</h1>
+            <h1 class="text-3xl text-black pb-2 mt-2">Data Diri</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- BACK BUTTON -->
                 <div class="p-4">

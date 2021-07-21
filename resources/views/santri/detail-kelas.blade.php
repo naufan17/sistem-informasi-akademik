@@ -6,7 +6,7 @@
     <!-- DATA DIRI -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Detail</h1>
+            <h1 class="text-3xl text-black pb-2 mt-2">Mata Pelajaran</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- BACK BUTTON -->
                 <div class="p-4">
@@ -18,12 +18,12 @@
                     </a>
                 </div>
                 <div class="p-4">
-                    <h2 class="text-2xl ">Informasi Kelas</h2>
+                    <h2 class="text-2xl ">Informasi MP pada Kelas</h2>
                 </div>
                 @foreach($courses as $course)
                 <div>
                     <div class="pt-8">
-                        <p class="self-center bg-gray-50 py-4 px-4">Detail Kelas</p>
+                        <p class="self-center bg-gray-50 py-4 px-4">Detail MP</p>
                     </div>
 
                     <!--

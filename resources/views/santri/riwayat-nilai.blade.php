@@ -32,7 +32,10 @@
                         </tbody>
                     </table>
                 </div>
+
+                
                 <!--Graph Card-->
+                <!--
                 <div class="w-full md:w-1/2 py-4">
                     <div class="border-b-2 py-3">
                         <p class="text-xl">Grafik Riwayat</p>
@@ -57,10 +60,12 @@
                         </script>
                     </div>
                 </div>
+                        
                 <div class="flex object-left text-center text-white text-base pt-4">
                     <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Cetak
                         Riwayat Nilai</button>
                 </div>
+                -->
             </div>
         </main>
     </div>
