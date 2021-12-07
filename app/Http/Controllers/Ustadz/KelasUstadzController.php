@@ -8,7 +8,7 @@ use App\Models\Course;
 use App\Models\CumulativeStudy;
 use App\Models\User;
 
-class MataPelajaranUstadzController extends Controller
+class KelasUstadzController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -21,13 +21,13 @@ class MataPelajaranUstadzController extends Controller
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')->get();
 
-        return view('ustadz.mata-pelajaran', compact('courses'));
+        return view('ustadz.kelas', compact('courses'));
     }
 
     public function detailSantri($id)
     {
         $santris = CumulativeStudy::where('id_course', $id)->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')->get();
 
-        return view('ustadz.santri-mata-pelajaran', compact('santris'));
+        return view('ustadz.santri-kelas', compact('santris'));
     }
 }

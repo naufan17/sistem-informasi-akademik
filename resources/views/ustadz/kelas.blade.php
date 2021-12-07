@@ -31,7 +31,7 @@
                                 <td class="text-left py-3 px-4">{{ $course->grade_number }} {{ $course->grade_name }}</td>
                                 <td class="text-left py-3 px-4">{{ $course->day }}, {{ $course->time_begin }} - {{ $course->time_end }}</td>
                                 <td class="text-left py-3 px-4">
-                                    <a href="{{ url('ustadz/mata-pelajaran/detail-santri') }}/{{ $course->id_course }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-2 px-8">Lihat</a>
+                                    <a href="{{ url('ustadz/kelas/detail-santri') }}/{{ $course->id_course }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-2 px-8">Lihat</a>
                                 </td>
                             </tr>
                             @endforeach

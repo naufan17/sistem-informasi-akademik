@@ -15,7 +15,7 @@ use App\Http\Controllers\Santri\UstadzSantriController;
 
 use App\Http\Controllers\Ustadz\DashboardUstadzController;
 use App\Http\Controllers\Ustadz\DataDiriUstadzController;
-use App\Http\Controllers\Ustadz\MataPelajaranUstadzController;
+use App\Http\Controllers\Ustadz\KelasUstadzController;
 use App\Http\Controllers\Ustadz\SantriUstadzController;
 use App\Http\Controllers\Ustadz\UstadzUstadzController;
 
@@ -44,6 +44,7 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/santri/data-diri/update-profile', [DataDiriSantriController::class, 'updateProfile'])->name('santri.data-diri.update-profile');
     Route::get('/santri/data-diri/update-password', [DataDiriSantriController::class, 'updatePassword'])->name('santri.data-diri.update-password');
 
+    Route::get('/santri/filter-semester', [KelasSantriController::class, 'filterSemester'])->name('santri.filter-semester');
     Route::get('/santri/kelas/{id}', [KelasSantriController::class, 'index'])->name('santri.kelas');
     Route::get('/santri/kelas/detail/{id}', [KelasSantriController::class, 'detail'])->name('santri.kelas.detail');
 
@@ -66,8 +67,8 @@ Route::group(['middleware' => 'checkRole:ustadz'], function () {
     Route::get('/ustadz/data-diri/update-profile', [DataDiriUstadzController::class, 'updateProfile'])->name('ustadz.data-diri.update-profile');
     Route::get('/ustadz/data-diri/update-password', [DataDiriUstadzController::class, 'updatePassword'])->name('ustadz.data-diri.update-password');
 
-    Route::get('/ustadz/mata-pelajaran/{id}', [MataPelajaranUstadzController::class, 'index'])->name('ustadz.mata-pelajaran');
-    Route::get('/ustadz/mata-pelajaran/detail-santri/{id}', [MataPelajaranUstadzController::class, 'detailSantri'])->name('ustadz.mata-pelajaran.detail-santri');
+    Route::get('/ustadz/kelas/{id}', [KelasUstadzController::class, 'index'])->name('ustadz.kelas');
+    Route::get('/ustadz/kelas/detail-santri/{id}', [KelasUstadzController::class, 'detailSantri'])->name('ustadz.kelas.detail-santri');
 
     Route::get('/ustadz/filter-santri', [SantriUstadzController::class, 'filter'])->name('ustadz.filter-santri');
     Route::get('/ustadz/santri', [SantriUstadzController::class, 'index'])->name('ustadz.santri');

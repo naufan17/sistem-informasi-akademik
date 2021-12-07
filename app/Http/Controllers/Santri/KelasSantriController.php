@@ -17,11 +17,19 @@ class KelasSantriController extends Controller
      */
     public function index($id)
     {
-        $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')->where('id', $id)
+        $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
                                             ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')->where('id_santri', $id)->get();
 
         return view('santri.kelas', compact('cumulative_studies'));
     }
+
+    public function filterSemester(Request $request)
+    {
+        $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+                                            ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')->where('id_santri', $request->id)->where('semester', $request->semester)->get();
+
+        return view('santri.kelas', compact('cumulative_studies'));
+}
 
     public function detail($id)
     {

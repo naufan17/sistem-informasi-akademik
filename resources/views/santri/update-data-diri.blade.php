@@ -46,7 +46,6 @@
                                 <input type="text" name="name" placeholder=" " value="{{ $santri->name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
-
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600"> Tempat Lahir</p>
                             <div class="relative z-0 w-full">
@@ -141,7 +140,7 @@
                         </div>
                     </div>
                     <div>
-                        <div class="pt-8">
+                        <!-- <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">Keterangan Orang Tua</p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
@@ -191,7 +190,7 @@
                             <div class="relative z-0 w-full">
                                 <input type="number" name="phone_number_parent" placeholder=" " value="{{ $santri->phone_number_parent }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
-                        </div>
+                        </div> -->
                         <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
                             <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Simpan</button>
                         </div>

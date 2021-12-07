@@ -9,26 +9,7 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Ustadz</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
-                <form method="GET" action="{{ url('ustadz/filter-ustadz') }}">
-                    <div class="flex space-x-4 items-center pb-8">
-                        <div class="flex-none w-36">
-                            <a class="self-center">Mata Pelajaran</a>
-                        </div>
-                        <div class="flex-none md:w-1/5">
-                            <div class="relative">
-                                <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
-                                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                    </svg>
-                                </div>
-                                <select type="text" name="course" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
-                                    @foreach($ustadzs as $ustadz)
-                                        <option value="{{ $ustadz->course }}">{{ $ustadz->course }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                        </div>
-                    </div>
+                <form method="GET" action="{{ url('santri/filter-ustadz') }}">
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
                             <a class="self-center">Status</a>
@@ -58,10 +39,10 @@
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Id</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nama Ustadz</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Mata Pelajaran</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Status</th>
+                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Id</th>
+                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nama Ustadz</th>
+                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Status</th>
+                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Detail</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
@@ -70,8 +51,10 @@
                                 <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
                                 <td class="text-left py-3 px-4">{{ $ustadz->id }}</td>
                                 <td class="text-left py-3 px-4">{{ $ustadz->name }}</td>
-                                <td class="text-left py-3 px-4">{{ $ustadz->course }}</td>
                                 <td class="text-left py-3 px-4">{{ $ustadz->status }}</td>
+                                <td class="text-left py-3 px-4">
+                                    <a href="{{ url('santri/uztadz/detail') }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-2 px-6">Detail</a>
+                                </td>  
                             </tr>
                             @endforeach
                         </tbody>

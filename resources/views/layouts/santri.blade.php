@@ -79,7 +79,7 @@
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
                             <a href="{{ url('santri/kelas') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white flex items-center py-3 pl-8">
-                                Mata Pelajaran
+                                Kelas
                             </a>
                         </div>
 
