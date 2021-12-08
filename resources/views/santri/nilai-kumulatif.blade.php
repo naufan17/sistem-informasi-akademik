@@ -60,20 +60,18 @@
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Tahun Akademik</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Jumlah Nilai</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nilai Rata-rata</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Absensi MDNU (%)</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Absensi Asrama (%)</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Keterangan</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Jumlah Nilai</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Nilai Rata-rata</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi MDNU (%)</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi Asrama (%)</th>
+                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Keterangan</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                         @foreach($attendances as $attendance)
                             <tr>
                                 <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-left py-3 px-4">{{ $tahunAkademik }}</td>
                                 <td class="text-left py-3 px-4">{{ $semester }}</td>
                                 <td class="text-left py-3 px-4">{{ $totalNilai }}</td>
                                 <td class="text-left py-3 px-4">{{ $rataRata }}</td>

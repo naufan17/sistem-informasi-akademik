@@ -15,16 +15,14 @@
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Tahun Akademik</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Jumlah MP</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nilai Kumulatif</td>
+                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
+                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Jumlah MP</th>
+                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nilai Kumulatif</td>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             <tr>
                                 <td class="text-left py-3 px-4">1</td>
-                                <td class="text-left py-3 px-4">{{ $tahunAkademik }}</td>
                                 <td class="text-left py-3 px-4">{{ $semester }}</td>
                                 <td class="text-left py-3 px-4">{{ $totalMataPelajaran }}</td>
                                 <td class="text-left py-3 px-4">{{ $totalNilai }}</td>
