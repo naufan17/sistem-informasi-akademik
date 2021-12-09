@@ -11,25 +11,6 @@
                 <!-- OPTION -->
                 <div class="flex space-x-4 items-center pb-4">
                     <div class="flex-none w-36">
-                        <a class="self-center">Tahun Ajaran</a>
-                    </div>
-                    <div class="flex-none md:w-1/5">
-                        <div class="relative">
-                            <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
-                                <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
-                                    <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
-                                </svg>
-                            </div>
-                            <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
-                                <option>2021/2022</option>
-                                <option>2020/2021</option>
-                                <option>2019/2020</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="flex space-x-4 items-center pb-8">
-                    <div class="flex-none w-36">
                         <a class="self-center">Semester</a>
                     </div>
                     <div class="flex-none md:w-1/5">
@@ -41,8 +22,8 @@
                                 </svg>
                             </div>
                             <select class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
-                                <option>Ganjil</option>
-                                <option>Genap</option>
+                                <option>1</option>
+                                <option>2</option>
                             </select>
                         </div>
                     </div>
@@ -59,25 +40,25 @@
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Jumlah Nilai</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Nilai Rata-rata</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi MDNU (%)</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi Asrama (%)</th>
-                                <th class="text-left w-1/6 py-3 px-4 uppercase font-semibold text-sm">Keterangan</th>
+                                <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
+                                <th class="text-center w-1/6 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
+                                <th class="text-center w-1/6 py-3 px-4 uppercase font-semibold text-sm">Jumlah Nilai</th>
+                                <th class="text-center w-1/6 py-3 px-4 uppercase font-semibold text-sm">Nilai Rata-rata</th>
+                                <th class="text-center w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi MDNU (%)</th>
+                                <th class="text-center w-1/6 py-3 px-4 uppercase font-semibold text-sm">Absensi Asrama (%)</th>
+                                <th class="text-center w-1/6 py-3 px-4 uppercase font-semibold text-sm">Keterangan</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                         @foreach($attendances as $attendance)
                             <tr>
-                                <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-left py-3 px-4">{{ $semester }}</td>
-                                <td class="text-left py-3 px-4">{{ $totalNilai }}</td>
-                                <td class="text-left py-3 px-4">{{ $rataRata }}</td>
-                                <td class="text-left py-3 px-4">{{ $attendance->attendance_mdnu }}%</td>
-                                <td class="text-left py-3 px-4">{{ $attendance->attendance_asrama }}%</td>
-                                <td class="text-left py-3 px-4">{{ $keterangan }}</td>
+                                <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-center py-3 px-4">{{ $semester }}</td>
+                                <td class="text-center py-3 px-4">{{ $totalNilai }}</td>
+                                <td class="text-center py-3 px-4">{{ $rataRata }}</td>
+                                <td class="text-center py-3 px-4">{{ $attendance->attendance_mdnu }}%</td>
+                                <td class="text-center py-3 px-4">{{ $attendance->attendance_asrama }}%</td>
+                                <td class="text-center py-3 px-4">{{ $keterangan }}</td>
                             </tr>
                             @endforeach
                         </tbody>

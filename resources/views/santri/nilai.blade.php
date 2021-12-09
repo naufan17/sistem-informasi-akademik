@@ -43,21 +43,21 @@
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Mata Pelajaran</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">KKM</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nilai Hasil Belajar</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
+                                <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Mata Pelajaran</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">KKM</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nilai Hasil Belajar</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             @foreach($scores as $score)
                             <tr>
-                                <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-left py-3 px-4">{{ $score->course }}</td>
-                                <td class="text-left py-3 px-4">{{ $score->minimum_score }}</td>
-                                <td class="text-left py-3 px-4">{{ $score->score }}</td>
-                                <td class="text-left py-3 px-4">{{ $score->semester }}</td>
+                                <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-center py-3 px-4">{{ $score->course }}</td>
+                                <td class="text-center py-3 px-4">{{ $score->minimum_score }}</td>
+                                <td class="text-center py-3 px-4">{{ $score->score }}</td>
+                                <td class="text-center py-3 px-4">{{ $score->semester }}</td>
                             </tr>
                             @endforeach
                         </tbody>

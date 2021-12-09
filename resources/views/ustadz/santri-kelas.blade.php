@@ -14,19 +14,19 @@
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">NIS</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nama Santri</th>
-                                <th class="text-left w-1/3 py-3 px-4 uppercase font-semibold text-sm">Status</th>
+                                <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">NIS</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nama Santri</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Status</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             @foreach($santris as $santri)
                             <tr>
-                                <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-left py-3 px-4">{{ $santri->id }}</td>
-                                <td class="text-left py-3 px-4">{{ $santri->name }}</td>
-                                <td class="text-left py-3 px-4">{{ $santri->status }}</td>
+                                <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-center py-3 px-4">{{ $santri->id }}</td>
+                                <td class="text-center py-3 px-4">{{ $santri->name }}</td>
+                                <td class="text-center py-3 px-4">{{ $santri->status }}</td>
                             </tr>
                             @endforeach
                         </tbody>

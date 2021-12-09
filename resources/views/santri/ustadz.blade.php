@@ -38,21 +38,21 @@
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Id</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nama Ustadz</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Status</th>
-                                <th class="text-left w-1/4 py-3 px-4 uppercase font-semibold text-sm">Detail</th>
+                                <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Id</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nama Ustadz</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Status</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Detail</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             @foreach($ustadzs as $ustadz)
                             <tr>
-                                <td class="text-left py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-left py-3 px-4">{{ $ustadz->id }}</td>
-                                <td class="text-left py-3 px-4">{{ $ustadz->name }}</td>
-                                <td class="text-left py-3 px-4">{{ $ustadz->status }}</td>
-                                <td class="text-left py-3 px-4">
+                                <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-center py-3 px-4">{{ $ustadz->id }}</td>
+                                <td class="text-center py-3 px-4">{{ $ustadz->name }}</td>
+                                <td class="text-center py-3 px-4">{{ $ustadz->status }}</td>
+                                <td class="text-center py-3 px-4">
                                     <a href="{{ url('santri/uztadz/detail') }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-2 px-6">Detail</a>
                                 </td>  
                             </tr>

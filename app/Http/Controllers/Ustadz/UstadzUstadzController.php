@@ -25,6 +25,6 @@ class UstadzUstadzController extends Controller
     {
         $ustadzs = User::where('role', 'ustadz')->where('status', $request->status)->get();
 
-        return view('ustadz.filter-ustadz', compact('ustadzs'));
+        return view('ustadz.ustadz', compact('ustadzs'));
     }
 }
