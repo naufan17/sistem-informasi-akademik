@@ -17,16 +17,20 @@ class KelasUstadzController extends Controller
      */
     public function index($id)
     {
-        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')->where('id', $id)
+        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+                        ->where('id', $id)
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                        ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')->get();
+                        ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
+                        ->get();
 
         return view('ustadz.kelas', compact('courses'));
     }
 
     public function detailSantri($id)
     {
-        $santris = CumulativeStudy::where('id_course', $id)->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')->get();
+        $santris = CumulativeStudy::where('id_course', $id)
+                                ->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+                                ->get();
 
         return view('ustadz.santri-kelas', compact('santris'));
     }

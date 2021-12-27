@@ -10,22 +10,23 @@
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
-
+    
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
     <!-- Styles -->
+    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
     <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
-
+    
 </head>
-
 <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
     <!--HEADER-->
     <nav id="header" class="w-full bg-white border-b-2">
@@ -48,7 +49,6 @@
             </div>
         </div>
     </nav>
-
     <!--KONTEN-->
     <div class="carousel relative container mx-auto" style="max-width:1600px;">
         <div class="carousel-inner relative overflow-hidden w-full">
@@ -138,7 +138,6 @@
                 mendapat pengakuan resmi dari Kanwil Departemen Agama Wilayah
                 Propinsi DIY, berupa Piagam Madrasah Diniyah No. 91199, tertanggal 27
                 Agustus 1991.</p>
-
         </div>
         <!-- ALAMAT -->
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
@@ -154,12 +153,10 @@
             </div>
         </div>
     </section>
-
     <!-- FOOTER -->
     <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
         <div class="container flex px-6 py-8 ">
             <div class="w-full mx-auto flex flex-wrap">
-
                 <div class="text-left flex w-full lg:w-1/2 ">
                     <div class="px-3 md:px-0">
                         <h3 class="font-bold text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
@@ -168,7 +165,6 @@
                         <a class="inline-block no-underline hover:text-black hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
                     </div>
                 </div>
-
                 <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
                     <div class="px-3 md:px-0">
                         <h3 class="font-bold text-gray-900">Media Sosial</h3>
@@ -179,16 +175,12 @@
                                 <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
                                 <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Twitter</a>
                                 <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a>
-
                             </li>
                         </ul>
                     </div>
                 </div>
-
             </div>
         </div>
     </footer>
-
 </body>
-
 </html>

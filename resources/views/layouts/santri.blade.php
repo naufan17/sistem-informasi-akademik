@@ -28,11 +28,11 @@
 
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 <body class="work-sans leading-normal text-base tracking-normal font-family-karla ">
     <div id="app">
-
         <!-- HEADER -->
         <nav id="header" class="w-full bg-white border-b-2">
             <div class="w-full container flex items-center justify-between">
@@ -54,7 +54,6 @@
                 </div>
             </div>
         </nav>
-
         <main>
             <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex ">
@@ -82,7 +81,6 @@
                                 Kelas
                             </a>
                         </div>
-
                         <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
                             <button @click="open = !open" class="flex flex-row text-gray-800 group-hover:text-white items-center py-3 pl-8">
                                 <span class="w-full text-left font-bold">Nilai</span>
@@ -98,7 +96,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!--
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
                             <a href="{{ url('santri/nilai') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white flex items-center py-3 pl-8">
@@ -131,7 +128,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!--
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
                             <a href="{{ url('santri/ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-3 pl-8">
@@ -152,10 +148,8 @@
                                 @csrf
                             </form>
                         </button>
-
                     </nav>
                 </aside>
-
                 <!-- Page Content -->
                 <div class="w-full overflow-y-hidden mb-auto">
                     <div class="overflow-x-hidden h-screen">
@@ -163,7 +157,6 @@
                     </div>
                 </div>
             </div>
-
             <!-- FOOTER -->
             <footer class="w-full bg-white p-8 border-t border-gray-400">
                 <div class="px-3">
@@ -173,5 +166,4 @@
         </main>
     </div>
 </body>
-
 </html>

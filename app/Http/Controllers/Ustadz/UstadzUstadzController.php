@@ -16,14 +16,17 @@ class UstadzUstadzController extends Controller
      */
     public function index()
     {
-        $ustadzs = User::where('role', 'ustadz')->get();
+        $ustadzs = User::where('role', 'ustadz')
+                        ->get();
 
         return view('ustadz.ustadz', compact('ustadzs'));
     }
 
     public function filter(Request $request)
     {
-        $ustadzs = User::where('role', 'ustadz')->where('status', $request->status)->get();
+        $ustadzs = User::where('role', 'ustadz')
+                        ->where('status', $request->status)
+                        ->get();
 
         return view('ustadz.ustadz', compact('ustadzs'));
     }

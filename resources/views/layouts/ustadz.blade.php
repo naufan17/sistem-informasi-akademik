@@ -6,7 +6,6 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -27,6 +26,7 @@
 
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 <body class="work-sans leading-normal text-base tracking-normal">
@@ -60,7 +60,6 @@
                         <div class="text-gray-900">
                             <div class="pt-6 px-6 mb-8">
                                 <div class="text-center bg-white rounded-lg shadow-xl">
-
                                 <!--
                                     <div class="px-6 py-6">
                                         <img src="https://source.unsplash.com/random/350x350" alt="random image" class="object-center rounded-full">
@@ -81,7 +80,6 @@
                                 Kelas
                             </a>
                         </div>
-
                         <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
                             <button @click="open = !open" class="flex flex-row text-gray-800 group-hover:text-white items-center py-3 pl-8">
                                 <span class="w-full text-left font-bold">List Data</span>
@@ -96,7 +94,6 @@
                                 </div>
                             </div>
                         </div>
-
                         <!--
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
                             <a href="{{ url('ustadz/ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-3 pl-8">
@@ -118,7 +115,6 @@
                                 @csrf
                             </form>
                         </button>
-
                     </nav>
                 </aside>
                 <!-- Page Content -->
@@ -128,16 +124,13 @@
                     </div>
                 </div>
             </div>
-
             <!-- FOOTER -->
             <footer class="w-full bg-white p-8 border-t border-gray-400">
                 <div class="px-3">
                     <h3 class="text-center font-medium text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta - 2021</h3>
                 </div>
             </footer>
-
         </main>
     </div>
 </body>
-
 </html>

@@ -15,14 +15,17 @@ class SantriUstadzController extends Controller
      */
     public function index()
     {
-        $santris = User::where('role', 'santri')->get();
+        $santris = User::where('role', 'santri')
+                        ->get();
 
         return view('ustadz.santri', compact('santris'));
     }
 
     public function filter(Request $request)
     {
-        $santris = User::where('role', 'santri')->where('status', $request->status)->get();
+        $santris = User::where('role', 'santri')
+                        ->where('status', $request->status)
+                        ->get();
         
         return view('ustadz.santri', compact('santris'));
     }

@@ -6,7 +6,7 @@
 
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
-
+    
     <title>{{ config('app.name', 'Laravel') }}</title>
 
     <!-- Scripts -->
@@ -22,7 +22,7 @@
 
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
-    
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="work-sans leading-normal text-base tracking-normal">
     <div id="app">
@@ -48,19 +48,15 @@
                     </div>
                 </div>
             </nav>
-
             <!-- Page Content -->
             <div class="bg-gray-100 font-family-karla flex">
-
                 <!-- Page Content -->
                 <div class="w-full flex flex-col h-screen overflow-y-hidden">
                     <div class="overflow-x-hidden">
                         @yield('content')
                     </div>
                 </div>
-
             </div>
-            
             <!-- FOOTER -->
             <footer class="mx-auto bg-white py-8 border-t border-gray-400">
                 <div class="container flex px-6 py-8 ">
