@@ -69,8 +69,6 @@
                                 <!-- <td class="text-center py-3 px-4">{{ $cumulative_study->id_course }}</td> -->
                                 <td class="text-center py-3 px-4">{{ $cumulative_study->course }}</td>
                                 <td class="text-center py-3 px-4">{{ $cumulative_study->book }}</td>
-                                <td class="text-center py-3 px-4">{{ $course->grade_number }} {{ $course->grade_name }}</td>
-                                <td class="text-center py-3 px-4">{{ $course->day }}, {{ $course->time_begin }} - {{ $course->time_end }}</td>
                                 <td class="text-center py-3 px-4">
                                     <a href="{{ url('santri/kelas/detail') }}/{{ $cumulative_study->id_course }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-2 px-6">Detail</a>
                                 </td>  
