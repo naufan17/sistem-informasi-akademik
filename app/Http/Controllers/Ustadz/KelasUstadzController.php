@@ -18,9 +18,9 @@ class KelasUstadzController extends Controller
     public function index($id)
     {
         $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
-                        ->where('id', $id)
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
+                        ->where('id', $id)
                         ->get();
 
         return view('ustadz.kelas', compact('courses'));

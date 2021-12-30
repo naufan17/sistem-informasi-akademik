@@ -16,6 +16,7 @@ class SantriSantriController extends Controller
     public function index()
     {
         $santris = User::where('role', 'santri')
+                        ->orderBy('id')
                         ->get();
 
         return view('santri.santri', compact('santris'));
@@ -25,6 +26,7 @@ class SantriSantriController extends Controller
     {
         $santris = User::where('role', 'santri')
                         ->where('status', $request->status)
+                        ->orderBy('id')
                         ->get();
         
         return view('santri.santri', compact('santris'));
