@@ -9,7 +9,7 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Nilai</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
-                <form method="GET" action="{{ url('santri/filter-semester') }}">
+                <form method="GET" action="{{ url('santri/filter-nilai') }}">
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
                             <a class="self-center">Semester</a>
@@ -22,7 +22,7 @@
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <select type="number" name="semester" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                <select type="text" name="semester" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
                                     <option value="Ganjil">Ganjil</option>
                                     <option value="Genap">Genap</option>
                                 </select>
@@ -33,7 +33,6 @@
                         <div class="flex-none w-36">
                             <a class="self-center">Tahun Ajaran</a>
                         </div>
-                        <input type="hidden" name="id" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <div class="flex-none md:w-1/5">
                             <div class="relative">
                                 <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
@@ -48,7 +47,7 @@
                             </div>
                         </div>
                         <div class="object-left text-center text-white text-base">
-                            <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Lihat Kelas</button>
+                            <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Lihat Nilai</button>
                         </div>
                     </div>
                 </form>
@@ -77,13 +76,10 @@
                             @endforeach
                         </tbody>
                     </table>
-                </div>
-
-                <!--
+                </div>                
                 <div class="flex object-left text-center text-white text-base pt-4">
                     <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Cetak Nilai</button>
                 </div>
--->
             </div>
         </main>
     </div>

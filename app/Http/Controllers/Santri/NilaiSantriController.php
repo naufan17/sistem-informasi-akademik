@@ -16,10 +16,22 @@ class NilaiSantriController extends Controller
      */
     public function index($id)
     {
-        $scores = CumulativeStudy::where('id_santri', $id)
-                                ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+        $scores = CumulativeStudy::leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                 ->where('id_santri', $id)
+                                ->orderBy('semester')
                                 ->get();
+
+        return view('santri.nilai', compact('scores'));
+    }
+
+    public function filterNilai(Request $request)
+    {
+        $scores = CumulativeStudy::leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+                                            ->where('id_santri', $request->id)
+                                            ->where('semester', $request->semester)
+                                            ->where('year', $request->tahun_ajaran)
+                                            ->orderBy('semester')
+                                            ->get();
 
         return view('santri.nilai', compact('scores'));
     }

@@ -44,10 +44,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/santri/data-diri/update-profile', [DataDiriSantriController::class, 'updateProfile'])->name('santri.data-diri.update-profile');
     Route::get('/santri/data-diri/update-password', [DataDiriSantriController::class, 'updatePassword'])->name('santri.data-diri.update-password');
 
-    Route::get('/santri/filter-semester', [KelasSantriController::class, 'filterSemester'])->name('santri.filter-semester');
+    Route::get('/santri/filter-kelas', [KelasSantriController::class, 'filterKelas'])->name('santri.filter-kelas');
     Route::get('/santri/kelas/{id}', [KelasSantriController::class, 'index'])->name('santri.kelas');
     Route::get('/santri/kelas/detail/{id}', [KelasSantriController::class, 'detail'])->name('santri.kelas.detail');
 
+    Route::get('/santri/filter-nilai', [NilaiSantriController::class, 'filterNilai'])->name('santri.filter-nilai');
     Route::get('/santri/nilai/{id}', [NilaiSantriController::class, 'index'])->name('santri.nilai');
     Route::get('/santri/riwayat-nilai/{id}', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
     Route::get('/santri/nilai-kumulatif/{id}', [NilaiKumulatifSantriController::class, 'index'])->name('santri.nilai-kumulatif');

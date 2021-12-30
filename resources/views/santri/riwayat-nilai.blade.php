@@ -15,23 +15,23 @@
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Jumlah MP</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nilai Kumulatif</td>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Tahun Akademik</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Jumlah MP</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nilai Kumulatif</td>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             <tr>
                                 <td class="text-center py-3 px-4">1</td>
                                 <td class="text-center py-3 px-4">{{ $semester }}</td>
+                                <td class="text-center py-3 px-4">{{ $tahunAkademik }}</td>
                                 <td class="text-center py-3 px-4">{{ $totalMataPelajaran }}</td>
                                 <td class="text-center py-3 px-4">{{ $totalNilai }}</td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
-
-                
                 <!--Graph Card-->
                 <!--
                 <div class="w-full md:w-1/2 py-4">
@@ -57,8 +57,7 @@
                             });
                         </script>
                     </div>
-                </div>
-                        
+                </div>    
                 <div class="flex object-left text-center text-white text-base pt-4">
                     <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Cetak
                         Riwayat Nilai</button>
