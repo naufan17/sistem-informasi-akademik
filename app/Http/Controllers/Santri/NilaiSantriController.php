@@ -27,11 +27,11 @@ class NilaiSantriController extends Controller
     public function filterNilai(Request $request)
     {
         $scores = CumulativeStudy::leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
-                                            ->where('id_santri', $request->id)
-                                            ->where('semester', $request->semester)
-                                            ->where('year', $request->tahun_ajaran)
-                                            ->orderBy('semester')
-                                            ->get();
+                                ->where('id_santri', $request->id)
+                                ->where('semester', $request->semester)
+                                ->where('year', $request->tahun_ajaran)
+                                ->orderBy('semester')
+                                ->get();
 
         return view('santri.nilai', compact('scores'));
     }

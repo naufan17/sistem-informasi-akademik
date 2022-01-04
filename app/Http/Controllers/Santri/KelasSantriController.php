@@ -43,10 +43,10 @@ class KelasSantriController extends Controller
 
     public function detail($id)
     {
-        $courses = Course::where('id_course', $id)
-                        ->leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
+                        ->where('id_course', $id)
                         ->get();
 
         return view('santri.detail-kelas', compact('courses'));

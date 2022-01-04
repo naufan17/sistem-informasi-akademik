@@ -57,9 +57,11 @@
                             <tr>
                                 <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
                                 <!-- <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Kode MP</th> -->
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Mata pelajaran</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Kitab</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Detail</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Mata pelajaran</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Kitab</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Kelas</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Jadwal</th>
+                                <!-- <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold text-sm">Detail</th> -->
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
@@ -69,9 +71,11 @@
                                 <!-- <td class="text-center py-3 px-4">{{ $cumulative_study->id_course }}</td> -->
                                 <td class="text-center py-3 px-4">{{ $cumulative_study->course }}</td>
                                 <td class="text-center py-3 px-4">{{ $cumulative_study->book }}</td>
-                                <td class="text-center py-3 px-4">
+                                <td class="text-center py-3 px-4">{{ $cumulative_study->grade_number }} {{ $cumulative_study->grade_name }}</td>
+                                <td class="text-center py-3 px-4">{{ $cumulative_study->day }}, {{ $cumulative_study->time_begin }} - {{ $cumulative_study->time_end }}</td>
+                                <!-- <td class="text-center py-3 px-4">
                                     <a href="{{ url('santri/kelas/detail') }}/{{ $cumulative_study->id_course }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-2 px-6">Detail</a>
-                                </td>  
+                                </td>   -->
                             </tr>
                             @endforeach
                         </tbody>
