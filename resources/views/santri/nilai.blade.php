@@ -47,7 +47,7 @@
                             </div>
                         </div>
                         <div class="object-left text-center text-white text-base">
-                            <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8" href="#">Lihat Nilai</button>
+                            <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Lihat</button>
                         </div>
                     </div>
                 </form>

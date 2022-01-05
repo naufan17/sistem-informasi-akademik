@@ -9,7 +9,7 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Data Diri</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <div class="flex object-left text-center text-white text-base p-4">
-                    <a href="{{ url('ustadz/data-diri/form-update') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white rounded shadow-lg py-3 px-8">Update Profile</a>
+                    <a href="{{ url('ustadz/data-diri/form-update') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white rounded shadow-lg py-3 px-8">Perbarui</a>
                 </div>
                 <div class="p-4">
                     <h2 class="text-2xl ">Informasi Data Diri</h2>
@@ -20,13 +20,11 @@
                     <div class="pt-8">
                         <p class="self-center bg-gray-50 py-4 px-4">Identitas Diri</p>
                     </div>
-
                     <!--
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4">
                         <img id="showImage" class="w-32 rounded-full" src="https://source.unsplash.com/random/350x350" alt="random image">
                     </div>
                     -->
-
                     <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 space-y-1 p-4 border-b">
                         <p class="text-gray-600">Nama Lengkap</p>
                         <p>: {{ $ustadz->name }}</p>

@@ -28,7 +28,7 @@
                             </div>
                         </div>
                         <div class="object-left text-center text-white text-base">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Lihat Ustadz</button>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Lihat</button>
                         </div>
                     </div>
                 </form>
