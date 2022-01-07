@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\CumulativeStudy;
 use App\Models\Score;
+use PDF;
 
 class NilaiSantriController extends Controller
 {
@@ -34,5 +35,17 @@ class NilaiSantriController extends Controller
                                 ->get();
 
         return view('santri.nilai', compact('scores'));
+    }
+
+    public function cetakNilai($id)
+    {
+        $scores = CumulativeStudy::leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+                                ->where('id_santri', $id)
+                                ->orderBy('semester')
+                                ->get();
+
+        $pdf = PDF::loadview('santri.cetak-nilai', compact('scores'));
+
+        return $pdf->stream();
     }
 }

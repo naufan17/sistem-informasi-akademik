@@ -39,7 +39,7 @@
                     </table>
                 </div>
                 <div class="flex object-left text-center text-white text-base pt-6">
-                    <button class="bg-blue-600 hover:bg-blue-800 shadow-lg rounded py-3 px-8" href="#">Cetak MP</button>
+                    <a href="{{ url('ustadz/kelas/cetak') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-3 px-8">Cetak</a>
                 </div>
             </div>
         </main>

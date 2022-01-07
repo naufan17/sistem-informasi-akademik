@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\CumulativeStudy;
 use App\Models\Course;
 use App\Models\User;
+use PDF;
 
 class KelasSantriController extends Controller
 {
@@ -50,5 +51,20 @@ class KelasSantriController extends Controller
                         ->get();
 
         return view('santri.detail-kelas', compact('courses'));
+    }
+
+    public function cetakKelas($id)
+    {
+        $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+                                            ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+                                            ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
+                                            ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
+                                            ->where('id_santri', $id)
+                                            ->orderBy('semester')
+                                            ->get();
+
+        $pdf = PDF::loadview('santri.cetak-kelas', compact('cumulative_studies'));
+
+        return $pdf->stream();
     }
 }

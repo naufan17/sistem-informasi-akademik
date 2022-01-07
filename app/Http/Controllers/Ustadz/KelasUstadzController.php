@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Course;
 use App\Models\CumulativeStudy;
 use App\Models\User;
+use PDF;
 
 class KelasUstadzController extends Controller
 {
@@ -33,5 +34,18 @@ class KelasUstadzController extends Controller
                                 ->get();
 
         return view('ustadz.santri-kelas', compact('santris'));
+    }
+
+    public function cetakKelas($id)
+    {
+        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+                        ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
+                        ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
+                        ->where('id', $id)
+                        ->get();
+
+        $pdf = PDF::loadview('ustadz.cetak-kelas', compact('courses'));
+
+        return $pdf->stream();
     }
 }
