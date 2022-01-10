@@ -23,11 +23,18 @@
                         </thead>
                         <tbody class="text-gray-700">
                             <tr>
-                                <td class="text-center py-3 px-4">1</td>
-                                <td class="text-center py-3 px-4">{{ $semester }}</td>
-                                <td class="text-center py-3 px-4">{{ $tahunAkademik }}</td>
-                                <td class="text-center py-3 px-4">{{ $totalMataPelajaran }}</td>
-                                <td class="text-center py-3 px-4">{{ $totalNilai }}</td>
+                                <td class="text-center py-3 px-4">1.</td>
+                                <td class="text-center py-3 px-4">{{ $scores_1['semester'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores_1['tahun'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores_1['total_mp'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores_1['total_nilai'] }}</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center py-3 px-4">2.</td>
+                                <td class="text-center py-3 px-4">{{ $scores_2['semester'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores_2['tahun'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores_2['total_mp'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores_2['total_nilai'] }}</td>
                             </tr>
                         </tbody>
                     </table>
