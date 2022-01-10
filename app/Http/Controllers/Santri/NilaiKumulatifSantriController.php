@@ -17,6 +17,20 @@ class NilaiKumulatifSantriController extends Controller
     public function index($id)
     {
         $totalNilai_1 = 0;
+        $totalNilai_2 = 0;
+        $tahunAkademik_1 = 0;
+        $tahunAkademik_2 = 0;
+        $semester_1 = 0;
+        $semester_2 = 0;
+        $totalMataPelajaran_1 = 0;
+        $totalMataPelajaran_2 = 0;
+        $rataRata_1 = 0;
+        $rataRata_2 = 0;
+        $attendance_mdnu_1 = 0;
+        $attendance_mdnu_2 = 0;
+        $attendance_asrama_1 = 0;
+        $attendance_asrama_2 = 0;
+        
         foreach(CumulativeStudy::where('id_santri', $id)->where('semester', 'Ganjil')->get() as $score){
             $totalNilai_1 = $totalNilai_1 + $score->score;
             $tahunAkademik_1 = $score->year;

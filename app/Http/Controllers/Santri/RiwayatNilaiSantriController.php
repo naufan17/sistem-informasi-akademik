@@ -16,6 +16,7 @@ class RiwayatNilaiSantriController extends Controller
     public function index($id)
     {        
         $totalNilai_1 = 0;
+        
         foreach(CumulativeStudy::where('id_santri', $id)->where('semester', 'Ganjil')->get() as $score){
             $totalMataPelajaran_1 = CumulativeStudy::where('id_santri', $id)->where('semester', 'Ganjil')->count();
             $totalNilai_1 = $totalNilai_1 + $score->score;
