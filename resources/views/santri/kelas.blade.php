@@ -22,7 +22,7 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="semester" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
-                                    @foreach($filters as $filter)    
+                                    @foreach($filter_semesters as $filter)    
                                     <option value="{{ $filter->semester }}">{{ $filter->semester }}</option>
                                     @endforeach
                                 </select>
@@ -41,7 +41,7 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="tahun_ajaran" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
-                                    @foreach($filters as $filter)    
+                                    @foreach($filter_years as $filter)    
                                     <option value="{{ $filter->year }}">{{ $filter->year }}</option>
                                     @endforeach
                                 </select>
