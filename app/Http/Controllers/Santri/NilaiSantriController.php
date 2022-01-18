@@ -23,14 +23,14 @@ class NilaiSantriController extends Controller
                                 ->get();
 
         $filter_semesters = CumulativeStudy::select('semester')
-                                ->where('id_santri', $id)
-                                ->distinct()
-                                ->get();
+                                            ->where('id_santri', $id)
+                                            ->distinct()
+                                            ->get();
 
         $filter_years = CumulativeStudy::select('year')
-                                ->where('id_santri', $id)
-                                ->distinct()
-                                ->get();
+                                        ->where('id_santri', $id)
+                                        ->distinct()
+                                        ->get();
 
         return view('santri.nilai', compact('scores', 'filter_semesters', 'filter_years'));
     }
@@ -45,16 +45,16 @@ class NilaiSantriController extends Controller
                                 ->get();
 
         $filter_semesters = CumulativeStudy::select('semester')
-                                ->where('id_santri', $request->id)
-                                ->where('semester', $request->semester)
-                                ->distinct()
-                                ->get();
+                                            ->where('id_santri', $request->id)
+                                            ->where('semester', $request->semester)
+                                            ->distinct()
+                                            ->get();
 
         $filter_years = CumulativeStudy::select('year')
-                                ->where('id_santri', $request->id)
-                                ->where('year', $request->tahun_ajaran)
-                                ->distinct()
-                                ->get();
+                                        ->where('id_santri', $request->id)
+                                        ->where('year', $request->tahun_ajaran)
+                                        ->distinct()
+                                        ->get();
 
         return view('santri.nilai', compact('scores', 'filter_semesters', 'filter_years'));
     }

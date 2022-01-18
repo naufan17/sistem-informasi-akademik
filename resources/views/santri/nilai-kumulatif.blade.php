@@ -30,22 +30,12 @@
                             <tr>
                                 <td class="text-center py-3 px-4">1.</td>
                                 <td class="text-center py-3 px-4">{{ $scores_1['semester'] }}</td>
-                                <td class="text-center py-3 px-4">{{ $scores_1['tahun'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores_1['year'] }}</td>
                                 <td class="text-center py-3 px-4">{{ $scores_1['total_nilai'] }}</td>
                                 <td class="text-center py-3 px-4">{{ $scores_1['nilai_rata'] }}</td>
                                 <td class="text-center py-3 px-4">{{ $scores_1['attendance_mdnu'] }}%</td>
                                 <td class="text-center py-3 px-4">{{ $scores_1['attendance_asrama'] }}%</td>
                                 <td class="text-center py-3 px-4">{{ $scores_1['keterangan'] }}</td>
-                            </tr>
-                            <tr>
-                                <td class="text-center py-3 px-4">2.</td>
-                                <td class="text-center py-3 px-4">{{ $scores_2['semester'] }}</td>
-                                <td class="text-center py-3 px-4">{{ $scores_2['tahun'] }}</td>
-                                <td class="text-center py-3 px-4">{{ $scores_2['total_nilai'] }}</td>
-                                <td class="text-center py-3 px-4">{{ $scores_2['nilai_rata'] }}</td>
-                                <td class="text-center py-3 px-4">{{ $scores_2['attendance_mdnu'] }}%</td>
-                                <td class="text-center py-3 px-4">{{ $scores_2['attendance_asrama'] }}%</td>
-                                <td class="text-center py-3 px-4">{{ $scores_2['keterangan'] }}</td>
                             </tr>
                         </tbody>
                     </table>
