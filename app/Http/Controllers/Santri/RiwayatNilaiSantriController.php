@@ -32,12 +32,22 @@ class RiwayatNilaiSantriController extends Controller
         //     $scores_2 = array('total_nilai'=>$totalNilai_2, 'tahun'=>$score->year, 'semester'=>$score->semester, 'total_mp'=>$totalMataPelajaran_2);
         // }
 
-        $filter_semesters = CumulativeStudy::select('semester', 'year')
+        $filter_semesters = CumulativeStudy::select('semester')
                                             ->where('id_santri', $id)
                                             ->distinct()
                                             ->get();
 
-        foreach($filter_semesters as $filter){
+        $filter_years = CumulativeStudy::select('year')
+                                        ->where('id_santri', $id)
+                                        ->distinct()
+                                        ->get();
+
+        $filters = CumulativeStudy::select('semester', 'year')
+                                            ->where('id_santri', $id)
+                                            ->distinct()
+                                            ->get();
+
+        foreach($filters as $filter){
             $totalMataPelajaran_1 = CumulativeStudy::where('id_santri', $id)
                                                     ->where('semester', $filter->semester)
                                                     ->where('year', $filter->year)
@@ -51,6 +61,48 @@ class RiwayatNilaiSantriController extends Controller
             $scores_1 = array('total_nilai'=>$totalNilai_1, 'semester'=>$filter->semester, 'year'=>$filter->year, 'total_mp'=>$totalMataPelajaran_1);
         }
 
-        return view('santri.riwayat-nilai', compact('scores_1'));
+        return view('santri.riwayat-nilai', compact('scores_1', 'filter_semesters', 'filter_years'));
+    }
+
+    public function filterRiwayatNilai(Request $request)
+    {
+        $scores_1 = 0;
+        
+        $filter_semesters = CumulativeStudy::select('semester')
+                                            ->where('id_santri', $request->id)
+                                            ->where('semester', $request->semester)
+                                            ->where('year', $request->year)
+                                            ->distinct()
+                                            ->get();
+
+        $filter_years = CumulativeStudy::select('year')
+                                        ->where('id_santri', $request->id)
+                                        ->where('semester', $request->semester)
+                                        ->where('year', $request->year)
+                                        ->distinct()
+                                        ->get();
+
+        $filters = CumulativeStudy::select('semester', 'year')
+                                    ->where('id_santri', $request->id)
+                                    ->where('semester', $request->semester)
+                                    ->where('year', $request->year)
+                                    ->distinct()
+                                    ->get();
+
+        foreach($filters as $filter){
+            $totalMataPelajaran_1 = CumulativeStudy::where('id_santri', $request->id)
+                                                    ->where('semester', $filter->semester)
+                                                    ->where('year', $filter->year)
+                                                    ->count();
+
+            $totalNilai_1 = CumulativeStudy::where('id_santri', $request->id)
+                                            ->where('semester', $filter->semester)
+                                            ->where('year', $filter->year)
+                                            ->sum('score');
+    
+            $scores_1 = array('total_nilai'=>$totalNilai_1, 'semester'=>$filter->semester, 'year'=>$filter->year, 'total_mp'=>$totalMataPelajaran_1);
+        }
+
+        return view('santri.riwayat-nilai', compact('scores_1', 'filter_semesters', 'filter_years'));
     }
 }
