@@ -22,7 +22,11 @@ class NilaiSantriController extends Controller
                                 ->orderBy('semester')
                                 ->get();
 
-        return view('santri.nilai', compact('scores'));
+        $filters = CumulativeStudy::select('semester', 'year')
+                                ->where('id_santri', $id)
+                                ->get();
+
+        return view('santri.nilai', compact('scores', 'filters'));
     }
 
     public function filterNilai(Request $request)
@@ -34,7 +38,14 @@ class NilaiSantriController extends Controller
                                 ->orderBy('semester')
                                 ->get();
 
-        return view('santri.nilai', compact('scores'));
+        $filters = CumulativeStudy::select('semester', 'year')
+                                ->where('id_santri', $request->id)
+                                ->where('semester', $request->semester)
+                                ->where('year', $request->tahun_ajaran)
+                                ->limit(1)
+                                ->get();
+
+        return view('santri.nilai', compact('scores', 'filters'));
     }
 
     public function cetakNilai($id)
