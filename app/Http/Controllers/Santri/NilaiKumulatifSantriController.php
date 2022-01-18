@@ -64,10 +64,10 @@ class NilaiKumulatifSantriController extends Controller
                 } 
             }
     
-            $scores_1 = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'nilai_rata'=>$rataNilai, 'attendance_mdnu'=>$attendance_mdnu, 'attendance_asrama'=>$attendance_asrama, 'keterangan'=>$keterangan);
+            $scores = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'nilai_rata'=>$rataNilai, 'attendance_mdnu'=>$attendance_mdnu, 'attendance_asrama'=>$attendance_asrama, 'keterangan'=>$keterangan);
         }
         
-        return view('santri.nilai-kumulatif', compact('scores_1', 'filter_semesters', 'filter_years'));
+        return view('santri.nilai-kumulatif', compact('scores', 'filter_semesters', 'filter_years'));
     }
 
     public function filterNilaiKumulatif(Request $request)
@@ -75,7 +75,7 @@ class NilaiKumulatifSantriController extends Controller
         $attendance_mdnu = 0;
         $attendance_asrama = 0;
         $keterangan = '';
-        $scores_1 = 0;
+        $scores = 0;
 
         $filter_semesters = CumulativeStudy::select('semester')
                                             ->where('id_santri', $request->id)
@@ -127,9 +127,9 @@ class NilaiKumulatifSantriController extends Controller
                 } 
             }
     
-            $scores_1 = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'nilai_rata'=>$rataNilai, 'attendance_mdnu'=>$attendance_mdnu, 'attendance_asrama'=>$attendance_asrama, 'keterangan'=>$keterangan);
+            $scores = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'nilai_rata'=>$rataNilai, 'attendance_mdnu'=>$attendance_mdnu, 'attendance_asrama'=>$attendance_asrama, 'keterangan'=>$keterangan);
         }
         
-        return view('santri.nilai-kumulatif', compact('scores_1', 'filter_semesters', 'filter_years'));
+        return view('santri.nilai-kumulatif', compact('scores', 'filter_semesters', 'filter_years'));
     }
 }

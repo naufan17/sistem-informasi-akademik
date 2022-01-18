@@ -5,7 +5,6 @@ namespace App\Http\Controllers\Santri;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\CumulativeStudy;
-use App\Models\Score;
 use PDF;
 
 class NilaiSantriController extends Controller

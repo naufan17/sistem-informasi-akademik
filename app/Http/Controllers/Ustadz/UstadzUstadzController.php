@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Ustadz;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\Course;
 use App\Models\User;
 
 class UstadzUstadzController extends Controller
