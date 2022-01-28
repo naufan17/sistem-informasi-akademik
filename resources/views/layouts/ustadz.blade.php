@@ -28,7 +28,6 @@
     <!-- Tailwind -->
     <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
-
 </head>
 <body class="work-sans leading-normal text-base tracking-normal">
     <div id="app">

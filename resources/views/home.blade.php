@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,16 +24,15 @@
 
     <!--Replace with your tailwind.css once created-->
     <link href="https://fonts.googleapis.com/css?family=Work+Sans:200,400&display=swap" rel="stylesheet">
-    
 </head>
 <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
     <!--HEADER-->
-    <nav id="header" class="w-full bg-white border-b-2">
+    <nav id="header" class="w-full z-30 top-0 bg-white border-b-2 pb-3">
         <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-            <div class="flex space-x-4 py-6">
+            <div class="flex space-x-4 py-2">
                 <!--LOGO-->
                 <div class="object-left">
-                    <img src="images/logo.png" class="w-24">
+                    <img src="{{ ('images/logo.png ') }}" class="w-24">
                 </div>
                 <!--NAME-->
                 <div class="text-center font-bold font-sans text-yellow-800 mt-2">
