@@ -71,12 +71,12 @@
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('ustadz/data-diri') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white flex items-center py-3 pl-8">
+                            <a href="{{ url('ustadz/data-diri') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Data Diri
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href= "{{ url('ustadz/kelas') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white flex items-center py-3 pl-8">
+                            <a href= "{{ url('ustadz/kelas') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Kelas
                             </a>
                         </div>
@@ -105,10 +105,9 @@
                                 Santri
                             </a>
                         </div>
--->
-
+                        -->
                         <button class="w-full hover:bg-blue-600 cta-btn font-semibold justify-center ">
-                            <a class="text-gray-800 hover:text-white items-center py-3 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <a class="text-gray-800 hover:text-white hover:no-underline items-center py-3 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
