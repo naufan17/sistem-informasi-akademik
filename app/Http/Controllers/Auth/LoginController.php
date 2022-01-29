@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Auth;
 
 class LoginController extends Controller
 {
@@ -40,6 +41,8 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('guest')->except('logout');
+        // $this->middleware('guest:santri')->except('logout');
+        // $this->middleware('guest:ustadz')->except('logout');
     }
 
     public function login(Request $request)
@@ -61,4 +64,43 @@ class LoginController extends Controller
             return redirect()->route('login')->with('error', 'Email & Password are incorrect.');
         }     
     }
+
+    
+    // public function showSantriLoginForm()
+    // {
+    //     return view('auth.login', ['url' => 'santri']);
+    // }
+
+    // public function santriLogin(Request $request)
+    // {
+    //     $this->validate($request, [
+    //         'email'   => 'required|email',
+    //         'password' => 'required|min:6'
+    //     ]);
+
+    //     if (Auth::guard('santri')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+
+    //         return redirect()->intended('/santri');
+    //     }
+    //     return back()->withInput($request->only('email', 'remember'));
+    // }
+
+    // public function showUstadzLoginForm()
+    // {
+    //     return view('auth.login', ['url' => 'ustadz']);
+    // }
+
+    // public function ustadzLogin(Request $request)
+    // {
+    //     $this->validate($request, [
+    //         'email'   => 'required|email',
+    //         'password' => 'required|min:6'
+    //     ]);
+
+    //     if (Auth::guard('ustadz')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+
+    //         return redirect()->intended('/ustadz');
+    //     }
+    //     return back()->withInput($request->only('email', 'remember'));
+    // }
 }

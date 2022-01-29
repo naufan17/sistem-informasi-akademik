@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
 
 use App\Http\Controllers\Santri\DashboardSantriController;
@@ -35,6 +36,13 @@ Route::get('/', function () {
 });
 
 Auth::routes();
+
+// Route::get('/login/santri', [LoginController::class, 'showSantriLoginForm']);
+// Route::get('/login/ustadz', [LoginController::class, 'showUstadzLoginForm']);
+
+// Route::view('/home', 'home')->middleware('auth');
+// Route::get('/santri/dashboard', [DashboardSantriController::class, 'index'])->name('santri.dashboard');
+// Route::get('/ustadz/dashboard', [DashboardUstadzController::class, 'index'])->name('ustadz.dashboard');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/santri/dashboard', [DashboardSantriController::class, 'index'])->name('santri.dashboard');

@@ -53,8 +53,8 @@
             <!--Slide 1-->
             <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
             <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide1.jpg');">
-                    <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-black bg-opacity-40">
+                <div class="block h-full w-full mx-auto pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide1.jpg');">
+                    <div class="block h-full w-full mx-auto pt-6 md:pt-0 md:items-center bg-black bg-opacity-40">
                         <div class="container mx-auto">
                             <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                                 <p class="text-white text-2xl my-4">Selamat Datang di Sistem Informasi Akademik Madrasah Diniyyah Nurul Ummah Yogyakarta</p>
@@ -68,8 +68,8 @@
             <!--Slide 2-->
             <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0 bg-cover bg-right" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide2.jpg');">
-                    <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-black bg-opacity-40">
+                <div class="block h-full w-full mx-auto pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide2.jpg');">
+                    <div class="block h-full w-full mx-auto pt-6 md:pt-0 md:items-center bg-black bg-opacity-40">
                         <div class="container mx-auto">
                             <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                                 <p class="text-white text-2xl my-4">"Mabruk, Semoga Barokah. Mondok Ngaji, Jama'ah, Muthola'ah"</p>
@@ -83,8 +83,8 @@
             <!--Slide 3-->
             <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
             <div class="carousel-item absolute opacity-0" style="height:50vh;">
-                <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide3.jpg');">
-                    <div class="block h-full w-full mx-auto flex pt-6 md:pt-0 md:items-center bg-black bg-opacity-40">
+                <div class="block h-full w-full mx-auto pt-6 md:pt-0 md:items-center bg-cover bg-right" style="background-image: url('images/slide3.jpg');">
+                    <div class="block h-full w-full mx-auto pt-6 md:pt-0 md:items-center bg-black bg-opacity-40">
                         <div class="container mx-auto">
                             <div class="flex flex-col w-full lg:w-1/2 md:ml-16 items-center md:items-start px-6 tracking-wide">
                                 <p class="text-white text-2xl my-3">"Ngandelo aku, nek pancen alim tenan, wong sing do pengen nggolek mantu santri, utowo santri putri ngendi wae mesti bakal ngantri."</p>

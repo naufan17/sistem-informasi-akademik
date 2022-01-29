@@ -46,6 +46,14 @@ return [
             'provider' => 'users',
             'hash' => false,
         ],
+        'santri' => [
+            'driver' => 'session',
+            'provider' => 'santris',
+        ],
+        'ustadz' => [
+            'driver' => 'session',
+            'provider' => 'ustadzs',
+        ],
     ],
 
     /*
@@ -69,6 +77,14 @@ return [
         'users' => [
             'driver' => 'eloquent',
             'model' => App\Models\User::class,
+        ],
+        'santris' => [
+            'driver' => 'eloquent',
+            'model' => App\Santri::class,
+        ],
+        'ustadzs' => [
+            'driver' => 'eloquent',
+            'model' => App\Ustadz::class,
         ],
 
         // 'users' => [
