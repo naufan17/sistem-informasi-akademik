@@ -8,11 +8,11 @@
             @csrf
             <!-- Email Address -->
             <div>
-                <label class="block font-medium text-sm text-gray-700" for="email">
-                    {{ __('Email') }}
+                <label class="block font-medium text-sm text-gray-700" for="id">
+                    {{ __('NIS/NIU') }}
                 </label>
-                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full" name="email" :value="old('email')" required autofocus>
-                @error('email')
+                <input id="id" type="number" class="form-control @error('id') is-invalid @enderror rounded-md shadow-sm border-gray-300 focus:border-indigo-300 focus:ring focus:ring-indigo-200 focus:ring-opacity-50 block mt-1 w-full" name="id" :value="old('id')" required autofocus>
+                @error('id')
                     <span class="invalid-feedback" role="alert">
                         <strong>{{ $message }}</strong>
                     </span>

@@ -30,6 +30,7 @@ class CreateUstadzsTable extends Migration
             $table->string('districs')->nullable();
             $table->string('regency')->nullable();
             $table->string('province')->nullable();
+            $table->enum('role', ['ustadz'])->default('ustadz');
             $table->enum('status', ['Aktif', 'Tidak aktif'])->default('Aktif');
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();

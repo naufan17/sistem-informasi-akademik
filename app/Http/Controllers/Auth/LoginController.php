@@ -47,11 +47,11 @@ class LoginController extends Controller
         $input = $request->all();
    
         $this->validate($request, [
-            'email' => 'required|email',
+            'id' => 'required',
             'password' => 'required',
         ]);
    
-        if(auth()->attempt(array('email' => $input['email'], 'password' => $input['password']))){
+        if(auth()->attempt(array('id' => $input['id'], 'password' => $input['password']))){
             if (auth()->user()->role == 'ustadz') {
                 return redirect()->route('ustadz.dashboard');
             }else{
@@ -62,39 +62,39 @@ class LoginController extends Controller
         }     
     }
     
-    public function showSantriLoginForm()
-    {
-        return view('auth.loginnew', ['url' => 'santri']);
-    }
+    // public function showSantriLoginForm()
+    // {
+    //     return view('auth.loginnew', ['url' => 'santri']);
+    // }
 
-    public function santriLogin(Request $request)
-    {
-        $this->validate($request, [
-            'email'   => 'required|email',
-            'password' => 'required|min:6'
-        ]);
+    // public function santriLogin(Request $request)
+    // {
+    //     $this->validate($request, [
+    //         'email'   => 'required|email',
+    //         'password' => 'required|min:6'
+    //     ]);
 
-        if (Auth::guard('santri')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
-            return redirect()->intended('/santri/dashboard');
-        }
-        return back()->withInput($request->only('email', 'remember'));
-    }
+    //     if (Auth::guard('santri')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+    //         return redirect()->intended('/santri/dashboard');
+    //     }
+    //     return back()->withInput($request->only('email', 'remember'));
+    // }
 
-    public function showUstadzLoginForm()
-    {
-        return view('auth.loginnew', ['url' => 'ustadz']);
-    }
+    // public function showUstadzLoginForm()
+    // {
+    //     return view('auth.loginnew', ['url' => 'ustadz']);
+    // }
 
-    public function ustadzLogin(Request $request)
-    {
-        $this->validate($request, [
-            'email'   => 'required|email',
-            'password' => 'required|min:6'
-        ]);
+    // public function ustadzLogin(Request $request)
+    // {
+    //     $this->validate($request, [
+    //         'email'   => 'required|email',
+    //         'password' => 'required|min:6'
+    //     ]);
 
-        if (Auth::guard('ustadz')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
-            return redirect()->intended('/ustadz/dashboard');
-        }
-        return back()->withInput($request->only('email', 'remember'));
-    }
+    //     if (Auth::guard('ustadz')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+    //         return redirect()->intended('/ustadz/dashboard');
+    //     }
+    //     return back()->withInput($request->only('email', 'remember'));
+    // }
 }

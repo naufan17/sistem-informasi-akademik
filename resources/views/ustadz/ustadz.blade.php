@@ -39,7 +39,7 @@
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Id</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">NIU</th>
                                 <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nama Ustadz</th>
                                 <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Status</th>
                                 <!-- <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Detail</th> -->
