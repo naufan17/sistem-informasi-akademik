@@ -41,14 +41,14 @@
                         </div>
                     <!--NAME-->
                     <div class="text-center font-bold font-sans text-yellow-800 mt-2">
-                        <a class="text-base">MADRASAH DINIYYAH</a><br>
-                        <a class="text-2xl font-bold">NURUL UMMAH</a><br>
-                        <a class="text-base tracking-widest">YOGYAKARTA</a>
+                        <a class="text-base hover:no-underline">MADRASAH DINIYYAH</a><br>
+                        <a class="text-2xl font-bold hover:no-underline">NURUL UMMAH</a><br>
+                        <a class="text-base tracking-widest hover:no-underline">YOGYAKARTA</a>
                     </div>
                 </div>
                 <div class="font-bold text-yellow-600 text-right">
-                    <a class="text-xl">SISTEM INFORMASI AKADEMIK <br></a>
-                    <a class="text-base tracking-widest">M D N U</a>
+                    <a class="text-xl hover:no-underline">SISTEM INFORMASI AKADEMIK <br></a>
+                    <a class="text-base tracking-widest hover:no-underline">M D N U</a>
                 </div>
             </div>
         </nav>

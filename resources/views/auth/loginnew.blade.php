@@ -4,7 +4,14 @@
 
 <div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
     <div class="w-full sm:max-w-md px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
-        <form method="POST" action="{{ route('login') }}">
+        <div class="text-center mb-2">
+            <a class="text-lg font-bold hover:no-underline">{{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</a><br>
+        </div>
+        @isset($url)
+        <form method="POST" action='{{ url("login/$url") }}' aria-label="{{ __('Login') }}">
+        @else
+        <form method="POST" action="{{ route('login') }}" aria-label="{{ __('Login') }}">
+        @endisset
             @csrf
             <!-- Email Address -->
             <div>
@@ -48,10 +55,6 @@
                 </button>
             </div>
         </form>
-        <!-- <div class=" text-center text-white text-xl py-4">
-            <a href="{{ url('login/santri') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk Santri</a>
-            <a href="{{ url('login/ustadz') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk Ustadz</a>
-        </div> -->
     </div>
 </div>
 

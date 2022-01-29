@@ -40,6 +40,9 @@ Auth::routes();
 // Route::get('/login/santri', [LoginController::class, 'showSantriLoginForm']);
 // Route::get('/login/ustadz', [LoginController::class, 'showUstadzLoginForm']);
 
+// Route::post('/login/santri', [LoginController::class, 'santriLogin']);
+// Route::post('/login/ustadz', [LoginController::class, 'ustadzLogin']);
+
 // Route::view('/home', 'home')->middleware('auth');
 // Route::get('/santri/dashboard', [DashboardSantriController::class, 'index'])->name('santri.dashboard');
 // Route::get('/ustadz/dashboard', [DashboardUstadzController::class, 'index'])->name('ustadz.dashboard');

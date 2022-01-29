@@ -80,11 +80,11 @@ return [
         ],
         'santris' => [
             'driver' => 'eloquent',
-            'model' => App\Santri::class,
+            'model' => App\Models\Santri::class,
         ],
         'ustadzs' => [
             'driver' => 'eloquent',
-            'model' => App\Ustadz::class,
+            'model' => App\Models\Ustadz::class,
         ],
 
         // 'users' => [

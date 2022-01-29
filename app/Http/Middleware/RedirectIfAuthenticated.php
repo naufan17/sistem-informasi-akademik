@@ -29,4 +29,19 @@ class RedirectIfAuthenticated
 
         return $next($request);
     }
+
+    // public function handle($request, Closure $next, $guard = null)
+    // {
+    //     if ($guard == "santri" && Auth::guard($guard)->check()) {
+    //         return redirect('/santri/dashboard');
+    //     }
+    //     if ($guard == "ustadz" && Auth::guard($guard)->check()) {
+    //         return redirect('/ustadz/dashboard');
+    //     }
+    //     if (Auth::guard($guard)->check()) {
+    //         return redirect('/home');
+    //     }
+
+    //     return $next($request);
+    // }
 }

@@ -36,14 +36,14 @@
                 </div>
                 <!--NAME-->
                 <div class="text-center font-bold font-sans text-yellow-800 mt-2">
-                    <a class="text-base">MADRASAH DINIYYAH</a><br>
-                    <a class="text-2xl font-bold">NURUL UMMAH</a><br>
-                    <a class="text-base tracking-widest">YOGYAKARTA</a>
+                    <a class="text-base hover:no-underline">MADRASAH DINIYYAH</a><br>
+                    <a class="text-2xl font-bold hover:no-underline">NURUL UMMAH</a><br>
+                    <a class="text-base tracking-widest hover:no-underline">YOGYAKARTA</a>
                 </div>
             </div>
             <div class="font-bold text-yellow-600 text-right">
-                <a class="text-xl">SISTEM INFORMASI AKADEMIK <br></a>
-                <a class="text-base tracking-widest">M D N U</a>
+                <a class="text-xl hover:no-underline">SISTEM INFORMASI AKADEMIK <br></a>
+                <a class="text-base tracking-widest hover:no-underline">M D N U</a>
             </div>
         </div>
     </nav>
@@ -116,10 +116,10 @@
         <div class="w-full container mx-auto flex items-center justify-between">
             <div class="flex-1 mx-8 py-8">
                 <div class="text-center">
-                    <a class="text-lg font-bold">Masuk untuk melihat informasi akademik anda</a><br>
+                    <a class="text-lg font-bold hover:no-underline">Masuk untuk melihat informasi akademik anda</a><br>
                 </div>
                 <div class=" text-center text-white text-xl py-4">
-                    <a href="{{ route('login') }}" class="button text-sm underline transform hover:scale-110 motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk</a>
+                    <a href="{{ route('login') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk</a>
                 </div>
             </div>
         </div>
