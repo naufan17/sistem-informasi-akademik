@@ -60,6 +60,7 @@
                         </tbody>
                     </table>
                 </div>
+                {{ $ustadzs->links() }}
             </div>
         </main>
     </div>

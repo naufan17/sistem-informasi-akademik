@@ -17,7 +17,7 @@ class SantriSantriController extends Controller
     {
         $santris = User::where('role', 'santri')
                         ->orderBy('id')
-                        ->get();
+                        ->paginate(50);
 
         return view('santri.santri', compact('santris'));
     }
@@ -27,7 +27,7 @@ class SantriSantriController extends Controller
         $santris = User::where('role', 'santri')
                         ->where('status', $request->status)
                         ->orderBy('id')
-                        ->get();
+                        ->paginate(50);
         
         return view('santri.santri', compact('santris'));
     }
