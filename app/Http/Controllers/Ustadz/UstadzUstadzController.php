@@ -19,7 +19,12 @@ class UstadzUstadzController extends Controller
                         ->orderBy('id')
                         ->paginate(50);
 
-        return view('ustadz.ustadz', compact('ustadzs'));
+        $filter_status = User::select('status')
+                        ->where('role', 'ustadz')
+                        ->distinct()
+                        ->get();
+
+        return view('ustadz.ustadz', compact('ustadzs', 'filter_status'));
     }
 
     public function filter(Request $request)
@@ -29,6 +34,12 @@ class UstadzUstadzController extends Controller
                         ->orderBy('id')
                         ->paginate(50);
 
-        return view('ustadz.ustadz', compact('ustadzs'));
+        $filter_status = User::select('status')
+                        ->where('role', 'ustadz')
+                        ->where('status', $request->status)
+                        ->distinct()
+                        ->get();
+
+        return view('ustadz.ustadz', compact('ustadzs', 'filter_status'));
     }
 }

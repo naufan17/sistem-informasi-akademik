@@ -9,7 +9,8 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Santri</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
-                <form method="GET" action="{{ url('ustadz/filter-santri') }}">
+                <form method="POST" action="{{ url('ustadz/santri') }}">
+                    @csrf
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
                             <a class="self-center hover:no-underline">Status</a>
@@ -22,8 +23,9 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="status" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
-                                    <option value="Aktif">Aktif</option>
-                                    <option value="Tidak Aktif">Tidak Aktif</option>
+                                    @foreach($filter_status as $filter)
+                                    <option value="{{ $filter->status }}">{{ $filter->status }}</option>
+                                    @endforeach
                                 </select>
                             </div>
                         </div>

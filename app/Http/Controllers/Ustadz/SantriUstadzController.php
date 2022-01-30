@@ -19,7 +19,12 @@ class SantriUstadzController extends Controller
                         ->orderBy('id')
                         ->paginate(50);
 
-        return view('ustadz.santri', compact('santris'));
+        $filter_status = User::select('status')
+                        ->where('role', 'santri')
+                        ->distinct()
+                        ->get();
+
+        return view('ustadz.santri', compact('santris', 'filter_status'));
     }
 
     public function filter(Request $request)
@@ -29,6 +34,12 @@ class SantriUstadzController extends Controller
                         ->orderBy('id')
                         ->paginate(50);
         
-        return view('ustadz.santri', compact('santris'));
+        $filter_status = User::select('status')
+                        ->where('role', 'santri')
+                        ->where('status', $request->status)
+                        ->distinct()
+                        ->get();
+        
+        return view('ustadz.santri', compact('santris', 'filter_status'));
     }
 }

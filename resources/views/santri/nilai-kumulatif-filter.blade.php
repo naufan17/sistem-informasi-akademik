@@ -9,7 +9,8 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Nilai Kumulatif</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
-                <form method="GET" action="{{ url('santri/filter-nilai-kumulatif') }}">
+                <form method="POST" action="{{ url('santri/nilai-kumulatif') }}">
+                    @csrf
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
                             <a class="self-center hover:no-underline">Semester</a>
@@ -85,7 +86,8 @@
                         </tbody>
                     </table>
                 </div>
-                <form method="GET" action="{{ url('santri/filter-nilai-kumulatif/cetak') }}">
+                <form method="POST" action="{{ url('santri/nilai-kumulatif/cetak') }}">
+                    @csrf
                     <div class="flex space-x-4 items-center pb-8">
                         <input type="hidden" name="id" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         @foreach($filter_semesters as $filter)    

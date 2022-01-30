@@ -21,7 +21,8 @@
                     <h2 class="text-2xl ">Update Informasi Data Diri</h2>
                 </div>
                 <!-- FORM UPDATE DATA DIRI -->
-                <form method="GET" action="{{ url('santri/data-diri/update-profile') }}">
+                <form method="POST" action="{{ url('santri/data-diri/update-profile') }}">
+                    @csrf
                     @foreach($santris as $santri)
                     <div>
                         <div class="pt-8">
@@ -191,13 +192,14 @@
                                 <input type="number" name="phone_number_parent" placeholder=" " value="{{ $santri->phone_number_parent }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div> -->
-                        <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Simpan</button>
-                        </div>
+                    </div>
+                    <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Simpan</button>
                     </div>
                     @endforeach
                 </form>
-                <form method="GET" action="{{ url('santri/data-diri/update-password') }}">
+                <form method="POST" action="{{ url('santri/data-diri/update-password') }}">
+                    @csrf
                     <div class="pb-8">
                         <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">Update Password</p>

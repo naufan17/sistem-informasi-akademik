@@ -52,31 +52,31 @@ Route::group(['middleware' => 'auth'], function () {
     
     Route::get('/santri/data-diri/{id}', [DataDiriSantriController::class, 'index'])->name('santri.data-diri');
     Route::get('/santri/data-diri/form-update/{id}', [DataDiriSantriController::class, 'formUpdate'])->name('santri.data-diri.form-update');
-    Route::get('/santri/data-diri/update-profile', [DataDiriSantriController::class, 'updateProfile'])->name('santri.data-diri.update-profile');
-    Route::get('/santri/data-diri/update-password', [DataDiriSantriController::class, 'updatePassword'])->name('santri.data-diri.update-password');
+    Route::post('/santri/data-diri/update-profile', [DataDiriSantriController::class, 'updateProfile'])->name('santri.data-diri.update-profile');
+    Route::post('/santri/data-diri/update-password', [DataDiriSantriController::class, 'updatePassword'])->name('santri.data-diri.update-password');
 
-    Route::get('/santri/filter-kelas', [KelasSantriController::class, 'filterKelas'])->name('santri.filter-kelas');
     Route::get('/santri/kelas/{id}', [KelasSantriController::class, 'index'])->name('santri.kelas');
+    Route::post('/santri/kelas', [KelasSantriController::class, 'filterKelas'])->name('santri.kelas');
     Route::get('/santri/kelas/detail/{id}', [KelasSantriController::class, 'detail'])->name('santri.kelas.detail');
     Route::get('/santri/kelas/cetak/{id}', [KelasSantriController::class, 'cetakKelas'])->name('santri.kelas.cetak');
 
-    Route::get('/santri/filter-nilai', [NilaiSantriController::class, 'filterNilai'])->name('santri.filter-nilai');
     Route::get('/santri/nilai/{id}', [NilaiSantriController::class, 'index'])->name('santri.nilai');
+    Route::post('/santri/nilai', [NilaiSantriController::class, 'filterNilai'])->name('santri.nilai');
     Route::get('/santri/nilai/cetak/{id}', [NilaiSantriController::class, 'cetakNilai'])->name('santri.nilai.cetak');
 
-    Route::get('/santri/filter-riwayat-nilai', [RiwayatNilaiSantriController::class, 'filterRiwayatNilai'])->name('santri.filter-riwayat-nilai');
     Route::get('/santri/riwayat-nilai/{id}', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
-    Route::get('/santri/filter-riwayat-nilai/cetak', [RiwayatNilaiSantriController::class, 'cetakRiwayatNilai'])->name('santri.filter-riwayat-nilai.cetak');
+    Route::post('/santri/riwayat-nilai', [RiwayatNilaiSantriController::class, 'filterRiwayatNilai'])->name('santri.riwayat-nilai');
+    Route::post('/santri/riwayat-nilai/cetak', [RiwayatNilaiSantriController::class, 'cetakRiwayatNilai'])->name('santri.riwayat-nilai.cetak');
     
-    Route::get('/santri/filter-nilai-kumulatif', [NilaiKumulatifSantriController::class, 'filterNilaiKumulatif'])->name('santri.filter-nilai-kumulatif');
     Route::get('/santri/nilai-kumulatif/{id}', [NilaiKumulatifSantriController::class, 'index'])->name('santri.nilai-kumulatif');
-    Route::get('/santri/filter-nilai-kumulatif/cetak', [NilaiKumulatifSantriController::class, 'cetakNilaiKumulatif'])->name('santri.filter-nilai-kumulatif.cetak');
+    Route::post('/santri/nilai-kumulatif', [NilaiKumulatifSantriController::class, 'filterNilaiKumulatif'])->name('santri.nilai-kumulatif');
+    Route::post('/santri/nilai-kumulatif/cetak', [NilaiKumulatifSantriController::class, 'cetakNilaiKumulatif'])->name('santri.nilai-kumulatif.cetak');
     
-    Route::get('/santri/filter-ustadz', [UstadzSantriController::class, 'filter'])->name('santri.filter-ustadz');
     Route::get('/santri/ustadz', [UstadzSantriController::class, 'index'])->name('santri.ustadz');
+    Route::post('/santri/ustadz', [UstadzSantriController::class, 'filter'])->name('santri.filter-ustadz');
 
-    Route::get('/santri/filter-santri', [SantriSantriController::class, 'filter'])->name('santri.filter-santri');
     Route::get('/santri/santri', [SantriSantriController::class, 'index'])->name('santri.santri');
+    Route::post('/santri/santri', [SantriSantriController::class, 'filter'])->name('santri.filter-santri');
 });
 
 Route::group(['middleware' => 'checkRole:ustadz'], function () {
@@ -84,16 +84,16 @@ Route::group(['middleware' => 'checkRole:ustadz'], function () {
     
     Route::get('/ustadz/data-diri/{id}', [DataDiriUstadzController::class, 'index'])->name('ustadz.data-diri');
     Route::get('/ustadz/data-diri/form-update/{id}', [DataDiriUstadzController::class, 'formUpdate'])->name('ustadz.data-diri.form-update');
-    Route::get('/ustadz/data-diri/update-profile', [DataDiriUstadzController::class, 'updateProfile'])->name('ustadz.data-diri.update-profile');
-    Route::get('/ustadz/data-diri/update-password', [DataDiriUstadzController::class, 'updatePassword'])->name('ustadz.data-diri.update-password');
+    Route::post('/ustadz/data-diri/update-profile', [DataDiriUstadzController::class, 'updateProfile'])->name('ustadz.data-diri.update-profile');
+    Route::post('/ustadz/data-diri/update-password', [DataDiriUstadzController::class, 'updatePassword'])->name('ustadz.data-diri.update-password');
 
     Route::get('/ustadz/kelas/{id}', [KelasUstadzController::class, 'index'])->name('ustadz.kelas');
     Route::get('/ustadz/kelas/detail-santri/{id}', [KelasUstadzController::class, 'detailSantri'])->name('ustadz.kelas.detail-santri');
     Route::get('/ustadz/kelas/cetak/{id}', [KelasUstadzController::class, 'cetakKelas'])->name('ustadz.kelas.cetak');
 
-    Route::get('/ustadz/filter-santri', [SantriUstadzController::class, 'filter'])->name('ustadz.filter-santri');
     Route::get('/ustadz/santri', [SantriUstadzController::class, 'index'])->name('ustadz.santri');
+    Route::post('/ustadz/santri', [SantriUstadzController::class, 'filter'])->name('ustadz.santri');
 
-    Route::get('/ustadz/filter-ustadz', [UstadzUstadzController::class, 'filter'])->name('ustadz.filter-ustadz');
     Route::get('/ustadz/ustadz', [UstadzUstadzController::class, 'index'])->name('ustadz.ustadz');
+    Route::post('/ustadz/ustadz', [UstadzUstadzController::class, 'filter'])->name('ustadz.ustadz');
 });

@@ -21,13 +21,13 @@
                     <h2 class="text-2xl ">Update Informasi Data Diri</h2>
                 </div>
                 <!-- FORM UPDATE DATA DIRI -->
-                <form method="GET" action="{{ url('ustadz/data-diri/update-profile') }}">
+                <form method="POST" action="{{ url('ustadz/data-diri/update-profile') }}">
+                    @csrf
                     @foreach($ustadzs as $ustadz)
                     <div>
                         <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">Identitas Diri</p>
                         </div>
-
                         <!--
                         <div class="grid justify-items-stretch py-8">
                             <div class="justify-self-center object-center text-center text-white text-base px-4">
@@ -40,7 +40,6 @@
                             </div>
                         </div>
                         -->
-
                         <input type="hidden" name="id" placeholder=" " value="{{ $ustadz->id }}" required class="pt-3 pb-2 block w-full px-0 mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-800">Nama Lengkap</p>
@@ -141,13 +140,14 @@
                                 <input type="text" name="province" placeholder=" " value="{{ $ustadz->province }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
-                        <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Simpan</button>
-                        </div>
                     </div>
                     @endforeach
+                    <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Simpan</button>
+                    </div>
                 </form>
-                <form method="GET" action="{{ url('ustadz/data-diri/update-password') }}">
+                <form method="POST" action="{{ url('ustadz/data-diri/update-password') }}">
+                    @csrf
                     <div class="pb-8">
                         <div class="pt-8">
                             <p class="self-center bg-gray-50 py-4 px-4">Update Password</p>
