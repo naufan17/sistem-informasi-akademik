@@ -22,7 +22,7 @@ class KelasSantriController extends Controller
                                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                                             ->where('id_santri', $id)
-                                            ->orderBy('semester')
+                                            ->orderBy('sem')
                                             ->get();
         
         $filter_semesters = CumulativeStudy::select('semester')
@@ -47,7 +47,7 @@ class KelasSantriController extends Controller
                                             ->where('id_santri', $request->id)
                                             ->where('semester', $request->semester)
                                             ->where('year', $request->tahun_ajaran)
-                                            ->orderBy('semester')
+                                            ->orderBy('sem')
                                             ->get();
                 
         $filter_semesters = CumulativeStudy::select('semester')

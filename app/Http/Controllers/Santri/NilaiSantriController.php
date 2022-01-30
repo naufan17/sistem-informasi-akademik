@@ -18,7 +18,7 @@ class NilaiSantriController extends Controller
     {
         $scores = CumulativeStudy::leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                 ->where('id_santri', $id)
-                                ->orderBy('semester')
+                                ->orderBy('sem')
                                 ->get();
 
         $filter_semesters = CumulativeStudy::select('semester')
@@ -40,7 +40,7 @@ class NilaiSantriController extends Controller
                                 ->where('id_santri', $request->id)
                                 ->where('semester', $request->semester)
                                 ->where('year', $request->year)
-                                ->orderBy('semester')
+                                ->orderBy('sem')
                                 ->get();
 
         $filter_semesters = CumulativeStudy::select('semester')

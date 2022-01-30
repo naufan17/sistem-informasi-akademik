@@ -62,9 +62,10 @@
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Mata Pelajaran</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">KKM</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nilai Hasil Belajar</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Mata Pelajaran</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">KKM</th>
+                                <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Nilai Hasil Belajar</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
@@ -72,6 +73,7 @@
                             <tr>
                                 <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
                                 <td class="text-center py-3 px-4">{{ $score->course }}</td>
+                                <td class="text-center py-3 px-4">{{ $score->sem }}</td>
                                 <td class="text-center py-3 px-4">{{ $score->minimum_score }}</td>
                                 <td class="text-center py-3 px-4">{{ $score->score }}</td>
                             </tr>

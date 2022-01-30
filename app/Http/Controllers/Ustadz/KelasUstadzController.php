@@ -21,6 +21,7 @@ class KelasUstadzController extends Controller
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                         ->where('id', $id)
+                        ->orderBy('sem')
                         ->get();
 
         return view('ustadz.kelas', compact('courses'));
@@ -28,9 +29,19 @@ class KelasUstadzController extends Controller
 
     public function detailSantri($id)
     {
-        $santris = CumulativeStudy::where('id_course', $id)
-                                ->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
-                                ->get();
+        if(date('m') <= 06 ){
+            $santris = CumulativeStudy::where('id_course', $id)
+                                    ->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+                                    ->where('year', date('Y')-1 . '/' . date('Y'))
+                                    ->where('semester', 'Genap')
+                                    ->get();
+        }elseif(date('m') > 06 ){
+            $santris = CumulativeStudy::where('id_course', $id)
+                                    ->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+                                    ->where('year', date('Y') . '/' . date('Y')+1)
+                                    ->where('semester', 'Ganjil')
+                                    ->get();
+        }
 
         return view('ustadz.santri-kelas', compact('santris'));
     }
