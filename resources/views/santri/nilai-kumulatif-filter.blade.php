@@ -12,7 +12,7 @@
                 <form method="GET" action="{{ url('santri/filter-nilai-kumulatif') }}">
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
-                            <a class="self-center">Semester</a>
+                            <a class="self-center hover:no-underline">Semester</a>
                         </div>
                         <input type="hidden" name="id" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <div class="flex-none md:w-1/5">
@@ -32,7 +32,7 @@
                     </div>
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
-                            <a class="self-center">Tahun Ajaran</a>
+                            <a class="self-center hover:no-underline">Tahun Ajaran</a>
                         </div>
                         <div class="flex-none md:w-1/5">
                             <div class="relative">

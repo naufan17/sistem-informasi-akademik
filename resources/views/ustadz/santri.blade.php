@@ -12,7 +12,7 @@
                 <form method="GET" action="{{ url('ustadz/filter-santri') }}">
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
-                            <a class="self-center">Status</a>
+                            <a class="self-center hover:no-underline">Status</a>
                         </div>
                         <div class="flex-none md:w-1/5">
                             <div class="relative">
