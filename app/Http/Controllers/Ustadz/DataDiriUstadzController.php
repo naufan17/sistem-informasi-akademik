@@ -45,7 +45,6 @@ class DataDiriUstadzController extends Controller
         //     'districs' => 'required', 'string',
         //     'regency' => 'required', 'string',
         //     'province' => 'required', 'string',
-        //     'status' => 'required', 'string',
         // ]);
 
         User::where('id', $request->id)->update([
@@ -64,7 +63,6 @@ class DataDiriUstadzController extends Controller
             'districs' => $request->districs, 
             'regency' => $request->regency, 
             'province' => $request->province, 
-            'status' => $request->status, 
         ]);
 
         return redirect()->route('ustadz.data-diri', [$request->id]);
