@@ -64,11 +64,13 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/santri/nilai/{id}', [NilaiSantriController::class, 'index'])->name('santri.nilai');
     Route::get('/santri/nilai/cetak/{id}', [NilaiSantriController::class, 'cetakNilai'])->name('santri.nilai.cetak');
 
-    Route::get('/santri/riwayat-nilai/{id}', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
     Route::get('/santri/filter-riwayat-nilai', [RiwayatNilaiSantriController::class, 'filterRiwayatNilai'])->name('santri.filter-riwayat-nilai');
+    Route::get('/santri/riwayat-nilai/{id}', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
+    Route::get('/santri/filter-riwayat-nilai/cetak', [RiwayatNilaiSantriController::class, 'cetakRiwayatNilai'])->name('santri.filter-riwayat-nilai.cetak');
     
-    Route::get('/santri/nilai-kumulatif/{id}', [NilaiKumulatifSantriController::class, 'index'])->name('santri.nilai-kumulatif');
     Route::get('/santri/filter-nilai-kumulatif', [NilaiKumulatifSantriController::class, 'filterNilaiKumulatif'])->name('santri.filter-nilai-kumulatif');
+    Route::get('/santri/nilai-kumulatif/{id}', [NilaiKumulatifSantriController::class, 'index'])->name('santri.nilai-kumulatif');
+    Route::get('/santri/filter-nilai-kumulatif/cetak', [NilaiKumulatifSantriController::class, 'cetakNilaiKumulatif'])->name('santri.filter-nilai-kumulatif.cetak');
     
     Route::get('/santri/filter-ustadz', [UstadzSantriController::class, 'filter'])->name('santri.filter-ustadz');
     Route::get('/santri/ustadz', [UstadzSantriController::class, 'index'])->name('santri.ustadz');

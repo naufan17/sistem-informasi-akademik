@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Santri;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Models\CumulativeStudy;
+use PDF;
 
 class RiwayatNilaiSantriController extends Controller
 {
@@ -25,26 +26,29 @@ class RiwayatNilaiSantriController extends Controller
                                         ->distinct()
                                         ->get();
 
-        $filters = CumulativeStudy::select('semester', 'year')
-                                    ->where('id_santri', $id)
-                                    ->distinct()
-                                    ->get();
+        // $filters = CumulativeStudy::select('semester', 'year')
+        //                             ->where('id_santri', $id)
+        //                             ->distinct()
+        //                             ->get();
 
-        foreach($filters as $filter){
-            $totalMataPelajaran = CumulativeStudy::where('id_santri', $id)
-                                                ->where('semester', $filter->semester)
-                                                ->where('year', $filter->year)
-                                                ->count();
+        // foreach($filters as $filter){
+        //     $totalMataPelajaran = CumulativeStudy::where('id_santri', $id)
+        //                                         ->where('semester', $filter->semester)
+        //                                         ->where('year', $filter->year)
+        //                                         ->count();
 
-            $totalNilai = CumulativeStudy::where('id_santri', $id)
-                                        ->where('semester', $filter->semester)
-                                        ->where('year', $filter->year)
-                                        ->sum('score');
+        //     $totalNilai = CumulativeStudy::where('id_santri', $id)
+        //                                 ->where('semester', $filter->semester)
+        //                                 ->where('year', $filter->year)
+        //                                 ->sum('score');
     
-            $scores = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'total_mp'=>$totalMataPelajaran);
-        }
+        //     $scores = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'total_mp'=>$totalMataPelajaran);
+        // }
 
-        return view('santri.riwayat-nilai', compact('scores', 'filter_semesters', 'filter_years'));
+        // return view('santri.riwayat-nilai', compact('scores', 'filter_semesters', 'filter_years'));
+
+        return view('santri.riwayat-nilai', compact('filter_semesters', 'filter_years'));
+
     }
 
     public function filterRiwayatNilai(Request $request)
@@ -86,6 +90,34 @@ class RiwayatNilaiSantriController extends Controller
             $scores = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'total_mp'=>$totalMataPelajaran);
         }
 
-        return view('santri.riwayat-nilai', compact('scores', 'filter_semesters', 'filter_years'));
+        return view('santri.riwayat-nilai-filter', compact('scores', 'filter_semesters', 'filter_years'));
+    }
+
+    public function cetakRiwayatNilai(Request $request)
+    {
+        $filters = CumulativeStudy::select('semester', 'year')
+                                    ->where('id_santri', $request->id)
+                                    ->where('semester', $request->semester)
+                                    ->where('year', $request->year)
+                                    ->distinct()
+                                    ->get();
+
+        foreach($filters as $filter){
+            $totalMataPelajaran = CumulativeStudy::where('id_santri', $request->id)
+                                                ->where('semester', $filter->semester)
+                                                ->where('year', $filter->year)
+                                                ->count();
+
+            $totalNilai = CumulativeStudy::where('id_santri', $request->id)
+                                        ->where('semester', $filter->semester)
+                                        ->where('year', $filter->year)
+                                        ->sum('score');
+    
+            $scores = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'total_mp'=>$totalMataPelajaran);
+        }
+        
+        $pdf = PDF::loadview('santri.cetak-riwayat-nilai', compact('scores'));
+
+        return $pdf->stream();
     }
 }

@@ -53,38 +53,6 @@
                         </div>
                     </div>
                 </form>
-                <p class="text-xl py-4 flex items-center">
-                    Laporan Kumulatif Hasil Studi MDNU
-                </p>
-                <!-- LAPORAN KUMULATIF -->
-                <div class="bg-white overflow-auto pb-8">
-                    <table class="table-auto bg-white">
-                        <thead class="bg-gray-800 text-white">
-                            <tr>
-                                <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
-                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Tahun Akademik</th>
-                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Jumlah Nilai</th>
-                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Nilai Rata-rata</th>
-                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Absensi MDNU (%)</th>
-                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Absensi Asrama (%)</th>
-                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Keterangan</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700">
-                            <tr>
-                                <td class="text-center py-3 px-4">1.</td>
-                                <td class="text-center py-3 px-4">{{ $scores['semester'] }}</td>
-                                <td class="text-center py-3 px-4">{{ $scores['year'] }}</td>
-                                <td class="text-center py-3 px-4">{{ $scores['total_nilai'] }}</td>
-                                <td class="text-center py-3 px-4">{{ $scores['nilai_rata'] }}</td>
-                                <td class="text-center py-3 px-4">{{ $scores['attendance_mdnu'] }}%</td>
-                                <td class="text-center py-3 px-4">{{ $scores['attendance_asrama'] }}%</td>
-                                <td class="text-center py-3 px-4">{{ $scores['keterangan'] }}</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
             </div>
         </main>
     </div>

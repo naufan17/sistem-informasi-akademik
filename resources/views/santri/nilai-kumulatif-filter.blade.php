@@ -6,10 +6,10 @@
     <!-- NILAI -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Nilai</h1>
+            <h1 class="text-3xl text-black pb-2 mt-2">Nilai Kumulatif</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
-                <form method="GET" action="{{ url('santri/filter-nilai') }}">
+                <form method="GET" action="{{ url('santri/filter-nilai-kumulatif') }}">
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
                             <a class="self-center">Semester</a>
@@ -54,34 +54,53 @@
                     </div>
                 </form>
                 <p class="text-xl py-4 flex items-center">
-                    Laporan Hasil Studi MDNU
+                    Laporan Kumulatif Hasil Studi MDNU
                 </p>
-                <!--TABEL NILAI-->
+                <!-- LAPORAN KUMULATIF -->
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Mata Pelajaran</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">KKM</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nilai Hasil Belajar</th>
+                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Semester</th>
+                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Tahun Akademik</th>
+                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Jumlah Nilai</th>
+                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Nilai Rata-rata</th>
+                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Absensi MDNU (%)</th>
+                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Absensi Asrama (%)</th>
+                                <th class="text-center w-1/7 py-3 px-4 uppercase font-semibold text-sm">Keterangan</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
-                            @foreach($scores as $score)
                             <tr>
-                                <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-center py-3 px-4">{{ $score->course }}</td>
-                                <td class="text-center py-3 px-4">{{ $score->minimum_score }}</td>
-                                <td class="text-center py-3 px-4">{{ $score->score }}</td>
+                                <td class="text-center py-3 px-4">1.</td>
+                                <td class="text-center py-3 px-4">{{ $scores['semester'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores['year'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores['total_nilai'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores['nilai_rata'] }}</td>
+                                <td class="text-center py-3 px-4">{{ $scores['attendance_mdnu'] }}%</td>
+                                <td class="text-center py-3 px-4">{{ $scores['attendance_asrama'] }}%</td>
+                                <td class="text-center py-3 px-4">{{ $scores['keterangan'] }}</td>
                             </tr>
-                            @endforeach
                         </tbody>
                     </table>
-                </div>                
-                <div class="flex object-left text-center text-white text-base pt-6">
-                    <a href="{{ url('santri/nilai/cetak') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white hover:no-underline text-white rounded shadow-md py-3 px-8">Cetak</a>
                 </div>
+                <form method="GET" action="{{ url('santri/filter-nilai-kumulatif/cetak') }}">
+                    <div class="flex space-x-4 items-center pb-8">
+                        <input type="hidden" name="id" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        @foreach($filter_semesters as $filter)    
+                        <input type="hidden" name="semester" placeholder=" " value="{{ $filter->semester }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        @endforeach
+                        @foreach($filter_years as $filter)    
+                        <input type="hidden" name="year" placeholder=" " value="{{ $filter->year }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        @endforeach
+                    </div>
+                    <div class="flex space-x-4 items-center pb-8">
+                        <div class="object-left text-center text-white text-base">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Cetak</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         </main>
     </div>
