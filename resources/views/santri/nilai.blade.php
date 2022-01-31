@@ -81,10 +81,13 @@
                             @endforeach
                         </tbody>
                     </table>
-                </div>                
+                </div>  
+                @if(empty($cumulative_studies))
+                @else
                 <div class="flex object-left text-center text-white text-base pt-6">
                     <a href="{{ url('santri/nilai/cetak') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white hover:no-underline text-white rounded shadow-md py-3 px-8">Cetak</a>
                 </div>
+                @endif              
             </div>
         </main>
     </div>

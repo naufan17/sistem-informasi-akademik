@@ -46,6 +46,31 @@ class KelasUstadzController extends Controller
         return view('ustadz.santri-kelas', compact('santris'));
     }
 
+    public function createNilai(Request $request)
+    {
+        $request->validate([
+            'id_cumulative_study' => 'required', 'number',
+            'score' => 'required', 'number',
+        ]);
+        
+        CumulativeStudy::where('id_cumulative_study', $request->id_cumulative_study)->update([
+            'minimum_score' => '60',
+            'score' => $request->score,
+        ]);
+
+        // CumulativeStudy::upsert([
+        //     'id_cumulative_study' => $request->id_cumulative_study,
+        //     'year' => $request->year,
+        //     'semester' => $request->semester,
+        //     'minimum_score' => '75',
+        //     'score' => $request->score,
+        //     'id_santri' => $request->id_santri,
+        //     'id_course' => $request->id_course,
+        // ],['id_cumulative_study', 'year', 'semester', 'id_santri', 'id_course'],['minimum_score', 'score']);
+
+        return redirect()->route('ustadz.kelas.detail-santri', [$request->id_course]);
+    }
+
     public function cetakKelas($id)
     {
         $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
