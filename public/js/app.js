@@ -366,6 +366,16 @@ eval("__webpack_require__.r(__webpack_exports__);\n// extracted by mini-css-extr
 
 /***/ }),
 
+/***/ "./resources/css/app.css":
+/*!*******************************!*\
+  !*** ./resources/css/app.css ***!
+  \*******************************/
+/***/ (() => {
+
+throw new Error("Module build failed (from ./node_modules/mini-css-extract-plugin/dist/loader.js):\nModuleBuildError: Module build failed (from ./node_modules/postcss-loader/dist/cjs.js):\nError: Cannot find module '@tailwindcss/forms'\nRequire stack:\n- C:\\xampp\\htdocs\\sistem-informasi-akademik\\tailwind.config.js\n- C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\tailwindcss\\lib\\lib\\setupTrackingContext.js\n- C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\tailwindcss\\lib\\index.js\n- C:\\xampp\\htdocs\\sistem-informasi-akademik\\webpack.mix.js\n- C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\laravel-mix\\setup\\webpack.config.js\n- C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\webpack-cli\\lib\\webpack-cli.js\n- C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\webpack-cli\\lib\\bootstrap.js\n- C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\webpack-cli\\bin\\cli.js\n- C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\webpack\\bin\\webpack.js\n    at Function.Module._resolveFilename (node:internal/modules/cjs/loader:933:15)\n    at Function.Module._load (node:internal/modules/cjs/loader:778:27)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at require (C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\v8-compile-cache\\v8-compile-cache.js:159:20)\n    at Object.<anonymous> (C:\\xampp\\htdocs\\sistem-informasi-akademik\\tailwind.config.js:26:15)\n    at Module._compile (C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\v8-compile-cache\\v8-compile-cache.js:192:30)\n    at Object.Module._extensions..js (node:internal/modules/cjs/loader:1153:10)\n    at Module.load (node:internal/modules/cjs/loader:981:32)\n    at Function.Module._load (node:internal/modules/cjs/loader:822:12)\n    at Module.require (node:internal/modules/cjs/loader:1005:19)\n    at processResult (C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\webpack\\lib\\NormalModule.js:675:19)\n    at C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\webpack\\lib\\NormalModule.js:777:5\n    at C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\loader-runner\\lib\\LoaderRunner.js:399:11\n    at C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\loader-runner\\lib\\LoaderRunner.js:251:18\n    at context.callback (C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\loader-runner\\lib\\LoaderRunner.js:124:13)\n    at Object.loader (C:\\xampp\\htdocs\\sistem-informasi-akademik\\node_modules\\postcss-loader\\dist\\index.js:96:7)");
+
+/***/ }),
+
 /***/ "./node_modules/popper.js/dist/esm/popper.js":
 /*!***************************************************!*\
   !*** ./node_modules/popper.js/dist/esm/popper.js ***!
@@ -558,7 +568,8 @@ eval("// shim for using process in browser\nvar process = module.exports = {};\n
 /******/ 	// Load entry module and return exports
 /******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
 /******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/js/app.js")))
-/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	__webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/sass/app.scss")))
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["css/app"], () => (__webpack_require__("./resources/css/app.css")))
 /******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
 /******/ 	
 /******/ })()

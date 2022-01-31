@@ -30,10 +30,10 @@
             <!-- HEADER -->
             <nav id="header" class="w-full bg-white border-b-2">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-                    <div class="flex space-x-4 py-6">
+                    <div class="flex space-x-4 py-2">
                         <!--LOGO-->
                         <div class="object-left">
-                            <img src="images/logo.png" class="w-24">
+                            <img src="{{ ('images/logo.png ') }}" class="w-24">
                         </div>
                         <!--NAME-->
                         <div class="text-center font-bold font-sans text-yellow-800 mt-2">
