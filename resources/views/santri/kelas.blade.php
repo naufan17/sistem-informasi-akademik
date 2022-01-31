@@ -53,7 +53,12 @@
                         </div>
                     </div>
                 </form>
-                <p class="text-xl pb-4 flex items-center">Daftar MP Diikuti</p>
+                <p class="text-xl pt-4 flex items-center border-b-2">Daftar MP Diikuti</p>
+                <div class="flex flex-row-reverse object-left text-center text-white text-base py-8">
+                    <a href="{{ url('santri/kelas/form-create') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:no-underline rounded shadow-lg py-3 px-8">
+                        Tambah
+                    </a>
+                </div>
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
