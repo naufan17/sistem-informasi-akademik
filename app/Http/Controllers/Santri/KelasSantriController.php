@@ -157,7 +157,6 @@ class KelasSantriController extends Controller
         ]);
 
         if(date('m') == 01 || date('m') == 07){
-
             if(date('m') <= 06 ){
                 CumulativeStudy::firstOrCreate([
                     'year' => date('Y')-1 . '/' . date('Y'),
@@ -210,7 +209,7 @@ class KelasSantriController extends Controller
                                             ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                                            ->where('id_santri', $request->id)
+                                            ->where('id_santri', $request->id_ustadz)
                                             ->where('semester', $request->semester)
                                             ->where('year', $request->year)
                                             ->orderBy('semester')

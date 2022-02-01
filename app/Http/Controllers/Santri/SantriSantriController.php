@@ -16,15 +16,22 @@ class SantriSantriController extends Controller
     public function index()
     {
         $santris = User::where('role', 'santri')
+                        ->where('status', 'Aktif')
                         ->orderBy('id')
                         ->paginate(50);
 
         $filter_status = User::select('status')
+                            ->where('role', 'santri')
+                            ->distinct()
+                            ->get();
+
+        $status = User::select('status')
                         ->where('role', 'santri')
+                        ->where('status', 'Aktif')
                         ->distinct()
                         ->get();
 
-        return view('santri.santri', compact('santris', 'filter_status'));
+        return view('santri.santri', compact('santris', 'filter_status', 'status'));
     }
 
     public function filter(Request $request)
@@ -35,11 +42,16 @@ class SantriSantriController extends Controller
                         ->paginate(50);
 
         $filter_status = User::select('status')
-                        ->where('role', 'santri')
-                        ->where('status', $request->status)
-                        ->distinct()
-                        ->get();
+                            ->where('role', 'santri')
+                            ->distinct()
+                            ->get();
+    
+        $status = User::select('status')
+                    ->where('role', 'santri')
+                    ->where('status', $request->status)
+                    ->distinct()
+                    ->get();
         
-        return view('santri.santri', compact('santris', 'filter_status'));
+        return view('santri.santri', compact('santris', 'filter_status', 'status'));
     }
 }

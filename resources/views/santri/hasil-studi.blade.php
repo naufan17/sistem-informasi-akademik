@@ -88,6 +88,8 @@
                         </tbody>
                     </table>
                 </div>
+                @if(empty($scores))
+                @else
                 <form method="POST" action="{{ url('santri/hasil-studi/cetak') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
@@ -101,6 +103,7 @@
                         </div>
                     </div>
                 </form>
+                @endif
             </div>
         </main>
     </div>

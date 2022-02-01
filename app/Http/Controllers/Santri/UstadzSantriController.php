@@ -16,15 +16,22 @@ class UstadzSantriController extends Controller
     public function index()
     {
         $ustadzs = User::where('role', 'ustadz')
+                        ->where('status', 'Aktif')
                         ->orderBy('id')
                         ->paginate(50);
 
         $filter_status = User::select('status')
-                        ->where('role', 'ustadz')
-                        ->distinct()
-                        ->get();
+                            ->where('role', 'ustadz')
+                            ->distinct()
+                            ->get();
 
-        return view('santri.ustadz', compact('ustadzs', 'filter_status'));
+        $status = User::select('status')
+                    ->where('role', 'ustadz')
+                    ->where('status', 'Aktif')
+                    ->distinct()
+                    ->get();
+
+        return view('santri.ustadz', compact('ustadzs', 'filter_status', 'status'));
     }
 
     public function filter(Request $request)
@@ -35,11 +42,16 @@ class UstadzSantriController extends Controller
                         ->paginate(50);
 
         $filter_status = User::select('status')
-                        ->where('role', 'ustadz')
-                        ->where('status', $request->status)
-                        ->distinct()
-                        ->get();
+                            ->where('role', 'ustadz')
+                            ->distinct()
+                            ->get();
 
-        return view('santri.ustadz', compact('ustadzs', 'filter_status'));
+        $status = User::select('status')
+                    ->where('role', 'ustadz')
+                    ->where('status', $request->status)
+                    ->distinct()
+                    ->get();
+
+        return view('santri.ustadz', compact('ustadzs', 'filter_status', 'status'));
     }
 }
