@@ -16,15 +16,7 @@ class KelasSantriController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
     public function index($id)
-    {
-        $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
-                                            ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
-                                            ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                                            ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                                            ->where('id_santri', $id)
-                                            ->orderBy('sem')
-                                            ->get();
-        
+    {        
         $filter_semesters = CumulativeStudy::select('semester')
                                             ->where('id_santri', $id)
                                             ->distinct()
@@ -34,6 +26,29 @@ class KelasSantriController extends Controller
                                         ->where('id_santri', $id)
                                         ->distinct()
                                         ->get();
+
+        if(date('m') <= 06 ){
+            $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+                                                ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+                                                ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
+                                                ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
+                                                ->where('id_santri', $id)
+                                                ->where('semester', 'Genap')
+                                                ->where('year', date('Y')-1 . '/' . date('Y'))
+                                                ->orderBy('sem')
+                                                ->get();
+
+        }elseif(date('m') > 06 ){
+            $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+                                                ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+                                                ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
+                                                ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
+                                                ->where('id_santri', $id)
+                                                ->where('semester', 'Ganjil')
+                                                ->where('year', date('Y') . '/' . date('Y')+1)
+                                                ->orderBy('sem')
+                                                ->get();
+        }
 
         return view('santri.kelas', compact('cumulative_studies', 'filter_semesters', 'filter_years'));
     }

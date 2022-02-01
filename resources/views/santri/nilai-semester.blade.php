@@ -9,7 +9,7 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Nilai</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
-                <form method="POST" action="{{ url('santri/nilai') }}">
+                <form method="POST" action="{{ url('santri/nilai-semester') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
@@ -82,10 +82,10 @@
                         </tbody>
                     </table>
                 </div>  
-                @if(empty($cumulative_studies))
+                @if(empty($scores))
                 @else
                 <div class="flex object-left text-center text-white text-base pt-6">
-                    <a href="{{ url('santri/nilai/cetak') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white hover:no-underline text-white rounded shadow-md py-3 px-8">Cetak</a>
+                    <a href="{{ url('santri/nilai-semester/cetak') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white hover:no-underline text-white rounded shadow-md py-3 px-8">Cetak</a>
                 </div>
                 @endif              
             </div>

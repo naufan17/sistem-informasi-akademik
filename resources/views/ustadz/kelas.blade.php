@@ -13,7 +13,6 @@
                         <thead class="bg-gray-800 text-white">
                             <tr>
                                 <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <!-- <th class="text-center w-1/6 py-3 px-4 uppercase font-semibold text-sm">Kode MP</th> -->
                                 <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold text-sm">Mata pelajaran</th>
                                 <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold text-sm">Kitab</th>
                                 <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold text-sm">Tingkat</th>
@@ -25,7 +24,6 @@
                             @foreach($courses as $course)
                             <tr>
                                 <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
-                                <!-- <td class="text-center py-3 px-4">{{ $course->id_course }}</td> -->
                                 <td class="text-center py-3 px-4">{{ $course->course }}</td>
                                 <td class="text-center py-3 px-4">{{ $course->book }}</td>
                                 <td class="text-center py-3 px-4">{{ $course->grade_number }} {{ $course->grade_name }}</td>

@@ -8,9 +8,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\Santri\DashboardSantriController;
 use App\Http\Controllers\Santri\DataDiriSantriController;
 use App\Http\Controllers\Santri\KelasSantriController;
-use App\Http\Controllers\Santri\NilaiSantriController;
+use App\Http\Controllers\Santri\NilaiSemesterSantriController;
 use App\Http\Controllers\Santri\RiwayatNilaiSantriController;
-use App\Http\Controllers\Santri\NilaiKumulatifSantriController;
+use App\Http\Controllers\Santri\RaporNilaiSemesterSantriController;
 use App\Http\Controllers\Santri\SantriSantriController;
 use App\Http\Controllers\Santri\UstadzSantriController;
 
@@ -63,17 +63,17 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/santri/kelas/detail/{id}', [KelasSantriController::class, 'detail'])->name('santri.kelas.detail');
     Route::get('/santri/kelas/cetak/{id}', [KelasSantriController::class, 'cetakKelas'])->name('santri.kelas.cetak');
 
-    Route::get('/santri/nilai/{id}', [NilaiSantriController::class, 'index'])->name('santri.nilai');
-    Route::post('/santri/nilai', [NilaiSantriController::class, 'filterNilai'])->name('santri.nilai');
-    Route::get('/santri/nilai/cetak/{id}', [NilaiSantriController::class, 'cetakNilai'])->name('santri.nilai.cetak');
+    Route::get('/santri/nilai-semester/{id}', [NilaiSemesterSantriController::class, 'index'])->name('santri.nilai-semester');
+    Route::post('/santri/nilai-semester', [NilaiSemesterSantriController::class, 'filterNilaiSemester'])->name('santri.nilai-semester');
+    Route::get('/santri/nilai-semester/cetak/{id}', [NilaiSemesterSantriController::class, 'cetakNilaiSemester'])->name('santri.nilai-semester.cetak');
 
-    Route::get('/santri/riwayat-nilai/{id}', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
-    Route::post('/santri/riwayat-nilai', [RiwayatNilaiSantriController::class, 'filterRiwayatNilai'])->name('santri.riwayat-nilai');
-    Route::post('/santri/riwayat-nilai/cetak', [RiwayatNilaiSantriController::class, 'cetakRiwayatNilai'])->name('santri.riwayat-nilai.cetak');
+    // Route::get('/santri/riwayat-nilai/{id}', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
+    // Route::post('/santri/riwayat-nilai', [RiwayatNilaiSantriController::class, 'filterRiwayatNilai'])->name('santri.riwayat-nilai');
+    // Route::post('/santri/riwayat-nilai/cetak', [RiwayatNilaiSantriController::class, 'cetakRiwayatNilai'])->name('santri.riwayat-nilai.cetak');
     
-    Route::get('/santri/nilai-kumulatif/{id}', [NilaiKumulatifSantriController::class, 'index'])->name('santri.nilai-kumulatif');
-    Route::post('/santri/nilai-kumulatif', [NilaiKumulatifSantriController::class, 'filterNilaiKumulatif'])->name('santri.nilai-kumulatif');
-    Route::post('/santri/nilai-kumulatif/cetak', [NilaiKumulatifSantriController::class, 'cetakNilaiKumulatif'])->name('santri.nilai-kumulatif.cetak');
+    Route::get('/santri/rapor-nilai-semester/{id}', [RaporNilaiSemesterSantriController::class, 'index'])->name('santri.rapor-nilai-semester');
+    Route::post('/santri/rapor-nilai-semester', [RaporNilaiSemesterSantriController::class, 'filterRaporNilaiSemester'])->name('santri.rapor-nilai-semester');
+    Route::post('/santri/rapor-nilai-semester/cetak', [RaporNilaiSemesterSantriController::class, 'cetakRaporNilaiSemester'])->name('santri.rapor-nilai-semester.cetak');
     
     Route::get('/santri/ustadz', [UstadzSantriController::class, 'index'])->name('santri.ustadz');
     Route::post('/santri/ustadz', [UstadzSantriController::class, 'filter'])->name('santri.filter-ustadz');
