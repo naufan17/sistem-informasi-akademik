@@ -90,7 +90,7 @@
                                 <div class="px-2 py-2 bg-white rounded-md shadow">
                                     <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparents hover:no-underline" href="{{ url('santri/nilai-semester') }}/{{ Auth::user()->id }}">Nilai Semester</a>
                                     <!-- <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/riwayat-nilai') }}/{{ Auth::user()->id }}">Riwayat Nilai</a> -->
-                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/rapor-nilai-semester') }}/{{ Auth::user()->id }}">Rapor Nilai Semester</a>
+                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/hasil-studi') }}/{{ Auth::user()->id }}">Hasil Studi</a>
                                 </div>
                             </div>
                         </div>

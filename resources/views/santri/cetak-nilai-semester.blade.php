@@ -3,13 +3,14 @@
 @section('content')
 
 <center>
-    <h5>Laporan Hasil Studi MDNU</h4>
+    <h5>Laporan Nilai Semester</h4>
 </center>	
 <table class='table table-bordered'>
     <thead>
         <tr>
             <th>No</th>
             <th>Mata Pelajaran</th>
+            <th>Semester</th>
             <th>KKM</th>
             <th>Nilai Hasil Belajar</th>
         </tr>
@@ -19,6 +20,7 @@
         <tr>
             <td>{{ $loop->iteration }}</td>
             <td>{{ $score->course }}</td>
+            <td>{{ $score->sem }}</td>
             <td>{{ $score->minimum_score }}</td>
             <td>{{ $score->score }}</td>
         </tr>

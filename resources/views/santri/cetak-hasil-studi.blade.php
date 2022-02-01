@@ -3,7 +3,7 @@
 @section('content')
 
 <center>
-    <h5>Laporan Kumulatif Hasil Studi MDNU</h4>
+    <h5>Laporan Hasil Studi MDNU</h4>
 </center>	
 <table class='table table-bordered'>
     <thead>

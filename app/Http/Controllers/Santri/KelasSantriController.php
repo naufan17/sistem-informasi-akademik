@@ -38,6 +38,20 @@ class KelasSantriController extends Controller
                                                 ->orderBy('sem')
                                                 ->get();
 
+            $semesters = CumulativeStudy::select('semester')
+                                        ->where('id_santri', $id)
+                                        ->where('semester', 'Genap')
+                                        ->where('year', date('Y')-1 . '/' . date('Y'))
+                                        ->distinct()
+                                        ->get();
+    
+            $years = CumulativeStudy::select('year')
+                                    ->where('id_santri', $id)
+                                    ->where('semester', 'Genap')
+                                    ->where('year', date('Y')-1 . '/' . date('Y'))
+                                    ->distinct()
+                                    ->get();
+    
         }elseif(date('m') > 06 ){
             $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
                                                 ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
@@ -48,13 +62,38 @@ class KelasSantriController extends Controller
                                                 ->where('year', date('Y') . '/' . date('Y')+1)
                                                 ->orderBy('sem')
                                                 ->get();
+
+            $semesters = CumulativeStudy::select('semester')
+                                        ->where('id_santri', $id)
+                                        ->where('semester', 'Ganjil')
+                                        ->where('year', date('Y') . '/' . date('Y')+1)
+                                    ->distinct()
+                                        ->get();
+    
+            $years = CumulativeStudy::select('year')
+                                    ->where('id_santri', $id)
+                                    ->where('semester', 'Ganjil')
+                                    ->where('year', date('Y') . '/' . date('Y')+1)
+                                    ->distinct()
+                                    ->get();
         }
 
-        return view('santri.kelas', compact('cumulative_studies', 'filter_semesters', 'filter_years'));
+        return view('santri.kelas', compact('cumulative_studies', 'filter_semesters', 'filter_years', 'semesters', 'years'));
     }
 
     public function filterKelas(Request $request)
     {
+
+        $filter_semesters = CumulativeStudy::select('semester')
+                                            ->where('id_santri', $request->id)
+                                            ->distinct()
+                                            ->get();
+
+        $filter_years = CumulativeStudy::select('year')
+                                        ->where('id_santri', $request->id)
+                                        ->distinct()
+                                        ->get();
+
         $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
                                             ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
@@ -65,19 +104,19 @@ class KelasSantriController extends Controller
                                             ->orderBy('sem')
                                             ->get();
                 
-        $filter_semesters = CumulativeStudy::select('semester')
+        $semesters = CumulativeStudy::select('semester')
                                             ->where('id_santri', $request->id)
                                             ->where('semester', $request->semester)
                                             ->distinct()
                                             ->get();
         
-        $filter_years = CumulativeStudy::select('year')
+        $years = CumulativeStudy::select('year')
                                         ->where('id_santri', $request->id)
                                         ->where('year', $request->tahun_ajaran)
                                         ->distinct()
                                         ->get();
 
-        return view('santri.kelas', compact('cumulative_studies', 'filter_semesters', 'filter_years'));
+        return view('santri.kelas', compact('cumulative_studies', 'filter_semesters', 'filter_years', 'semesters', 'years'));
     }
 
     public function formCreate($id)
@@ -165,13 +204,15 @@ class KelasSantriController extends Controller
         return view('santri.detail-kelas', compact('courses'));
     }
 
-    public function cetakKelas($id)
+    public function cetakKelas(Request $request)
     {
         $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
                                             ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                                            ->where('id_santri', $id)
+                                            ->where('id_santri', $request->id)
+                                            ->where('semester', $request->semester)
+                                            ->where('year', $request->year)
                                             ->orderBy('semester')
                                             ->get();
 

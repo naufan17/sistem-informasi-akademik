@@ -6,10 +6,10 @@
     <!-- NILAI -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Nilai Kumulatif</h1>
+            <h1 class="text-3xl text-black pb-2 mt-2">Hasil Studi</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
-                <form method="POST" action="{{ url('santri/rapor-nilai-semester') }}">
+                <form method="POST" action="{{ url('santri/hasil-studi') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
@@ -24,6 +24,7 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="semester" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                    <option selected value="{{ $scores['semester'] }}">{{ $scores['semester'] }}</option>
                                     @foreach($filter_semesters as $filter)    
                                     <option value="{{ $filter->semester }}">{{ $filter->semester }}</option>
                                     @endforeach
@@ -43,6 +44,7 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="year" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                    <option selected value="{{ $scores['year'] }}">{{ $scores['year'] }}</option>
                                     @foreach($filter_years as $filter)    
                                     <option value="{{ $filter->year }}">{{ $filter->year }}</option>
                                     @endforeach
@@ -55,7 +57,7 @@
                     </div>
                 </form>
                 <p class="text-xl py-4 flex items-center">
-                    Laporan Kumulatif Hasil Studi MDNU
+                    Laporan Hasil Studi MDNU
                 </p>
                 <!-- LAPORAN KUMULATIF -->
                 <div class="bg-white overflow-auto pb-8">
@@ -74,7 +76,7 @@
                         </thead>
                         <tbody class="text-gray-700">
                             <tr>
-                                <td class="text-center py-3 px-4">1.</td>
+                                <td class="text-center py-3 px-4">1</td>
                                 <td class="text-center py-3 px-4">{{ $scores['semester'] }}</td>
                                 <td class="text-center py-3 px-4">{{ $scores['year'] }}</td>
                                 <td class="text-center py-3 px-4">{{ $scores['total_nilai'] }}</td>
@@ -86,16 +88,12 @@
                         </tbody>
                     </table>
                 </div>
-                <form method="POST" action="{{ url('santri/rapor-nilai-semester/cetak') }}">
+                <form method="POST" action="{{ url('santri/hasil-studi/cetak') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
                         <input type="hidden" name="id" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                        @foreach($filter_semesters as $filter)    
-                        <input type="hidden" name="semester" placeholder=" " value="{{ $filter->semester }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                        @endforeach
-                        @foreach($filter_years as $filter)    
-                        <input type="hidden" name="year" placeholder=" " value="{{ $filter->year }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
-                        @endforeach
+                        <input type="hidden" name="semester" placeholder=" " value="{{ $scores['semester'] }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <input type="hidden" name="year" placeholder=" " value="{{ $scores['year'] }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                     </div>
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="object-left text-center text-white text-base">

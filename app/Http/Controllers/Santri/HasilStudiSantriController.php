@@ -8,7 +8,7 @@ use App\Models\CumulativeStudy;
 use App\Models\Attendance;
 use PDF;
 
-class RaporNilaiSemesterSantriController extends Controller
+class HasilStudiSantriController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -113,10 +113,10 @@ class RaporNilaiSemesterSantriController extends Controller
             }
         }
 
-        return view('santri.rapor-nilai-semester', compact('scores', 'filter_semesters', 'filter_years'));
+        return view('santri.hasil-studi', compact('scores', 'filter_semesters', 'filter_years'));
     }
 
-    public function filterRaporNilaiSemester(Request $request)
+    public function filterHasilStudi(Request $request)
     {
         $attendance_mdnu = 0;
         $attendance_asrama = 0;
@@ -125,15 +125,11 @@ class RaporNilaiSemesterSantriController extends Controller
 
         $filter_semesters = CumulativeStudy::select('semester')
                                             ->where('id_santri', $request->id)
-                                            ->where('semester', $request->semester)
-                                            ->where('year', $request->year)
                                             ->distinct()
                                             ->get();
 
         $filter_years = CumulativeStudy::select('year')
                                         ->where('id_santri', $request->id)
-                                        ->where('semester', $request->semester)
-                                        ->where('year', $request->year)
                                         ->distinct()
                                         ->get();
 
@@ -176,10 +172,10 @@ class RaporNilaiSemesterSantriController extends Controller
             $scores = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'nilai_rata'=>$rataNilai, 'attendance_mdnu'=>$attendance_mdnu, 'attendance_asrama'=>$attendance_asrama, 'keterangan'=>$keterangan);
         }
         
-        return view('santri.rapor-nilai-semester', compact('scores', 'filter_semesters', 'filter_years'));
+        return view('santri.hasil-studi', compact('scores', 'filter_semesters', 'filter_years'));
     }
 
-    public function cetakRaporNilaiSemester(Request $request)
+    public function cetakHasilStudi(Request $request)
     {
         $attendance_mdnu = 0;
         $attendance_asrama = 0;
@@ -226,7 +222,7 @@ class RaporNilaiSemesterSantriController extends Controller
         }
 
 
-        $pdf = PDF::loadview('santri.cetak-rapor-nilai-semester', compact('scores'));
+        $pdf = PDF::loadview('santri.cetak-hasil-studi', compact('scores'));
 
         return $pdf->stream();
     }

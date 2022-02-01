@@ -6,7 +6,7 @@
     <!-- NILAI -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Nilai</h1>
+            <h1 class="text-3xl text-black pb-2 mt-2">Nilai Semester</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
                 <form method="POST" action="{{ url('santri/nilai-semester') }}">
@@ -24,6 +24,9 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="semester" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                    @foreach($semesters as $filter)    
+                                    <option value="{{ $filter->semester }}">{{ $filter->semester }}</option>
+                                    @endforeach
                                     @foreach($filter_semesters as $filter)    
                                     <option value="{{ $filter->semester }}">{{ $filter->semester }}</option>
                                     @endforeach
@@ -43,6 +46,9 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="year" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                    @foreach($years as $filter)    
+                                    <option value="{{ $filter->year }}">{{ $filter->year }}</option>
+                                    @endforeach
                                     @foreach($filter_years as $filter)    
                                     <option value="{{ $filter->year }}">{{ $filter->year }}</option>
                                     @endforeach
@@ -55,7 +61,7 @@
                     </div>
                 </form>
                 <p class="text-xl py-4 flex items-center">
-                    Laporan Hasil Studi MDNU
+                    Laporan Nilai Semester
                 </p>
                 <!--TABEL NILAI-->
                 <div class="bg-white overflow-auto pb-8">
@@ -84,9 +90,21 @@
                 </div>  
                 @if(empty($scores))
                 @else
-                <div class="flex object-left text-center text-white text-base pt-6">
-                    <a href="{{ url('santri/nilai-semester/cetak') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white hover:no-underline text-white rounded shadow-md py-3 px-8">Cetak</a>
-                </div>
+                <form method="POST" action="{{ url('santri/nilai-semester/cetak') }}">
+                    @csrf
+                    <div class="flex space-x-4 items-center pb-8">
+                        @foreach($scores as $score)
+                        <input type="hidden" name="id" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <input type="hidden" name="semester" placeholder=" " value="{{ $score->semester }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <input type="hidden" name="year" placeholder=" " value="{{ $score->year }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        @endforeach
+                    </div>
+                    <div class="flex space-x-4 items-center pb-8">
+                        <div class="object-left text-center text-white text-base">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Cetak</button>
+                        </div>
+                    </div>
+                </form>
                 @endif              
             </div>
         </main>

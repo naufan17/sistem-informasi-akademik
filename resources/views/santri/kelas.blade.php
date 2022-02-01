@@ -23,6 +23,9 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="semester" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                    @foreach($semesters as $filter)    
+                                    <option value="{{ $filter->semester }}">{{ $filter->semester }}</option>
+                                    @endforeach
                                     @foreach($filter_semesters as $filter)    
                                     <option value="{{ $filter->semester }}">{{ $filter->semester }}</option>
                                     @endforeach
@@ -42,6 +45,9 @@
                                     </svg>
                                 </div>
                                 <select type="text" name="tahun_ajaran" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                    @foreach($years as $filter)    
+                                    <option value="{{ $filter->year }}">{{ $filter->year }}</option>
+                                    @endforeach
                                     @foreach($filter_years as $filter)    
                                     <option value="{{ $filter->year }}">{{ $filter->year }}</option>
                                     @endforeach
@@ -91,9 +97,21 @@
                 </div>
                 @if(empty($cumulative_studies))
                 @else
-                <div class="flex object-left text-center text-white text-base pt-6">
-                    <a href="{{ url('santri/kelas/cetak') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white hover:no-underline text-white rounded shadow-md py-3 px-8">Cetak</a>
-                </div>
+                <form method="POST" action="{{ url('santri/kelas/cetak') }}">
+                    @csrf
+                    <div class="flex space-x-4 items-center pb-8">
+                        @foreach($cumulative_studies as $cumulative_study)
+                        <input type="hidden" name="id" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <input type="hidden" name="semester" placeholder=" " value="{{ $cumulative_study->semester}}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <input type="hidden" name="year" placeholder=" " value="{{ $cumulative_study->year }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        @endforeach
+                    </div>
+                    <div class="flex space-x-4 items-center pb-8">
+                        <div class="object-left text-center text-white text-base">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Cetak</button>
+                        </div>
+                    </div>
+                </form>
                 @endif
                 <!-- <p class="text-xl py-4 flex items-center">
                     Catatan dari Ustadz
