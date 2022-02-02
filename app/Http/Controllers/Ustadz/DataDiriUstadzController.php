@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Ustadz;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 class DataDiriUstadzController extends Controller
@@ -65,6 +67,8 @@ class DataDiriUstadzController extends Controller
             'province' => $request->province, 
         ]);
 
+        Session::flash('update','Data Berhasil Diperbarui!');
+
         return redirect()->route('ustadz.data-diri', [$request->id]);
     }
 
@@ -73,6 +77,8 @@ class DataDiriUstadzController extends Controller
         User::where('id', $request->id)->update([
             'password' => Hash::make($request->password), 
         ]);
+
+        Session::flash('update','Data Berhasil Diupdate!');
 
         return redirect()->route('ustadz.data-diri', [$request->id]);
     }

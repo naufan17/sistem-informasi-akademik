@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use App\Models\CumulativeStudy;
 use App\Models\Course;
 use PDF;
@@ -175,6 +176,8 @@ class KelasSantriController extends Controller
             }
         }
 
+        Session::flash('tambah','Data Berhasil Ditambahkan!');
+
         return redirect()->route('santri.kelas.form-create', [$request->id_santri]);
     }
 
@@ -188,6 +191,8 @@ class KelasSantriController extends Controller
         if(date('m') == 01 || date('m') == 07){
             CumulativeStudy::where('id_cumulative_study', $id)->delete();
         }
+
+        Session::flash('hapus','Data Berhasil Dihapus!');
         
         return redirect()->route('santri.kelas.form-create', [$id_santri]);
     }

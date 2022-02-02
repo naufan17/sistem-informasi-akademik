@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Ustadz;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
 use App\Models\Course;
 use App\Models\CumulativeStudy;
 use PDF;
@@ -115,6 +116,8 @@ class KelasUstadzController extends Controller
         //     'id_santri' => $request->id_santri,
         //     'id_course' => $request->id_course,
         // ],['id_cumulative_study', 'year', 'semester', 'id_santri', 'id_course'],['minimum_score', 'score']);
+
+        Session::flash('tambah','Data Berhasil Ditambahkan!');
 
         return redirect()->route('ustadz.kelas.detail-santri', [$request->id_course]);
     }

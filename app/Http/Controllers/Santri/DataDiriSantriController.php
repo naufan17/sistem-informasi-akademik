@@ -4,6 +4,8 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 
 class DataDiriSantriController extends Controller
@@ -81,6 +83,8 @@ class DataDiriSantriController extends Controller
             'phone_number_parent' => $request->phone_number_parent, 
         ]);
 
+        Session::flash('update','Data Berhasil Diperbarui!');
+
         return redirect()->route('santri.data-diri', [$request->id]);
     }
 
@@ -89,6 +93,8 @@ class DataDiriSantriController extends Controller
         User::where('id', $request->id)->update([
             'password' => Hash::make($request->password), 
         ]);
+
+        Session::flash('update','Data Berhasil Diupdate!');
 
         return redirect()->route('santri.data-diri', [$request->id]);
     }
