@@ -119,8 +119,12 @@
                     <a class="text-lg font-bold hover:no-underline">Masuk untuk melihat informasi akademik anda</a><br>
                 </div>
                 <div class=" text-center text-white text-xl py-4">
-                    <a href="{{ route('login') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk</a>
+                    <a href="{{ url('login/santri') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk Santri</a>
+                    <a href="{{ url('login/ustadz') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk Ustadz</a>
                 </div>
+                <!-- <div class=" text-center text-white text-xl py-4">
+                    <a href="{{ route('login') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk</a>
+                </div> -->
             </div>
         </div>
         <div class="container py-8 px-6 mx-auto">

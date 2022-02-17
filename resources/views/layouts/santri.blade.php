@@ -65,17 +65,17 @@
                                         <img src="https://source.unsplash.com/random/350x350" alt="random image" class="object-center rounded-full">
                                     </div>
                                     -->
-                                    <h4 class="py-6 text-l font-semibold leading-tight truncate">Hai {{ Auth::user()->name }}</h4>
+                                    <h4 class="py-6 text-l font-semibold leading-tight truncate">Hai {{ Auth::guard('santri')->id() }}</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/data-diri') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href="{{ url('santri/data-diri') }}/{{ Auth::guard('santri')->id() }}" class="text-gray-800 hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Data Diri
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/kelas') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href="{{ url('santri/kelas') }}/{{ Auth::guard('santri')->id() }}" class="text-gray-800 hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Kelas
                             </a>
                         </div>
@@ -88,30 +88,12 @@
                             </button>
                             <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-md">
                                 <div class="px-2 py-2 bg-white rounded-md shadow">
-                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparents hover:no-underline" href="{{ url('santri/nilai-semester') }}/{{ Auth::user()->id }}">Nilai Semester</a>
-                                    <!-- <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/riwayat-nilai') }}/{{ Auth::user()->id }}">Riwayat Nilai</a> -->
-                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/hasil-studi') }}/{{ Auth::user()->id }}">Hasil Studi</a>
+                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparents hover:no-underline" href="{{ url('santri/nilai-semester') }}/{{ Auth::guard('santri')->id() }}">Nilai Semester</a>
+                                    <!-- <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/riwayat-nilai') }}/{{ Auth::guard('santri')->id() }}">Riwayat Nilai</a> -->
+                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/hasil-studi') }}/{{ Auth::guard('santri')->id() }}">Hasil Studi</a>
                                 </div>
                             </div>
                         </div>
-                        <!--
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/nilai') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white flex items-center py-3 pl-8">
-                                Nilai
-                            </a>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/riwayat-nilai') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white flex items-center py-3 pl-8">
-                                Riwayat Nilai
-                            </a>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/nilai-kumulatif') }}/{{ Auth::user()->id }}" class="text-gray-800 hover:text-white flex items-center py-3 pl-8">
-                                Nilai Kumulatif
-                            </a>
-                        </div>
--->
-
                         <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
                             <button @click="open = !open" class="flex flex-row text-gray-800 group-hover:text-white items-center py-3 pl-8">
                                 <span class="w-full text-left font-bold">List Data</span>

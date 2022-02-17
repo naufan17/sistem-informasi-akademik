@@ -17,31 +17,31 @@ class RedirectIfAuthenticated
      * @param  string|null  ...$guards
      * @return mixed
      */
-    public function handle(Request $request, Closure $next, ...$guards)
-    {
-        $guards = empty($guards) ? [null] : $guards;
-
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
-            }
-        }
-
-        return $next($request);
-    }
-
-    // public function handle($request, Closure $next, $guard = null)
+    // public function handle(Request $request, Closure $next, ...$guards)
     // {
-    //     if ($guard == "santri" && Auth::guard($guard)->check()) {
-    //         return redirect('/santri/dashboard');
-    //     }
-    //     if ($guard == "ustadz" && Auth::guard($guard)->check()) {
-    //         return redirect('/ustadz/dashboard');
-    //     }
-    //     if (Auth::guard($guard)->check()) {
-    //         return redirect('/home');
+    //     $guards = empty($guards) ? [null] : $guards;
+
+    //     foreach ($guards as $guard) {
+    //         if (Auth::guard($guard)->check()) {
+    //             return redirect(RouteServiceProvider::HOME);
+    //         }
     //     }
 
     //     return $next($request);
     // }
+
+    public function handle($request, Closure $next, $guard = null)
+    {
+        if ($guard == "santri" && Auth::guard($guard)->check()) {
+            return redirect('/santri/dashboard');
+        }
+        if ($guard == "ustadz" && Auth::guard($guard)->check()) {
+            return redirect('/ustadz/dashboard');
+        }
+        if (Auth::guard($guard)->check()) {
+            return redirect('/home');
+        }
+
+        return $next($request);
+    }
 }

@@ -66,17 +66,17 @@
                                     </div>
                                 -->
 
-                                    <h4 class="py-6 text-l font-semibold leading-tight truncate">Hai {{ Auth::user()->name }}</h4>
+                                    <h4 class="py-6 text-l font-semibold leading-tight truncate">Hai </h4>
                                 </div>
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('ustadz/data-diri') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href="{{ url('ustadz/data-diri') }}/" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Data Diri
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href= "{{ url('ustadz/kelas') }}/{{ Auth::user()->id }}" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href= "{{ url('ustadz/kelas') }}/" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Kelas
                             </a>
                         </div>
@@ -94,18 +94,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('ustadz/ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-3 pl-8">
-                                Ustadz
-                            </a>
-                        </div>
-                        <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('ustadz/santri') }}" class="text-gray-800 group-hover:text-white flex items-center py-3 pl-8">
-                                Santri
-                            </a>
-                        </div>
-                        -->
                         <button class="w-full hover:bg-blue-600 cta-btn font-semibold justify-center ">
                             <a class="text-gray-800 hover:text-white hover:no-underline items-center py-3 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}

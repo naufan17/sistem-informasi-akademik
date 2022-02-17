@@ -21,6 +21,7 @@ class Santri extends Authenticatable
      */
 
     protected $fillable = [
+        'id_santri',
         'name',
         'place_born',
         'birthday',
