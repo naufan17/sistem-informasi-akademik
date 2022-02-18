@@ -29,8 +29,8 @@ class KelasSantriController extends Controller
                                         ->get();
 
         if(date('m') <= 06 ){
-            $cumulative_studies = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
-                                                ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+            $cumulative_studies = CumulativeStudy::leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+                                                ->leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                                                 ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                                 ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                                                 ->where('id_santri', $id)
@@ -54,8 +54,8 @@ class KelasSantriController extends Controller
                                     ->get();
     
         }elseif(date('m') > 06 ){
-            $cumulative_studies = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
-                                                ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+            $cumulative_studies = CumulativeStudy::leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+                                                ->leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                                                 ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                                 ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                                                 ->where('id_santri', $id)
@@ -94,8 +94,8 @@ class KelasSantriController extends Controller
                                         ->distinct()
                                         ->get();
 
-        $cumulative_studies = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
-                                            ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+        $cumulative_studies = CumulativeStudy::leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+                                            ->leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                                             ->where('id_santri', $request->id)
@@ -196,21 +196,10 @@ class KelasSantriController extends Controller
         return redirect()->route('santri.kelas.form-create', [$id_santri]);
     }
 
-    public function detail($id)
-    {
-        $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
-                        ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                        ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                        ->where('id_course', $id)
-                        ->get();
-
-        return view('santri.detail-kelas', compact('courses'));
-    }
-
     public function cetakKelas(Request $request)
     {
-        $cumulative_studies = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
-                                            ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+        $cumulative_studies = CumulativeStudy::leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
+                                            ->leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                                             ->where('id_santri', $request->id_ustadz)

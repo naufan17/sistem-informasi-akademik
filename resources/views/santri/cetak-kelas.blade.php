@@ -13,6 +13,7 @@
             <th>Kitab</th>
             <th>Kelas</th>
             <th>Jadwal</th>
+            <th>Ustadz</th>
         </tr>
     </thead>
     <tbody>
@@ -23,6 +24,7 @@
             <td>{{ $cumulative_study->book }}</td>
             <td>{{ $cumulative_study->grade_number }} {{ $cumulative_study->grade_name }}</td>
             <td>{{ $cumulative_study->day }}, {{ $cumulative_study->time_begin }} - {{ $cumulative_study->time_end }}</td>
+            <td>{{ $cumulative_study->name }}</td>
         </tr>
         @endforeach
     </tbody>

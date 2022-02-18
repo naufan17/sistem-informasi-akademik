@@ -58,7 +58,6 @@ Route::group(['middleware' => 'auth:santri'], function () {
     Route::get('/santri/kelas/form-create/{id}', [KelasSantriController::class, 'formCreate'])->name('santri.kelas.form-create');
     Route::post('/santri/kelas/create', [KelasSantriController::class, 'create'])->name('santri.kelas.create');
     Route::get('/santri/kelas/delete/{id}', [KelasSantriController::class, 'delete'])->name('santri.kelas.delete');
-    Route::get('/santri/kelas/detail/{id}', [KelasSantriController::class, 'detail'])->name('santri.kelas.detail');
     Route::post('/santri/kelas/cetak', [KelasSantriController::class, 'cetakKelas'])->name('santri.kelas.cetak');
 
     Route::get('/santri/nilai-semester/{id}', [NilaiSemesterSantriController::class, 'index'])->name('santri.nilai-semester');
