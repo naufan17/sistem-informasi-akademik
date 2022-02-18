@@ -221,7 +221,6 @@ class HasilStudiSantriController extends Controller
             $scores = array('total_nilai'=>$totalNilai, 'semester'=>$filter->semester, 'year'=>$filter->year, 'nilai_rata'=>$rataNilai, 'attendance_mdnu'=>$attendance_mdnu, 'attendance_asrama'=>$attendance_asrama, 'keterangan'=>$keterangan);
         }
 
-
         $pdf = PDF::loadview('santri.cetak-hasil-studi', compact('scores'));
 
         return $pdf->stream();

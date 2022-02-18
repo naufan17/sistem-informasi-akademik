@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Santri;
 
 class SantriSantriController extends Controller
 {
@@ -15,17 +15,17 @@ class SantriSantriController extends Controller
      */
     public function index()
     {
-        $santris = User::where('role', 'santri')
+        $santris = Santri::where('role', 'santri')
                         ->where('status', 'Aktif')
                         ->orderBy('id')
                         ->paginate(50);
 
-        $filter_status = User::select('status')
+        $filter_status = Santri::select('status')
                             ->where('role', 'santri')
                             ->distinct()
                             ->get();
 
-        $status = User::select('status')
+        $status = Santri::select('status')
                         ->where('role', 'santri')
                         ->where('status', 'Aktif')
                         ->distinct()
@@ -36,17 +36,17 @@ class SantriSantriController extends Controller
 
     public function filter(Request $request)
     {
-        $santris = User::where('role', 'santri')
+        $santris = Santri::where('role', 'santri')
                         ->where('status', $request->status)
                         ->orderBy('id')
                         ->paginate(50);
 
-        $filter_status = User::select('status')
+        $filter_status = Santri::select('status')
                             ->where('role', 'santri')
                             ->distinct()
                             ->get();
     
-        $status = User::select('status')
+        $status = Santri::select('status')
                     ->where('role', 'santri')
                     ->where('status', $request->status)
                     ->distinct()

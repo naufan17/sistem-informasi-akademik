@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Ustadz;
 
 class UstadzSantriController extends Controller
 {
@@ -15,17 +15,17 @@ class UstadzSantriController extends Controller
      */
     public function index()
     {
-        $ustadzs = User::where('role', 'ustadz')
+        $ustadzs = Ustadz::where('role', 'ustadz')
                         ->where('status', 'Aktif')
                         ->orderBy('id')
                         ->paginate(50);
 
-        $filter_status = User::select('status')
+        $filter_status = Ustadz::select('status')
                             ->where('role', 'ustadz')
                             ->distinct()
                             ->get();
 
-        $status = User::select('status')
+        $status = Ustadz::select('status')
                     ->where('role', 'ustadz')
                     ->where('status', 'Aktif')
                     ->distinct()
@@ -36,17 +36,17 @@ class UstadzSantriController extends Controller
 
     public function filter(Request $request)
     {
-        $ustadzs = User::where('role', 'ustadz')
+        $ustadzs = Ustadz::where('role', 'ustadz')
                         ->where('status', $request->status)
                         ->orderBy('id')
                         ->paginate(50);
 
-        $filter_status = User::select('status')
+        $filter_status = Ustadz::select('status')
                             ->where('role', 'ustadz')
                             ->distinct()
                             ->get();
 
-        $status = User::select('status')
+        $status = Ustadz::select('status')
                     ->where('role', 'ustadz')
                     ->where('status', $request->status)
                     ->distinct()

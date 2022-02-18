@@ -66,17 +66,17 @@
                                     </div>
                                 -->
 
-                                    <h4 class="py-6 text-l font-semibold leading-tight truncate">Hai </h4>
+                                    <h4 class="py-6 text-l font-semibold leading-tight truncate">Hai {{ Auth::guard('ustadz')->id() }}</h4>
                                 </div>
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('ustadz/data-diri') }}/" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href="{{ url('ustadz/data-diri') }}/{{ Auth::guard('ustadz')->id() }}" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Data Diri
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href= "{{ url('ustadz/kelas') }}/" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href= "{{ url('ustadz/kelas') }}/{{ Auth::guard('ustadz')->id() }}" class="text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Kelas
                             </a>
                         </div>

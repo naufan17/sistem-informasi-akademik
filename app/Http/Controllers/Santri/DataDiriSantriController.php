@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
+use App\Models\Santri;
 
 class DataDiriSantriController extends Controller
 {
@@ -17,14 +17,14 @@ class DataDiriSantriController extends Controller
      */
     public function index($id)
     {
-        $santris = User::where('id', $id)->get(); 
+        $santris = Santri::where('id', $id)->get(); 
 
         return view('santri.data-diri', compact('santris'));
     }
 
     public function formUpdate($id)
     {
-        $santris = User::where('id', $id)->get();
+        $santris = Santri::where('id', $id)->get();
         
         return view('santri.update-data-diri', compact('santris'));
     }
@@ -57,7 +57,7 @@ class DataDiriSantriController extends Controller
         //     'phone_number_parent' => 'required', 'string',
         // ]);
 
-        User::where('id', $request->id)->update([
+        Santri::where('id', $request->id)->update([
             'name' => $request->name,
             'place_born' => $request->place_born, 
             'birthday' => $request->birthday, 
@@ -90,7 +90,7 @@ class DataDiriSantriController extends Controller
 
     public function updatePassword(Request $request)
     {
-        User::where('id', $request->id)->update([
+        Santri::where('id', $request->id)->update([
             'password' => Hash::make($request->password), 
         ]);
 

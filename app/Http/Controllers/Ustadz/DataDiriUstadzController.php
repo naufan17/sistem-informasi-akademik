@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
-use App\Models\User;
+use App\Models\Ustadz;
 
 class DataDiriUstadzController extends Controller
 {
@@ -17,14 +17,14 @@ class DataDiriUstadzController extends Controller
      */
     public function index($id)
     {
-        $ustadzs = User::where('id', $id)->get();
+        $ustadzs = Ustadz::where('id', $id)->get();
 
         return view('ustadz.data-diri', compact('ustadzs'));
     }
 
     public function formUpdate($id)
     {
-        $ustadzs = User::where('id', $id)->get();
+        $ustadzs = Ustadz::where('id', $id)->get();
         
         return view('ustadz.update-data-diri', compact('ustadzs'));
     }
@@ -49,7 +49,7 @@ class DataDiriUstadzController extends Controller
         //     'province' => 'required', 'string',
         // ]);
 
-        User::where('id', $request->id)->update([
+        Ustadz::where('id', $request->id)->update([
             'name' => $request->name,
             'place_born' => $request->place_born, 
             'birthday' => $request->birthday, 
@@ -74,7 +74,7 @@ class DataDiriUstadzController extends Controller
 
     public function updatePassword(Request $request)
     {
-        User::where('id', $request->id)->update([
+        Ustadz::where('id', $request->id)->update([
             'password' => Hash::make($request->password), 
         ]);
 

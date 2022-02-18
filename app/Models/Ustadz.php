@@ -20,7 +20,7 @@ class Ustadz extends Authenticatable
      */
 
     protected $fillable = [
-        'id_ustadz',
+        'id',
         'name',
         'place_born',
         'birthday',

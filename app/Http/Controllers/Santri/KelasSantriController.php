@@ -29,7 +29,7 @@ class KelasSantriController extends Controller
                                         ->get();
 
         if(date('m') <= 06 ){
-            $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+            $cumulative_studies = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                                 ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                                 ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                                 ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
@@ -54,7 +54,7 @@ class KelasSantriController extends Controller
                                     ->get();
     
         }elseif(date('m') > 06 ){
-            $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+            $cumulative_studies = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                                 ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                                 ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                                 ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
@@ -68,7 +68,7 @@ class KelasSantriController extends Controller
                                         ->where('id_santri', $id)
                                         ->where('semester', 'Ganjil')
                                         ->where('year', date('Y') . '/' . date('Y')+1)
-                                    ->distinct()
+                                        ->distinct()
                                         ->get();
     
             $years = CumulativeStudy::select('year')
@@ -84,7 +84,6 @@ class KelasSantriController extends Controller
 
     public function filterKelas(Request $request)
     {
-
         $filter_semesters = CumulativeStudy::select('semester')
                                             ->where('id_santri', $request->id)
                                             ->distinct()
@@ -95,7 +94,7 @@ class KelasSantriController extends Controller
                                         ->distinct()
                                         ->get();
 
-        $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+        $cumulative_studies = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                             ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
@@ -106,16 +105,16 @@ class KelasSantriController extends Controller
                                             ->get();
                 
         $semesters = CumulativeStudy::select('semester')
-                                            ->where('id_santri', $request->id)
-                                            ->where('semester', $request->semester)
-                                            ->distinct()
-                                            ->get();
+                                    ->where('id_santri', $request->id)
+                                    ->where('semester', $request->semester)
+                                    ->distinct()
+                                    ->get();
         
         $years = CumulativeStudy::select('year')
-                                        ->where('id_santri', $request->id)
-                                        ->where('year', $request->tahun_ajaran)
-                                        ->distinct()
-                                        ->get();
+                                ->where('id_santri', $request->id)
+                                ->where('year', $request->tahun_ajaran)
+                                ->distinct()
+                                ->get();
 
         return view('santri.kelas', compact('cumulative_studies', 'filter_semesters', 'filter_years', 'semesters', 'years'));
     }
@@ -123,7 +122,7 @@ class KelasSantriController extends Controller
     public function formCreate($id)
     {
         if(date('m') <= 06 ){
-            $cumulativestudys = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+            $cumulativestudys = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                                 ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                                 ->orderBy('sem')
                                                 ->where('id_santri', $id)
@@ -132,7 +131,7 @@ class KelasSantriController extends Controller
                                                 ->get();
 
         }elseif(date('m') > 06 ){
-            $cumulativestudys = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+            $cumulativestudys = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                                 ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                                 ->orderBy('sem')
                                                 ->where('id_santri', $id)
@@ -141,7 +140,7 @@ class KelasSantriController extends Controller
                                                 ->get();
         }
 
-        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+        $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                         ->orderBy('sem')
@@ -199,7 +198,7 @@ class KelasSantriController extends Controller
 
     public function detail($id)
     {
-        $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+        $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                         ->where('id_course', $id)
@@ -210,7 +209,7 @@ class KelasSantriController extends Controller
 
     public function cetakKelas(Request $request)
     {
-        $cumulative_studies = CumulativeStudy::leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+        $cumulative_studies = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                             ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
                                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')

@@ -19,7 +19,7 @@ class KelasUstadzController extends Controller
     public function index($id)
     {
         if(date('m') <= 06 ){
-            $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                             ->where('id', $id)
@@ -31,7 +31,7 @@ class KelasUstadzController extends Controller
             $semester = "Genap";
 
         }elseif(date('m') > 06 ){
-            $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                             ->where('id', $id)
@@ -49,7 +49,7 @@ class KelasUstadzController extends Controller
     public function filter(Request $request)
     {
         if($request->semester == 'Genap'){
-            $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                             ->where('id', $request->id_santri)
@@ -61,7 +61,7 @@ class KelasUstadzController extends Controller
             $semester = "Genap";
 
         }elseif($request->semester == 'Ganjil'){
-            $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                             ->where('id', $request->id_santri)
@@ -80,13 +80,13 @@ class KelasUstadzController extends Controller
     {
         if(date('m') <= 06 ){
             $santris = CumulativeStudy::where('id_course', $id)
-                                    ->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+                                    ->leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                     ->where('year', date('Y')-1 . '/' . date('Y'))
                                     ->where('semester', 'Genap')
                                     ->get();
         }elseif(date('m') > 06 ){
             $santris = CumulativeStudy::where('id_course', $id)
-                                    ->leftjoin('users', 'cumulative_studies.id_santri', '=', 'users.id')
+                                    ->leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                     ->where('year', date('Y') . '/' . date('Y')+1)
                                     ->where('semester', 'Ganjil')
                                     ->get();
@@ -125,7 +125,7 @@ class KelasUstadzController extends Controller
     public function cetakKelas(Request $request)
     {
         if($request->semester == 'Genap'){
-            $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                             ->where('id', $request->id_ustadz)
@@ -135,7 +135,7 @@ class KelasUstadzController extends Controller
                             ->get();
 
         }elseif($request->semester == 'Ganjil'){
-            $courses = Course::leftjoin('users', 'courses.id_ustadz', '=', 'users.id')
+            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                             ->where('id', $request->id_ustadz)

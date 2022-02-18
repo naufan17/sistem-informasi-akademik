@@ -70,14 +70,14 @@ class LoginController extends Controller
     public function santriLogin(Request $request)
     {
         $this->validate($request, [
-            'email'   => 'required|email',
+            'id'   => 'required',
             'password' => 'required|min:6'
         ]);
 
-        if (Auth::guard('santri')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+        if (Auth::guard('santri')->attempt(['id' => $request->id, 'password' => $request->password], $request->get('remember'))) {
             return redirect()->intended('/santri/dashboard');
         }
-        return back()->withInput($request->only('email', 'remember'));
+        return back()->withInput($request->only('id', 'remember'));
     }
 
     public function showUstadzLoginForm()
@@ -88,13 +88,13 @@ class LoginController extends Controller
     public function ustadzLogin(Request $request)
     {
         $this->validate($request, [
-            'email'   => 'required|email',
+            'id'   => 'required',
             'password' => 'required|min:6'
         ]);
 
-        if (Auth::guard('ustadz')->attempt(['email' => $request->email, 'password' => $request->password], $request->get('remember'))) {
+        if (Auth::guard('ustadz')->attempt(['id' => $request->id, 'password' => $request->password], $request->get('remember'))) {
             return redirect()->intended('/ustadz/dashboard');
         }
-        return back()->withInput($request->only('email', 'remember'));
+        return back()->withInput($request->only('id', 'remember'));
     }
 }
