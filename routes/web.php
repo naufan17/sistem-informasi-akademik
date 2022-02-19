@@ -43,8 +43,6 @@ Route::get('/login/ustadz', [LoginController::class, 'showUstadzLoginForm']);
 Route::post('/login/santri', [LoginController::class, 'santriLogin']);
 Route::post('/login/ustadz', [LoginController::class, 'ustadzLogin']);
 
-// Route::view('/home', 'home')->middleware('auth');
-
 Route::group(['middleware' => 'auth:santri'], function () {
     Route::get('/santri/dashboard', [DashboardSantriController::class, 'index'])->name('santri.dashboard');
 

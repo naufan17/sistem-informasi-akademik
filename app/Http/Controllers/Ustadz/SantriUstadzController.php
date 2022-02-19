@@ -15,18 +15,15 @@ class SantriUstadzController extends Controller
      */
     public function index()
     {
-        $santris = Santri::where('role', 'santri')
-                        ->where('status', 'Aktif')
+        $santris = Santri::where('status', 'Aktif')
                         ->orderBy('id')
                         ->paginate(50);
 
         $filter_status = Santri::select('status')
-                        ->where('role', 'santri')
                         ->distinct()
                         ->get();
 
         $status = Santri::select('status')
-                        ->where('role', 'santri')
                         ->where('status', 'Aktif')
                         ->distinct()
                         ->get();
@@ -36,18 +33,15 @@ class SantriUstadzController extends Controller
 
     public function filter(Request $request)
     {
-        $santris = Santri::where('role', 'santri')
-                        ->where('status', $request->status)
+        $santris = Santri::where('status', $request->status)
                         ->orderBy('id')
                         ->paginate(50);
 
         $filter_status = Santri::select('status')
-                            ->where('role', 'santri')
                             ->distinct()
                             ->get();
         
         $status = Santri::select('status')
-                            ->where('role', 'santri')
                             ->where('status', $request->status)
                             ->distinct()
                             ->get();

@@ -15,18 +15,15 @@ class UstadzUstadzController extends Controller
      */
     public function index()
     {
-        $ustadzs = Ustadz::where('role', 'ustadz')
-                        ->where('status', 'Aktif')
+        $ustadzs = Ustadz::where('status', 'Aktif')
                         ->orderBy('id')
                         ->paginate(50);
 
         $filter_status = Ustadz::select('status')
-                            ->where('role', 'ustadz')
                             ->distinct()
                             ->get();
 
         $status = Ustadz::select('status')
-                    ->where('role', 'ustadz')
                     ->where('status', 'Aktif')
                     ->distinct()
                     ->get();
@@ -37,18 +34,15 @@ class UstadzUstadzController extends Controller
 
     public function filter(Request $request)
     {
-        $ustadzs = Ustadz::where('role', 'ustadz')
-                        ->where('status', $request->status)
+        $ustadzs = Ustadz::where('status', $request->status)
                         ->orderBy('id')
                         ->paginate(50);
 
         $filter_status = Ustadz::select('status')
-                            ->where('role', 'ustadz')
                             ->distinct()
                             ->get();
 
         $status = Ustadz::select('status')
-                    ->where('role', 'ustadz')
                     ->where('status', $request->status)
                     ->distinct()
                     ->get();
