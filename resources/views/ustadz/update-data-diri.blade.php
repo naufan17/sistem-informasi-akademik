@@ -18,7 +18,7 @@
                     </a>
                 </div>
                 <div class="p-4">
-                    <h2 class="text-2xl ">Update Informasi Data Diri</h2>
+                    <h2 class="text-2xl ">Perbarui Informasi Data Diri</h2>
                 </div>
                 <!-- FORM UPDATE DATA DIRI -->
                 <form method="POST" action="{{ url('ustadz/data-diri/update-profile') }}">
@@ -146,22 +146,42 @@
                         <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Simpan</button>
                     </div>
                 </form>
+                <form method="POST" action="{{ url('ustadz/data-diri/update-foto') }}" enctype="multipart/form-data">
+                    @csrf
+                    <div class="pb-8">
+                        <div class="pt-8">
+                            <p class="self-center bg-gray-50 py-4 px-4">Foto Profil</p>
+                        </div>
+                        @foreach($ustadzs as $ustadz)
+                        <input id="id" type="hidden" name="id" placeholder="" value="{{ $ustadz->id }}" required autocomplete="role" required class="pt-3 pb-2 px-3 block w-full mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <div class="md:grid md:grid-cols-4 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
+                            <p class="self-center text-gray-600">File Foto</p>
+                            <div class="relative z-0 w-full mb-5">
+                                <input class="form-control block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-4 rounded" type="file" name="image" required="required">
+                            </div>
+                            <div class="object-left text-center text-white text-base">
+                                <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Simpan</button>
+                            </div>
+                        </div>
+                        @endforeach
+                    </div>
+                </form>
                 <form method="POST" action="{{ url('ustadz/data-diri/update-password') }}">
                     @csrf
                     <div class="pb-8">
                         <div class="pt-8">
-                            <p class="self-center bg-gray-50 py-4 px-4">Update Password</p>
+                            <p class="self-center bg-gray-50 py-4 px-4">Password</p>
                         </div>
                         @foreach($ustadzs as $ustadz)
                         <input id="id" type="hidden" name="id" placeholder="" value="{{ $ustadz->id }}" required autocomplete="role" required class="pt-3 pb-2 px-3 block w-full mt-0 bg-transparent border-0 border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                            <p class="self-center text-gray-600">New Password</p>
+                            <p class="self-center text-gray-600">Password Baru</p>
                             <div class="relative z-0 w-full mb-5">
                                 <input type="password" name="password" placeholder="" required autocomplete="new-password" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                            <p class="self-center text-gray-600">Password Confirm</p>
+                            <p class="self-center text-gray-600">Konfirmasi Password</p>
                             <div class="relative z-0 w-full mb-5">
                                 <input type="password" name="password_confirmation" placeholder="" required autocomplete="new-password" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>

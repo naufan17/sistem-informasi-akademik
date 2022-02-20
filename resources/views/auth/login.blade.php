@@ -6,7 +6,7 @@
     <div class="w-full sm:max-w-md px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
         <form method="POST" action="{{ route('login') }}">
             @csrf
-            <!-- Email Address -->
+            <!-- NIS/NIU -->
             <div>
                 <label class="block font-medium text-sm text-gray-700" for="id">
                     {{ __('NIS/NIU') }}

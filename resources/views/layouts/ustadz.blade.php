@@ -38,7 +38,7 @@
                     <div class="flex space-x-4 py-2">
                         <!--LOGO-->
                         <div class="object-left">
-                            <img src="{{ ('images/logo.png ') }}" class="w-24">
+                            <img src="{{ URL::to('/') }}/images/logo.png" class="w-24">
                         </div>
                         <!--NAME-->
                         <div class="text-center font-bold font-sans text-yellow-800 mt-2">
@@ -60,13 +60,10 @@
                         <div class="text-gray-900">
                             <div class="pt-6 px-6 mb-8">
                                 <div class="text-center bg-white rounded-lg shadow-xl">
-                                <!--
                                     <div class="px-6 py-6">
-                                        <img src="https://source.unsplash.com/random/350x350" alt="random image" class="object-center rounded-full">
+                                        <img src="{{ URL::to('/') }}/foto_ustadz/{{Auth::guard('ustadz')->user()->photo}}" class="object-center rounded-full">
                                     </div>
-                                -->
-
-                                    <h4 class="py-6 text-l font-semibold leading-tight truncate">Hai {{ Auth::guard('ustadz')->id() }}</h4>
+                                    <h4 class="py-6 text-l font-semibold leading-tight truncate">Hai {{ Auth::guard('ustadz')->user()->name }}</h4>
                                 </div>
                             </div>
                         </div>

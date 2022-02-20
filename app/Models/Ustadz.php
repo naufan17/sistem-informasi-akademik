@@ -37,6 +37,7 @@ class Ustadz extends Authenticatable
         'regency',
         'province',
         'status',
+        'photo',
         'password',
     ];
 

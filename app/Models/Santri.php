@@ -46,6 +46,7 @@ class Santri extends Authenticatable
         'parent_address', 
         'phone_number_parent', 
         'status',
+        'photo',
         'password',
     ];
 

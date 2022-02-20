@@ -49,6 +49,7 @@ Route::group(['middleware' => 'auth:santri'], function () {
     Route::get('/santri/data-diri/{id}', [DataDiriSantriController::class, 'index'])->name('santri.data-diri');
     Route::get('/santri/data-diri/form-update/{id}', [DataDiriSantriController::class, 'formUpdate'])->name('santri.data-diri.form-update');
     Route::post('/santri/data-diri/update-profile', [DataDiriSantriController::class, 'updateProfile'])->name('santri.data-diri.update-profile');
+    Route::post('/santri/data-diri/update-foto', [DataDiriSantriController::class, 'updateFoto'])->name('santri.data-diri.update-foto');
     Route::post('/santri/data-diri/update-password', [DataDiriSantriController::class, 'updatePassword'])->name('santri.data-diri.update-password');
 
     Route::get('/santri/kelas/{id}', [KelasSantriController::class, 'index'])->name('santri.kelas');
@@ -83,6 +84,7 @@ Route::group(['middleware' => 'auth:ustadz'], function () {
     Route::get('/ustadz/data-diri/{id}', [DataDiriUstadzController::class, 'index'])->name('ustadz.data-diri');
     Route::get('/ustadz/data-diri/form-update/{id}', [DataDiriUstadzController::class, 'formUpdate'])->name('ustadz.data-diri.form-update');
     Route::post('/ustadz/data-diri/update-profile', [DataDiriUstadzController::class, 'updateProfile'])->name('ustadz.data-diri.update-profile');
+    Route::post('/ustadz/data-diri/update-foto', [DataDiriUstadzController::class, 'updateFoto'])->name('ustadz.data-diri.update-foto');
     Route::post('/ustadz/data-diri/update-password', [DataDiriUstadzController::class, 'updatePassword'])->name('ustadz.data-diri.update-password');
 
     Route::get('/ustadz/kelas/{id}', [KelasUstadzController::class, 'index'])->name('ustadz.kelas');

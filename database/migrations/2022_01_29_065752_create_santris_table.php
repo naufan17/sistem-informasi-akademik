@@ -39,6 +39,7 @@ class CreateSantrisTable extends Migration
             $table->string('parent_address')->nullable();
             $table->string('phone_number_parent')->nullable();
             $table->enum('status', ['Aktif', 'Tidak aktif'])->default('Aktif');
+            $table->string('photo')->nullable();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();

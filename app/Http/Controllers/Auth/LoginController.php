@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
@@ -77,6 +78,9 @@ class LoginController extends Controller
         if (Auth::guard('santri')->attempt(['id' => $request->id, 'password' => $request->password], $request->get('remember'))) {
             return redirect()->intended('/santri/dashboard');
         }
+
+        Session::flash('gagal','NIS/NIU dan Password Salah');
+
         return back()->withInput($request->only('id', 'remember'));
     }
 
@@ -95,6 +99,9 @@ class LoginController extends Controller
         if (Auth::guard('ustadz')->attempt(['id' => $request->id, 'password' => $request->password], $request->get('remember'))) {
             return redirect()->intended('/ustadz/dashboard');
         }
+
+        Session::flash('gagal','NIS/NIU dan Password Salah');
+        
         return back()->withInput($request->only('id', 'remember'));
     }
 }

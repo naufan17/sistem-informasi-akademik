@@ -88,6 +88,25 @@ class DataDiriSantriController extends Controller
         return redirect()->route('santri.data-diri', [$request->id]);
     }
 
+    public function updateFoto(Request $request)
+    {
+        $request->validate([
+            'image' => 'required|image|mimes:jpg,png,jpeg',
+        ]);
+
+        $file = $request->file('image');
+        $nama_file = rand().$file->getClientOriginalName();
+        $file->move('foto_santri', $nama_file);
+
+        Santri::where('id', $request->id)->update([
+            'photo' => $nama_file,
+        ]);
+
+        Session::flash('update','Data Berhasil Diupdate!');
+
+        return redirect()->route('santri.data-diri', [$request->id]);
+    }
+
     public function updatePassword(Request $request)
     {
         Santri::where('id', $request->id)->update([
