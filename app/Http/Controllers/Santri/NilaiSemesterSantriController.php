@@ -31,7 +31,6 @@ class NilaiSemesterSantriController extends Controller
                                     ->where('id_santri', $id)
                                     ->where('semester', 'Genap')
                                     ->where('year', date('Y')-1 . '/' . date('Y'))
-                                    ->orderBy('sem')
                                     ->get();
 
             $semesters = CumulativeStudy::select('semester')
@@ -53,7 +52,6 @@ class NilaiSemesterSantriController extends Controller
                                     ->where('id_santri', $id)
                                     ->where('semester', 'Ganjil')
                                     ->where('year', date('Y') . '/' . date('Y')+1)
-                                    ->orderBy('sem')
                                     ->get();
 
             $semesters = CumulativeStudy::select('semester')
@@ -90,7 +88,6 @@ class NilaiSemesterSantriController extends Controller
                                 ->where('id_santri', $request->id)
                                 ->where('semester', $request->semester)
                                 ->where('year', $request->year)
-                                ->orderBy('sem')
                                 ->get();
 
         $semesters = CumulativeStudy::select('semester')

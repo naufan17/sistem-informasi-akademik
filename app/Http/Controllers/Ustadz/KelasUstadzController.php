@@ -18,62 +18,16 @@ class KelasUstadzController extends Controller
      */
     public function index($id)
     {
-        if(date('m') <= 06 ){
-            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
-                            ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                            ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                            ->where('id', $id)
-                            ->whereIn('sem', [2, 4, 6, 8, 10, 12, 14, 16])
-                            ->where('status_course', 'Aktif')
-                            ->orderBy('sem')
-                            ->get();
-                            
-            $semester = "Genap";
+        $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
+                        ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
+                        ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
+                        ->where('id', $id)
+                        ->where('status_course', 'Aktif')
+                        ->orderBy('grade_name')
+                        ->orderBy('grade_number')
+                        ->get();
 
-        }elseif(date('m') > 06 ){
-            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
-                            ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                            ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                            ->where('id', $id)
-                            ->where('status_course', 'Aktif')
-                            ->whereIn('sem', [1, 3, 5, 7, 9, 11, 13, 15])
-                            ->orderBy('sem')
-                            ->get();
-
-            $semester = "Ganjil";
-        }
-
-        return view('ustadz.kelas', compact('courses', 'semester'));
-    }
-
-    public function filter(Request $request)
-    {
-        if($request->semester == 'Genap'){
-            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
-                            ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                            ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                            ->where('id', $request->id_santri)
-                            ->where('status_course', 'Aktif')
-                            ->whereIn('sem', [2, 4, 6, 8, 10, 12, 14, 16])
-                            ->orderBy('sem')
-                            ->get();
-                            
-            $semester = "Genap";
-
-        }elseif($request->semester == 'Ganjil'){
-            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
-                            ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                            ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                            ->where('id', $request->id_santri)
-                            ->where('status_course', 'Aktif')
-                            ->whereIn('sem', [1, 3, 5, 7, 9, 11, 13, 15])
-                            ->orderBy('sem')
-                            ->get();
-
-            $semester = "Ganjil";
-        }
-
-        return view('ustadz.kelas', compact('courses', 'semester'));
+        return view('ustadz.kelas', compact('courses'));
     }
 
     public function detailSantri($id)
@@ -124,27 +78,12 @@ class KelasUstadzController extends Controller
 
     public function cetakKelas(Request $request)
     {
-        if($request->semester == 'Genap'){
-            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
-                            ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                            ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                            ->where('id', $request->id_ustadz)
-                            ->where('status_course', 'Aktif')
-                            ->whereIn('sem', [2, 4, 6, 8, 10, 12, 14, 16])
-                            ->orderBy('sem')
-                            ->get();
-
-        }elseif($request->semester == 'Ganjil'){
-            $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
-                            ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                            ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                            ->where('id', $request->id_ustadz)
-                            ->where('status_course', 'Aktif')
-                            ->whereIn('sem', [1, 3, 5, 7, 9, 11, 13, 15])
-                            ->orderBy('sem')
-                            ->get();
-
-        }
+        $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
+                        ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
+                        ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
+                        ->where('id', $request->id_ustadz)
+                        ->where('status_course', 'Aktif')
+                        ->get();
 
         $pdf = PDF::loadview('ustadz.cetak-kelas', compact('courses'));
 

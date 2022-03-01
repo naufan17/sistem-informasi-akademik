@@ -16,7 +16,7 @@ class SantriSantriController extends Controller
     public function index()
     {
         $santris = Santri::where('status', 'Aktif')
-                        ->orderBy('id')
+                        ->orderBy('name')
                         ->paginate(50);
 
         $filter_status = Santri::select('status')
@@ -34,7 +34,7 @@ class SantriSantriController extends Controller
     public function filter(Request $request)
     {
         $santris = Santri::where('status', $request->status)
-                        ->orderBy('id')
+                        ->orderBy('name')
                         ->paginate(50);
 
         $filter_status = Santri::select('status')

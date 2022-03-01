@@ -36,7 +36,8 @@ class KelasSantriController extends Controller
                                                 ->where('id_santri', $id)
                                                 ->where('semester', 'Genap')
                                                 ->where('year', date('Y')-1 . '/' . date('Y'))
-                                                ->orderBy('sem')
+                                                ->orderBy('grade_name')
+                                                ->orderBy('grade_number')
                                                 ->get();
 
             $semesters = CumulativeStudy::select('semester')
@@ -61,7 +62,8 @@ class KelasSantriController extends Controller
                                                 ->where('id_santri', $id)
                                                 ->where('semester', 'Ganjil')
                                                 ->where('year', date('Y') . '/' . date('Y')+1)
-                                                ->orderBy('sem')
+                                                ->orderBy('grade_name')
+                                                ->orderBy('grade_number')
                                                 ->get();
 
             $semesters = CumulativeStudy::select('semester')
@@ -101,7 +103,8 @@ class KelasSantriController extends Controller
                                             ->where('id_santri', $request->id)
                                             ->where('semester', $request->semester)
                                             ->where('year', $request->tahun_ajaran)
-                                            ->orderBy('sem')
+                                            ->orderBy('grade_name')
+                                            ->orderBy('grade_number')
                                             ->get();
                 
         $semesters = CumulativeStudy::select('semester')
@@ -124,7 +127,6 @@ class KelasSantriController extends Controller
         if(date('m') <= 06 ){
             $cumulativestudys = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                                 ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
-                                                ->orderBy('sem')
                                                 ->where('id_santri', $id)
                                                 ->where('semester', 'Genap')
                                                 ->where('year', date('Y')-1 . '/' . date('Y'))
@@ -133,7 +135,6 @@ class KelasSantriController extends Controller
         }elseif(date('m') > 06 ){
             $cumulativestudys = CumulativeStudy::leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                                 ->leftjoin('courses', 'cumulative_studies.id_course', '=', 'courses.id_course')
-                                                ->orderBy('sem')
                                                 ->where('id_santri', $id)
                                                 ->where('semester', 'Ganjil')
                                                 ->where('year', date('Y') . '/' . date('Y')+1)
@@ -143,7 +144,8 @@ class KelasSantriController extends Controller
         $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
-                        ->orderBy('sem')
+                        ->orderBy('grade_name')
+                        ->orderBy('grade_number')
                         ->get();
 
         return view('santri.tambah-santri-kelas', compact('cumulativestudys', 'courses', 'id'));
@@ -164,11 +166,23 @@ class KelasSantriController extends Controller
                     'id_santri' => $request->id_santri,
                     'id_course' => $request->id_course,
                 ]);
+                CumulativeStudy::firstOrCreate([
+                    'year' => date('Y')-1 . '/' . date('Y'),
+                    'semester' => 'Ganjil',
+                    'id_santri' => $request->id_santri,
+                    'id_course' => $request->id_course,
+                ]);
         
             }elseif(date('m') > 06 ){
                 CumulativeStudy::firstOrCreate([
                     'year' => date('Y') . '/' . date('Y')+1,
                     'semester' => 'Ganjil',
+                    'id_santri' => $request->id_santri,
+                    'id_course' => $request->id_course,
+                ]);
+                CumulativeStudy::firstOrCreate([
+                    'year' => date('Y') . '/' . date('Y')+1,
+                    'semester' => 'Genap',
                     'id_santri' => $request->id_santri,
                     'id_course' => $request->id_course,
                 ]);

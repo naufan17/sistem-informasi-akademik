@@ -113,42 +113,6 @@
                     </div>
                 </form>
                 @endif
-                <!-- <p class="text-xl py-4 flex items-center">
-                    Catatan dari Ustadz
-                </p>
-                <div class="bg-white overflow-auto pb-8">
-                    <table class="table-auto bg-white">
-                        <thead class="bg-gray-800 text-white">
-                            <tr>
-                                <th class="text-left py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-left w-1/5 py-3 px-4 uppercase font-semibold text-sm">Nama MP</th>
-                                <th class="text-left w-full py-3 px-4 uppercase font-semibold text-sm">Catatan</th>
-                            </tr>
-                        </thead>
-                        <tbody class="text-gray-700">
-                            <tr>
-                                <td class="text-left py-3 px-4">1</td>
-                                <td class="text-left py-3 px-4"><a >Tafsir</a></td>
-                                <td class="text-left py-3 px-4"><a >-</a></td>
-                            </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">2</td>
-                                <td class="text-left py-3 px-4"><a>Fiqih</a></td>
-                                <td class="text-left py-3 px-4"><a >-</a></td>
-                            </tr>
-                            <tr>
-                                <td class="text-left py-3 px-4">3</td>
-                                <td class="text-left py-3 px-4"><a>Nahwu</a></td>
-                                <td class="text-left py-3 px-4"><a >-</a></td>
-                            </tr>
-                            <tr class="bg-gray-200">
-                                <td class="text-left py-3 px-4">4</td>
-                                <td class="text-left py-3 px-4"><a>Hadits</a></td>
-                                <td class="text-left py-3 px-4"><a >-</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div> -->
             </div>
         </main>
     </div>
