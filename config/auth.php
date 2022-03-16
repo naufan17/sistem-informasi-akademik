@@ -115,6 +115,18 @@ return [
             'expire' => 60,
             'throttle' => 60,
         ],
+        'santris' => [
+            'provider' => 'santris',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'ustadzs' => [
+            'provider' => 'ustadzs',
+            'table' => 'password_resets',
+            'expire' => 60,
+            'throttle' => 60,
+        ],
     ],
 
     /*
