@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Ustadz;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use App\Models\Course;
 use App\Models\CumulativeStudy;
@@ -16,12 +17,12 @@ class KelasUstadzController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($id)
+    public function index()
     {
         $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                        ->where('id', $id)
+                        ->where('id', Auth::guard('ustadz')->user()->id)
                         ->where('status_course', 'Aktif')
                         ->orderBy('grade_name')
                         ->orderBy('grade_number')

@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Santri;
@@ -15,16 +16,16 @@ class DataDiriSantriController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($id)
+    public function index()
     {
-        $santris = Santri::where('id', $id)->get(); 
+        $santris = Santri::where('id', Auth::guard('santri')->user()->id)->get(); 
 
         return view('santri.data-diri', compact('santris'));
     }
 
-    public function formUpdate($id)
+    public function formUpdate()
     {
-        $santris = Santri::where('id', $id)->get();
+        $santris = Santri::where('id', Auth::guard('santri')->user()->id)->get();
         
         return view('santri.update-data-diri', compact('santris'));
     }
@@ -57,7 +58,7 @@ class DataDiriSantriController extends Controller
         //     'phone_number_parent' => 'required', 'string',
         // ]);
 
-        Santri::where('id', $request->id)->update([
+        Santri::where('id', Auth::guard('santri')->user()->id)->update([
             'name' => $request->name,
             'place_born' => $request->place_born, 
             'birthday' => $request->birthday, 
@@ -85,7 +86,7 @@ class DataDiriSantriController extends Controller
 
         Session::flash('update','Data Berhasil Diperbarui!');
 
-        return redirect()->route('santri.data-diri', [$request->id]);
+        return redirect()->route('santri.data-diri', [Auth::guard('santri')->user()->id]);
     }
 
     public function updateFoto(Request $request)
@@ -98,24 +99,24 @@ class DataDiriSantriController extends Controller
         $nama_file = rand().$file->getClientOriginalName();
         $file->move('foto_santri', $nama_file);
 
-        Santri::where('id', $request->id)->update([
+        Santri::where('id', Auth::guard('santri')->user()->id)->update([
             'photo' => $nama_file,
         ]);
 
         Session::flash('update','Data Berhasil Diupdate!');
 
-        return redirect()->route('santri.data-diri', [$request->id]);
+        return redirect()->route('santri.data-diri', [Auth::guard('santri')->user()->id]);
     }
 
     public function updatePassword(Request $request)
     {
-        Santri::where('id', $request->id)->update([
+        Santri::where('id', Auth::guard('santri')->user()->id)->update([
             'password' => Hash::make($request->password), 
         ]);
 
         Session::flash('update','Data Berhasil Diupdate!');
 
-        return redirect()->route('santri.data-diri', [$request->id]);
+        return redirect()->route('santri.data-diri', [Auth::guard('santri')->user()->id]);
     }
     
 }

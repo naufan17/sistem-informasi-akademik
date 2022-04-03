@@ -15,7 +15,6 @@
                         <div class="flex-none w-36">
                             <a class="self-center hover:no-underline">Semester</a>
                         </div>
-                        <input type="hidden" name="id" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <div class="flex-none md:w-1/5">
                             <div class="relative">
                                 <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
@@ -93,7 +92,6 @@
                 <form method="POST" action="{{ url('santri/hasil-studi/cetak') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
-                        <input type="hidden" name="id" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <input type="hidden" name="semester" placeholder=" " value="{{ $scores['semester'] }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <input type="hidden" name="year" placeholder=" " value="{{ $scores['year'] }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                     </div>

@@ -68,12 +68,12 @@
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/data-diri') }}/{{ Auth::guard('santri')->id() }}" class="text-gray-800 hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href="{{ url('santri/data-diri') }}" class="text-gray-800 hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Data Diri
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('santri/kelas') }}/{{ Auth::guard('santri')->id() }}" class="text-gray-800 hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href="{{ url('santri/kelas') }}" class="text-gray-800 hover:text-white hover:no-underline flex items-center py-3 pl-8">
                                 Kelas
                             </a>
                         </div>
@@ -86,9 +86,9 @@
                             </button>
                             <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-md">
                                 <div class="px-2 py-2 bg-white rounded-md shadow">
-                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparents hover:no-underline" href="{{ url('santri/nilai-semester') }}/{{ Auth::guard('santri')->id() }}">Nilai Semester</a>
-                                    <!-- <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/riwayat-nilai') }}/{{ Auth::guard('santri')->id() }}">Riwayat Nilai</a> -->
-                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/hasil-studi') }}/{{ Auth::guard('santri')->id() }}">Hasil Studi</a>
+                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparents hover:no-underline" href="{{ url('santri/nilai-semester') }}">Nilai Semester</a>
+                                    <!-- <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/riwayat-nilai') }}">Riwayat Nilai</a> -->
+                                    <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/hasil-studi') }}">Hasil Studi</a>
                                 </div>
                             </div>
                         </div>

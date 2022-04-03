@@ -9,7 +9,7 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Data Diri</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <div class="flex object-left text-center text-white text-base p-4">
-                    <a href="{{ url('ustadz/data-diri/form-update') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white hover:no-underline rounded shadow-lg py-3 px-8">Perbarui</a>
+                    <a href="{{ url('ustadz/data-diri/form-update') }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white hover:no-underline rounded shadow-lg py-3 px-8">Perbarui</a>
                 </div>
                 @if($update = Session::get('update'))
                 <div class="bg-orange-100 border border-orange-400 text-orange-700 px-4 py-3 rounded relative mb-2" role="alert">

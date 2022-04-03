@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Models\CumulativeStudy;
 use App\Models\Attendance;
 use PDF;
@@ -15,7 +16,7 @@ class HasilStudiSantriController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($id)
+    public function index()
     {
         $attendance_mdnu = 0;
         $attendance_asrama = 0;
@@ -23,35 +24,35 @@ class HasilStudiSantriController extends Controller
         $scores = 0;
 
         $filter_semesters = CumulativeStudy::select('semester')
-                                            ->where('id_santri', $id)
+                                            ->where('id_santri', Auth::guard('santri')->user()->id)
                                             ->distinct()
                                             ->get();
 
         $filter_years = CumulativeStudy::select('year')
-                                        ->where('id_santri', $id)
+                                        ->where('id_santri', Auth::guard('santri')->user()->id)
                                         ->distinct()
                                         ->get();
 
         if(date('m') <= 06 ){
             $filters = CumulativeStudy::select('semester', 'year')
-                                        ->where('id_santri', $id)
+                                        ->where('id_santri', Auth::guard('santri')->user()->id)
                                         ->where('semester', 'Genap')
                                         ->where('year', date('Y')-1 . '/' . date('Y'))
                                         ->distinct()
                                         ->get();
 
             foreach($filters as $filter){
-                $totalNilai = CumulativeStudy::where('id_santri', $id)
+                $totalNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                             ->where('semester', 'Genap')
                                             ->where('year', date('Y')-1 . '/' . date('Y'))
                                             ->sum('score');
 
-                $rataNilai = CumulativeStudy::where('id_santri', $id)
+                $rataNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                             ->where('semester', 'Genap')
                                             ->where('year', date('Y')-1 . '/' . date('Y'))
                                             ->avg('score');
 
-                foreach(Attendance::where('id_santri', $id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
+                foreach(Attendance::where('id_santri', Auth::guard('santri')->user()->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
                     $attendance_mdnu = $score->attendance_mdnu;
                     $attendance_asrama = $score->attendance_asrama;
                     if($score->attendance_mdnu <= 15 && $score->attendance_asrama <= 10){
@@ -61,7 +62,7 @@ class HasilStudiSantriController extends Controller
                     }
                 }
 
-                foreach(CumulativeStudy::where('id_santri', $id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
+                foreach(CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
                     if($score->score > 59 && $keterangan == 'Naik Kelas'){
                         $keterangan = 'Naik Kelas';
                     }else{
@@ -74,24 +75,24 @@ class HasilStudiSantriController extends Controller
 
         }elseif(date('m') > 06 ){
             $filters = CumulativeStudy::select('semester', 'year')
-                                    ->where('id_santri', $id)
+                                    ->where('id_santri', Auth::guard('santri')->user()->id)
                                     ->where('semester', 'Ganjil')
                                     ->where('year', date('Y') . '/' . date('Y')+1)
                                     ->distinct()
                                     ->get();
 
             foreach($filters as $filter){
-                $totalNilai = CumulativeStudy::where('id_santri', $id)
+                $totalNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                             ->where('semester', 'Ganjil')
                                             ->where('year', date('Y') . '/' . date('Y')+1)
                                             ->sum('score');
 
-                $rataNilai = CumulativeStudy::where('id_santri', $id)
+                $rataNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                             ->where('semester', 'Ganjil')
                                             ->where('year', date('Y') . '/' . date('Y')+1)
                                             ->avg('score');
 
-                foreach(Attendance::where('id_santri', $id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
+                foreach(Attendance::where('id_santri', Auth::guard('santri')->user()->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
                     $attendance_mdnu = $score->attendance_mdnu;
                     $attendance_asrama = $score->attendance_asrama;
                     if($score->attendance_mdnu <= 15 && $score->attendance_asrama <= 10){
@@ -101,7 +102,7 @@ class HasilStudiSantriController extends Controller
                     }
                 }
 
-                foreach(CumulativeStudy::where('id_santri', $id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
+                foreach(CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
                     if($score->score > 59 && $keterangan == 'Naik Kelas'){
                         $keterangan = 'Naik Kelas';
                     }else{
@@ -124,34 +125,34 @@ class HasilStudiSantriController extends Controller
         $scores = 0;
 
         $filter_semesters = CumulativeStudy::select('semester')
-                                            ->where('id_santri', $request->id)
+                                            ->where('id_santri', Auth::guard('santri')->user()->id)
                                             ->distinct()
                                             ->get();
 
         $filter_years = CumulativeStudy::select('year')
-                                        ->where('id_santri', $request->id)
+                                        ->where('id_santri', Auth::guard('santri')->user()->id)
                                         ->distinct()
                                         ->get();
 
         $filters = CumulativeStudy::select('semester', 'year')
                                     ->where('semester', $request->semester)
                                     ->where('year', $request->year)
-                                    ->where('id_santri', $request->id)
+                                    ->where('id_santri', Auth::guard('santri')->user()->id)
                                     ->distinct()
                                     ->get();
 
         foreach($filters as $filter){
-            $totalNilai = CumulativeStudy::where('id_santri', $request->id)
+            $totalNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                         ->where('semester', $filter->semester)
                                         ->where('year', $filter->year)
                                         ->sum('score');
 
-            $rataNilai = CumulativeStudy::where('id_santri', $request->id)
+            $rataNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                         ->where('semester', $filter->semester)
                                         ->where('year', $filter->year)
                                         ->avg('score');
 
-            foreach(Attendance::where('id_santri', $request->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
+            foreach(Attendance::where('id_santri', Auth::guard('santri')->user()->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
                 $attendance_mdnu = $score->attendance_mdnu;
                 $attendance_asrama = $score->attendance_asrama;
                 if($score->attendance_mdnu <= 15 && $score->attendance_asrama <= 10){
@@ -161,7 +162,7 @@ class HasilStudiSantriController extends Controller
                 }
             }
 
-            foreach(CumulativeStudy::where('id_santri', $request->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
+            foreach(CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
                 if($score->score > 59 && $keterangan == 'Naik Kelas'){
                     $keterangan = 'Naik Kelas';
                 }else{
@@ -185,22 +186,22 @@ class HasilStudiSantriController extends Controller
         $filters = CumulativeStudy::select('semester', 'year')
                                     ->where('semester', $request->semester)
                                     ->where('year', $request->year)
-                                    ->where('id_santri', $request->id)
+                                    ->where('id_santri', Auth::guard('santri')->user()->id)
                                     ->distinct()
                                     ->get();
 
         foreach($filters as $filter){
-            $totalNilai = CumulativeStudy::where('id_santri', $request->id)
+            $totalNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                         ->where('semester', $filter->semester)
                                         ->where('year', $filter->year)
                                         ->sum('score');
 
-            $rataNilai = CumulativeStudy::where('id_santri', $request->id)
+            $rataNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                         ->where('semester', $filter->semester)
                                         ->where('year', $filter->year)
                                         ->avg('score');
 
-            foreach(Attendance::where('id_santri', $request->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
+            foreach(Attendance::where('id_santri', Auth::guard('santri')->user()->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
                 $attendance_mdnu = $score->attendance_mdnu;
                 $attendance_asrama = $score->attendance_asrama;
                 if($score->attendance_mdnu <= 15 && $score->attendance_asrama <= 10){
@@ -210,7 +211,7 @@ class HasilStudiSantriController extends Controller
                 }
             }
 
-            foreach(CumulativeStudy::where('id_santri', $request->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
+            foreach(CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)->where('semester', $filter->semester)->where('year', $filter->year)->get() as $score){
                 if($score->score > 59 && $keterangan == 'Naik Kelas'){
                     $keterangan = 'Naik Kelas';
                 }else{

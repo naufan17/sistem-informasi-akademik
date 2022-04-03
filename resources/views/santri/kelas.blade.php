@@ -62,7 +62,7 @@
                 @if(date('m') == 01 || date('m') == 07)
                 <p class="text-xl pt-4 flex items-center border-b-2">Daftar MP Diikuti</p>
                 <div class="flex flex-row-reverse object-left text-center text-white text-base py-8">
-                    <a href="{{ url('santri/kelas/form-create') }}/{{ Auth::user()->id }}" class="button bg-blue-600 hover:bg-blue-800 hover:no-underline rounded shadow-lg py-3 px-8">
+                    <a href="{{ url('santri/kelas/form-create') }}" class="button bg-blue-600 hover:bg-blue-800 hover:no-underline rounded shadow-lg py-3 px-8">
                         Tambah
                     </a>
                 </div>
@@ -101,7 +101,6 @@
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
                         @foreach($cumulative_studies as $cumulative_study)
-                        <input type="hidden" name="id_ustadz" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <input type="hidden" name="semester" placeholder=" " value="{{ $cumulative_study->semester}}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <input type="hidden" name="year" placeholder=" " value="{{ $cumulative_study->year }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         @endforeach

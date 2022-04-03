@@ -46,28 +46,28 @@ Route::post('/login/ustadz', [LoginController::class, 'ustadzLogin']);
 Route::group(['middleware' => 'auth:santri'], function () {
     Route::get('/santri/dashboard', [DashboardSantriController::class, 'index'])->name('santri.dashboard');
 
-    Route::get('/santri/data-diri/{id}', [DataDiriSantriController::class, 'index'])->name('santri.data-diri');
-    Route::get('/santri/data-diri/form-update/{id}', [DataDiriSantriController::class, 'formUpdate'])->name('santri.data-diri.form-update');
+    Route::get('/santri/data-diri', [DataDiriSantriController::class, 'index'])->name('santri.data-diri');
+    Route::get('/santri/data-diri/form-update', [DataDiriSantriController::class, 'formUpdate'])->name('santri.data-diri.form-update');
     Route::post('/santri/data-diri/update-profile', [DataDiriSantriController::class, 'updateProfile'])->name('santri.data-diri.update-profile');
     Route::post('/santri/data-diri/update-foto', [DataDiriSantriController::class, 'updateFoto'])->name('santri.data-diri.update-foto');
     Route::post('/santri/data-diri/update-password', [DataDiriSantriController::class, 'updatePassword'])->name('santri.data-diri.update-password');
 
-    Route::get('/santri/kelas/{id}', [KelasSantriController::class, 'index'])->name('santri.kelas');
+    Route::get('/santri/kelas', [KelasSantriController::class, 'index'])->name('santri.kelas');
     Route::post('/santri/kelas', [KelasSantriController::class, 'filterKelas'])->name('santri.kelas');
-    Route::get('/santri/kelas/form-create/{id}', [KelasSantriController::class, 'formCreate'])->name('santri.kelas.form-create');
+    Route::get('/santri/kelas/form-create', [KelasSantriController::class, 'formCreate'])->name('santri.kelas.form-create');
     Route::post('/santri/kelas/create', [KelasSantriController::class, 'create'])->name('santri.kelas.create');
     Route::get('/santri/kelas/delete/{id}', [KelasSantriController::class, 'delete'])->name('santri.kelas.delete');
     Route::post('/santri/kelas/cetak', [KelasSantriController::class, 'cetakKelas'])->name('santri.kelas.cetak');
 
-    Route::get('/santri/nilai-semester/{id}', [NilaiSemesterSantriController::class, 'index'])->name('santri.nilai-semester');
+    Route::get('/santri/nilai-semester', [NilaiSemesterSantriController::class, 'index'])->name('santri.nilai-semester');
     Route::post('/santri/nilai-semester', [NilaiSemesterSantriController::class, 'filterNilaiSemester'])->name('santri.nilai-semester');
     Route::post('/santri/nilai-semester/cetak', [NilaiSemesterSantriController::class, 'cetakNilaiSemester'])->name('santri.nilai-semester.cetak');
 
-    // Route::get('/santri/riwayat-nilai/{id}', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
+    // Route::get('/santri/riwayat-nilai', [RiwayatNilaiSantriController::class, 'index'])->name('santri.riwayat-nilai');
     // Route::post('/santri/riwayat-nilai', [RiwayatNilaiSantriController::class, 'filterRiwayatNilai'])->name('santri.riwayat-nilai');
     // Route::post('/santri/riwayat-nilai/cetak', [RiwayatNilaiSantriController::class, 'cetakRiwayatNilai'])->name('santri.riwayat-nilai.cetak');
     
-    Route::get('/santri/hasil-studi/{id}', [HasilStudiSantriController::class, 'index'])->name('santri.hasil-studi');
+    Route::get('/santri/hasil-studi', [HasilStudiSantriController::class, 'index'])->name('santri.hasil-studi');
     Route::post('/santri/hasil-studi', [HasilStudiSantriController::class, 'filterHasilStudi'])->name('santri.hasil-studi');
     Route::post('/santri/hasil-studi/cetak', [HasilStudiSantriController::class, 'cetakHasilStudi'])->name('santri.hasil-studi.cetak');
     
@@ -81,13 +81,13 @@ Route::group(['middleware' => 'auth:santri'], function () {
 Route::group(['middleware' => 'auth:ustadz'], function () {
     Route::get('/ustadz/dashboard', [DashboardUstadzController::class, 'index'])->name('ustadz.dashboard');
 
-    Route::get('/ustadz/data-diri/{id}', [DataDiriUstadzController::class, 'index'])->name('ustadz.data-diri');
-    Route::get('/ustadz/data-diri/form-update/{id}', [DataDiriUstadzController::class, 'formUpdate'])->name('ustadz.data-diri.form-update');
+    Route::get('/ustadz/data-diri', [DataDiriUstadzController::class, 'index'])->name('ustadz.data-diri');
+    Route::get('/ustadz/data-diri/form-update', [DataDiriUstadzController::class, 'formUpdate'])->name('ustadz.data-diri.form-update');
     Route::post('/ustadz/data-diri/update-profile', [DataDiriUstadzController::class, 'updateProfile'])->name('ustadz.data-diri.update-profile');
     Route::post('/ustadz/data-diri/update-foto', [DataDiriUstadzController::class, 'updateFoto'])->name('ustadz.data-diri.update-foto');
     Route::post('/ustadz/data-diri/update-password', [DataDiriUstadzController::class, 'updatePassword'])->name('ustadz.data-diri.update-password');
 
-    Route::get('/ustadz/kelas/{id}', [KelasUstadzController::class, 'index'])->name('ustadz.kelas');
+    Route::get('/ustadz/kelas', [KelasUstadzController::class, 'index'])->name('ustadz.kelas');
     Route::get('/ustadz/kelas/detail-santri/{id}', [KelasUstadzController::class, 'detailSantri'])->name('ustadz.kelas.detail-santri');
     Route::post('/ustadz/kelas/detail-santri/create-nilai', [KelasUstadzController::class, 'createNilai'])->name('ustadz.kelas.detail-santri.create-nilai');
     Route::post('/ustadz/kelas/cetak', [KelasUstadzController::class, 'cetakKelas'])->name('ustadz.kelas.cetak');

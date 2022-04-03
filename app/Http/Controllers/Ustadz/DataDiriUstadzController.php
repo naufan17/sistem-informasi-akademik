@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Ustadz;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Hash;
 use App\Models\Ustadz;
@@ -15,16 +16,16 @@ class DataDiriUstadzController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($id)
+    public function index()
     {
-        $ustadzs = Ustadz::where('id', $id)->get();
+        $ustadzs = Ustadz::where('id', Auth::guard('ustadz')->user()->id)->get();
 
         return view('ustadz.data-diri', compact('ustadzs'));
     }
 
-    public function formUpdate($id)
+    public function formUpdate()
     {
-        $ustadzs = Ustadz::where('id', $id)->get();
+        $ustadzs = Ustadz::where('id', Auth::guard('ustadz')->user()->id)->get();
         
         return view('ustadz.update-data-diri', compact('ustadzs'));
     }
@@ -49,7 +50,7 @@ class DataDiriUstadzController extends Controller
         //     'province' => 'required', 'string',
         // ]);
 
-        Ustadz::where('id', $request->id)->update([
+        Ustadz::where('id', Auth::guard('ustadz')->user()->id)->update([
             'name' => $request->name,
             'place_born' => $request->place_born, 
             'birthday' => $request->birthday, 
@@ -69,7 +70,7 @@ class DataDiriUstadzController extends Controller
 
         Session::flash('update','Data Berhasil Diperbarui!');
 
-        return redirect()->route('ustadz.data-diri', [$request->id]);
+        return redirect()->route('ustadz.data-diri', [Auth::guard('ustadz')->user()->id]);
     }
 
     public function updateFoto(Request $request)
@@ -82,24 +83,24 @@ class DataDiriUstadzController extends Controller
         $nama_file = rand().$file->getClientOriginalName();
         $file->move('foto_ustadz', $nama_file);
 
-        Ustadz::where('id', $request->id)->update([
+        Ustadz::where('id', Auth::guard('ustadz')->user()->id)->update([
             'photo' => $nama_file,
         ]);
 
         Session::flash('update','Data Berhasil Diupdate!');
 
-        return redirect()->route('ustadz.data-diri', [$request->id]);
+        return redirect()->route('ustadz.data-diri', [Auth::guard('ustadz')->user()->id]);
     }
 
     public function updatePassword(Request $request)
     {
-        Ustadz::where('id', $request->id)->update([
+        Ustadz::where('id', Auth::guard('ustadz')->user()->id)->update([
             'password' => Hash::make($request->password), 
         ]);
 
         Session::flash('update','Data Berhasil Diupdate!');
 
-        return redirect()->route('ustadz.data-diri', [$request->id]);
+        return redirect()->route('ustadz.data-diri', [Auth::guard('ustadz')->user()->id]);
     }
     
 }

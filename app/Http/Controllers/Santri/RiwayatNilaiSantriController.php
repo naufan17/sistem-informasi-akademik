@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Santri;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\Auth;
 use App\Models\CumulativeStudy;
 use PDF;
 
@@ -14,30 +15,30 @@ class RiwayatNilaiSantriController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index($id)
+    public function index()
     {        
         $filter_semesters = CumulativeStudy::select('semester')
-                                            ->where('id_santri', $id)
+                                            ->where('id_santri', Auth::guard('santri')->user()->id)
                                             ->distinct()
                                             ->get();
 
         $filter_years = CumulativeStudy::select('year')
-                                        ->where('id_santri', $id)
+                                        ->where('id_santri', Auth::guard('santri')->user()->id)
                                         ->distinct()
                                         ->get();
 
         // $filters = CumulativeStudy::select('semester', 'year')
-        //                             ->where('id_santri', $id)
+        //                             ->where('id_santri', Auth::guard('santri')->user()->id)
         //                             ->distinct()
         //                             ->get();
 
         // foreach($filters as $filter){
-        //     $totalMataPelajaran = CumulativeStudy::where('id_santri', $id)
+        //     $totalMataPelajaran = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
         //                                         ->where('semester', $filter->semester)
         //                                         ->where('year', $filter->year)
         //                                         ->count();
 
-        //     $totalNilai = CumulativeStudy::where('id_santri', $id)
+        //     $totalNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
         //                                 ->where('semester', $filter->semester)
         //                                 ->where('year', $filter->year)
         //                                 ->sum('score');
@@ -56,33 +57,33 @@ class RiwayatNilaiSantriController extends Controller
         $scores = 0;
         
         $filter_semesters = CumulativeStudy::select('semester')
-                                            ->where('id_santri', $request->id)
+                                            ->where('id_santri', Auth::guard('santri')->user()->id)
                                             ->where('semester', $request->semester)
                                             ->where('year', $request->year)
                                             ->distinct()
                                             ->get();
 
         $filter_years = CumulativeStudy::select('year')
-                                        ->where('id_santri', $request->id)
+                                        ->where('id_santri', Auth::guard('santri')->user()->id)
                                         ->where('semester', $request->semester)
                                         ->where('year', $request->year)
                                         ->distinct()
                                         ->get();
 
         $filters = CumulativeStudy::select('semester', 'year')
-                                    ->where('id_santri', $request->id)
+                                    ->where('id_santri', Auth::guard('santri')->user()->id)
                                     ->where('semester', $request->semester)
                                     ->where('year', $request->year)
                                     ->distinct()
                                     ->get();
 
         foreach($filters as $filter){
-            $totalMataPelajaran = CumulativeStudy::where('id_santri', $request->id)
+            $totalMataPelajaran = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                                 ->where('semester', $filter->semester)
                                                 ->where('year', $filter->year)
                                                 ->count();
 
-            $totalNilai = CumulativeStudy::where('id_santri', $request->id)
+            $totalNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                         ->where('semester', $filter->semester)
                                         ->where('year', $filter->year)
                                         ->sum('score');
@@ -96,19 +97,19 @@ class RiwayatNilaiSantriController extends Controller
     public function cetakRiwayatNilai(Request $request)
     {
         $filters = CumulativeStudy::select('semester', 'year')
-                                    ->where('id_santri', $request->id)
+                                    ->where('id_santri', Auth::guard('santri')->user()->id)
                                     ->where('semester', $request->semester)
                                     ->where('year', $request->year)
                                     ->distinct()
                                     ->get();
 
         foreach($filters as $filter){
-            $totalMataPelajaran = CumulativeStudy::where('id_santri', $request->id)
+            $totalMataPelajaran = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                                 ->where('semester', $filter->semester)
                                                 ->where('year', $filter->year)
                                                 ->count();
 
-            $totalNilai = CumulativeStudy::where('id_santri', $request->id)
+            $totalNilai = CumulativeStudy::where('id_santri', Auth::guard('santri')->user()->id)
                                         ->where('semester', $filter->semester)
                                         ->where('year', $filter->year)
                                         ->sum('score');
