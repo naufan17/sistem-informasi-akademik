@@ -51,7 +51,7 @@
                                 <td class="text-center py-3 px-4">{{ $cumulativestudy->course }}</td>
                                 <td class="text-center py-3 px-4">{{ $cumulativestudy->book }}</td>
                                 @if(empty($cumulativestudy->score))
-                                <td>
+                                <!-- <td>
                                     <div class="flex py-3 px-4">
                                         <div class="w-5 mr-2 transform hover:text-purple-500 hover:scale-110">
                                             <a href="{{ url('santri/kelas/delete') }}/{{ $cumulativestudy->id_cumulative_study }}">
@@ -61,6 +61,15 @@
                                             </a>
                                         </div>
                                     </div>
+                                </td> -->
+                                <td>
+                                <form method="POST" action="{{ url('santri/kelas/delete') }}">
+                                        @csrf
+                                        <div class="flex flex-row-reverse object-left text-center text-white text-base py-3 px-4">
+                                            <input type="hidden" name="id_cumulative_study" placeholder="" value="{{ $cumulativestudy->id_cumulative_study }}" required autocomplete="name" required class="py-2 px-3 block w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-300" />
+                                            <button type="submit" class="bg-red-600 hover:bg-red-800 rounded shadow-lg py-2 px-4">Hapus</button>
+                                        </div>
+                                    </form>
                                 </td>
                                 @else
                                 <td class="text-center py-3 px-4"></td>

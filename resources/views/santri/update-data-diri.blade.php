@@ -43,25 +43,25 @@
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-800">Nama Lengkap</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="name" placeholder=" " value="{{ $santri->name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="name" value="{{ $santri->name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600"> Tempat Lahir</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="place_born" placeholder=" " value="{{ $santri->place_born }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="place_born" value="{{ $santri->place_born }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600"> Tanggal Lahir</p>
                             <div class="relative z-0 w-full">
-                                <input type="date" name="birthday" placeholder=" " value="{{ $santri->birthday }}" onclick="this.setAttribute('type', 'date');" class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="date" name="birthday" value="{{ $santri->birthday }}" onclick="this.setAttribute('type', 'date');" class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Jenis Kelamin</p>
                             <div class="relative z-0 w-full">
-                                <select type="text" name="gender" placeholder=" " value="{{ $santri->gender }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" id="grid-state">
+                                <select type="text" name="gender" value="{{ $santri->gender }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" id="grid-state">
                                     <option>Laki-laki</option>
                                     <option>Perempuan</option>
                                 </select>
@@ -70,25 +70,25 @@
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Nomor Induk Kependudukan / Passport</p>
                             <div class="relative z-0 w-full">
-                                <input type="number" name="id_number" placeholder=" " value="{{ $santri->id_number }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="number" name="id_number" value="{{ $santri->id_number }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600"> Golongan Darah</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="blood" placeholder=" " value="{{ $santri->blood }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="blood" value="{{ $santri->blood }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600"> Nomor Telepon / Handphone </p>
                             <div class="relative z-0 w-full">
-                                <input type="number" name="phone_number" placeholder=" " value="{{ $santri->phone_number }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="number" name="phone_number" value="{{ $santri->phone_number }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600"> Email </p>
                             <div class="relative z-0 w-full">
-                                <input type="email" name="email" placeholder=" " value="{{ $santri->email }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="email" name="email" value="{{ $santri->email }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                     </div>
@@ -99,43 +99,43 @@
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Alamat Rumah</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="address" placeholder=" " value="{{ $santri->address }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="address" value="{{ $santri->address }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">RT</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="RT" placeholder=" " value="{{ $santri->RT }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="RT" value="{{ $santri->RT }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">RW</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="RW" placeholder=" " value="{{ $santri->RW }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="RW" value="{{ $santri->RW }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Kelurahan / Desa</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="village" placeholder=" " value="{{ $santri->village }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="village" value="{{ $santri->village }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Kecamatan</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="districs" placeholder=" " value="{{ $santri->districs }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="districs" value="{{ $santri->districs }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Kabupaten</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="regency" placeholder=" " value="{{ $santri->regency }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="regency" value="{{ $santri->regency }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Provinsi</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="province" placeholder=" " value="{{ $santri->province }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="province" value="{{ $santri->province }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                     </div>
@@ -146,49 +146,49 @@
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Nama Ayah</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="father_name" placeholder=" " value="{{ $santri->father_name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="father_name" value="{{ $santri->father_name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Tempat Lahir Ayah</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="place_born_father" placeholder=" " value="{{ $santri->place_born_father }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="place_born_father" value="{{ $santri->place_born_father }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Tanggal Lahir Ayah</p>
                             <div class="relative z-0 w-full">
-                                <input type="date" name="birthday_father" placeholder=" " value="{{ $santri->birthday_father }}" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="date" name="birthday_father" value="{{ $santri->birthday_father }}" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Nama Ibu</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="mother_name" placeholder=" " value="{{ $santri->mother_name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="mother_name" value="{{ $santri->mother_name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Tempat Lahir Ibu</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="place_born_mother" placeholder=" " value="{{ $santri->place_born_mother }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="place_born_mother" value="{{ $santri->place_born_mother }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Tanggal Lahir Ibu</p>
                             <div class="relative z-0 w-full">
-                                <input type="date" name="birthday_mother" placeholder=" " value="{{ $santri->birthday_mother }}" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="date" name="birthday_mother" value="{{ $santri->birthday_mother }}" onclick="this.setAttribute('type', 'date');" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">Alamat Orang Tua</p>
                             <div class="relative z-0 w-full">
-                                <input type="text" name="parent_address" placeholder=" " value="{{ $santri->parent_address }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="text" name="parent_address" value="{{ $santri->parent_address }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">No. Telp/Handphone</p>
                             <div class="relative z-0 w-full">
-                                <input type="number" name="phone_number_parent" placeholder=" " value="{{ $santri->phone_number_parent }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="number" name="phone_number_parent" value="{{ $santri->phone_number_parent }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                     </div>

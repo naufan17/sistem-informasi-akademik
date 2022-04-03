@@ -197,10 +197,10 @@ class KelasSantriController extends Controller
         return redirect()->route('santri.kelas.form-create', [Auth::guard('santri')->user()->id])->with('tambah','Data Berhasil Ditambahkan!');
     }
 
-    public function delete($id)
+    public function delete(Request $request)
     {
         if(date('m') == 01 || date('m') == 07){
-            CumulativeStudy::where('id_cumulative_study', $id)->delete();
+            CumulativeStudy::where('id_cumulative_study', $request->id_cumulative_study)->delete();
 
             Session::flash('hapus','Matapelajaran Berhasil Dihapus!');
 

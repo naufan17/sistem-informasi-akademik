@@ -22,7 +22,7 @@
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <select type="text" name="semester" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                <select type="text" name="semester" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
                                     <option selected value="{{ $scores['semester'] }}">{{ $scores['semester'] }}</option>
                                     @foreach($filter_semesters as $filter)    
                                     <option value="{{ $filter->semester }}">{{ $filter->semester }}</option>
@@ -42,7 +42,7 @@
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <select type="text" name="year" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                <select type="text" name="year" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
                                     <option selected value="{{ $scores['year'] }}">{{ $scores['year'] }}</option>
                                     @foreach($filter_years as $filter)    
                                     <option value="{{ $filter->year }}">{{ $filter->year }}</option>
