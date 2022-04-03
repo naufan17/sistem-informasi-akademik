@@ -28,8 +28,14 @@
                                 <td class="text-center py-3 px-4">{{ $course->book }}</td>
                                 <td class="text-center py-3 px-4">{{ $course->grade_number }} {{ $course->grade_name }}</td>
                                 <td class="text-center py-3 px-4">{{ $course->day }}, {{ $course->time_begin }} - {{ $course->time_end }}</td>
-                                <td class="text-center py-3 px-4">
-                                    <a href="{{ url('ustadz/kelas/detail-santri') }}/{{ $course->id_course }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white hover:no-underline text-white rounded shadow-md py-2 px-8">Lihat</a>
+                                <td>
+                                    <form method="POST" action="{{ url('ustadz/kelas/detail-santri') }}">
+                                        @csrf
+                                        <div class="flex flex-row-reverse object-left text-center text-white text-base py-3 px-4">
+                                            <input type="hidden" name="id_course" placeholder="" value="{{ $course->id_course }}" required autocomplete="name" required class="py-2 px-3 block w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-300" />
+                                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2 px-4">Lihat</button>
+                                        </div>
+                                    </form>
                                 </td>
                             </tr>
                             @endforeach

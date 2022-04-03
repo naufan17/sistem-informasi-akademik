@@ -31,16 +31,16 @@ class KelasUstadzController extends Controller
         return view('ustadz.kelas', compact('courses'));
     }
 
-    public function detailSantri($id)
+    public function detailSantri(Request $request)
     {
         if(date('m') <= 06 ){
-            $santris = CumulativeStudy::where('id_course', $id)
+            $santris = CumulativeStudy::where('id_course', $request->id_course)
                                     ->leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                     ->where('year', date('Y')-1 . '/' . date('Y'))
                                     ->where('semester', 'Genap')
                                     ->get();
         }elseif(date('m') > 06 ){
-            $santris = CumulativeStudy::where('id_course', $id)
+            $santris = CumulativeStudy::where('id_course', $request->id_course)
                                     ->leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                     ->where('year', date('Y') . '/' . date('Y')+1)
                                     ->where('semester', 'Ganjil')

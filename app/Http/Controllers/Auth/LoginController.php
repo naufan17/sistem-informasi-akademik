@@ -79,9 +79,7 @@ class LoginController extends Controller
             return redirect()->intended('/santri/dashboard');
         }
 
-        Session::flash('gagal','NIS/NIU dan Password Salah');
-
-        return back()->withInput($request->only('id', 'remember'));
+        return back()->withInput($request->only('id', 'remember'))-with('gagal','NIS/NIU dan Password Salah');
     }
 
     public function showUstadzLoginForm()
@@ -99,9 +97,7 @@ class LoginController extends Controller
         if (Auth::guard('ustadz')->attempt(['id' => $request->id, 'password' => $request->password], $request->get('remember'))) {
             return redirect()->intended('/ustadz/dashboard');
         }
-
-        Session::flash('gagal','NIS/NIU dan Password Salah');
         
-        return back()->withInput($request->only('id', 'remember'));
+        return back()->withInput($request->only('id', 'remember'))->with('gagal','NIS/NIU dan Password Salah');
     }
 }
