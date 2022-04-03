@@ -68,9 +68,7 @@ class DataDiriUstadzController extends Controller
             'province' => $request->province, 
         ]);
 
-        Session::flash('update','Data Berhasil Diperbarui!');
-
-        return redirect()->route('ustadz.data-diri', [Auth::guard('ustadz')->user()->id]);
+        return redirect()->route('ustadz.data-diri', [Auth::guard('ustadz')->user()->id])->with('update','Data Diri Berhasil Diperbarui!');
     }
 
     public function updateFoto(Request $request)
@@ -87,9 +85,7 @@ class DataDiriUstadzController extends Controller
             'photo' => $nama_file,
         ]);
 
-        Session::flash('update','Data Berhasil Diupdate!');
-
-        return redirect()->route('ustadz.data-diri', [Auth::guard('ustadz')->user()->id]);
+        return redirect()->route('ustadz.data-diri', [Auth::guard('ustadz')->user()->id])->with('update','Foto Berhasil Upload!');
     }
 
     public function updatePassword(Request $request)
@@ -98,9 +94,7 @@ class DataDiriUstadzController extends Controller
             'password' => Hash::make($request->password), 
         ]);
 
-        Session::flash('update','Data Berhasil Diupdate!');
-
-        return redirect()->route('ustadz.data-diri', [Auth::guard('ustadz')->user()->id]);
+        return redirect()->route('ustadz.data-diri', [Auth::guard('ustadz')->user()->id])->with('update','Password Berhasil Diupdate!');
     }
     
 }

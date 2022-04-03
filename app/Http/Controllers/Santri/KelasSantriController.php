@@ -158,7 +158,7 @@ class KelasSantriController extends Controller
             'id_course' => 'required', 'number',
         ]);
 
-        if(date('m') == 04 || date('m') == 07){
+        if(date('m') == 01 || date('m') == 07){
             if(date('m') <= 06 ){
                 CumulativeStudy::firstOrCreate([
                     'year' => date('Y')-1 . '/' . date('Y'),
@@ -187,19 +187,25 @@ class KelasSantriController extends Controller
                     'id_course' => $request->id_course,
                 ]);
             }
+
+            Session::flash('tambah','Matapelajaran Berhasil Ditambahkan!');
+
+        } else {
+            Session::flash('hapus','Matapelajaran Gagal Ditambahkan!');
         }
 
-        Session::flash('tambah','Data Berhasil Ditambahkan!');
-
-        return redirect()->route('santri.kelas.form-create', [Auth::guard('santri')->user()->id]);
+        return redirect()->route('santri.kelas.form-create', [Auth::guard('santri')->user()->id])->with('tambah','Data Berhasil Ditambahkan!');
     }
 
     public function delete($id)
     {
-        if(date('m') == 04 || date('m') == 07){
+        if(date('m') == 01 || date('m') == 07){
             CumulativeStudy::where('id_cumulative_study', $id)->delete();
 
-            Session::flash('hapus','Data Berhasil Dihapus!');
+            Session::flash('hapus','Matapelajaran Berhasil Dihapus!');
+
+        } else {
+            Session::flash('hapus','Matapelajaran Gagal Dihapus!');
         }
         
         return redirect()->route('santri.kelas.form-create', [Auth::guard('santri')->user()->id]);
@@ -211,7 +217,7 @@ class KelasSantriController extends Controller
                                             ->leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                                             ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                                             ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                                            ->where('id_santri', $request->id_ustadz)
+                                            ->where('id_santri', Auth::guard('santri')->user()->id)
                                             ->where('semester', $request->semester)
                                             ->where('year', $request->year)
                                             ->orderBy('semester')

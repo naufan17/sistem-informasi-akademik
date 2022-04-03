@@ -84,9 +84,7 @@ class DataDiriSantriController extends Controller
             'phone_number_parent' => $request->phone_number_parent, 
         ]);
 
-        Session::flash('update','Data Berhasil Diperbarui!');
-
-        return redirect()->route('santri.data-diri', [Auth::guard('santri')->user()->id]);
+        return redirect()->route('santri.data-diri', [Auth::guard('santri')->user()->id])->with('update','Data Diri Berhasil Diperbarui!');
     }
 
     public function updateFoto(Request $request)
@@ -103,9 +101,7 @@ class DataDiriSantriController extends Controller
             'photo' => $nama_file,
         ]);
 
-        Session::flash('update','Data Berhasil Diupdate!');
-
-        return redirect()->route('santri.data-diri', [Auth::guard('santri')->user()->id]);
+        return redirect()->route('santri.data-diri', [Auth::guard('santri')->user()->id])->with('update','Foto Berhasil Upload!');
     }
 
     public function updatePassword(Request $request)
@@ -114,9 +110,7 @@ class DataDiriSantriController extends Controller
             'password' => Hash::make($request->password), 
         ]);
 
-        Session::flash('update','Data Berhasil Diupdate!');
-
-        return redirect()->route('santri.data-diri', [Auth::guard('santri')->user()->id]);
+        return redirect()->route('santri.data-diri', [Auth::guard('santri')->user()->id])->with('update','Password Berhasil Diupdate!');
     }
     
 }

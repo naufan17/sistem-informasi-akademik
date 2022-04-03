@@ -72,9 +72,7 @@ class KelasUstadzController extends Controller
         //     'id_course' => $request->id_course,
         // ],['id_cumulative_study', 'year', 'semester', 'id_santri', 'id_course'],['minimum_score', 'score']);
 
-        Session::flash('tambah','Data Berhasil Ditambahkan!');
-
-        return redirect()->route('ustadz.kelas.detail-santri', [$request->id_course]);
+        return redirect()->route('ustadz.kelas.detail-santri', [$request->id_course])->with('tambah','Nilai Berhasil Ditambahkan!');
     }
 
     public function cetakKelas(Request $request)
@@ -82,7 +80,7 @@ class KelasUstadzController extends Controller
         $courses = Course::leftjoin('ustadzs', 'courses.id_ustadz', '=', 'ustadzs.id')
                         ->leftjoin('schedules', 'courses.id_schedule', '=', 'schedules.id_schedule')
                         ->leftjoin('grades', 'courses.id_grade', '=', 'grades.id_grade')
-                        ->where('id', $request->id_ustadz)
+                        ->where('id', Auth::guard('ustadz')->user()->id)
                         ->where('status_course', 'Aktif')
                         ->get();
 
