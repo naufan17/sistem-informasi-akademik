@@ -19,6 +19,7 @@ class CreateSchedulesTable extends Migration
             $table->float('time_begin');
             $table->float('time_end');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
