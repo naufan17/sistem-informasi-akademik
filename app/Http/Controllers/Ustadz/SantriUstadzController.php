@@ -20,8 +20,8 @@ class SantriUstadzController extends Controller
                         ->paginate(50);
 
         $filter_status = Santri::select('status')
-                        ->distinct()
-                        ->get();
+                                ->distinct()
+                                ->get();
 
         $status = Santri::select('status')
                         ->where('status', 'Aktif')
@@ -38,13 +38,13 @@ class SantriUstadzController extends Controller
                         ->paginate(50);
 
         $filter_status = Santri::select('status')
-                            ->distinct()
-                            ->get();
+                                ->distinct()
+                                ->get();
         
         $status = Santri::select('status')
-                            ->where('status', $request->status)
-                            ->distinct()
-                            ->get();
+                        ->where('status', $request->status)
+                        ->distinct()
+                        ->get();
         
         return view('ustadz.santri', compact('santris', 'filter_status', 'status'));
     }

@@ -89,7 +89,7 @@ Route::group(['middleware' => 'auth:ustadz'], function () {
 
     Route::get('/ustadz/kelas', [KelasUstadzController::class, 'index'])->name('ustadz.kelas');
     Route::post('/ustadz/kelas/detail-santri', [KelasUstadzController::class, 'detailSantri'])->name('ustadz.kelas.detail-santri');
-    Route::post('/ustadz/kelas/detail-santri/create-nilai', [KelasUstadzController::class, 'createNilai'])->name('ustadz.kelas.detail-santri.create-nilai');
+    Route::post('/ustadz/kelas/detail-santri/create', [KelasUstadzController::class, 'createNilai'])->name('ustadz.kelas.detail-santri.create');
     Route::post('/ustadz/kelas/cetak', [KelasUstadzController::class, 'cetakKelas'])->name('ustadz.kelas.cetak');
 
     Route::get('/ustadz/santri', [SantriUstadzController::class, 'index'])->name('ustadz.santri');

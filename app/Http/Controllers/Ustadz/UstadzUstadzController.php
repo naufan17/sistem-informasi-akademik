@@ -24,10 +24,9 @@ class UstadzUstadzController extends Controller
                             ->get();
 
         $status = Ustadz::select('status')
-                    ->where('status', 'Aktif')
-                    ->distinct()
-                    ->get();
-
+                        ->where('status', 'Aktif')
+                        ->distinct()
+                        ->get();
 
         return view('ustadz.ustadz', compact('ustadzs', 'filter_status', 'status'));
     }
@@ -43,9 +42,9 @@ class UstadzUstadzController extends Controller
                             ->get();
 
         $status = Ustadz::select('status')
-                    ->where('status', $request->status)
-                    ->distinct()
-                    ->get();
+                        ->where('status', $request->status)
+                        ->distinct()
+                        ->get();
 
         return view('ustadz.ustadz', compact('ustadzs', 'filter_status', 'status'));
     }
