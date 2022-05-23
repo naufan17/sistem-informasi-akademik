@@ -27,7 +27,7 @@
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <select type="text" name="semester" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                <select type="text" name="semester" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-2.5 px-4 pr-8 rounded" id="grid-state">
                                     @foreach($semesters as $filter)    
                                     <option value="{{ $filter->semester }}">{{ $filter->semester }}</option>
                                     @endforeach
@@ -49,7 +49,7 @@
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <select type="text" name="year" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                <select type="text" name="year" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-2.5 px-4 pr-8 rounded" id="grid-state">
                                     @foreach($years as $filter)    
                                     <option value="{{ $filter->year }}">{{ $filter->year }}</option>
                                     @endforeach
@@ -60,13 +60,11 @@
                             </div>
                         </div>
                         <div class="object-left text-center text-white text-base">
-                            <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Lihat</button>
+                            <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Lihat</button>
                         </div>
                     </div>
                 </form>
-                <p class="text-xl py-4 flex items-center">
-                    Laporan Nilai Semester
-                </p>
+                <p class="text-xl py-4 flex items-center">Laporan Nilai Semester</p>
                 <!--TABEL NILAI-->
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
@@ -100,7 +98,7 @@
                     </div>
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="object-left text-center text-white text-base">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Cetak</button>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Cetak</button>
                         </div>
                     </div>
                 </form>  

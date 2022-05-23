@@ -33,12 +33,12 @@
     <div id="app">
         <main>
             <!-- HEADER -->
-            <nav id="header" class="w-full bg-white border-b-2">
+            <nav id="header" class="w-full z-30 top-0 bg-white border-b-1">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
                     <div class="flex space-x-4 py-2">
                         <!--LOGO-->
                         <div class="object-left">
-                            <img src="{{ URL::to('/') }}/images/logo.png" class="w-24">
+                            <a href="/ustadz/dashboard"><img src="{{ URL::to('/') }}/images/logo.png" class="w-24"></a>
                         </div>
                         <!--NAME-->
                         <div class="text-center font-bold font-sans text-yellow-800 mt-2">
@@ -55,11 +55,11 @@
             </nav>
             <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex">
-                <aside class="relative bg-gray-100 h-screen w-64 hidden sm:block ">
-                    <nav class="font-semibold pt-3 text-base">
+                <aside class="relative bg-gray-100 bg-sidebar h-screen w-64 hidden sm:block">
+                    <nav class="font-semibold pt-3">
                         <div class="text-gray-900">
                             <div class="pt-6 px-6 mb-8">
-                                <div class="text-center bg-white rounded-lg shadow-xl">
+                                <div class="text-center bg-white rounded-lg shadow-lg">
                                     <div class="px-6 py-6">
                                         <img src="{{ URL::to('/') }}/foto_ustadz/{{Auth::guard('ustadz')->user()->photo}}" class="object-center rounded-full">
                                     </div>
@@ -77,7 +77,7 @@
                                 Kelas
                             </a>
                         </div>
-                        <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
+                        <!-- <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
                             <button @click="open = !open" class="flex flex-row text-gray-800 group-hover:text-white items-center py-3 pl-8">
                                 <span class="w-full text-left font-bold">List Data</span>
                                 <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="object-right w-full h-4">
@@ -90,7 +90,25 @@
                                     <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('ustadz/santri') }}">Santri</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        <button class="w-full">
+                            <div @click.away="open = false"  x-data="{ open: false }">
+                                <div @click="open = !open" class="w-full flex justify-between group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
+                                    <a class="font-bold text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                                        List Data
+                                    </a>
+                                    <div class="items-center flex group-hover:text-white pr-8">
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+                                </div>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute w-full mt-2 origin-top-right rounded-md shadow-md">
+                                    <div class="px-3 py-2 bg-white rounded-md shadow text-left">
+                                        <a class="block px-8 py-3 mt-2 text-sm font-semibold rounded-md hover:bg-blue-600 hover:text-white hover:no-underline hover:shadow-lg hover:border-transparent" href="{{ url('ustadz/ustadz') }}">Ustadz</a>
+                                        <a class="block px-8 py-3 mt-2 text-sm font-semibold rounded-md hover:bg-blue-600 hover:text-white hover:no-underline hover:shadow-lg hover:border-transparent" href="{{ url('ustadz/santri') }}">Santri</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
                         <button class="w-full hover:bg-blue-600 cta-btn font-semibold justify-center ">
                             <a class="text-gray-800 hover:text-white hover:no-underline items-center py-3 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}

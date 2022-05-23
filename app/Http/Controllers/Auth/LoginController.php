@@ -79,7 +79,7 @@ class LoginController extends Controller
             return redirect()->intended('/santri/dashboard');
         }
 
-        return back()->withInput($request->only('id', 'remember'))-with('gagal','NIS/NIU dan Password Salah');
+        return back()->withInput($request->only('id', 'remember'))->with('gagal','NIS dan Password Salah');
     }
 
     public function showUstadzLoginForm()
@@ -98,6 +98,6 @@ class LoginController extends Controller
             return redirect()->intended('/ustadz/dashboard');
         }
         
-        return back()->withInput($request->only('id', 'remember'))->with('gagal','NIS/NIU dan Password Salah');
+        return back()->withInput($request->only('id', 'remember'))->with('gagal','NIU dan Password Salah');
     }
 }

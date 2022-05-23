@@ -64,7 +64,7 @@ class KelasUstadzController extends Controller
             ]);
         }
 
-        return redirect('/ustadz/kelas/detail-santri')->with('tambah','Nilai Berhasil Ditambahkan!');
+        return redirect('/ustadz/kelas')->with('tambah','Nilai Berhasil Ditambahkan!');
     }
 
     public function cetakKelas(Request $request)

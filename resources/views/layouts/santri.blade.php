@@ -31,30 +31,30 @@
 </head>
 <body class="work-sans leading-normal text-base tracking-normal font-family-karla ">
     <div id="app">
-        <!-- HEADER -->
-        <nav id="header" class="w-full bg-white border-b-2">
-            <div class="w-full container flex items-center justify-between">
-                <div class="flex space-x-4 py-2">
-                    <!--LOGO-->
-                    <div class="object-left">
-                            <img src="{{ URL::to('/') }}/images/logo.png" class="w-24">
+        <main>
+            <!-- HEADER -->
+            <nav id="header" class="w-full bg-white border-b-1">
+                <div class="w-full container flex items-center justify-between">
+                    <div class="flex space-x-4 py-2">
+                        <!--LOGO-->
+                        <div class="object-left">
+                            <a href="/santri/dashboard"><img src="{{ URL::to('/') }}/images/logo.png" class="w-24"></a>
                         </div>
-                    <!--NAME-->
-                    <div class="text-center font-bold font-sans text-yellow-800 mt-2">
-                        <a class="text-base hover:no-underline">MADRASAH DINIYYAH</a><br>
-                        <a class="text-2xl font-bold hover:no-underline">NURUL UMMAH</a><br>
-                        <a class="text-base tracking-widest hover:no-underline">YOGYAKARTA</a>
+                        <!--NAME-->
+                        <div class="text-center font-bold font-sans text-yellow-800 mt-2">
+                            <a class="text-base hover:no-underline">MADRASAH DINIYYAH</a><br>
+                            <a class="text-2xl font-bold hover:no-underline">NURUL UMMAH</a><br>
+                            <a class="text-base tracking-widest hover:no-underline">YOGYAKARTA</a>
+                        </div>
+                    </div>
+                    <div class="font-bold text-yellow-600 text-right">
+                        <a class="text-xl hover:no-underline">SISTEM INFORMASI AKADEMIK <br></a>
+                        <a class="text-base tracking-widest hover:no-underline">M D N U</a>
                     </div>
                 </div>
-                <div class="font-bold text-yellow-600 text-right">
-                    <a class="text-xl hover:no-underline">SISTEM INFORMASI AKADEMIK <br></a>
-                    <a class="text-base tracking-widest hover:no-underline">M D N U</a>
-                </div>
-            </div>
-        </nav>
-        <main>
+            </nav>
             <!-- MENU -->
-            <div class="bg-gray-100 font-family-karla flex ">
+            <div class="bg-gray-100 font-family-karla flex">
                 <aside class="relative bg-gray-100 bg-sidebar h-screen w-64 hidden sm:block">
                     <nav class="font-semibold pt-3 text-base">
                         <div class="text-gray-900">
@@ -77,7 +77,7 @@
                                 Kelas
                             </a>
                         </div>
-                        <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
+                        <!-- <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
                             <button @click="open = !open" class="flex flex-row text-gray-800 group-hover:text-white items-center py-3 pl-8">
                                 <span class="w-full text-left font-bold">Nilai</span>
                                 <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="object-right w-full h-4">
@@ -87,12 +87,29 @@
                             <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-md">
                                 <div class="px-2 py-2 bg-white rounded-md shadow">
                                     <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparents hover:no-underline" href="{{ url('santri/nilai-semester') }}">Nilai Semester</a>
-                                    <!-- <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/riwayat-nilai') }}">Riwayat Nilai</a> -->
                                     <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/hasil-studi') }}">Hasil Studi</a>
                                 </div>
                             </div>
-                        </div>
-                        <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
+                        </div> -->
+                        <button class="w-full">
+                            <div @click.away="open = false" class="flex justify-between group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
+                                <div @click="open = !open" class="w-full flex justify-between group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
+                                    <a class="font-bold text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                                        Nilai
+                                    </a>
+                                    <div class="items-center flex group-hover:text-white pr-8">
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+                                </div>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute w-full mt-2 origin-top-right rounded-md shadow-md">
+                                    <div class="px-3 py-2 bg-white rounded-md shadow text-left">
+                                        <a class="block px-8 py-3 mt-2 text-sm font-semibold rounded-md hover:bg-blue-600 hover:text-white hover:no-underline hover:shadow-lg hover:border-transparent" href="{{ url('santri/nilai-semester') }}">Nilai Semester</a>
+                                        <a class="block px-8 py-3 mt-2 text-sm font-semibold rounded-md hover:bg-blue-600 hover:text-white hover:no-underline hover:shadow-lg hover:border-transparent" href="{{ url('santri/hasil-studi') }}">Hasil Studi</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
+                        <!-- <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
                             <button @click="open = !open" class="flex flex-row text-gray-800 group-hover:text-white items-center py-3 pl-8">
                                 <span class="w-full text-left font-bold">List Data</span>
                                 <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="object-right w-full h-4">
@@ -105,7 +122,25 @@
                                     <a class="block px-4 py-3 mt-2 text-sm font-semibold rounded-lg hover:bg-blue-600 hover:text-white hover:shadow-lg hover:border-transparent hover:no-underline" href="{{ url('santri/santri') }}">Santri</a>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
+                        <button class="w-full">
+                            <div @click.away="open = false" class="flex justify-between group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
+                                <div @click="open = !open" class="w-full flex justify-between group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
+                                    <a class="font-bold text-gray-800 group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                                        List Data
+                                    </a>
+                                    <div class="items-center flex group-hover:text-white pr-8">
+                                        <i class="fas fa-caret-down"></i>
+                                    </div>
+                                </div>
+                                <div x-show="open" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95" class="absolute w-full mt-2 origin-top-right rounded-md shadow-md">
+                                    <div class="px-3 py-2 bg-white rounded-md shadow text-left">
+                                        <a class="block px-8 py-3 mt-2 text-sm font-semibold rounded-md hover:bg-blue-600 hover:text-white hover:no-underline hover:shadow-lg hover:border-transparent" href="{{ url('santri/ustadz') }}">Ustadz</a>
+                                        <a class="block px-8 py-3 mt-2 text-sm font-semibold rounded-md hover:bg-blue-600 hover:text-white hover:no-underline hover:shadow-lg hover:border-transparent" href="{{ url('santri/santri') }}">Santri</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </button>
                         <!--
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
                             <a href="{{ url('santri/ustadz') }}" class="text-gray-800 group-hover:text-white flex items-center py-3 pl-8">
@@ -117,7 +152,7 @@
                                 Santri
                             </a>
                         </div>
--->
+                        -->
                         <button class="w-full hover:bg-blue-600 cta-btn font-semibold justify-center ">
                             <a class="text-gray-800 hover:text-white hover:no-underline items-center py-3 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}
@@ -129,8 +164,8 @@
                     </nav>
                 </aside>
                 <!-- Page Content -->
-                <div class="w-full overflow-y-hidden mb-auto">
-                    <div class="overflow-x-hidden h-screen">
+                <div class="w-full flex flex-col h-screen overflow-y-hidden">
+                    <div class="overflow-x-hidden">
                         @yield('content')
                     </div>
                 </div>

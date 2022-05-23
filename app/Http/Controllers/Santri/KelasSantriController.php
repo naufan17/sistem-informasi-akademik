@@ -166,12 +166,13 @@ class KelasSantriController extends Controller
                     'id_santri' => Auth::guard('santri')->user()->id,
                     'id_course' => $request->id_course,
                 ]);
-                CumulativeStudy::firstOrCreate([
-                    'year' => date('Y')-1 . '/' . date('Y'),
-                    'semester' => 'Ganjil',
-                    'id_santri' => Auth::guard('santri')->user()->id,
-                    'id_course' => $request->id_course,
-                ]);
+
+                // CumulativeStudy::firstOrCreate([
+                //     'year' => date('Y')-1 . '/' . date('Y'),
+                //     'semester' => 'Ganjil',
+                //     'id_santri' => Auth::guard('santri')->user()->id,
+                //     'id_course' => $request->id_course,
+                // ]);
         
             }elseif(date('m') > 06 ){
                 CumulativeStudy::firstOrCreate([
@@ -180,12 +181,13 @@ class KelasSantriController extends Controller
                     'id_santri' => Auth::guard('santri')->user()->id,
                     'id_course' => $request->id_course,
                 ]);
-                CumulativeStudy::firstOrCreate([
-                    'year' => date('Y') . '/' . date('Y')+1,
-                    'semester' => 'Genap',
-                    'id_santri' => Auth::guard('santri')->user()->id,
-                    'id_course' => $request->id_course,
-                ]);
+                
+                // CumulativeStudy::firstOrCreate([
+                //     'year' => date('Y') . '/' . date('Y')+1,
+                //     'semester' => 'Genap',
+                //     'id_santri' => Auth::guard('santri')->user()->id,
+                //     'id_course' => $request->id_course,
+                // ]);
             }
 
             Session::flash('tambah','Matapelajaran Berhasil Ditambahkan!');

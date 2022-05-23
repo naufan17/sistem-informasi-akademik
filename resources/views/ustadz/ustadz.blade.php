@@ -11,7 +11,7 @@
                 <!-- OPTION -->
                 <form method="POST" action="{{ url('ustadz/ustadz') }}">
                     @csrf
-                    <div class="flex space-x-4 items-center pb-8">
+                    <div class="flex space-x-4 items-center pb-4">
                         <div class="flex-none w-36">
                             <a class="self-center hover:no-underline">Status</a>
                         </div>
@@ -22,7 +22,7 @@
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <select type="text" name="status" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-3 px-4 pr-8 rounded" id="grid-state">
+                                <select type="text" name="status" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-2.5 px-4 pr-8 rounded" id="grid-state">
                                     @foreach($status as $filter)
                                     <option selected value="{{ $filter->status }}">{{ $filter->status }}</option>
                                     @endforeach                                    
@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="object-left text-center text-white text-base">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Lihat</button>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Lihat</button>
                         </div>
                     </div>
                 </form>
