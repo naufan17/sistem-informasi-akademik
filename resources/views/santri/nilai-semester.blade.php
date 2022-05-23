@@ -8,6 +8,11 @@
         <main class="pt-6 px-6">
             <h1 class="text-3xl text-black pb-2 mt-2">Nilai Semester</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
+                @if($scores->isEmpty())
+                <div class="flex-1 text-center">
+                    <h1 class="text-lg text-black pb-6">Hasil Studi Anda Masih Kosong</h1>
+                </div>
+                @else
                 <!-- OPTION -->
                 <form method="POST" action="{{ url('santri/nilai-semester') }}">
                     @csrf
@@ -85,8 +90,6 @@
                         </tbody>
                     </table>
                 </div>  
-                @if(empty($scores))
-                @else
                 <form method="POST" action="{{ url('santri/nilai-semester/cetak') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
@@ -100,8 +103,8 @@
                             <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-3 px-8">Cetak</button>
                         </div>
                     </div>
-                </form>
-                @endif              
+                </form>  
+                @endif         
             </div>
         </main>
     </div>

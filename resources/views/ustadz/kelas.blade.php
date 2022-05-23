@@ -7,6 +7,11 @@
         <main class="pt-6 px-6">
             <h1 class="text-3xl text-black pb-2 mt-2">Kelas</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
+                @if($courses->isEmpty())
+                <div class="flex-1 text-center">
+                    <h1 class="text-lg text-black pb-6">Hasil Studi Anda Masih Kosong</h1>
+                </div>
+                @else
                 <p class="text-xl pb-4 flex items-center">Daftar Kelas</p>
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
@@ -42,8 +47,6 @@
                         </tbody>
                     </table>
                 </div>
-                @if(empty($courses))
-                @else
                 <form method="POST" action="{{ url('ustadz/kelas/cetak') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">

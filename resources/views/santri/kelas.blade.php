@@ -7,6 +7,11 @@
         <main class="pt-6 px-6">
             <h1 class="text-3xl text-black pb-2 mt-2">Kelas</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
+                @if($cumulative_studies->isEmpty())
+                <div class="flex-1 text-center">
+                    <h1 class="text-lg text-black pb-6">Anda Belum Mengikuti Kelas</h1>
+                </div>
+                @else
                 <!-- OPTION -->
                 <form method="POST" action="{{ url('santri/kelas') }}">
                     @csrf
@@ -95,8 +100,6 @@
                         </tbody>
                     </table>
                 </div>
-                @if(empty($cumulative_studies))
-                @else
                 <form method="POST" action="{{ url('santri/kelas/cetak') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
