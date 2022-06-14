@@ -209,7 +209,7 @@
                             <div class="relative z-0 w-full mb-2 mt-2">
                                 <input class="form-control block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-1 px-4 pr-8 rounded" type="file" name="image" required="required">
                             </div>
-                            <div class="object-left text-center text-white text-base mt-2">
+                            <div class="object-left text-center text-white text-base mt-1">
                                 <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Simpan</button>
                             </div>
                         </div>
