@@ -15,10 +15,5 @@ class Schedule extends Model
      *
      * @var array
      */
-    protected $fillable = [
-        'day',
-        'time_begin',
-        'time_end',
-    ];
-    
+    protected $fillable = [];
 }

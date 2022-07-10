@@ -66,7 +66,7 @@
                 </form>
                 @if(date('m') == 01 || date('m') == 07)
                 <p class="text-xl pt-4 flex items-center border-b-2">Daftar MP Diikuti</p>
-                <div class="flex flex-row-reverse object-left text-center text-white text-base py-8">
+                <div class="flex flex-row-reverse object-left text-center text-white text-base py-4">
                     <a href="{{ url('santri/kelas/form-create') }}" class="button bg-blue-600 hover:bg-blue-800 hover:no-underline rounded shadow-lg py-2.5 px-6">
                         Tambah
                     </a>

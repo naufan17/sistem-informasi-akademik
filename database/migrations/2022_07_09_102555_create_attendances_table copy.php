@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateCumulativeStudiesTable extends Migration
+class CreateAttendancesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,17 +13,17 @@ class CreateCumulativeStudiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('cumulative_studies', function (Blueprint $table) {
-            $table->id('id_cumulative_study');
+        Schema::create('attendances', function (Blueprint $table) {
+            $table->id('id_attendance');
             $table->string('year');
             $table->enum('semester', ['Genap', 'Ganjil']);
-            $table->float('minimum_score')->nullable();
-            $table->float('score')->nullable();
+            $table->float('minimum_attendance_mdnu');
+            $table->float('attendance_mdnu');
+            $table->float('minimum_attendance_asrama');
+            $table->float('attendance_asrama');
             $table->unsignedBigInteger('id_santri');
-            $table->unsignedBigInteger('id_course');
             $table->timestamps();
-            $table->foreign('id_santri')->references('id_santri')->on('santris');
-            $table->foreign('id_course')->references('id_course')->on('courses');
+            $table->foreign('id_santri')->references('id')->on('santris');
         });
     }
 
@@ -34,6 +34,6 @@ class CreateCumulativeStudiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cumulative_studies');
+        Schema::dropIfExists('attendances');
     }
 }

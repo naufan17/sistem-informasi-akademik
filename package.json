@@ -10,18 +10,18 @@
         "production": "mix --production"
     },
     "devDependencies": {
-        "autoprefixer": "^10.4.2",
+        "autoprefixer": "^10.4.7",
         "axios": "^0.21",
         "bootstrap": "^4.6.0",
         "jquery": "^3.6",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "popper.js": "^1.16.1",
-        "postcss": "^8.4.5",
+        "postcss": "^8.4.14",
         "resolve-url-loader": "^3.1.2",
         "sass": "^1.32.11",
         "sass-loader": "^11.0.1",
-        "tailwindcss": "^3.0.18"
+        "tailwindcss": "^3.1.5"
     },
     "dependencies": {
         "tailwind": "^4.0.0"

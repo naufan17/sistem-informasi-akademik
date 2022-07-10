@@ -7,21 +7,20 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Santri extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, SoftDeletes;
 
-    // protected $guard = 'santri';
+    protected $guard = 'santri';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-
     protected $fillable = [
-        'id',
         'name',
         'place_born',
         'birthday',
@@ -47,7 +46,6 @@ class Santri extends Authenticatable
         'phone_number_parent', 
         'status',
         'photo',
-        'password',
     ];
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSantrisTable extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateSantrisTable extends Migration
      */
     public function up()
     {
-        Schema::create('santris', function (Blueprint $table) {
-            $table->id('id_santri');
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
             $table->string('place_born')->nullable();
             $table->date('birthday')->nullable();
@@ -22,7 +22,7 @@ class CreateSantrisTable extends Migration
             $table->bigInteger('id_number')->nullable();
             $table->string('blood')->nullable();
             $table->string('phone_number')->nullable();
-            $table->string('email')->unique()->nullable();
+            $table->string('email')->unique();
             $table->string('address')->nullable();
             $table->integer('RT')->nullable();
             $table->integer('RW')->nullable();
@@ -39,12 +39,10 @@ class CreateSantrisTable extends Migration
             $table->string('parent_address')->nullable();
             $table->string('phone_number_parent')->nullable();
             $table->enum('status', ['Aktif', 'Tidak aktif'])->default('Aktif');
-            $table->string('photo')->nullable();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();
             $table->rememberToken();
             $table->timestamps();
-            $table->softDeletes();
         });
     }
 
@@ -55,6 +53,6 @@ class CreateSantrisTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('santris');
+        Schema::dropIfExists('users');
     }
 }

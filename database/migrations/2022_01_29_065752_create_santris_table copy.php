@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateUstadzsTable extends Migration
+class CreateSantrisTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,8 @@ class CreateUstadzsTable extends Migration
      */
     public function up()
     {
-        Schema::create('ustadzs', function (Blueprint $table) {
-            $table->id('id_ustadz');
+        Schema::create('santris', function (Blueprint $table) {
+            $table->id();
             $table->string('name');
             $table->string('place_born')->nullable();
             $table->date('birthday')->nullable();
@@ -30,6 +30,14 @@ class CreateUstadzsTable extends Migration
             $table->string('districs')->nullable();
             $table->string('regency')->nullable();
             $table->string('province')->nullable();
+            $table->string('father_name')->nullable();
+            $table->string('place_born_father')->nullable();
+            $table->date('birthday_father')->nullable();
+            $table->string('mother_name')->nullable();
+            $table->string('place_born_mother')->nullable();
+            $table->date('birthday_mother')->nullable();
+            $table->string('parent_address')->nullable();
+            $table->string('phone_number_parent')->nullable();
             $table->enum('status', ['Aktif', 'Tidak aktif'])->default('Aktif');
             $table->string('photo')->nullable();
             $table->string('password');
@@ -47,6 +55,6 @@ class CreateUstadzsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ustadzs');
+        Schema::dropIfExists('santris');
     }
 }

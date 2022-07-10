@@ -19,7 +19,6 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 
     <!-- Tailwind -->
-    <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!--Replace with your tailwind.css once created-->

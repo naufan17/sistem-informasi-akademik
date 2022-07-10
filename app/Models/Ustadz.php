@@ -6,10 +6,11 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Ustadz extends Authenticatable
 {
-    use HasFactory, Notifiable;
+    use HasFactory, Notifiable, SoftDeletes;
 
     protected $guard = 'ustadz';
 
@@ -18,9 +19,7 @@ class Ustadz extends Authenticatable
      *
      * @var array
      */
-
     protected $fillable = [
-        'id',
         'name',
         'place_born',
         'birthday',
@@ -38,7 +37,6 @@ class Ustadz extends Authenticatable
         'province',
         'status',
         'photo',
-        'password',
     ];
 
     /**
