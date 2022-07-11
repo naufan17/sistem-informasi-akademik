@@ -9,7 +9,7 @@
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 @if($courses->isEmpty())
                 <div class="flex-1 text-center">
-                    <h1 class="text-lg text-black pb-6">Hasil Studi Anda Masih Kosong</h1>
+                    <h1 class="text-lg text-black pb-6">Kelas Anda Masih Kosong</h1>
                 </div>
                 @else
                 <p class="text-xl pb-4 flex items-center">Daftar Kelas</p>
