@@ -39,7 +39,7 @@
                                     <td class="text-center py-3 px-4">
                                         <div class="relative z-0 w-full">
                                             <input type="hidden" name="id_cumulative_study[{{ $loop->iteration }}]" value="{{ $santri->id_cumulative_study }}"  required class="py-2 px-3 block w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-300" />
-                                            <input type="number" name="score[{{ $loop->iteration }}]" placeholder="1-100" value="{{ $santri->score }}" required autocomplete="nilai" required class="py-2 px-3 block w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-300" />
+                                            <input type="number" name="score[{{ $loop->iteration }}]" placeholder="1-100" min="0" max="100" value="{{ $santri->score }}" required autocomplete="nilai" required class="py-2 px-3 block w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-300" />
                                             <input type="hidden" name="id_course" value="{{ $santri->id_course }}"  required class="py-2 px-3 block w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-300" />
                                         </div>
                                     </td>

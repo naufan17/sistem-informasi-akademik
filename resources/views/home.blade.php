@@ -7,6 +7,9 @@
 
     <title>SIAKAD MDNU</title>
 
+    <!-- Browser tab logo -->
+    <link rel="icon" type="image/png" href="{{ asset('images/logo.png') }}"/>
+
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
     

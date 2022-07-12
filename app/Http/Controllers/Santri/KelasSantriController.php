@@ -155,7 +155,7 @@ class KelasSantriController extends Controller
     public function create(Request $request)
     {
         $request->validate([
-            'id_course' => 'required', 'number',
+            'id_course' => 'required',
         ]);
 
         if(date('m') == 01 || date('m') == 07){

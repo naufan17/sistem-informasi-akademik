@@ -53,8 +53,8 @@ class KelasUstadzController extends Controller
     public function createNilai(Request $request)
     {
         $request->validate([
-            'id_cumulative_study' => 'required|number',
-            'score' => 'required|number',
+            'id_cumulative_study' => 'required',
+            'score' => 'required',
         ]);
         
         for($x = 1; $x <= count($request->id_cumulative_study); $x++){
