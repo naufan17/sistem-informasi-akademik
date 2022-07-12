@@ -10,7 +10,7 @@
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 @if($scores->isEmpty())
                 <div class="flex-1 text-center">
-                    <h1 class="text-lg text-black pb-6">Hasil Studi Anda Masih Kosong</h1>
+                    <h1 class="text-lg text-black pb-6">Nilai Semester Anda Masih Kosong</h1>
                 </div>
                 @else
                 <!-- OPTION -->

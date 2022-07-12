@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers\Ustadz;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\Session;
 use App\Models\Course;
 use App\Models\CumulativeStudy;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
+use Illuminate\Http\Request;
 use PDF;
 
 class KelasUstadzController extends Controller
@@ -53,8 +53,8 @@ class KelasUstadzController extends Controller
     public function createNilai(Request $request)
     {
         $request->validate([
-            'id_cumulative_study' => 'required', 'number',
-            'score' => 'required', 'number',
+            'id_cumulative_study' => 'required|number',
+            'score' => 'required|number',
         ]);
         
         for($x = 1; $x <= count($request->id_cumulative_study); $x++){

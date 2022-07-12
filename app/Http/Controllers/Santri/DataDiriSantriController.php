@@ -32,31 +32,31 @@ class DataDiriSantriController extends Controller
 
     public function updateProfile(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required', 'string', 'max:255',
-        //     'place_born' => 'required', 'string',
-        //     'birthday' => 'required', 'date',
-        //     'gender' => 'required', 'string',
-        //     'id_number' => 'required', 'bigInteger',
-        //     'blood' => 'required', 'string',
-        //     'phone_number' => 'required', 'bigInteger',
-        //     'email' => 'required', 'string', 'email', 'max:255', 'unique:users',
-        //     'address' => 'required', 'bigInteger', 'max:255',
-        //     'RT' => 'required', 'string',
-        //     'RW' => 'required', 'string',
-        //     'village' => 'required', 'string',
-        //     'districs' => 'required', 'string',
-        //     'regency' => 'required', 'string',
-        //     'province' => 'required', 'string',
-        //     'father_name' => 'required', 'string',
-        //     'place_born_father' => 'required', 'string',
-        //     'birthday_father' => 'required', 'string',
-        //     'mother_name' => 'required', 'string',
-        //     'place_born_mother' => 'required', 'string',
-        //     'birthday_mother' => 'required', 'string',
-        //     'parent_address' => 'required', 'string',
-        //     'phone_number_parent' => 'required', 'string',
-        // ]);
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'place_born' => 'required|string',
+            'birthday' => 'required|date',
+            'gender' => 'required|string',
+            'id_number' => 'required',
+            'blood' => 'required|string',
+            'phone_number' => 'required',
+            'email' => 'required|string|email|max:255|unique:santris',
+            'address' => 'required|max:255',
+            'RT' => 'required|max:10',
+            'RW' => 'required|max:10',
+            'village' => 'required|string',
+            'districs' => 'required|string',
+            'regency' => 'required|string',
+            'province' => 'required|string',
+            'father_name' => 'required|string',
+            'place_born_father' => 'required|string',
+            'birthday_father' => 'required|date',
+            'mother_name' => 'required|string',
+            'place_born_mother' => 'required|string',
+            'birthday_mother' => 'required|date',
+            'parent_address' => 'required|string',
+            'phone_number_parent' => 'required',
+        ]);
 
         Santri::where('id', Auth::guard('santri')->user()->id)->update([
             'name' => $request->name,
@@ -106,6 +106,10 @@ class DataDiriSantriController extends Controller
 
     public function updatePassword(Request $request)
     {
+        $request->validate([
+            'password' => 'required|min:8|confirmed',
+        ]);
+        
         Santri::where('id', Auth::guard('santri')->user()->id)->update([
             'password' => Hash::make($request->password), 
         ]);

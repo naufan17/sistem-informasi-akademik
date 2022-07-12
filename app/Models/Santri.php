@@ -46,6 +46,7 @@ class Santri extends Authenticatable
         'phone_number_parent', 
         'status',
         'photo',
+        'password',
     ];
 
     /**
@@ -54,7 +55,6 @@ class Santri extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password',
         'remember_token',
     ];
 

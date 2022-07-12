@@ -32,23 +32,23 @@ class DataDiriUstadzController extends Controller
 
     public function updateProfile(Request $request)
     {
-        // $request->validate([
-        //     'name' => 'required', 'string', 'max:255',
-        //     'place_born' => 'required', 'string',
-        //     'birthday' => 'required', 'date',
-        //     'gender' => 'required', 'string',
-        //     'id_number' => 'required', 'bigInteger',
-        //     'blood' => 'required', 'string',
-        //     'phone_number' => 'required', 'bigInteger',
-        //     'email' => 'required', 'string', 'email', 'max:255', 'unique:users',
-        //     'address' => 'required', 'bigInteger', 'max:255',
-        //     'RT' => 'required', 'string',
-        //     'RW' => 'required', 'string',
-        //     'village' => 'required', 'string',
-        //     'districs' => 'required', 'string',
-        //     'regency' => 'required', 'string',
-        //     'province' => 'required', 'string',
-        // ]);
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'place_born' => 'required|string',
+            'birthday' => 'required|date',
+            'gender' => 'required|string',
+            'id_number' => 'required',
+            'blood' => 'required|string',
+            'phone_number' => 'required',
+            'email' => 'required|string|email|max:255|unique:ustadzs',
+            'address' => 'required|max:255',
+            'RT' => 'required|max:10',
+            'RW' => 'required|max:10',
+            'village' => 'required|string',
+            'districs' => 'required|string',
+            'regency' => 'required|string',
+            'province' => 'required|string',
+        ]);
 
         Ustadz::where('id', Auth::guard('ustadz')->user()->id)->update([
             'name' => $request->name,
@@ -90,6 +90,10 @@ class DataDiriUstadzController extends Controller
 
     public function updatePassword(Request $request)
     {
+        $request->validate([
+            'password' => 'required|min:8|confirmed',
+        ]);
+        
         Ustadz::where('id', Auth::guard('ustadz')->user()->id)->update([
             'password' => Hash::make($request->password), 
         ]);

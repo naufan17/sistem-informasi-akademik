@@ -63,7 +63,7 @@
                             <div class="pt-6 px-6 mb-8">
                                 <div class="text-center bg-white rounded-lg shadow-xl">
                                     <div class="px-6 py-6">
-                                        @if(empty(Auth::guard('ustadz')->user()->photo))
+                                        @if(empty(Auth::guard('santri')->user()->photo))
                                         <img src="{{ URL::to('/') }}/images/default-profile-picture.jpg" class="object-center rounded-full">
                                         @else
                                         <img src="{{ URL::to('/') }}/foto_santri/{{Auth::guard('santri')->user()->photo}}" class="object-center rounded-full">
