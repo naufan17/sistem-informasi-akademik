@@ -16,6 +16,7 @@ class UstadzSantriController extends Controller
     public function index()
     {
         $ustadzs = Ustadz::where('status', 'Aktif')
+                        ->orderBy('id')
                         ->paginate(50);
 
         $filter_status = Ustadz::select('status')
@@ -33,6 +34,7 @@ class UstadzSantriController extends Controller
     public function filter(Request $request)
     {
         $ustadzs = Ustadz::where('status', $request->status)
+                        ->orderBy('id')
                         ->paginate(50);
 
         $filter_status = Ustadz::select('status')

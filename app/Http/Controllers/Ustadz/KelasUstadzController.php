@@ -38,12 +38,14 @@ class KelasUstadzController extends Controller
                                     ->leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                     ->where('year', date('Y')-1 . '/' . date('Y'))
                                     ->where('semester', 'Genap')
+                                    ->orderBy('name')
                                     ->get();
         }elseif(date('m') > 06 ){
             $santris = CumulativeStudy::where('id_course', $request->id_course)
                                     ->leftjoin('santris', 'cumulative_studies.id_santri', '=', 'santris.id')
                                     ->where('year', date('Y') . '/' . date('Y')+1)
                                     ->where('semester', 'Ganjil')
+                                    ->orderBy('name')
                                     ->get();
         }
 
