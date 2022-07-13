@@ -82,7 +82,7 @@
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600"> Nomor Telepon / Handphone </p>
                             <div class="relative z-0 w-full">
-                                <input type="number" name="phone_number" value="{{ $santri->phone_number }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="tel" name="phone_number" value="{{ $santri->phone_number }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
@@ -188,7 +188,7 @@
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
                             <p class="self-center text-gray-600">No. Telp/Handphone</p>
                             <div class="relative z-0 w-full">
-                                <input type="number" name="phone_number_parent" value="{{ $santri->phone_number_parent }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                                <input type="tel" name="phone_number_parent" value="{{ $santri->phone_number_parent }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                     </div>
