@@ -81,7 +81,66 @@
                 </div>
             </div>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
-                <p class="text-xl mb-8 flex items-center">Daftar Mata Pelajaran</p>
+                <form method="POST" action="{{ url('santri/kelas/form-create') }}">
+                    @csrf
+                    <div class="flex space-x-4 items-center pb-8">
+                        <div class="flex-none w-36">
+                            <a class="self-center hover:no-underline">Tingkat</a>
+                        </div>
+                        <div class="flex-none md:w-1/5">
+                            <div class="relative">
+                                <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
+                                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                                <select type="number" name="grade_number" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-2.5 px-4 pr-8 rounded" id="grid-state">
+                                    @foreach($grade_number as $filter)
+                                    <option selected value="{{ $filter->grade_number }}">{{ $filter->grade_number }}</option>
+                                    @endforeach      
+                                    @foreach($filter_grade_number as $filter)
+                                    <option value="{{ $filter->grade_number }}">{{ $filter->grade_number }}</option>
+                                    @endforeach  
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex space-x-4 items-center pb-8">
+                        <div class="flex-none w-36">
+                            <a class="self-center hover:no-underline">Nama Kelas</a>
+                        </div>
+                        <div class="flex-none md:w-1/5">
+                            <div class="relative">
+                                <div class="pointer-events-none absolute inset-y-0 right-3 flex items-center text-grey-darker">
+                                    <svg class="h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+                                        <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
+                                    </svg>
+                                </div>
+                                <select type="text" name="grade_name" value=""  class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-2.5 px-4 pr-8 rounded" id="grid-state">
+                                    @foreach($grade_name as $filter)
+                                    <option selected value="{{ $filter->grade_name }}">{{ $filter->grade_name }}</option>
+                                    @endforeach    
+                                    @foreach($filter_grade_name as $filter)
+                                    <option value="{{ $filter->grade_name }}">{{ $filter->grade_name }}</option>
+                                    @endforeach   
+                                </select>
+                            </div>
+                        </div>
+                        <div class="object-left text-center text-white text-base">
+                            <button class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Lihat</button>
+                        </div>
+                    </div>
+                </form>
+                <p class="text-xl flex items-center border-b-2">Daftar Mata Pelajaran</p>
+                <div class="flex flex-row-reverse object-left text-center text-white text-base py-4">
+                    <form method="POST" action="{{ url('santri/kelas/create-all') }}">
+                        @csrf
+                        @foreach($courses as $course)
+                        <input type="hidden" name="id_course[{{ $loop->iteration }}]" value="{{ $course->id_course }}" class="py-2 px-3 block w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-300" />
+                        @endforeach
+                        <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Tambah Semua</button>
+                    </form>
+                </div>
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
