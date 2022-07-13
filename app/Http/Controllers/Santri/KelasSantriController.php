@@ -151,10 +151,12 @@ class KelasSantriController extends Controller
                         ->get();
 
         $filter_grade_number = Grade::select('grade_number')
+                                    ->orderBy('grade_number')
                                     ->distinct()
                                     ->get();
 
         $filter_grade_name = Grade::select('grade_name')
+                                ->orderBy('grade_name')
                                 ->distinct()
                                 ->get();
 
@@ -206,10 +208,12 @@ class KelasSantriController extends Controller
                         ->get();
 
         $filter_grade_number = Grade::select('grade_number')
+                                    ->orderBy('grade_number')
                                     ->distinct()
                                     ->get();
 
         $filter_grade_name = Grade::select('grade_name')
+                                ->orderBy('grade_name')
                                 ->distinct()
                                 ->get();
 
