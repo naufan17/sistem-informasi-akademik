@@ -87,7 +87,11 @@
                                 <td class="text-center py-3 px-4">{{ $scores['nilai_rata'] }}</td>
                                 <td class="text-center py-3 px-4">{{ $scores['attendance_mdnu'] }}%</td>
                                 <td class="text-center py-3 px-4">{{ $scores['attendance_asrama'] }}%</td>
-                                <td class="text-center py-3 px-4">{{ $scores['keterangan'] }}</td>
+                                @if($scores['keterangan'] === 'Naik Kelas')
+                                <td class="text-center text-green-600 font-bold py-3 px-4">{{ $scores['keterangan'] }}</td>
+                                @elseif($scores['keterangan'] === 'Tidak Naik Kelas')
+                                <td class="text-center text-red-600 font-bold py-3 px-4">{{ $scores['keterangan'] }}</td>
+                                @endif
                             </tr>
                         </tbody>
                     </table>
