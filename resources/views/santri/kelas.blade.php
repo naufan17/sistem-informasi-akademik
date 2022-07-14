@@ -8,9 +8,16 @@
             <h1 class="text-3xl text-black pb-2 mt-2">Kelas</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 @if($cumulative_studies->isEmpty())
+                @if(date('m') == 01 || date('m') == 07)
                 <div class="flex-1 text-center">
                     <h1 class="text-lg text-black pb-6">Anda Belum Mengikuti Kelas</h1>
+                    <a href="{{ url('santri/kelas/form-create') }}" class="button bg-blue-600 hover:bg-blue-800 text-white hover:no-underline rounded shadow-lg py-2.5 px-6">
+                        Tambah
+                    </a>
                 </div>
+                @else
+                <p class="text-xl pb-4 flex items-center">Daftar MP Diikuti</p>
+                @endif
                 @else
                 <!-- OPTION -->
                 <form method="POST" action="{{ url('santri/kelas') }}">

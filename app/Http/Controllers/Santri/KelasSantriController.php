@@ -176,7 +176,9 @@ class KelasSantriController extends Controller
                                         ->distinct()
                                         ->get();
 
-        return view('santri.tambah-santri-kelas', compact('cumulativestudys', 'courses', 'filter_semesters', 'filter_years', 'filter_grade_number', 'filter_grade_name', 'grade_number', 'grade_name'));
+        $add_all = false;
+
+        return view('santri.tambah-santri-kelas', compact('cumulativestudys', 'courses', 'filter_semesters', 'filter_years', 'filter_grade_number', 'filter_grade_name', 'grade_number', 'grade_name', 'add_all'));
     }
 
     public function filterMapel(Request $request)
@@ -237,7 +239,9 @@ class KelasSantriController extends Controller
                                         ->distinct()
                                         ->get();
 
-        return view('santri.tambah-santri-kelas', compact('cumulativestudys', 'courses', 'filter_semesters', 'filter_years', 'filter_grade_number', 'filter_grade_name', 'grade_number', 'grade_name'));
+        $add_all = true;
+
+        return view('santri.tambah-santri-kelas', compact('cumulativestudys', 'courses', 'filter_semesters', 'filter_years', 'filter_grade_number', 'filter_grade_name', 'grade_number', 'grade_name', 'add_all'));
     }
 
     public function create(Request $request)
