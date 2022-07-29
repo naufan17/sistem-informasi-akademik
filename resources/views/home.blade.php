@@ -124,7 +124,7 @@
         @media (max-width: 639px){
             iframe{
                 height: 300px;
-                width: 350px;
+                width: 360px;
             }
         }
     </style>
