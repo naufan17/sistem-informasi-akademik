@@ -147,11 +147,10 @@
                     <div class="text-left">
                         <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 sm:text-xl text-base">Kunjungi Kami</a>
                         <p class="py-4 sm:text-base text-md">Anda dapat menemukan kami di:</p>
-                        <p class="text-blue-900 sm:text-base text-md">Jl. Raden Ronggo KG II No.982, Prenggan, Kec. Kotagede, <br>
-                        Kota Yogyakarta, Daerah Istimewa Yogyakarta 55172.</p>
+                        <p class="text-blue-900 sm:text-base text-md">Jl. Raden Ronggo KG II No.982, Prenggan, Kec. Kotagede, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55172.</p>
                     </div>
-                    <div class="lg:py-0 py-10">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.6604869675466!2d110.3934521145091!3d-7.825712579895561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5710b624c18d%3A0x8d5f089b87af3c59!2sPondok%20Pesantren%20Nurul%20Ummah!5e0!3m2!1sen!2sid!4v1620766907033!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <div class="py-10">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.6604869675466!2d110.3934521145091!3d-7.825712579895561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5710b624c18d%3A0x8d5f089b87af3c59!2sPondok%20Pesantren%20Nurul%20Ummah!5e0!3m2!1sen!2sid!4v1620766907033!5m2!1sen!2sid" height="300" width="600" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                     </div>
                 </div>
             </div>

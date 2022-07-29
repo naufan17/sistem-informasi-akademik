@@ -86,7 +86,7 @@ tr:nth-child(even) {
     background-color:rgba(229, 231, 235, var(--tw-bg-opacity));
 }
 
-iframe{
+/* iframe{
     height: 300px;
     width: 600px;
 }
@@ -110,4 +110,4 @@ iframe{
         height: 350px;
         width: 350px;
     }
-}
+} */
