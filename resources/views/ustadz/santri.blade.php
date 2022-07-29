@@ -12,7 +12,7 @@
                 <form method="POST" action="{{ url('ustadz/santri') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
-                        <div class="flex-none w-36">
+                        <div class="flex-none sm:w-36 w-12">
                             <a class="self-center sm:text-base text-sm hover:no-underline">Status</a>
                         </div>
                         <div class="flex-none md:w-1/5">

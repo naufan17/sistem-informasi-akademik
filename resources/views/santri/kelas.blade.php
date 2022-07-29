@@ -23,7 +23,7 @@
                 <form method="POST" action="{{ url('santri/kelas') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
-                        <div class="flex-none w-36">
+                        <div class="flex-none sm:w-36 w-12">
                             <a class="self-center sm:text-base text-sm hover:no-underline">Semester</a>
                         </div>
                         <input type="hidden" name="id" value="{{ Auth::user()->id }}" class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
@@ -46,7 +46,7 @@
                         </div>
                     </div>
                     <div class="flex space-x-4 items-center pb-8">
-                        <div class="flex-none w-36">
+                        <div class="flex-none sm:w-36 w-12">
                             <a class="self-center sm:text-base text-sm hover:no-underline">Tahun Ajaran</a>
                         </div>
                         <div class="flex-none md:w-1/5">

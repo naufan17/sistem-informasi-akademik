@@ -18,7 +18,7 @@
                     </a>
                 </div>
                 <div class="p-4">
-                    <h2 class="text-2xl ">Perbarui Informasi Data Diri</h2>
+                    <h2 class="sm:text-2xl text-xl">Perbarui Informasi Data Diri</h2>
                 </div>
                 <!-- FORM UPDATE DATA DIRI -->
                 <form method="POST" action="{{ url('ustadz/data-diri/update-profile') }}">
@@ -26,7 +26,7 @@
                     @foreach($ustadzs as $ustadz)
                     <div>
                         <div class="pt-8">
-                            <p class="self-center bg-gray-50 py-4 px-4">Identitas Diri</p>
+                            <p class="self-center sm:text-base text-sm bg-gray-50 py-4 px-4">Identitas Diri</p>
                         </div>
                         <!--
                         <div class="grid justify-items-stretch py-8">
@@ -41,25 +41,25 @@
                         </div>
                         -->
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-800">Nama Lengkap</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Nama Lengkap</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="name" value="{{ $ustadz->name }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600"> Tempat Lahir</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600"> Tempat Lahir</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="place_born" value="{{ $ustadz->place_born }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600"> Tanggal Lahir</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600"> Tanggal Lahir</p>
                             <div class="relative z-0 w-full">
                                 <input type="date" name="birthday" value="{{ $ustadz->birthday }}" onclick="this.setAttribute('type', 'date');" class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Jenis Kelamin</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Jenis Kelamin</p>
                             <div class="relative z-0 w-full">
                                 <select type="text" name="gender" value="{{ $ustadz->gender }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" id="grid-state">
                                     <option>Laki-laki</option>
@@ -68,25 +68,25 @@
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Nomor Induk Kependudukan / Passport</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Nomor Induk Kependudukan / Passport</p>
                             <div class="relative z-0 w-full">
                                 <input type="number" name="id_number" value="{{ $ustadz->id_number }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600"> Golongan Darah</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600"> Golongan Darah</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="blood" value="{{ $ustadz->blood }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600"> Nomor Telepon / Handphone </p>
+                            <p class="self-center sm:text-base text-sm text-gray-600"> Nomor Telepon / Handphone </p>
                             <div class="relative z-0 w-full">
                                 <input type="tel" name="phone_number" value="{{ $ustadz->phone_number }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600"> Email </p>
+                            <p class="self-center sm:text-base text-sm text-gray-600"> Email </p>
                             <div class="relative z-0 w-full">
                                 <input type="email" name="email" value="{{ $ustadz->email }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
@@ -94,53 +94,53 @@
                     </div>
                     <div>
                         <div class="pt-8">
-                            <p class="self-center bg-gray-50 py-4 px-4">Keterangan Tempat Tinggal</p>
+                            <p class="self-center sm:text-base text-sm bg-gray-50 py-4 px-4">Keterangan Tempat Tinggal</p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Alamat Rumah</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Alamat Rumah</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="address" value="{{ $ustadz->address }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">RT</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">RT</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="RT" value="{{ $ustadz->RT }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">RW</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">RW</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="RW" value="{{ $ustadz->RW }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Kelurahan / Desa</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Kelurahan / Desa</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="village" value="{{ $ustadz->village }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Kecamatan</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Kecamatan</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="districs" value="{{ $ustadz->districs }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Kabupaten</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Kabupaten</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="regency" value="{{ $ustadz->regency }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
-                            <p class="self-center text-gray-600">Provinsi</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Provinsi</p>
                             <div class="relative z-0 w-full">
                                 <input type="text" name="province" value="{{ $ustadz->province }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                     </div>
                     @endforeach
-                    <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
+                    <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm pt-8 px-3">
                         <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Simpan</button>
                     </div>
                 </form>
@@ -148,16 +148,16 @@
                     @csrf
                     <div class="pb-8">
                         <div class="pt-8">
-                            <p class="self-center bg-gray-50 py-4 px-4">Foto Profil</p>
+                            <p class="self-center sm:text-base text-sm bg-gray-50 py-4 px-4">Foto Profil</p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                            <p class="self-center text-gray-600">File Foto</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">File Foto</p>
                             <div class="relative z-0 w-full mb-2 mt-2">
-                                <input class="form-control block appearance-none w-full bg-grey-lighter border border-grey-lighter text-sm text-grey-darker py-1 px-4 pr-8 rounded" type="file" name="image" required="required">
+                                <input class="form-control block appearance-none w-full bg-grey-lighter border border-grey-lighter sm:text-sm text-xs text-grey-darker py-1 px-4 pr-8 rounded" type="file" name="image" required="required">
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
+                    <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm pt-8 px-3">
                         <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Simpan</button>
                     </div>
                 </form>
@@ -165,11 +165,11 @@
                     @csrf
                     <div class="pb-8">
                         <div class="pt-8">
-                            <p class="self-center bg-gray-50 py-4 px-4">Password</p>
+                            <p class="self-center sm:text-base text-sm bg-gray-50 py-4 px-4">Password</p>
                         </div>
                         @foreach($ustadzs as $ustadz)
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                            <p class="self-center text-gray-600">Password Baru</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Password Baru</p>
                             <div class="relative z-0 w-full mb-5">
                                 <input type="password" name="password" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                                 @error('password')
@@ -180,14 +180,14 @@
                             </div>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                            <p class="self-center text-gray-600">Konfirmasi Password</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">Konfirmasi Password</p>
                             <div class="relative z-0 w-full mb-5">
                                 <input type="password" name="password_confirmation" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         @endforeach
                     </div>
-                    <div class="flex flex-row-reverse object-left text-center text-white text-base pt-8 px-3">
+                    <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm pt-8 px-3">
                         <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6" >Simpan</button>
                     </div>
                 </form>

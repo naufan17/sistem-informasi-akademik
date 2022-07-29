@@ -5,14 +5,14 @@
 <div class="w-full flex flex-col h-screen overflow-y-hidden">
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Kelas</h1>
+            <h1 class="sm:text-3xl text-2xl text-black pb-2 mt-2">Kelas</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 @if($courses->isEmpty())
                 <div class="flex-1 text-center">
                     <h1 class="text-lg text-black pb-6">Kelas Anda Masih Kosong</h1>
                 </div>
                 @else
-                <p class="text-xl pb-4 flex items-center">Daftar Kelas</p>
+                <p class="sm:text-xl text-lg pb-4 flex items-center">Daftar Kelas</p>
                 @if($tambah = Session::get('tambah'))
                 <div class="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative mb-2" role="alert">
                     <span class="block sm:inline">{{ $tambah }}</span>
@@ -25,26 +25,26 @@
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold text-sm">Mata pelajaran</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold text-sm">Kitab</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold text-sm">Kelas</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold text-sm">Jadwal</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold text-sm">Daftar Santri</th>
+                                <th class="text-center py-3 px-4 uppercase font-semibold sm:text-sm text-xs">No</th>
+                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Mata pelajaran</th>
+                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Kitab</th>
+                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Kelas</th>
+                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Jadwal</th>
+                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Daftar Santri</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             @foreach($courses as $course)
                             <tr>
-                                <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-center py-3 px-4">{{ $course->course }}</td>
-                                <td class="text-center py-3 px-4">{{ $course->book }}</td>
-                                <td class="text-center py-3 px-4">{{ $course->grade_number }} {{ $course->grade_name }}</td>
-                                <td class="text-center py-3 px-4">{{ $course->day }}, {{ $course->time_begin }} - {{ $course->time_end }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $course->course }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $course->book }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $course->grade_number }} {{ $course->grade_name }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $course->day }}, {{ $course->time_begin }} - {{ $course->time_end }}</td>
                                 <td>
                                     <form method="POST" action="{{ url('ustadz/kelas/detail-santri') }}">
                                         @csrf
-                                        <div class="flex flex-row-reverse object-left text-center text-white text-base py-3 px-4">
+                                        <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm py-3 px-4">
                                             <input type="hidden" name="id_course" placeholder="" value="{{ $course->id_course }}" required autocomplete="name" required class="py-2 px-3 block w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-300" />
                                             <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2 px-4">Lihat</button>
                                         </div>
@@ -61,7 +61,7 @@
                         <input type="hidden" name="id_ustadz" placeholder=" " value="{{ Auth::user()->id }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                     </div>
                     <div class="flex space-x-4 items-center pb-8">
-                        <div class="object-left text-center text-white text-base">
+                        <div class="object-left text-center text-white sm:text-base text-sm">
                             <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Cetak</button>
                         </div>
                     </div>

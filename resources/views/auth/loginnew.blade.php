@@ -2,10 +2,10 @@
 
 @section('content')
 
-<div class="flex flex-col sm:justify-center items-center bg-gray-100 py-40">
+<div class="flex flex-col sm:justify-center items-center bg-gray-100 py-40 px-10">
     <div class="w-full sm:max-w-md px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
         <div class="text-center mb-2">
-            <a class="text-lg font-bold hover:no-underline">{{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</a><br>
+            <a class="sm:text-lg text-base font-bold hover:no-underline">{{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</a><br>
         </div>
         @if($gagal = Session::get('gagal'))
         <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-2" role="alert">

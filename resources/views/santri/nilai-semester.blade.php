@@ -17,7 +17,7 @@
                 <form method="POST" action="{{ url('santri/nilai-semester') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
-                        <div class="flex-none w-36">
+                        <div class="flex-none sm:w-36 w-12">
                             <a class="self-center sm:text-base text-sm hover:no-underline">Semester</a>
                         </div>
                         <div class="flex-none md:w-1/5">
@@ -39,7 +39,7 @@
                         </div>
                     </div>
                     <div class="flex space-x-4 items-center pb-8">
-                        <div class="flex-none w-36">
+                        <div class="flex-none sm:w-36 w-12">
                             <a class="self-center sm:text-base text-sm hover:no-underline">Tahun Ajaran</a>
                         </div>
                         <div class="flex-none md:w-1/5">

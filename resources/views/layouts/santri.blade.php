@@ -179,7 +179,7 @@
             <!-- FOOTER -->
             <footer class="w-full bg-white p-8 border-t border-gray-400">
                 <div class="px-3">
-                    <h3 class="text-center font-medium text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta - 2021</h3>
+                    <h3 class="text-center font-medium sm:text-base text-sm text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta - 2021</h3>
                 </div>
             </footer>
         </main>

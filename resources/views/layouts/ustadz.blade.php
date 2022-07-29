@@ -69,7 +69,7 @@
                                         <img src="{{ URL::to('/') }}/images/default-profile-picture.jpg" class="object-center rounded-full">
                                         @endif
                                     </div>
-                                    <h4 class="py-6 text-l font-semibold leading-tight truncate">Hai {{ Auth::guard('ustadz')->user()->name }}</h4>
+                                    <h4 class="py-6 sm:text-base text-sm font-semibold leading-tight truncate">Hai {{ Auth::guard('ustadz')->user()->name }}</h4>
                                 </div>
                             </div>
                         </div>
@@ -135,7 +135,7 @@
             <!-- FOOTER -->
             <footer class="w-full bg-white p-8 border-t border-gray-400">
                 <div class="px-3">
-                    <h3 class="text-center font-medium text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta - 2021</h3>
+                    <h3 class="text-center font-medium sm:text-base text-sm text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta - 2021</h3>
                 </div>
             </footer>
         </main>
