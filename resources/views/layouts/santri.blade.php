@@ -35,23 +35,23 @@
     <div id="app">
         <main>
             <!-- HEADER -->
-            <nav id="header" class="w-full bg-white border-b-1">
-                <div class="w-full container flex items-center justify-between">
+            <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
+                <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
                     <div class="flex space-x-4 py-2">
                         <!--LOGO-->
                         <div class="object-left">
-                            <a href="/santri/dashboard"><img src="{{ URL::to('/') }}/images/logo.png" class="w-24"></a>
+                            <a href="/"><img src="{{ URL::to('/') }}/images/logo.png" class="w-24"></a>
                         </div>
                         <!--NAME-->
                         <div class="text-center font-bold font-sans text-yellow-800 mt-2">
-                            <a class="text-base hover:no-underline">MADRASAH DINIYYAH</a><br>
-                            <a class="text-2xl font-bold hover:no-underline">NURUL UMMAH</a><br>
-                            <a class="text-base tracking-widest hover:no-underline">YOGYAKARTA</a>
+                            <p class="sm:text-base text-sm">MADRASAH DINIYYAH</p>
+                            <p class="sm:text-xl text-base font-bold">NURUL UMMAH</p>
+                            <p class="sm:text-base text-sm tracking-widest">YOGYAKARTA</p>
                         </div>
                     </div>
                     <div class="font-bold text-yellow-600 text-right">
-                        <a class="text-xl hover:no-underline">SISTEM INFORMASI AKADEMIK <br></a>
-                        <a class="text-base tracking-widest hover:no-underline">M D N U</a>
+                        <p class="sm:text-lg text-md">SISTEM INFORMASI AKADEMIK</p>
+                        <p class="sm:text-base text-sm tracking-widest">M D N U</p>
                     </div>
                 </div>
             </nav>

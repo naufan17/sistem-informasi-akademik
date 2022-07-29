@@ -34,18 +34,18 @@
             <div class="flex space-x-4 py-2">
                 <!--LOGO-->
                 <div class="object-left">
-                    <a href="/"><img src="{{ ('images/logo.png ') }}" class="w-24"></a>
+                    <a href="/"><img src="{{ ('images/logo.png ') }}" class="sm:w-24 w-20"></a>
                 </div>
                 <!--NAME-->
                 <div class="text-center font-bold font-sans text-yellow-800 mt-2">
-                    <a class="text-base hover:no-underline">MADRASAH DINIYYAH</a><br>
-                    <a class="text-2xl font-bold hover:no-underline">NURUL UMMAH</a><br>
-                    <a class="text-base tracking-widest hover:no-underline">YOGYAKARTA</a>
+                    <p class="sm:text-base text-sm">MADRASAH DINIYYAH</p>
+                    <p class="sm:text-xl text-base font-bold">NURUL UMMAH</p>
+                    <p class="sm:text-base text-sm tracking-widest">YOGYAKARTA</p>
                 </div>
             </div>
             <div class="font-bold text-yellow-600 text-right">
-                <a class="text-xl hover:no-underline">SISTEM INFORMASI AKADEMIK <br></a>
-                <a class="text-base tracking-widest hover:no-underline">M D N U</a>
+                <p class="sm:text-lg text-md">SISTEM INFORMASI AKADEMIK</p>
+                <p class="sm:text-base text-sm tracking-widest">M D N U</p>
             </div>
         </div>
     </nav>
@@ -115,23 +115,20 @@
     <!-- LOGIN, TENTANG, ALAMAT -->
     <section class="bg-white py-8">
         <!-- LOGIN -->
-        <div class="w-full container mx-auto flex items-center justify-between">
+        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
             <div class="flex-1 mx-8 py-8">
                 <div class="text-center">
-                    <a class="text-lg font-bold hover:no-underline">Masuk untuk melihat informasi akademik anda</a><br>
+                    <a class="sm:text-xl text-base font-bold hover:no-underline">Masuk untuk melihat informasi akademik anda</a><br>
                 </div>
                 <div class=" text-center text-white text-xl py-4">
-                    <a href="{{ url('login/santri') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk Santri</a>
-                    <a href="{{ url('login/ustadz') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk Ustadz</a>
+                    <a href="{{ url('login/santri') }}" class="button sm:text-sm text-xs transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 rounded sm:py-3 py-1.5 sm:px-4 px-2">Masuk Santri</a>
+                    <a href="{{ url('login/ustadz') }}" class="button sm:text-sm text-xs transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 rounded sm:py-3 py-1.5 sm:px-4 px-2">Masuk Ustadz</a>
                 </div>
-                <!-- <div class=" text-center text-white text-xl py-4">
-                    <a href="{{ route('login') }}" class="button text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 p-3 mt-1 rounded py-3 px-8">Masuk</a>
-                </div> -->
             </div>
         </div>
         <div class="container py-8 px-6 mx-auto">
-            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl mb-8">Tentang MDNU</a>
-            <p class="py-4 text-justify">MDNU atau Madrasah Diniyyah Nurul Ummah adalah satuan pendidikan keagamaan yang
+            <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 sm:text-xl text-base mb-8">Tentang MDNU</a>
+            <p class="py-4 text-justify sm:text-base text-md">MDNU atau Madrasah Diniyyah Nurul Ummah adalah satuan pendidikan keagamaan yang
                 menyelenggarakan pendidikan Agama Islam baik yang terorganisir pada
                 lembaga-lembaga pendidikan keagamaan yang berada di dalam pondok
                 pesantren maupun yang di luar pondok pesantren (Buklet Madin, 2003).
@@ -144,41 +141,44 @@
                 Agustus 1991.</p>
         </div>
         <!-- ALAMAT -->
-        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+        <div class="container py-8 px-6 mx-auto">
             <div class="flex space-x-10 py-5 mx-auto">
-                <div class="text-left pl-5 mb-8">
-                    <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 text-xl">Kunjungi Kami</a>
-                    <p class="py-4">Anda dapat menemukan kami di:</p>
-                    <p class="text-blue-900">Jl. Raden Ronggo KG II No.982, Prenggan, Kec. Kotagede, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55172.</p>
-                </div>
-                <div>
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.6604869675466!2d110.3934521145091!3d-7.825712579895561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5710b624c18d%3A0x8d5f089b87af3c59!2sPondok%20Pesantren%20Nurul%20Ummah!5e0!3m2!1sen!2sid!4v1620766907033!5m2!1sen!2sid" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                <div class="w-full mx-auto flex flex-wrap">
+                    <div class="text-left">
+                        <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 sm:text-xl text-base">Kunjungi Kami</a>
+                        <p class="py-4 sm:text-base text-md">Anda dapat menemukan kami di:</p>
+                        <p class="text-blue-900 sm:text-base text-md">Jl. Raden Ronggo KG II No.982, Prenggan, Kec. Kotagede, <br>
+                        Kota Yogyakarta, Daerah Istimewa Yogyakarta 55172.</p>
+                    </div>
+                    <div class="lg:py-0 py-10">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3952.6604869675466!2d110.3934521145091!3d-7.825712579895561!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a5710b624c18d%3A0x8d5f089b87af3c59!2sPondok%20Pesantren%20Nurul%20Ummah!5e0!3m2!1sen!2sid!4v1620766907033!5m2!1sen!2sid" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- FOOTER -->
-    <footer class="container mx-auto bg-white py-8 border-t border-gray-400">
+    <footer class="mx-auto bg-white py-8 border-t border-gray-400">
         <div class="container flex px-6 py-8 ">
             <div class="w-full mx-auto flex flex-wrap">
                 <div class="text-left flex w-full lg:w-1/2 ">
                     <div class="px-3 md:px-0">
-                        <h3 class="font-bold text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
-                        <a class="inline-block no-underline hover:text-black hover:underline pt-4" href="tel:+62 857 2565 5593">Telp. 0857 2565 5593</a><br>
-                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://web.whatsapp.com/send?phone=6285725655593&text=Assalamualaikum%20Admin">WhatsApp. 0857 2565 5593</a><br>
-                        <a class="inline-block no-underline hover:text-black hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
+                        <h3 class="font-bold sm:text-xl text-base text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
+                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline pt-4" href="tel:+62 857 2565 5593">Telp. 0857 2565 5593</a><br>
+                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://web.whatsapp.com/send?phone=6285725655593&text=Assalamualaikum%20Admin">WhatsApp. 0857 2565 5593</a><br>
+                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
                     </div>
                 </div>
                 <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
-                    <div class="px-3 md:px-0">
-                        <h3 class="font-bold text-gray-900">Media Sosial</h3>
+                    <div class="px-3 md:px-0 lg:mt-0 mt-8">
+                        <h3 class="font-bold sm:text-xl text-base text-gray-900">Media Sosial</h3>
                         <ul class="list-reset items-center pt-4">
                             <li>
-                                <a class="inline-block no-underline hover:text-black hover:underline py-1" href="https://instagram.com/nurulummahyk?igshid=1m74irp80dl0v">Instagram</a>
-                                <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">YouTube</a>
-                                <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
-                                <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Twitter</a>
-                                <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline py-1" href="https://instagram.com/nurulummahyk?igshid=1m74irp80dl0v">Instagram</a>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">YouTube</a>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://nurulummah.com/">Twitter</a>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://nurulummah.com/">Website</a>
                             </li>
                         </ul>
                     </div>

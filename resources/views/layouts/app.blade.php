@@ -30,24 +30,23 @@
     <div id="app">
         <main>
             <!-- HEADER -->
-            <nav id="header" class="w-full bg-white border-b-2">
+            <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
                     <div class="flex space-x-4 py-2">
                         <!--LOGO-->
                         <div class="object-left">
-                        <a href="/"><img src="{{ URL::to('/') }}/images/logo.png" class="w-24"></a>
-
+                            <a href="/"><img src="{{ URL::to('/') }}/images/logo.png" class="w-24"></a>
                         </div>
                         <!--NAME-->
                         <div class="text-center font-bold font-sans text-yellow-800 mt-2">
-                            <a class="text-base hover:no-underline">MADRASAH DINIYYAH</a><br>
-                            <a class="text-2xl font-bold hover:no-underline">NURUL UMMAH</a><br>
-                            <a class="text-base tracking-widest hover:no-underline">YOGYAKARTA</a>
+                            <p class="sm:text-base text-sm">MADRASAH DINIYYAH</p>
+                            <p class="sm:text-xl text-base font-bold">NURUL UMMAH</p>
+                            <p class="sm:text-base text-sm tracking-widest">YOGYAKARTA</p>
                         </div>
                     </div>
                     <div class="font-bold text-yellow-600 text-right">
-                        <a class="text-xl hover:no-underline">SISTEM INFORMASI AKADEMIK <br></a>
-                        <a class="text-base tracking-widest hover:no-underline">M D N U</a>
+                        <p class="sm:text-lg text-md">SISTEM INFORMASI AKADEMIK</p>
+                        <p class="sm:text-base text-sm tracking-widest">M D N U</p>
                     </div>
                 </div>
             </nav>
@@ -66,22 +65,22 @@
                     <div class="w-full mx-auto flex flex-wrap">
                         <div class="text-left flex w-full lg:w-1/2 ">
                             <div class="px-3 md:px-0">
-                                <h3 class="font-bold text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
-                                <a class="inline-block no-underline hover:text-black hover:underline pt-4" href="tel:+62 857 2565 5593">Telp. 0857 2565 5593</a><br>
-                                <a class="inline-block no-underline hover:text-black hover:underline" href="https://web.whatsapp.com/send?phone=6285725655593&text=Assalamualaikum%20Admin">WhatsApp. 0857 2565 5593</a><br>
-                                <a class="inline-block no-underline hover:text-black hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
+                                <h3 class="font-bold sm:text-xl text-base text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline pt-4" href="tel:+62 857 2565 5593">Telp. 0857 2565 5593</a><br>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://web.whatsapp.com/send?phone=6285725655593&text=Assalamualaikum%20Admin">WhatsApp. 0857 2565 5593</a><br>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
                             </div>
                         </div>
                         <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
-                            <div class="px-3 md:px-0">
-                                <h3 class="font-bold text-gray-900">Media Sosial</h3>
+                            <div class="px-3 md:px-0 lg:mt-0 mt-8">
+                                <h3 class="font-bold sm:text-xl text-base text-gray-900">Media Sosial</h3>
                                 <ul class="list-reset items-center pt-4">
                                     <li>
-                                        <a class="inline-block no-underline hover:text-black hover:underline py-1" href="https://instagram.com/nurulummahyk?igshid=1m74irp80dl0v">Instagram</a>
-                                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">YouTube</a>
-                                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
-                                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Twitter</a>
-                                        <a class="inline-block no-underline hover:text-black hover:underline" href="https://nurulummah.com/">Website</a>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline py-1" href="https://instagram.com/nurulummahyk?igshid=1m74irp80dl0v">Instagram</a>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">YouTube</a>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://nurulummah.com/">Twitter</a>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://nurulummah.com/">Website</a>
                                     </li>
                                 </ul>
                             </div>
