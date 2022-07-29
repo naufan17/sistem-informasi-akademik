@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="min-h-screen flex flex-col sm:justify-center items-center pt-6 sm:pt-0 bg-gray-100">
+<div class="flex flex-col sm:justify-center items-center bg-gray-100 py-40">
     <div class="w-full sm:max-w-md px-6 py-4 bg-white shadow-md overflow-hidden sm:rounded-lg">
         <div class="text-center mb-2">
             <a class="text-lg font-bold hover:no-underline">{{ isset($url) ? ucwords($url) : ""}} {{ __('Login') }}</a><br>

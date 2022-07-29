@@ -40,7 +40,7 @@
                     <div class="flex sm:space-x-4 space-x-1 py-2">
                         <!--LOGO-->
                         <div class="object-left">
-                            <a href="/"><img src="{{ ('images/logo.png ') }}" class="sm:w-24 w-16"></a>
+                            <a href="/"><img src="{{ URL::to('/') }}/images/logo.png" class="sm:w-24 w-16"></a>
                         </div>
                         <!--NAME-->
                         <div class="text-center font-bold font-sans text-yellow-800 mt-2">
