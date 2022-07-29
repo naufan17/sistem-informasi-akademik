@@ -6,14 +6,14 @@
     <!-- USTADZ -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2 hover:no-underline">Ustadz</h1>
+            <h1 class="sm:text-3xl text-2xl text-black pb-2 mt-2 hover:no-underline">Ustadz</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
                 <form method="POST" action="{{ url('santri/ustadz') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
-                            <a class="self-center">Status</a>
+                            <a class="self-center sm:text-base text-sm">Status</a>
                         </div>
                         <div class="flex-none md:w-1/5">
                             <div class="relative">
@@ -22,7 +22,7 @@
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <select type="text" name="status" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-2.5 px-4 pr-8 rounded" id="grid-state">
+                                <select type="text" name="status" value="" class="block sm:text-base text-sm appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-2.5 px-4 pr-8 rounded" id="grid-state">
                                     @foreach($status as $filter)
                                     <option selected value="{{ $filter->status }}">{{ $filter->status }}</option>
                                     @endforeach                                    
@@ -32,32 +32,32 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="object-left text-center text-white text-base">
+                        <div class="object-left text-center text-white sm:text-base text-sm">
                             <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Lihat</button>
                         </div>
                     </div>
                 </form>
-                <p class="text-xl py-4 flex items-center">Daftar Ustadz Pengampu</p>
+                <p class="sm:text-xl text-lg py-4 flex items-center">Daftar Ustadz Pengampu</p>
                 <!--TABEL DAFTAR USTADZ -->
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">NIU</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nama Ustadz</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Status</th>
-                                <!-- <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold text-sm">Detail</th> -->
+                                <th class="text-center py-3 px-4 uppercase font-semibold sm:text-sm text-xs">No</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">NIU</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Nama Ustadz</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Status</th>
+                                <!-- <th class="text-center w-1/4 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Detail</th> -->
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             @foreach($ustadzs as $ustadz)
                             <tr>
-                                <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-center py-3 px-4">{{ $ustadz->id }}</td>
-                                <td class="text-center py-3 px-4">{{ $ustadz->name }}</td>
-                                <td class="text-center py-3 px-4">{{ $ustadz->status }}</td>
-                                <!-- <td class="text-center py-3 px-4">
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $ustadz->id }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $ustadz->name }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $ustadz->status }}</td>
+                                <!-- <td class="text-center sm:text-base text-sm py-3 px-4">
                                     <a href="{{ url('santri/uztadz/detail') }}" class="button bg-blue-600 hover:bg-blue-800 hover:text-white text-white rounded shadow-md py-2 px-6">Detail</a>
                                 </td>   -->
                             </tr>
