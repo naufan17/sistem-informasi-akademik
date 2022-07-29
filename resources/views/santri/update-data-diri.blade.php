@@ -198,7 +198,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-smpt-8 px-3">
+                    <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm pt-8 px-3">
                         <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Simpan</button>
                     </div>
                 </form>

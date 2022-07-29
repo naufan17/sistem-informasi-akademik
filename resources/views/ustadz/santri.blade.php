@@ -6,14 +6,14 @@
     <!-- SANTRI -->
     <div class="overflow-x-hidden">
         <main class="pt-6 px-6">
-            <h1 class="text-3xl text-black pb-2 mt-2">Santri</h1>
+            <h1 class="sm:text-3xl text-2xl text-black pb-2 mt-2">Santri</h1>
             <div class="bg-white rounded-lg shadow-md p-8 my-8">
                 <!-- OPTION -->
                 <form method="POST" action="{{ url('ustadz/santri') }}">
                     @csrf
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="flex-none w-36">
-                            <a class="self-center hover:no-underline">Status</a>
+                            <a class="self-center sm:text-base text-sm hover:no-underline">Status</a>
                         </div>
                         <div class="flex-none md:w-1/5">
                             <div class="relative">
@@ -22,7 +22,7 @@
                                         <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                                     </svg>
                                 </div>
-                                <select type="text" name="status" value="" class="block appearance-none w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-2.5 px-4 pr-8 rounded" id="grid-state">
+                                <select type="text" name="status" value="" class="block appearance-none sm:text-base text-sm w-full bg-grey-lighter border border-grey-lighter text-grey-darker py-2.5 px-4 pr-8 rounded" id="grid-state">
                                     @foreach($status as $filter)
                                     <option selected value="{{ $filter->status }}">{{ $filter->status }}</option>
                                     @endforeach                                    
@@ -32,30 +32,30 @@
                                 </select>
                             </div>
                         </div>
-                        <div class="object-left text-center text-white text-base">
+                        <div class="object-left text-center text-white sm:text-base text-sm">
                             <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Lihat</button>
                         </div>
                     </div>
                 </form>
-                <p class="text-xl py-4 flex items-center">Daftar Santri</p>
+                <p class="sm:text-xl text-lg py-4 flex items-center">Daftar Santri</p>
                 <!--TABEL NILAI-->
                 <div class="bg-white overflow-auto pb-8">
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="text-center py-3 px-4 uppercase font-semibold text-sm">No</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">NIS</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Nama Santri</th>
-                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold text-sm">Status</th>
+                                <th class="text-center py-3 px-4 uppercase font-semibold sm:text-xm text-xs">No</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold sm:text-xm text-xs">NIS</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold sm:text-xm text-xs">Nama Santri</th>
+                                <th class="text-center w-1/3 py-3 px-4 uppercase font-semibold sm:text-xm text-xs">Status</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             @foreach($santris as $santri)
                             <tr>
-                                <td class="text-center py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-center py-3 px-4">{{ $santri->id }}</td>
-                                <td class="text-center py-3 px-4">{{ $santri->name }}</td>
-                                <td class="text-center py-3 px-4">{{ $santri->status }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $loop->iteration }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $santri->id }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $santri->name }}</td>
+                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $santri->status }}</td>
                             </tr>
                             @endforeach
                         </tbody>
