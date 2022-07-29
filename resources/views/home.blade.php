@@ -244,7 +244,7 @@
         </div>
         <!-- ALAMAT -->
         <div class="container py-8 px-6 mx-auto">
-            <div class="flex space-x-10 py-5 mx-auto">
+            <div class="flex space-x-10 mx-auto">
                 <div class="w-full mx-auto flex flex-wrap">
                     <div class="text-left">
                         <a class="uppercase tracking-wide no-underline hover:no-underline font-bold text-gray-800 sm:text-xl text-base">Kunjungi Kami</a>
