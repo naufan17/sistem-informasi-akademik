@@ -32,21 +32,21 @@
             <!-- HEADER -->
             <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
                 <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
-                    <div class="flex space-x-4 py-2">
+                    <div class="flex sm:space-x-4 space-x-1 py-2">
                         <!--LOGO-->
                         <div class="object-left">
-                            <a href="/"><img src="{{ URL::to('/') }}/images/logo.png" class="sm:w-24 w-20"></a>
+                            <a href="/"><img src="{{ ('images/logo.png ') }}" class="sm:w-24 w-16"></a>
                         </div>
                         <!--NAME-->
                         <div class="text-center font-bold font-sans text-yellow-800 mt-2">
-                            <p class="sm:text-base text-sm">MADRASAH DINIYYAH</p>
-                            <p class="sm:text-xl text-base font-bold">NURUL UMMAH</p>
-                            <p class="sm:text-base text-sm tracking-widest">YOGYAKARTA</p>
+                            <p class="sm:text-base text-sm sm:tracking-normal tracking-tighter">MADRASAH DINIYYAH</p>
+                            <p class="sm:text-xl text-base font-bold sm:tracking-normal tracking-tighter">NURUL UMMAH</p>
+                            <p class="sm:text-base text-sm tracking-tight sm:tracking-wide">YOGYAKARTA</p>
                         </div>
                     </div>
                     <div class="font-bold text-yellow-600 text-right">
-                        <p class="sm:text-lg text-md">SISTEM INFORMASI AKADEMIK</p>
-                        <p class="sm:text-base text-sm tracking-widest">M D N U</p>
+                        <p class="sm:text-lg text-sm sm:tracking-normal tracking-tighter">SISTEM INFORMASI AKADEMIK</p>
+                        <p class="sm:text-base text-sm tracking-tight sm:tracking-wide">M D N U</p>
                     </div>
                 </div>
             </nav>
@@ -66,9 +66,9 @@
                         <div class="text-left flex w-full lg:w-1/2 ">
                             <div class="px-3 md:px-0">
                                 <h3 class="font-bold sm:text-xl text-base text-gray-900">Madrasah Diniyyah Pondok Pesantren Nurul Ummah Yogyakarta</h3>
-                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline pt-4" href="tel:+62 857 2565 5593">Telp. 0857 2565 5593</a><br>
-                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://web.whatsapp.com/send?phone=6285725655593&text=Assalamualaikum%20Admin">WhatsApp. 0857 2565 5593</a><br>
-                                <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-sm hover:underline pt-4" href="tel:+62 857 2565 5593">Telp. 0857 2565 5593</a><br>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-sm hover:underline" href="https://web.whatsapp.com/send?phone=6285725655593&text=Assalamualaikum%20Admin">WhatsApp. 0857 2565 5593</a><br>
+                                <a class="inline-block no-underline hover:text-black sm:text-base text-sm hover:underline" href="mailto:admisi.nurma@gmail.com">E-mail. admisi.nurma@gmail.com</a>
                             </div>
                         </div>
                         <div class="flex w-full lg:w-1/2 lg:justify-end lg:text-right">
@@ -76,11 +76,11 @@
                                 <h3 class="font-bold sm:text-xl text-base text-gray-900">Media Sosial</h3>
                                 <ul class="list-reset items-center pt-4">
                                     <li>
-                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline py-1" href="https://instagram.com/nurulummahyk?igshid=1m74irp80dl0v">Instagram</a>
-                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">YouTube</a>
-                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
-                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://nurulummah.com/">Twitter</a>
-                                        <a class="inline-block no-underline hover:text-black sm:text-base text-md hover:underline" href="https://nurulummah.com/">Website</a>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-sm hover:underline py-1" href="https://instagram.com/nurulummahyk?igshid=1m74irp80dl0v">Instagram</a>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-sm hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">YouTube</a>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-sm hover:underline" href="https://www.youtube.com/channel/UCYQ8dFPzAkFF0WbS0r-IDaw">Facebook</a><br>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-sm hover:underline" href="https://nurulummah.com/">Twitter</a>
+                                        <a class="inline-block no-underline hover:text-black sm:text-base text-sm hover:underline" href="https://nurulummah.com/">Website</a>
                                     </li>
                                 </ul>
                             </div>
