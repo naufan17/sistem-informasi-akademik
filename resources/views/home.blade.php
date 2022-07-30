@@ -132,7 +132,7 @@
 <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
     <!--HEADER-->
     <nav id="header" class="w-full z-30 top-0 bg-white border-b-2">
-        <div class="w-full container mx-auto flex flex-wrap items-center justify-between">
+        <div class="w-full mx-auto flex flex-wrap items-center justify-between">
             <div class="flex sm:space-x-4 space-x-1 py-2">
                 <!--LOGO-->
                 <div class="object-left">
