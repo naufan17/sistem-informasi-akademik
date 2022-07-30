@@ -46,7 +46,7 @@
                                         @csrf
                                         <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm py-3 px-4">
                                             <input type="hidden" name="id_course" placeholder="" value="{{ $course->id_course }}" required autocomplete="name" required class="py-2 px-3 block w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-300" />
-                                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2 px-4">Lihat</button>
+                                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 sm:px-4 px-2.5">Lihat</button>
                                         </div>
                                     </form>
                                 </td>
@@ -62,7 +62,7 @@
                     </div>
                     <div class="flex space-x-4 items-center pb-8">
                         <div class="object-left text-center text-white sm:text-base text-sm">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Cetak</button>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 sm:px-6 px-3.5">Cetak</button>
                         </div>
                     </div>
                 </form>

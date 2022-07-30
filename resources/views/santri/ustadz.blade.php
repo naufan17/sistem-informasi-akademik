@@ -33,7 +33,7 @@
                             </div>
                         </div>
                         <div class="object-left text-center text-white sm:text-base text-sm">
-                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 px-6">Lihat</button>
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 sm:px-6 px-3.5">Lihat</button>
                         </div>
                     </div>
                 </form>
