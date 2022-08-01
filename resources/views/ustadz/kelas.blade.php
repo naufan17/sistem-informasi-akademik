@@ -25,22 +25,22 @@
                     <table class="table-auto bg-white">
                         <thead class="bg-gray-800 text-white">
                             <tr>
-                                <th class="text-center py-3 px-4 uppercase font-semibold sm:text-sm text-xs">No</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Mata pelajaran</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Kitab</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Kelas</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Jadwal</th>
-                                <th class="text-center w-1/5 py-3 px-4 uppercase font-semibold sm:text-sm text-xs">Daftar Santri</th>
+                                <th class="text-center sm:py-3 py-2 sm:px-4 px-3 uppercase font-semibold sm:text-sm text-xs">No</th>
+                                <th class="text-center w-1/5 sm:py-3 py-2 sm:px-4 px-3 uppercase font-semibold sm:text-sm text-xs">Mata pelajaran</th>
+                                <th class="text-center w-1/5 sm:py-3 py-2 sm:px-4 px-3 uppercase font-semibold sm:text-sm text-xs">Kitab</th>
+                                <th class="text-center w-1/5 sm:py-3 py-2 sm:px-4 px-3 uppercase font-semibold sm:text-sm text-xs">Kelas</th>
+                                <th class="text-center w-1/5 sm:py-3 py-2 sm:px-4 px-3 uppercase font-semibold sm:text-sm text-xs">Jadwal</th>
+                                <th class="text-center w-1/5 sm:py-3 py-2 sm:px-4 px-3 uppercase font-semibold sm:text-sm text-xs">Daftar Santri</th>
                             </tr>
                         </thead>
                         <tbody class="text-gray-700">
                             @foreach($courses as $course)
                             <tr>
-                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $loop->iteration }}</td>
-                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $course->course }}</td>
-                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $course->book }}</td>
-                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $course->grade_number }} {{ $course->grade_name }}</td>
-                                <td class="text-center sm:text-base text-sm py-3 px-4">{{ $course->day }}, {{ $course->time_begin }} - {{ $course->time_end }}</td>
+                                <td class="text-center sm:text-base text-sm sm:py-3 py-2 sm:px-4 px-3">{{ $loop->iteration }}</td>
+                                <td class="text-center sm:text-base text-sm sm:py-3 py-2 sm:px-4 px-3">{{ $course->course }}</td>
+                                <td class="text-center sm:text-base text-sm sm:py-3 py-2 sm:px-4 px-3">{{ $course->book }}</td>
+                                <td class="text-center sm:text-base text-sm sm:py-3 py-2 sm:px-4 px-3">{{ $course->grade_number }} {{ $course->grade_name }}</td>
+                                <td class="text-center sm:text-base text-sm sm:py-3 py-2 sm:px-4 px-3">{{ $course->day }}, {{ $course->time_begin }} - {{ $course->time_end }}</td>
                                 <td>
                                     <form method="POST" action="{{ url('ustadz/kelas/detail-santri') }}">
                                         @csrf

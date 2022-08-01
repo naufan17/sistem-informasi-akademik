@@ -223,8 +223,8 @@
                     <a class="sm:text-xl text-base font-bold hover:no-underline">Masuk untuk melihat informasi akademik anda</a><br>
                 </div>
                 <div class=" text-center text-white text-xl py-4">
-                    <a href="{{ url('login/santri') }}" class="button sm:text-sm text-xs transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 rounded sm:py-3 py-2.5 sm:px-4 px-2.5">Masuk Santri</a>
-                    <a href="{{ url('login/ustadz') }}" class="button sm:text-sm text-xs transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 rounded sm:py-3 py-2.5 sm:px-4 px-2.5">Masuk Ustadz</a>
+                    <a href="{{ url('login/santri') }}" class="button sm:text-base text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 rounded sm:py-3 py-2.5 sm:px-4 px-2.5">Masuk Santri</a>
+                    <a href="{{ url('login/ustadz') }}" class="button sm:text-base text-sm transform hover:scale-110 hover:no-underline motion-reduce:transform-none bg-blue-800 rounded sm:py-3 py-2.5 sm:px-4 px-2.5">Masuk Ustadz</a>
                 </div>
             </div>
         </div>
