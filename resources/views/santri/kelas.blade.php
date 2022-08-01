@@ -10,7 +10,7 @@
                 @if($cumulative_studies->isEmpty())
                 @if(date('m') == 01 || date('m') == 07)
                 <div class="flex-1 text-center">
-                    <h1 class="text-lg text-black pb-6">Anda Belum Mengikuti Kelas</h1>
+                    <h1 class="sm:text-lg text-base text-black pb-6">Anda Belum Mengikuti Kelas</h1>
                     <a href="{{ url('santri/kelas/form-create') }}" class="button bg-blue-600 hover:bg-blue-800 text-white hover:no-underline rounded shadow-lg py-2.5 px-6">
                         Tambah
                     </a>
