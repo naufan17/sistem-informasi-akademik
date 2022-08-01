@@ -30,6 +30,12 @@
 
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function menuIcon() {
+        var x = document.getElementById("sidebar");
+        x.classList.toggle("hidden");
+    }
+    </script>
 </head>
 <body class="work-sans leading-normal text-base tracking-normal">
     <div id="app">
@@ -57,7 +63,7 @@
             </nav>
             <!-- MENU -->
             <div class="bg-gray-100 font-family-karla flex">
-                <aside class="relative bg-gray-100 bg-sidebar h-screen sm:w-64 w-36 sm:block">
+                <aside class="relative bg-gray-100 bg-sidebar h-screen sm:w-64 w-32 hidden sm:block" id="sidebar">
                     <nav class="font-semibold pt-3">
                         <div class="text-gray-900">
                             <div class="pt-6 px-6 mb-8">
@@ -128,6 +134,11 @@
                 <!-- Page Content -->
                 <div class="w-full flex flex-col h-screen overflow-y-hidden">
                     <div class="overflow-x-hidden">
+                        <div class="pl-4 pt-4 sm:hidden inline-block">
+                            <a href="javascript:void(0);" class="icon px-3 py-2 bg-white p-8 shadow-lg rounded text-base" id="menu-icon" onclick="menuIcon()">
+                                <i class="fa fa-bars"></i>
+                            </a>
+                        </div>
                         @yield('content')
                     </div>
                 </div>
