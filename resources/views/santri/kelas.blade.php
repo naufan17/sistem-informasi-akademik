@@ -109,13 +109,13 @@
                 </div>
                 <form method="POST" action="{{ url('santri/kelas/cetak') }}">
                     @csrf
-                    <div class="flex space-x-4 items-center pb-8">
+                    <div class="flex space-x-4 items-center">
                         @foreach($cumulative_studies as $cumulative_study)
                         <input type="hidden" name="semester" placeholder=" " value="{{ $cumulative_study->semester}}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         <input type="hidden" name="year" placeholder=" " value="{{ $cumulative_study->year }}" required class="self-center w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                         @endforeach
                     </div>
-                    <div class="flex space-x-4 items-center pb-8">
+                    <div class="flex space-x-4 items-center pt-4">
                         <div class="object-left text-center text-white sm:text-base text-sm">
                             <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 sm:px-6 px-3.5">Cetak</button>
                         </div>

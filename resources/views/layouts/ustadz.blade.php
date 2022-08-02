@@ -80,17 +80,17 @@
                             </div>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href="{{ url('ustadz/data-diri') }}" class="text-gray-800 sm:text-base text-sm group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href="{{ url('ustadz/data-diri') }}" class="text-gray-800 sm:text-base text-sm group-hover:text-white hover:no-underline flex items-center py-3 sm:pl-8 pl-6">
                                 Data Diri
                             </a>
                         </div>
                         <div class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                            <a href= "{{ url('ustadz/kelas') }}" class="text-gray-800 sm:text-base text-sm group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                            <a href= "{{ url('ustadz/kelas') }}" class="text-gray-800 sm:text-base text-sm group-hover:text-white hover:no-underline flex items-center py-3 sm:pl-8 pl-6">
                                 Kelas
                             </a>
                         </div>
                         <!-- <div @click.away="open = false" class="group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent" x-data="{ open: false }">
-                            <button @click="open = !open" class="flex flex-row text-gray-800 sm:text-base text-sm group-hover:text-white items-center py-3 pl-8">
+                            <button @click="open = !open" class="flex flex-row text-gray-800 sm:text-base text-sm group-hover:text-white items-center py-3 sm:pl-8 pl-6">
                                 <span class="w-full text-left font-bold">List Data</span>
                                 <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="object-right w-full h-4">
                                     <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
@@ -106,7 +106,7 @@
                         <button class="w-full">
                             <div @click.away="open = false"  x-data="{ open: false }">
                                 <div @click="open = !open" class="w-full flex justify-between group border-indigo-500 hover:bg-blue-600 hover:shadow-lg hover:border-transparent">
-                                    <a class="font-bold text-gray-800 sm:text-base text-sm group-hover:text-white hover:no-underline flex items-center py-3 pl-8">
+                                    <a class="font-bold text-gray-800 sm:text-base text-sm group-hover:text-white hover:no-underline flex items-center py-3 sm:pl-8 pl-6">
                                         List Data
                                     </a>
                                     <div class="items-center flex group-hover:text-white pr-8">
@@ -122,7 +122,7 @@
                             </div>
                         </button>
                         <button class="w-full hover:bg-blue-600 cta-btn font-semibold justify-center ">
-                            <a class="text-gray-800 sm:text-base text-sm hover:text-white hover:no-underline items-center py-3 pl-8 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
+                            <a class="text-gray-800 sm:text-base text-sm hover:text-white hover:no-underline items-center py-3 sm:pl-8 pl-6 flex item-center" href="{{ route('logout') }}" onclick="event.preventDefault();
                                 document.getElementById('logout-form').submit();">{{ __('Logout') }}
                             </a>
                             <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">

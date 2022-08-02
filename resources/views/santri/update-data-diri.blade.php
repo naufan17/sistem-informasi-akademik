@@ -187,31 +187,31 @@
                 </form>
                 <form method="POST" action="{{ url('santri/data-diri/update-foto') }}" enctype="multipart/form-data">
                     @csrf
-                    <div class="pb-8">
+                    <div class="pb-4">
                         <div class="pt-8">
                             <p class="sm:text-base text-sm bg-gray-50 py-4 px-4">Foto Profil</p>
                         </div>
                         <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                            <p class="sm:text-base text-sm text-gray-600">File Foto</p>
+                            <p class="self-center sm:text-base text-sm text-gray-600">File Foto</p>
                             <div class="relative z-0 w-full mb-2 mt-2">
                                 <input class="form-control block appearance-none w-full bg-grey-lighter border border-grey-lighter text-sm text-grey-darker py-1 px-4 pr-8 rounded" type="file" name="image" required="required">
                             </div>
                         </div>
-                    </div>
-                    <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm pt-8 px-3">
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 sm:px-6 px-3.5">Simpan</button>
+                        <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm pt-8 px-3">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 sm:px-6 px-3.5">Simpan</button>
+                        </div>
                     </div>
                 </form>
                 <form method="POST" action="{{ url('santri/data-diri/update-password') }}">
                     @csrf
-                    <div class="pb-8">
+                    <div class="pb-4">
                         <div class="pt-8">
                             <p class="sm:text-base text-sm bg-gray-50 py-4 px-4">Password</p>
                         </div>
                         @foreach($santris as $santri)
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                            <p class="sm:text-base text-sm text-gray-600">Password Baru</p>
-                            <div class="relative z-0 w-full mb-5">
+                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
+                            <p class="self-center sm:text-base text-sm text-gray-600">Password Baru</p>
+                            <div class="relative z-0 w-full">
                                 <input type="password" name="password" placeholder="" required autocomplete="new-password" required class="sm:text-base text-sm w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                                 @error('password')
                                     <span class="invalid-feedback text-red-500" role="alert">
@@ -220,16 +220,16 @@
                                 @enderror
                             </div>
                         </div>
-                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-2 space-y-1">
-                            <p class="sm:text-base text-sm text-gray-600">Konfirmasi Password</p>
-                            <div class="relative z-0 w-full mb-5">
-                                <input type="password" name="password_confirmation" placeholder="" required autocomplete="new-password" required class="sm:text-base text-sm w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
+                        <div class="md:grid md:grid-cols-2 hover:bg-gray-50 md:space-y-0 px-4 py-4 space-y-1">
+                            <p class="self-center sm:text-base text-sm text-gray-600">Konfirmasi Password</p>
+                            <div class="relative z-0 w-full">
+                                <input type="password" name="password_confirmation" placeholder="" required autocomplete="new-password" required class="self-center sm:text-base text-sm w-full bg-transparent border-b-2 appearance-none focus:outline-none focus:ring-0 focus:border-black border-gray-200" />
                             </div>
                         </div>
                         @endforeach
-                    </div>
-                    <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm pt-8 px-3">
-                        <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 sm:px-6 px-3.5">Simpan</button>
+                        <div class="flex flex-row-reverse object-left text-center text-white sm:text-base text-sm pt-8 px-3">
+                            <button type="submit" class="bg-blue-600 hover:bg-blue-800 rounded shadow-lg py-2.5 sm:px-6 px-3.5">Simpan</button>
+                        </div>
                     </div>
                 </form>
             </div>
