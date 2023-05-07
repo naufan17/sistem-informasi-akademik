@@ -1,1 +1,1 @@
-# Sistem Informasi Akademik Pondok Pesantren Nuru Ummah
+# Sistem Informasi Akademik Pondok Pesantren Nurul Ummah
